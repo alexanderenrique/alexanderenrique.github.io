@@ -2,5 +2,5 @@
 
 Welcome to the Microelectronics Projects section!
 
-- [Sample Project 1](/microelectronics/project1)
-- [Sample Project 2](/microelectronics/project2) 
+- [Sample Project 1]({{ site.baseurl }}/microelectronics/project1)
+- [Sample Project 2]({{ site.baseurl }}/microelectronics/project2) 

@@ -7,6 +7,6 @@ title: Welcome to Bits and Bolts
 
 Welcome! Explore the main sections:
 
-## [Wrenching Projects](/wrenching/)
-## [Coding Projects](/coding/)
-## [Microelectronics Projects](/microelectronics/) 
+## [Wrenching Projects]({{ site.baseurl }}/wrenching/)
+## [Coding Projects]({{ site.baseurl }}/coding/)
+## [Microelectronics Projects]({{ site.baseurl }}/microelectronics/) 

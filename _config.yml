@@ -5,8 +5,8 @@ email: your-email@example.com
 description: >-
   A badass blog about wrenching, coding, and microelectronics projects.
 theme: minima
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://alexanderenrique.github.io/bits_and_bolts" # your GitHub Pages URL
+baseurl: "/bits_and_bolts" # the subpath of your site, e.g. /blog
+url: "https://alexanderenrique.github.io" # your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
