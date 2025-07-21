@@ -1,5 +1,7 @@
-# 1968 Thunderbird Work Log- [1968 Thunderbird Work Log](#1968-thunderbird-work-log)
-- [1968 Thunderbird Work Log- 1968 Thunderbird Work Log](#1968-thunderbird-work-log--1968-thunderbird-work-log)
+# 1968 Thunderbird Work Log
+
+
+- [1968 Thunderbird Work Log](#1968-thunderbird-work-log)
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
@@ -17,6 +19,7 @@
 - I bought this T-Bird froma buy in Watsonville, CA. Fired right up, had basically straight pipes with glass pack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have revers
 
 ## Current Tasks
+- rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
 
 ## Up Next
 
