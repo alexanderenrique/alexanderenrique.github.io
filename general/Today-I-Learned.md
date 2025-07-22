@@ -6,6 +6,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 #### 07/21/2025
 - Started this blog! learned about Jekyll and hosting pages on GitHub. I feel cool
+- Pydantic is useful because it can super quickly enforce things. You could write lengthy code to enforce types, but Pydantic reduces the boilerplate code you need
 
 #### 07/20/2025
 - The best way to remove bushings is to destroy them
