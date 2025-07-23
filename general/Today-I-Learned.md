@@ -11,9 +11,9 @@ I'm learning just all the time and I think it's cool to look back and see what y
 #### 07/20/2025
 - The best way to remove bushings is to destroy them
   - always start by heating the rubber to get it to release from the metal
-  - Push out the rubber, or drill it out or if you want cancer sooner just burn it out and carbonize it
+  - Push out the rubber, or drill it out, or if you want cancer sooner just burn it out and carbonize it
   - Then remove the shell of the bushing by cutting a groove in it and hammering it out
-  - Air hammers work ok, not as well as you'd want
+  - Air hammers work ok, not as well as you'd want. Maybe mine just isn't that strong
 
 #### 07/19/2025
 - You can bend the hell out of a control arm with a hydralic press. You can't just push the center of a bushing as hard as you can and hope it pops out

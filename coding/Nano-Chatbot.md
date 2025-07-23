@@ -12,7 +12,7 @@
 
 ## To-do
 
-- Making a logging file so that docling doesn't re-process things
+
 - adding a query classification that classifies the query more broadly, pulls key words, etc
 - retrieval: using the improved query classification to retrieve a bunch of docs
   - Hybrid search maybe
@@ -38,6 +38,12 @@
 
 
 ## Progress Log
+### 07/22/2025
+- further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs "guides" there is too much overlap in the documents
+- Also not sure about "Procedure" vs "Guide", 
+- Added document logging so we can see what we've processed so far
+
+
 ### 07/21/2025
 - Updated the metadate fields to be broader, more applicable to other groups
 - implemented a hybrid pydantic/yaml approach so you only need to choose the metadata values in the yaml file
@@ -105,14 +111,9 @@
 - changing the metadata tags so that they are more broad, can be applied to more labs
 - enforcing the metadata tags more smartly with a hybrid yaml/pydantic model
 - cleaned it up so that the meta data info is just in the yaml files
+- Making a logging file so that docling doesn't re-process things
 
 
 ## Known Issues
-- 
-
-## Next Steps
-- 
-
-## Reference Links
 - 
 

@@ -8,11 +8,8 @@
   - [Work Log](#work-log)
     - [YYYY-MM-DD](#yyyy-mm-dd)
       - [Work Performed](#work-performed)
-  - [Purchase List](#purchase-list)
-  - [Total Investment](#total-investment)
   - [Back Burner](#back-burner)
   - [Accomplishments](#accomplishments)
-  - [Reference Materials](#reference-materials)
 
 
 ## Project Overview
@@ -28,23 +25,9 @@
 
 ### YYYY-MM-DD
 #### Work Performed
-- 
 
 
-## Purchase List
-| Date | Part Name | Cost | Notes |
-|------|-----------|------|-------|
-|07/15/2025| Bushings, ball joints, outer tie rod ends | $180 | From rock auto, it was more but I ended up returning the lower balljoints because I needed bolt in, and ordered 4X to many LCA bushings|
-|07/19/2025| Air Hammer, 3/8" hose| $60 | Amanzon, was mad at the bushings|
-|07/20/2025| Correct lower ball joints, NGK spark plugs| $60 | None|
-|07/22/2025| Strut Rod Bushings | $70 | None |
 
-
-## Total Investment
-- Parts: $
-- Tools: $
-- Other: $
-- Total: $
 
 ## Back Burner
 - Oil pan gasket, welding in bung
@@ -67,10 +50,10 @@
 
 ## Accomplishments
 - New ignition coil
-- Fixing wiper knob
+- Fixed winshield wiper knob with 3D printed version
 - New windshield wipers
 - Blower motor and controls working
-- Turn signal bulb out
+- Turn signal bulb out in dash
 - Turn signal working intermittently
 - Alternator upgrade
 - Add coolant overflow
@@ -104,6 +87,3 @@
 - Rear coil springs
 - Make the shifter linkage work better
 - Weld in O2 sensor bung
-
-## Reference Materials
-- 
