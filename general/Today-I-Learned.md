@@ -4,6 +4,19 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+#### 07/24/2025
+
+
+#### 07/23/2025
+- in PlatformIO and C/C++ header files are a lot like modules in python. Or like utils so that's where you put stuf you want to use globally
+- I think I learned about build flags, but not sure I get it yet
+- if there's errors in your IDE and lots of red lines it probably means your shit is broken
+- learned about MISO, MOSI, IRQ, and general SPI interface stuff
+
+  
+#### 07/22/2025
+- If you need .env and pydantic is being a dick about it, just export it
+
 #### 07/21/2025
 - Started this blog! learned about Jekyll and hosting pages on GitHub. I feel cool
 - Pydantic is useful because it can super quickly enforce things. You could write lengthy code to enforce types, but Pydantic reduces the boilerplate code you need

@@ -42,6 +42,8 @@
 - further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs "guides" there is too much overlap in the documents
 - Also not sure about "Procedure" vs "Guide", 
 - Added document logging so we can see what we've processed so far
+- Proccessed 47 documents from local doc to vectorization and metadata, and it went way way faster than it has in the past. Took like 3-4 hours where in the past it took all night to only do half. Not sure if that is becasue of the upgrade to pydantic V2 or maybe doclin g got better. I don't remember explicitly upgrading anything so I'm not sure why this changed
+  
 
 
 ### 07/21/2025
