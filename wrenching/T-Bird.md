@@ -6,8 +6,9 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
-    - [YYYY-MM-DD](#yyyy-mm-dd)
-      - [Work Performed](#work-performed)
+    - [07/24/2025](#07242025)
+    - [07/19/2025](#07192025)
+    - [07/18/2025](#07182025)
   - [Back Burner](#back-burner)
   - [Accomplishments](#accomplishments)
 
@@ -19,12 +20,25 @@
 - rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
 
 ## Up Next
+- Getting an alignment with all my new steering parts
+- New Wheels and Tires
+- Window trim, door seals
 
 
 ## Work Log
 
-### YYYY-MM-DD
-#### Work Performed
+### 07/24/2025
+- Continued sandblasting the control arms, painted them black
+- Recieved the strut rod bushings
+
+### 07/19/2025
+- started working on sand blasting and pushing the bushings outs. It went bad, I bent the fuck out of one of the arms with a hydraulic press. I felt bad. 
+- I fixed the hydraulic press too, just to mess my parts up
+- Sand blasting went fine, the knuckles turned out really nice, and I just love cleaning stuff up on the sand blaster
+
+
+### 07/18/2025
+- Totally ripped apart the suspension and steering on the t-bird, it really didn't give me too much trouble
 
 
 

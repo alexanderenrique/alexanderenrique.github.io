@@ -8,6 +8,7 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [07/25/2025:](#07252025)
     - [07/24/2025](#07242025)
     - [07/23/2025](#07232025)
     - [07/22/2025](#07222025)
@@ -30,15 +31,25 @@
   - Diff temp
   - fuel pressure eventually
   - drive shaft speed, could inform other parts of the project
+  - Back up camera using LIDAR
+  - Six axis IMU with a display for g forces and stuff
+  - figuring out how to log and or transmit this data somewhere
 
 ## Current Tasks
 - Figuring out the LGVL package on the ESP32
-- Getting the arduino IDE set up
+
 
 ## Up Next
 
 
 ## Work Log
+
+### 07/25/2025:
+- Still battling the touch screen in LVGL, just seems like a set up issue
+- I deleted any mention of the esp32-C3 from the ini file, don't want to confuse anything
+- Copied the suggested lv_conf.h from lvgl folder, so it's much more fine grained control
+- removed the "build simple" build flag from the .ini, to make sure it uses my lvgl_config.h
+- Commented out another lv_conf.h file that I found in the .pio/lvgl folder. I don't want it getting confused with different conf files.  
 
 ### 07/24/2025
 - Got the touch screen working, but the component that integrates to LVGL is still not working. Not sure how those are related
