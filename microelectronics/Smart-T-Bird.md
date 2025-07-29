@@ -3,15 +3,17 @@
 
 - [Smart T bird work log](#smart-t-bird-work-log)
   - [Project Overview](#project-overview)
-  - [Scope of work:](#scope-of-work)
-    - [Sensors and controllers I want:](#sensors-and-controllers-i-want)
   - [Current Tasks](#current-tasks)
-  - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [07/28/2025:](#07282025)
     - [07/25/2025:](#07252025)
     - [07/24/2025](#07242025)
     - [07/23/2025](#07232025)
     - [07/22/2025](#07222025)
+  - [Road Map](#road-map)
+  - [Scope of work:](#scope-of-work)
+    - [Sensors and controllers I want:](#sensors-and-controllers-i-want)
+  - [Done](#done)
   - [Back Burner](#back-burner)
 
 
@@ -19,30 +21,16 @@
 - I love me some data, micro electronics, and old cars so let's put them all together. 
 - My dream is to have temperature data, PWM control of fans, and a cool hidden display where I can see all the readouts and what everything is doing, and also manually override sensors if say I want to put a fan on full blast or whatever else
 
-## Scope of work:
-### Sensors and controllers I want:
-- Coolant temp and PWM fan control
-- Trans cooler temp and PWM fan control
-- Oil Temperature
-- Battery voltage
-- Display that is getting all the data wirelessly from the sensor network
-- The sensor should autodim based on light conditions
-- Bonues
-  - Diff temp
-  - fuel pressure eventually
-  - drive shaft speed, could inform other parts of the project
-  - Back up camera using LIDAR
-  - Six axis IMU with a display for g forces and stuff
-  - figuring out how to log and or transmit this data somewhere
 
 ## Current Tasks
-- Figuring out the LGVL package on the ESP32
+- ESP32 reading temperature
 
-
-## Up Next
 
 
 ## Work Log
+
+### 07/28/2025:
+- HAHA I WON! got the touch working with LVGL, it was all about lvgl not "moving forward" in time like it wasn't actually polling the screen. Everything was configured correctly, good wiring, LVGL just wasn't checking the screen if you can believe it
 
 ### 07/25/2025:
 - Still battling the touch screen in LVGL, just seems like a set up issue
@@ -76,6 +64,16 @@
 - made a branch in Jeff's repo for my PlatformIO project, I think that is the way to go as opposed to Arduino CLI + VSCode. I just don't want to have to configure everything manually sounds scary
 - Started playing with PlatformIO
 
+## Road Map
+- ESP32 C3 reading temperature
+- Broker ESP going with MQTT
+- Broker talking to the C3 node
+- Most basic UI to display temp
+- two way communication, turn LED on and off
+- OTA updates
+- advanced features like PWM
+- Power and wiring from car
+- Planning sensor nodes, perfboard
 
 ##General notes:
 - Screen pinout, from 1-X
@@ -94,5 +92,27 @@
   - T_DO
   - T_IRQ
 
+## Scope of work:
+### Sensors and controllers I want:
+- Coolant temp and PWM fan control
+- Trans cooler temp and PWM fan control
+- Oil Temperature
+- Battery voltage
+- Display that is getting all the data wirelessly from the sensor network
+- The sensor should autodim based on light conditions
+- Bonues
+  - Diff temp
+  - fuel pressure eventually
+  - drive shaft speed, could inform other parts of the project
+  - Back up camera using LIDAR
+  - Six axis IMU with a display for g forces and stuff
+  - figuring out how to log and or transmit this data somewhere
 
+## Done
+- figuring out PlatformIO
+- Creating a github repo (shout out jeff)
+- wiring the touch screen
+- getting basic touch working
+- getting LVGL to read touch
+- 
 ## Back Burner

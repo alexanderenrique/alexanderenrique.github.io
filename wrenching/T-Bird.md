@@ -6,6 +6,7 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [07/25/2025](#07252025)
     - [07/24/2025](#07242025)
     - [07/19/2025](#07192025)
     - [07/18/2025](#07182025)
@@ -26,6 +27,10 @@
 
 
 ## Work Log
+
+### 07/25/2025
+- Just lots to paint, finished painting the control arms, brake brackets, hub dust cap, etc.
+- Sandblasted and painted the rotor shields
 
 ### 07/24/2025
 - Continued sandblasting the control arms, painted them black
