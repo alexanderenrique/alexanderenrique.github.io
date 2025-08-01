@@ -5,6 +5,8 @@
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [07/30/2025:](#07302025)
+    - [07/29/2025:](#07292025)
     - [07/28/2025:](#07282025)
     - [07/25/2025:](#07252025)
     - [07/24/2025](#07242025)
@@ -23,11 +25,25 @@
 
 
 ## Current Tasks
-- ESP32 reading temperature
+- Getting the code working with the C3s
+- Further Calibrating the TMP36
+- Think about the larger picture of nodes, what needs to go where
+- Then we can think about the GUI, individual node wiring, etc
 
 
 
 ## Work Log
+
+### 07/30/2025:
+- the TMP36 sensor seems pretty dang innacurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi
+- So I added an offset but idk if it's linear. Should still be close enough for non-mission critical stuff
+- Also wrote code for an SHT sensor so I could measure office temperature, and further calibrate the TMP36
+- Might still use the SHT31 code fo
+
+### 07/29/2025:
+- wired upt the TMP36 sensor, got it working easily enough
+- learned about how the envirnmental variables work in PlatformIO
+- Tried learning about how to structure much more complicated programs, there'll be a lot of nodes with different environments, and main.cpp files
 
 ### 07/28/2025:
 - HAHA I WON! got the touch working with LVGL, it was all about lvgl not "moving forward" in time like it wasn't actually polling the screen. Everything was configured correctly, good wiring, LVGL just wasn't checking the screen if you can believe it
@@ -66,9 +82,7 @@
 
 ## Road Map
 - ESP32 C3 reading temperature
-- Broker ESP going with MQTT
 - Broker talking to the C3 node
-- Most basic UI to display temp
 - two way communication, turn LED on and off
 - OTA updates
 - advanced features like PWM
@@ -114,5 +128,8 @@
 - wiring the touch screen
 - getting basic touch working
 - getting LVGL to read touch
-- 
+- ESP32 reading temperature
+- ESP32s talking to eachother using MQTT
+- Broker ESP going with MQTT
+- Most basic UI to display temp
 ## Back Burner

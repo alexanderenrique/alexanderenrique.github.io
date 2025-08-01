@@ -4,7 +4,19 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+#### 07/28/2025
+- MQTT and how that works, kinda
+- Started learning about PRAM and the best way to drive displays
+- Sometimes deleting a token and reauthenticating is the way to go
+- Manually advancing the LVGL clock will solce your problems
+- Started learning about Data Structures and algorithms. Learned about "bigO" and the complexity of running nested loops, like how that increases exponentially
+- Kinda started on recursive algorithms but those my my head in a knot
+
+#### 07/25/2025
+- reflecting on a past learning, I got all mad at the higher ups because they weren't doing shit, but sometimes the higher ups are also fed up because their higher ups aren't doing shit. So while it's important for your voice to be heard, maybe give them the benefit of the doubt. Maybe. 
+
 #### 07/24/2025
+- learned about glancing angle xray spectroscopy for very thin films
 
 
 #### 07/23/2025
