@@ -5,6 +5,8 @@
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [08/2/2025:](#0822025)
+    - [07/31/2025:](#07312025)
     - [07/30/2025:](#07302025)
     - [07/29/2025:](#07292025)
     - [07/28/2025:](#07282025)
@@ -16,7 +18,7 @@
   - [Scope of work:](#scope-of-work)
     - [Sensors and controllers I want:](#sensors-and-controllers-i-want)
   - [Done](#done)
-  - [Back Burner](#back-burner)
+  - [Nodes:](#nodes)
 
 
 ## Project Overview
@@ -25,8 +27,7 @@
 
 
 ## Current Tasks
-- Getting the code working with the C3s
-- Further Calibrating the TMP36
+- Finish figuring out the wifi thing. Maybe getting a small Infrastrucre AP to rule out any kind of signal strength thing? And also relieve the stress from the ESP that is also driving the screen.
 - Think about the larger picture of nodes, what needs to go where
 - Then we can think about the GUI, individual node wiring, etc
 
@@ -34,6 +35,20 @@
 
 ## Work Log
 
+### 08/2/2025:
+- still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antennae thing.
+- uploaded the same SHT sketch to an esp32 (regular) and printed the wifi strength and in th kitchen right next to the AP the signal is like -68 dbm which isn't great, and then in the room it's -90 or less which is just terrible, could definitely contribute to the connectivity
+-  added lines in the softAP that explicitly sets the max power at 20W, and makes sure the wifi doesn't sleep or go into low pwower mode
+-  Considering either going to CAN Bus, which would make me a bit sad, or getting a stronger mini-AP, like an infrastructre spec one. 
+-  Still trying to figure out if it's really a wifi strength thing or what. But I do feel like I'm asking a lot of the one little ESP to both drive a screen, touch polling, and set up a wifi network. 
+-  
+
+### 07/31/2025:
+- got the C3 working and talking to the broker pretty easily, but the connection isn't the most reliable. I did two things:
+- Disabled the DCHP and assigned static IP addresses to the sensor nodes
+- Set the wifi frequency so that it goes to the same frequency everytime
+- I just want it to connect right away when powered up, and it doesn't matter if either lost power at any point or anything
+- Before these changes, it might take 2-3 reboots to connect
 ### 07/30/2025:
 - the TMP36 sensor seems pretty dang innacurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi
 - So I added an offset but idk if it's linear. Should still be close enough for non-mission critical stuff
@@ -132,4 +147,44 @@
 - ESP32s talking to eachother using MQTT
 - Broker ESP going with MQTT
 - Most basic UI to display temp
-## Back Burner
+- Getting the code working with the C3s
+- Further Calibrating the TMP36
+
+## Nodes:
+- Broker:
+  - Overview: Drives display, SHT31 (inside car temp), IMU, voltage, light sensor to autodim display based on ambient light
+    | Sensor | From ESP32 | To ESP32 |
+    ---------|---------|-------------|
+    | SHT31 | pwr,grnd | SDA/SCLK|
+    | light sensor | ??? | ??? |
+    |Display| SO MANY | ????|
+    | IMU | is it I2C? | ?????|
+    |Voltage | voltage divider| ???|
+
+- Engine Bay:
+  - Overview: Oil temp at pan, fan PWM, radiator temp, SHT31 (Ambient temp/humidity)
+  - Sensors: 2x TMP36, SHT31, 
+
+    | Sensor | From C3 | To C3 |
+    ---------|---------|---------
+    | TMP36 | pwr, grnd | Analog in|
+    | TMP36 | pwr, grnd | Analog in|
+    | SHT31 | pwr,grnd | SDA/SCLK|
+    | Mosfet| pull down resistor, PWM| None
+
+- Trunk:
+  - Overview: Back up camera, shows how far you are from whatever is behind you
+  - Sensor: LiDAR backup
+  | Sensor | From C3 | To C3 |
+  --------|---------|-------
+  | Backup camera | I2C, UART | ???? |
+
+- Undercar (?):
+  - Overview: Largely optional, could be nice for diff temp, vehicle speed, trans temp, PWM of trans fan
+  - Sensors: 2x TMP36, hall effect
+      | Sensor | From C3 | To C3 |
+    ---------|---------|---------
+    | TMP36 | pwr, grnd | Analog in|
+    | TMP36 | pwr, grnd | Analog in|
+    | SHT31 | pwr,grnd | SDA/SCLK|
+    | Mosfet| pull down resistor, PWM| None

@@ -4,6 +4,19 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+#### 08/05/2025
+- Messing with the cron job I feel like I have a much better grasp of interacting with the terminal and using nano to modify files. I don't know many commands but definiely the common useful ones. 
+
+#### 08/04/2025
+- there are limits to the max power your wifi is allowed to have, set by the FCC. Basically if any one person has too powerful a device it can mess things up for everyone
+- You can buy ESP32s without the integrated wifi antenna, and plug your own antennae in.
+- The C3s just have totally horrible antenna, they don't connect for shit
+- The programming language GO, I wonder if it could help me speed up some algo stuff. 
+- cronjobs, set up my first one on the collector computer
+
+#### 07/30/2025
+- learned about serial communications, man that stuff is cool. Synchronous, a synchronous, UART, I2C, SPI. It's like you use it and kinda know what's happening but cool to learn it
+- 
 #### 07/28/2025
 - MQTT and how that works, kinda
 - Started learning about PRAM and the best way to drive displays
