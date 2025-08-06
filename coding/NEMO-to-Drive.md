@@ -11,6 +11,11 @@
 
 ## Work Log
 
+### 08/6/2025
+- Haha you thought! Changed everything over to run on the shared drive using a service account. You must use a shared Google drive if you are going to use a Service account bot buddy
+- I clobbered the old instance on the collector and pulled a new version down once I figured out the whole new authentication scheme
+- Also cleaned up the repo, It's be cool to share it some time
+
 ### 08/5/2025
 - never really done am I? The .env was not being correctly loaded in the cron job because there were spaces between the variable names and the actual key, so it wasn't working
 - My scheduling was also whack and it was running at 8 minutes and 20 minutes past the hour, which I never remember setting. maybe I though 8am and 20:00=8pm? Anyways I changed it to run every hour cause why not
@@ -26,7 +31,5 @@
 - I deleted the token and reauthenticated, and now things work OK.
 
 ## Back Burner
-- 
+- Making it publishable?
 
-## Accomplishments
-- Figuring out a static google drive connection that doesn't expire

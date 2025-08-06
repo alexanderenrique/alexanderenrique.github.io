@@ -6,6 +6,7 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [08/04/2025](#08042025)
     - [07/25/2025](#07252025)
     - [07/24/2025](#07242025)
     - [07/19/2025](#07192025)
@@ -27,6 +28,14 @@
 
 
 ## Work Log
+
+### 08/04/2025
+- Started pressing in bushings, very satisfying
+- even my wonky arm accepted the bushing with a little violence
+- removed the strut rods, and the sway bar came out with it naturally. They're real rusty
+- I'm missing some bump stops on the strut rod on one side, and I desproyed the one ot the UCA ball joint bolt accidentally
+  - I guess I wonder how necessary they are? I mean they were installed from factory so they must be a good-ish idea
+  - not sure if I can source replacements
 
 ### 07/25/2025
 - Just lots to paint, finished painting the control arms, brake brackets, hub dust cap, etc.

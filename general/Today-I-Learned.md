@@ -5,6 +5,10 @@ I'm learning just all the time and I think it's cool to look back and see what y
 ## Learnings
 
 #### 08/05/2025
+- the google Oath doesn't work so well with a headless set up like in cron job. It needs to constantly open new oprts or whatever on the local host for authentication. It would work for a couple hours and then silently fail
+- Service accounts are the way to go
+
+#### 08/05/2025
 - Messing with the cron job I feel like I have a much better grasp of interacting with the terminal and using nano to modify files. I don't know many commands but definiely the common useful ones. 
 
 #### 08/04/2025
