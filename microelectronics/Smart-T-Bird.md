@@ -5,6 +5,7 @@
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [08/06/2025:](#08062025)
     - [08/2/2025:](#0822025)
     - [07/31/2025:](#07312025)
     - [07/30/2025:](#07302025)
@@ -27,13 +28,18 @@
 
 
 ## Current Tasks
-- Finish figuring out the wifi thing. Maybe getting a small Infrastrucre AP to rule out any kind of signal strength thing? And also relieve the stress from the ESP that is also driving the screen.
-- Think about the larger picture of nodes, what needs to go where
-- Then we can think about the GUI, individual node wiring, etc
+- Getting the CAN working
+- Think about the larger picture of nodes, what needs to go where. If we're using full fat ESP32 with CAN, maximizing the IO from each to minimize the numer of CAN wires
+- Then we can think about the GUI, etc
 
 
 
 ## Work Log
+
+### 08/06/2025:
+- I Think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world
+- I learned you must use a full blown ESP32 if you want to use can bus, the C3 and S3 don't natively speak canbus. 
+- And if you want to use CAN, you need a little break out board. Chat elegantly explained it as a walkie talkie. The ESPs already can communicate but they need the breakout board to send the message correctly. CAN does the whole high/low thing that the ESP can't drive
 
 ### 08/2/2025:
 - still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antennae thing.

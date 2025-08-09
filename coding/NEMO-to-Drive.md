@@ -11,6 +11,11 @@
 
 ## Work Log
 
+### 08/07/2025
+- The billing seems to be working nicely which is cool
+- Started working on getting the post usage question data out and onto the drive, that seems to be working well. Just a lot of data processing steps
+- Need to move it to the collector and then it'll be sorted
+
 ### 08/6/2025
 - Haha you thought! Changed everything over to run on the shared drive using a service account. You must use a shared Google drive if you are going to use a Service account bot buddy
 - I clobbered the old instance on the collector and pulled a new version down once I figured out the whole new authentication scheme

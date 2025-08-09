@@ -6,6 +6,9 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [08/08/2025](#08082025)
+    - [08/07/2025](#08072025)
+    - [08/06/2025](#08062025)
     - [08/04/2025](#08042025)
     - [07/25/2025](#07252025)
     - [07/24/2025](#07242025)
@@ -28,6 +31,20 @@
 
 
 ## Work Log
+
+### 08/08/2025
+- Started putting everything back on the car! This is the good bit where the painted shiny stuff goes together
+- Everything went smooth, had to do some work jogging my memory 
+
+### 08/07/2025
+- Sand balsted the tie rod adjusting sleeves and painted them, they look nice
+
+### 08/06/2025
+- Sand blasted and painted the strut rods. 
+- Removed the tie rod ends, they were super easy to unthread which was surprising
+- With the bare minimum of inner tie rods installed, I gave the rack a wiggle and everything else feels pretty gand tight. There is a little bit of lash in the steering box, but really quite good on the old car scale
+- Not finding any good replacements for the bump stops but I don't think I'll let that hold me back, just gonna send it. They can be added later if I really want
+
 
 ### 08/04/2025
 - Started pressing in bushings, very satisfying

@@ -3,6 +3,10 @@
 ## Project Overview
 
 ## Current Tasks
+- Creating a new repo, pushing my project there
+- Setting up the interactive interpreter window
+- Looking into the chunking, embedding, retrieval. How useful are metadata tags really?
+- 
 
 
 
@@ -38,6 +42,9 @@
 
 
 ## Progress Log
+
+### 08/07/2025
+- so what I'm hearing from Sam is that I should just build whatever I want with the stuff she provided. I'm going to clone this into my own repo and just go hard on it, I'll push it into the other repo periodically, but I want to be on my own main branch and do what I want if this is going to be my project
 ### 07/22/2025
 - further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs "guides" there is too much overlap in the documents
 - Also not sure about "Procedure" vs "Guide", 
