@@ -6,6 +6,7 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [08/10/2025](#08102025)
     - [08/08/2025](#08082025)
     - [08/07/2025](#08072025)
     - [08/06/2025](#08062025)
@@ -32,9 +33,21 @@
 
 ## Work Log
 
+### 08/10/2025
+- Put everything back together, big day. 
+- It's all nice and tight in the suspension, but the rattle is still there!! I'm not sure what's causing it but I'll get to the bottom of it
+- Double checked the shocks and everything, current though is that something is just loose inside the body work
+- I also learned the parking break disengage is vacuum operated, so now that needs to be done manually if you want to remove the parking brake.
+- The fucking rattle just can't be suspension related, there must be some loose bolts or something in there
+
 ### 08/08/2025
 - Started putting everything back on the car! This is the good bit where the painted shiny stuff goes together
-- Everything went smooth, had to do some work jogging my memory 
+- Everything went smooth, had to do some work jogging my memory on how the sway bar went in and how the brakes go together
+- The drivers side *crushed* LCA definitely has more play than the other side, but I was able to tighten the bolt to the point where it grabbed the inner part of the bushing and will hold. 
+- Did my best to alight the UCAs where they were before, and keep the tie rods to the correct length. 
+- The strut rods are interesting becasue it seems like they aren't really meant to be adjusted. Often you have nuts on either side of the bushing to move the rod forward and back relative to the car, but this one doesn't have that. 
+- The strut rods don't line up with the LCA until you tigthen them down and pull them forward
+- I'm refraining from tightening any bushings until it's sitting at ride height
 
 ### 08/07/2025
 - Sand balsted the tie rod adjusting sleeves and painted them, they look nice
