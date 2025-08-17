@@ -16,4 +16,9 @@ title: Welcome to Bits and Bolts
       <h3><a href="{{ site.baseurl }}/microelectronics/">Microelectronics Projects</a></h3>
     </div>
   </div>
+  
+  <!-- TESTING: This should be very obvious if changes are working -->
+  <div style="background-color: red; color: white; padding: 20px; margin: 20px; text-align: center; font-size: 24px;">
+    🎉 CHANGES ARE WORKING! 🎉
+  </div>
 </div> 
