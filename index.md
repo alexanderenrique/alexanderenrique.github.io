@@ -1,7 +1,19 @@
 ---
-layout: home
+layout: default
 title: Welcome to Bits and Bolts
 ---
 
-<!-- This file now uses the custom home layout defined in _layouts/home.html -->
-<!-- The layout will only show the three main category links you want --> 
+<div class="home">
+  <h1 class="page-heading">Welcome to Bits and Bolts</h1>
+  
+  <div class="main-sections">
+    <h2>Bits and Bolts Blog</h2>
+    <p>Welcome! Explore the main sections:</p>
+    
+    <div class="section-links">
+      <h3><a href="{{ site.baseurl }}/wrenching/">Wrenching Projects</a></h3>
+      <h3><a href="{{ site.baseurl }}/coding/">Coding Projects</a></h3>
+      <h3><a href="{{ site.baseurl }}/microelectronics/">Microelectronics Projects</a></h3>
+    </div>
+  </div>
+</div> 
