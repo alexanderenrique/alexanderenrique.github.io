@@ -3,6 +3,24 @@
 
 @import "{{ site.theme }}";
 
+/* Hide the theme's automatic navigation */
+.site-nav {
+  display: none !important;
+}
+
+/* Hide any other automatic navigation elements */
+.navigation,
+.nav-links,
+.site-header .wrapper > nav {
+  display: none !important;
+}
+
+/* Hide the theme's automatic page links */
+.page-links,
+.collection-links {
+  display: none !important;
+}
+
 .main-sections {
   text-align: center;
   margin: 2rem 0;

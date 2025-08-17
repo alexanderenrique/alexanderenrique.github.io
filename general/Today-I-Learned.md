@@ -4,8 +4,11 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+#### 08/17/2025
+- working with github pages I started learning about layouts of webpages and .scss files
+
 #### 08/10/2025
-- I learned about jumbo mortgage loans, anything above about 1.1 in the bay area
+- I learned about jumbo mortgage loans, anything above about $1.1 million in the bay area
 - 
 
 #### 08/05/2025
