@@ -1,6 +1,9 @@
 # Microelectronics Projects
 
-Welcome to the Microelectronics Projects section!
+Welcome to the Microelectronics Projects section! Here you'll find all my electronics and embedded systems work.
 
-- [Sample Project 1]({{ site.baseurl }}/microelectronics/project1)
-- [Sample Project 2]({{ site.baseurl }}/microelectronics/project2) 
+## Smart Vehicle Systems
+- [Smart Thunderbird]({{ site.baseurl }}/microelectronics/Smart-T-Bird) - Modern electronics integration for classic cars
+
+## Documentation
+- [README]({{ site.baseurl }}/microelectronics/README) - Overview of the microelectronics section 

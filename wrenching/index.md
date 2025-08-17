@@ -1,6 +1,9 @@
 # Wrenching Projects
 
-Welcome to the Wrenching Projects section!
+Welcome to the Wrenching Projects section! Here you'll find all my automotive restoration and repair adventures.
 
-- [Sample Project 1]({{ site.baseurl }}/wrenching/T-Bird)
-- [Sample Project 2]({{ site.baseurl }}/wrenching/project2) 
+## Classic Cars
+- [1968 Thunderbird Restoration]({{ site.baseurl }}/wrenching/T-Bird) - Complete restoration of a classic T-Bird
+
+## Documentation
+- [README]({{ site.baseurl }}/wrenching/README) - Overview of the wrenching section 
