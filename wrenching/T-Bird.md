@@ -6,6 +6,7 @@
   - [Current Tasks](#current-tasks)
   - [Up Next](#up-next)
   - [Work Log](#work-log)
+    - [08/13/2025](#08132025)
     - [08/10/2025](#08102025)
     - [08/08/2025](#08082025)
     - [08/07/2025](#08072025)
@@ -32,6 +33,12 @@
 
 
 ## Work Log
+
+### 08/13/2025
+- Sometimes you just have to step away for a bit. It was the brakes!
+- I did a test where I hit a bunch of bumps while very lightly hitting the brakes, not a rattle, certainley not the loose change sound
+- I did some googling and it looks like I'm totally missing these rubber isolators that go on the slide pins. They weren't there when I took the brakes apart
+- I can't wait for them to arrive, about a week though.
 
 ### 08/10/2025
 - Put everything back together, big day. 
