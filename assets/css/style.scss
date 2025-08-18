@@ -3,21 +3,38 @@
 
 @import "{{ site.theme }}";
 
-/* Hide the theme's automatic navigation */
-.site-nav {
-  display: none !important;
-}
-
-/* Hide any other automatic navigation elements */
+/* Hide ALL navigation elements aggressively */
+.site-nav,
 .navigation,
 .nav-links,
-.site-header .wrapper > nav {
+.site-header .wrapper > nav,
+.page-links,
+.collection-links,
+.site-header nav,
+header nav,
+nav,
+.nav,
+.navigation-menu,
+.menu,
+.site-menu {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* Hide any automatic page listings */
+.page-list,
+.post-list,
+.collection-list,
+.site-posts,
+.site-pages {
   display: none !important;
 }
 
-/* Hide the theme's automatic page links */
-.page-links,
-.collection-links {
+/* Hide the theme's automatic content generation */
+.auto-content,
+.theme-content,
+.default-content {
   display: none !important;
 }
 
