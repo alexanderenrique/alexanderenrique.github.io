@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Smart Thunderbird Electronics"
+categories: [microelectronics]
+tags: [electronics, classic-car, modernization]
+---
+
 # Smart T bird work log
 
 

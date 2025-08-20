@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Work Log Bot"
+categories: [coding, chatbot]
+tags: [ai, work-log, automation]
+---
+
 # Nano Chatbot
 
 ## Project Overview

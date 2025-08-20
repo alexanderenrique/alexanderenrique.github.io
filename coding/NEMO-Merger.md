@@ -1,3 +1,10 @@
+---
+layout: page
+title: "NEMO Merger Work Log"
+categories: [coding]
+tags: [nemo, lab-management, snf, snsf]
+---
+
 # NEMO Merger Work Log
 
 ## Project Overview

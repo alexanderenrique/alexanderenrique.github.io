@@ -1,3 +1,10 @@
+---
+layout: page
+title: "1968 Thunderbird Restoration"
+categories: [wrenching]
+tags: [classic-car, restoration, thunderbird]
+---
+
 # 1968 Thunderbird Work Log
 
 

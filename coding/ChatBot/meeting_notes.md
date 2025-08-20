@@ -1,3 +1,9 @@
+---
+layout: page
+title: "Meeting Notes Bot"
+categories: [coding, chatbot]
+tags: [ai, meeting-notes, automation]
+---
 
 ### Meeting Notes:
 #### 08/07/2025
