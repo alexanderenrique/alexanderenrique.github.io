@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Wrenching Projects"
+categories: [wrenching]
+tags: [overview, projects]
+---
+
 # Wrenching Projects
 
 Welcome to the Wrenching Projects section! Here you'll find all my automotive restoration and repair adventures.

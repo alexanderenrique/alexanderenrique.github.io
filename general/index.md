@@ -1,3 +1,10 @@
+---
+layout: page
+title: "General"
+categories: [general]
+tags: [overview, miscellaneous]
+---
+
 # General
 
 Welcome to the General section! Here you'll find miscellaneous thoughts, learnings, and ideas.

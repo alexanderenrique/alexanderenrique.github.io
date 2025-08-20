@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Today I Learned"
+categories: [general]
+tags: [learning, knowledge, daily]
+---
+
 # Today I Learned
 
 I'm learning just all the time and I think it's cool to look back and see what you learned and when. Just a simple list. 

@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Way Backburner - Project Ideas"
+categories: [general]
+tags: [ideas, planning, future-projects]
+---
+
 # Project Ideas and Experiments
 
 ## Mechanical Projects

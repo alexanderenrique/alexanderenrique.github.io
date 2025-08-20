@@ -1,3 +1,10 @@
+---
+layout: page
+title: "Coding Projects"
+categories: [coding]
+tags: [overview, projects]
+---
+
 # Coding Projects
 
 Welcome to the Coding Projects section! Here you'll find all my programming adventures and tools.
