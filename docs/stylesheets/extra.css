@@ -1,0 +1,18 @@
+/* Force hide the table of contents */
+.md-sidebar--secondary {
+  display: none !important;
+}
+
+.md-content__inner .md-content__inner {
+  margin-right: 0 !important;
+}
+
+/* Alternative selectors if the above don't work */
+.md-sidebar[data-md-component="toc"] {
+  display: none !important;
+}
+
+.md-content__inner {
+  margin-right: 0 !important;
+  max-width: none !important;
+}
