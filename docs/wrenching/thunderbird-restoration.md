@@ -4,14 +4,26 @@
 - I bought this T-Bird froma buy in Watsonville, CA. Fired right up, had basically straight pipes with glass pack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have revers
 
 ## Current Tasks
-- rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
-
-## Up Next
 - Getting an alignment with all my new steering parts
 - New Wheels and Tires
-- Window trim, door seals
+
+
+## Before My Birthday Road Trip
+- Tire change kit
+- organize spare kit
+- securing liquids in trunk
+- leaking trans (New fittings, hose)
+- Vinyl wrap
+- Bonus:
+  - Adding speakers to the back
+  - Oil Pan with turbo bung
+
+
 
 ## Work Log
+
+### 08/24/2025
+- Designed and 3D printed a blank off plate for the rear ashtrays, use VHB tape and it's really stuck on there. Nice
 
 ### 08/20/2025
 - After a bit of time away, I received the rubber isolators and installed them. Behold, no more terrible rattle. 
@@ -19,8 +31,6 @@
 - Measured up the rear speaker area, the hole is somthing like 5" square. Really unsure how it mounts
 - removed the rear ashtrays, and added some foam strips to take up any slack between the metal and the bolstering that could cause a rattle
 - I do like the ashtrays, but the plastic they are made out of is just so brittle and I don't think it's worth it to try and fix it. I'll design and 3D print a blank off plate so it looks complete
-
-## Work Log
 
 ### 08/13/2025
 - Sometimes you just have to step away for a bit. It was the brakes!
@@ -140,3 +150,6 @@
 - Rear coil springs
 - Make the shifter linkage work better
 - Weld in O2 sensor bung
+- rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
+- Adding vibration dampeners to brake calibers
+- 3D printed blank off for rear ashtrays

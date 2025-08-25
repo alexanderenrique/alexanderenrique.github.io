@@ -30,6 +30,9 @@
 
 ## Work Log
 
+### 08/21/2025
+- My "add allen prefix" went a bit wild and added the prefix to the wrong things so I corrected it and moved the Shriram/Spilker all that to the right category
+
 ### 08/12/2025
 - the staff charges and tool training charges were previously set to be global, so only one staff chaarge and one staff training charge could exist
   - Seems to be some kind of bug, can't make staff charges tool by tool
