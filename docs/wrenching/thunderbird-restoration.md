@@ -22,6 +22,9 @@
 
 ## Work Log
 
+### 08/25/2024
+- printed another blank off plate, used the last of four different spools of white
+
 ### 08/24/2025
 - Designed and 3D printed a blank off plate for the rear ashtrays, use VHB tape and it's really stuck on there. Nice
 
@@ -110,6 +113,31 @@
 - Speakers in the back
 - Wiring in Wideband O2 Sensor
 - Arduino project, adding sensors
+
+## 3D Models & STL Files
+
+Custom 3D printed parts designed for this project:
+
+### Rear Ashtray Blank Off Plate
+- **STL File**: [Download](assets/models/thunderbird-rear-ashtray-blank.stl)
+- **Rendering**: ![3D Preview](assets/renderings/thunderbird-rear-ashtray-blank.png)
+- **Description**: Custom blank off plate to replace brittle rear ashtrays
+- **Material**: PLA/PETG
+- **Installation**: VHB tape mounting
+- **Status**: ✅ Completed and installed
+
+### Windshield Wiper Knob
+- **STL File**: [Download](assets/models/thunderbird-wiper-knob.stl)
+- **Rendering**: ![3D Preview](assets/renderings/thunderbird-wiper-knob.png)
+- **Description**: Replacement for broken windshield wiper control knob
+- **Material**: PLA
+- **Status**: ✅ Completed and installed
+
+### Future Models
+- Dash mount brackets for electronics
+- Switch mounting plates
+- Custom interior trim pieces
+- Tool holders for trunk organization
 
 ## Accomplishments
 - New ignition coil

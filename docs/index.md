@@ -18,10 +18,10 @@ Daily learnings, project ideas, and miscellaneous thoughts.
 
 ## Quick Navigation
 
-- [Coding Projects](coding/) - Software and automation tools
-- [Wrenching Projects](wrenching/) - Mechanical and restoration work
-- [Microelectronics](microelectronics/) - Electronics and embedded systems
-- [General](general/) - Learnings and ideas
+- [Coding Projects](coding/index.md) - Software and automation tools
+- [Wrenching Projects](wrenching/index.md) - Mechanical and restoration work
+- [Microelectronics](microelectronics/index.md) - Electronics and embedded systems
+- [General](general/index.md) - Learnings and ideas
 
 ---
 

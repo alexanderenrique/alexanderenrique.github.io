@@ -52,17 +52,18 @@ nav:
       - NEMO Merger: coding/nemo-merger.md
       - NEMO to Drive: coding/nemo-to-drive.md
     - ChatBot Tools:
-      - Meeting Notes Bot: coding/chatbot/meeting-notes.md
-      - Work Log Bot: coding/chatbot/worklog.md
+      - Meeting Notes Bot: coding/chatbot/meeting_notes.md
+      - Work Log Bot: coding/chatbot/WorkLog.md
   - Wrenching Projects:
     - Overview: wrenching/index.md
     - 1968 Thunderbird: wrenching/thunderbird-restoration.md
   - Microelectronics:
     - Overview: microelectronics/index.md
-    - Smart Thunderbird: microelectronics/smart-thunderbird.md
+    - Smart Thunderbird: microelectronics/Smart-T-Bird.md
   - General:
-    - Today I Learned: general/today-i-learned.md
-    - Way Backburner: general/way-backburner.md
+    - Overview: general/index.md
+    - Today I Learned: general/Today-I-Learned.md
+    - Way Backburner: general/Way-Backburner.md
 
 # Plugins
 plugins:
