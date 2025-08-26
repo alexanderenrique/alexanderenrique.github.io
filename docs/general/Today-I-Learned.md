@@ -11,6 +11,14 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+#### 08/24/2025
+- RTOS and how that works, like FreeRTOS. I don't think I need it for any of my current work, but cool to know it exists
+- Learned how to do GD&T in OnShape for the yoshimura flange project
+
+
+#### 08/23/2025
+- Spanish Moss does not natively grow in California, it's acutally a lichen called lace lichen, and it's the state lichen of California. The more you know!
+
 #### 08/20/2025
 - mkdocs is the truth, started learning about how to lay out a blog using it instead of github pages themes
 
@@ -19,7 +27,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 #### 08/10/2025
 - I learned about jumbo mortgage loans, anything above about $1.1 million in the bay area
-- 
+  
 
 #### 08/05/2025
 - the google Oath doesn't work so well with a headless set up like in cron job. It needs to constantly open new oprts or whatever on the local host for authentication. It would work for a couple hours and then silently fail
@@ -37,7 +45,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 #### 07/30/2025
 - learned about serial communications, man that stuff is cool. Synchronous, a synchronous, UART, I2C, SPI. It's like you use it and kinda know what's happening but cool to learn it
-- 
+  
 #### 07/28/2025
 - MQTT and how that works, kinda
 - Started learning about PRAM and the best way to drive displays
