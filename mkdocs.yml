@@ -42,6 +42,7 @@ theme:
 # Custom CSS to hide TOC
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/3d-models.css
 
 # Navigation
 nav:
@@ -57,6 +58,7 @@ nav:
   - Wrenching Projects:
     - Overview: wrenching/index.md
     - 1968 Thunderbird: wrenching/thunderbird-restoration.md
+    - 3D Models: wrenching/3d-models.md
   - Microelectronics:
     - Overview: microelectronics/index.md
     - Smart Thunderbird: microelectronics/Smart-T-Bird.md

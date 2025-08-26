@@ -118,26 +118,10 @@
 
 Custom 3D printed parts designed for this project:
 
-### Rear Ashtray Blank Off Plate
-- **STL File**: [Download](assets/models/thunderbird-rear-ashtray-blank.stl)
-- **Rendering**: ![3D Preview](assets/renderings/thunderbird-rear-ashtray-blank.png)
-- **Description**: Custom blank off plate to replace brittle rear ashtrays
-- **Material**: PLA/PETG
-- **Installation**: VHB tape mounting
-- **Status**: ✅ Completed and installed
+- **Rear Ashtray Blank Off Plate** - Custom blank off plate to replace brittle rear ashtrays
+- **Windshield Wiper Knob** - Replacement for broken windshield wiper control knob
 
-### Windshield Wiper Knob
-- **STL File**: [Download](assets/models/thunderbird-wiper-knob.stl)
-- **Rendering**: ![3D Preview](assets/renderings/thunderbird-wiper-knob.png)
-- **Description**: Replacement for broken windshield wiper control knob
-- **Material**: PLA
-- **Status**: ✅ Completed and installed
-
-### Future Models
-- Dash mount brackets for electronics
-- Switch mounting plates
-- Custom interior trim pieces
-- Tool holders for trunk organization
+[View all 3D models and download STL files →](3d-models.md)
 
 ## Accomplishments
 - New ignition coil
