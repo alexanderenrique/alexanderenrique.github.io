@@ -11,9 +11,15 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 08/28/2025
+- Temportary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one infront of my buck converter in my display
+
+### 08/27/2025
+- Google cloud shell and how to set up cron jobs to turn the VM on an off. No need for it to stay on all the time just to run a job a couple times a day!
+
 #### 08/24/2025
 - RTOS and how that works, like FreeRTOS. I don't think I need it for any of my current work, but cool to know it exists
-- Learned how to do GD&T in OnShape for the yoshimura flange project
+- Learned how to do GD&T in OnShape for the yoshimura flange project, to get it on the blog
 
 
 #### 08/23/2025

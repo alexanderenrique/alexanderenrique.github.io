@@ -12,6 +12,8 @@ tags: [electronics, classic-car, modernization]
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [08/28/2025](#08282025)
+    - [08/27/2025](#08272025)
     - [08/06/2025:](#08062025)
     - [08/2/2025:](#0822025)
     - [07/31/2025:](#07312025)
@@ -42,6 +44,14 @@ tags: [electronics, classic-car, modernization]
 
 
 ## Work Log
+
+### 08/28/2025
+- Finished the ashtray holder 1.0 and printed it. I was a little bit tight in the width, and long in the length. My bolt holes also weren't all that exact. 
+- I decided to use M3 bolts directly into the PLA. Should be tight enough, especially becasue the screen kind of rests on the ashtray itself
+- Made changes and have V 2.0 printing right now at the lab.
+
+### 08/27/2025
+- Started designing the ashtray holder for the screen
 
 ### 08/06/2025:
 - I Think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world
