@@ -12,6 +12,7 @@ tags: [electronics, classic-car, modernization]
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [08/29/2025](#08292025)
     - [08/28/2025](#08282025)
     - [08/27/2025](#08272025)
     - [08/06/2025:](#08062025)
@@ -45,10 +46,30 @@ tags: [electronics, classic-car, modernization]
 
 ## Work Log
 
+
+### 08/29/2025
+- came up with a screen holder print I'm pretty proud of. I don't think I'll need the securing bolts after all
+- Started looking at the perf board layout, it's a lot to wrap your head around. Have to be super methodical, there is a lot going on. 
+- Here's my pin out from the ESP:
+  - MOSI → GPIO23
+  - SCLK → GPIO18
+  - CS (chip select) → GPIO5 (can be any GPIO)
+  - DC (data/command) → GPIO16 (any GPIO)
+  - RST (reset) → GPIO17 (any GPIO)
+  - BLK/LED (backlight) → 5V from buck converter
+  - TFT GND -> MOSFET Gate, pin 25
+  - TX to CAN -> 21
+  - RX to CAN -> 22
+  - In from LDR -> 32
+- Additional considerations:
+  - Need resistor between the LDR and ground to adjust sensitivity
+  - Need resistor between PWM pin and gate of mosfet to not blow stuff up
+
 ### 08/28/2025
 - Finished the ashtray holder 1.0 and printed it. I was a little bit tight in the width, and long in the length. My bolt holes also weren't all that exact. 
 - I decided to use M3 bolts directly into the PLA. Should be tight enough, especially becasue the screen kind of rests on the ashtray itself
 - Made changes and have V 2.0 printing right now at the lab.
+- Downloaded KiCAD. I think it's overkill for this project and I'll probably just use perf board, but I do love the sexyness of a real PCB. I kinda just want to create an MVP that works, and then I'll maybe make it nice. 
 
 ### 08/27/2025
 - Started designing the ashtray holder for the screen
@@ -174,15 +195,24 @@ tags: [electronics, classic-car, modernization]
 - Further Calibrating the TMP36
 
 ## Nodes:
-- Broker:
-  - Overview: Drives display, SHT31 (inside car temp), IMU, voltage, light sensor to autodim display based on ambient light
+- Screen Controller:
+  - Overview: Drives display, connected to the LDR for auto dimming, has a CAN transciever
+    | Sensor | From ESP32 | To ESP32 |
+    ---------|---------|-------------|
+    | light sensor | ??? | ??? |
+    |Display| SO MANY | ????|
+
+- In center console:
+  - Overview: Measurement ESP32 that lives in the ashtray or somewhere inside the car for interior measurement
+  - Measures: Inside temp and humidity, IMU, Battery Voltage, trans temp if it'll reach
+  - Questions: Can we use the same buck converter and TVS to power two ESP32s?
     | Sensor | From ESP32 | To ESP32 |
     ---------|---------|-------------|
     | SHT31 | pwr,grnd | SDA/SCLK|
-    | light sensor | ??? | ??? |
-    |Display| SO MANY | ????|
     | IMU | is it I2C? | ?????|
     |Voltage | voltage divider| ???|
+
+
 
 - Engine Bay:
   - Overview: Oil temp at pan, fan PWM, radiator temp, SHT31 (Ambient temp/humidity)
@@ -196,18 +226,9 @@ tags: [electronics, classic-car, modernization]
     | Mosfet| pull down resistor, PWM| None
 
 - Trunk:
-  - Overview: Back up camera, shows how far you are from whatever is behind you
+  - Overview: Back up camera, shows how far you are from whatever is behind you, run a temp sensor down to the diff
   - Sensor: LiDAR backup
   | Sensor | From C3 | To C3 |
   --------|---------|-------
   | Backup camera | I2C, UART | ???? |
 
-- Undercar (?):
-  - Overview: Largely optional, could be nice for diff temp, vehicle speed, trans temp, PWM of trans fan
-  - Sensors: 2x TMP36, hall effect
-      | Sensor | From C3 | To C3 |
-    ---------|---------|---------
-    | TMP36 | pwr, grnd | Analog in|
-    | TMP36 | pwr, grnd | Analog in|
-    | SHT31 | pwr,grnd | SDA/SCLK|
-    | Mosfet| pull down resistor, PWM| None
