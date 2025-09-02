@@ -1,1 +1,4 @@
 algo/
+
+# Keep Way-Backburner.md local only (not tracked in git)
+docs/general/Way-Backburner.md

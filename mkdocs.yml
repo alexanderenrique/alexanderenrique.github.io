@@ -65,7 +65,6 @@ nav:
   - General:
     - Overview: general/index.md
     - Today I Learned: general/Today-I-Learned.md
-    - Way Backburner: general/Way-Backburner.md
 
 # Plugins
 plugins:

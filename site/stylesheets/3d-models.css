@@ -1,0 +1,46 @@
+/* 3D Models Page Styling */
+
+/* Standard image sizes for 3D renderings */
+.model-image {
+    max-width: 400px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin: 10px 0;
+}
+
+/* Thumbnail version for smaller displays */
+.model-image-thumb {
+    max-width: 200px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .model-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Download button styling */
+.stl-download {
+    display: inline-block;
+    background: #3f51b5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: background 0.3s;
+}
+
+.stl-download:hover {
+    background: #303f9f;
+    text-decoration: none;
+    color: white;
+}

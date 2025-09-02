@@ -11,6 +11,9 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 08/29/2025
+- You can use an ESP32 C3 with CAN, you just need a module that goes from SPI to CAN. Lots of these modules already exist and hace the transmitter built in. 
+
 ### 08/28/2025
 - Temportary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one infront of my buck converter in my display
 
