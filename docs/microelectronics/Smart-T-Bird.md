@@ -12,6 +12,10 @@ tags: [electronics, classic-car, modernization]
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [09/07/2025](#09072025)
+    - [09/3/2025](#0932025)
+    - [09/2/2025](#0922025)
+    - [08/31/2025](#08312025)
     - [08/29/2025](#08292025)
     - [08/28/2025](#08282025)
     - [08/27/2025](#08272025)
@@ -45,6 +49,30 @@ tags: [electronics, classic-car, modernization]
 
 
 ## Work Log
+
+### 09/07/2025
+- I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would re boot
+- I got it working again, learned my lesson to make incremental changes instead of everything at once
+- Made the UI nicer, it is displaying and updating the real time values as it should now
+
+
+### 09/3/2025
+- completely reorganized the project space, created different nodes that make more sense
+- Wrote the code for a central node and the display node
+- Wrote some basic UI stuff. Getting the screen set back up was a mission, something was lost in translation, I had to remember all the user set up stuff for the screen
+- And the real trick was setting the rotation on the screen correctly, it get totally scrambled without the right orientation. 
+- Decided that the central node will do do 3 things, measure voltage, IMU, and temp/humidity.
+
+### 09/2/2025
+- got the right transistors, and got the screen auto dim working!
+- Played with a ton of different resistor values. Resistors to give the LDR the correct range, resistors to keep the BJTs happy, series resistors to keep the screen from flickering, etc. Lots going on.
+- Tried all kinds of things to reduce the flicker, but what I learned is that as long as the background isn't white, the flicker is imperceptible on the other colors.
+- I targeted 50,100,and 200 mA to the display. I could definitely make it dimmer, but the subtle flicker on white never went away. 
+
+### 08/31/2025
+- Tried to come up with the breadboard version of the screen central hub, it was a challenge!
+- The resistor between the diode and ground really is necessary to get it to read properly
+- I don't have the right transistors to build the circuit, I need some PNP transistors. And it's crazy that you use an NPN to trigger a PNP to make sure that the PNP is properly grounded. And there's math and resistors everywhere. 
 
 
 ### 08/29/2025
