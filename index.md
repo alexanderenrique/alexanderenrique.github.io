@@ -8,7 +8,7 @@ title: Welcome to Bits and Bolts
   
   <!-- Version Counter - Shows when this version was built -->
   <div class="version-counter">
-    <small>🚀 Built: {{ site.time | date: "%m/%d %H:%M" }}</small>
+    <small>Built: {{ site.time | date: "%m/%d %H:%M" }}</small>
   </div>
   
   <div class="main-sections">

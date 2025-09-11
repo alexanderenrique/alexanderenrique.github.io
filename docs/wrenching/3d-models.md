@@ -21,18 +21,18 @@ Most parts are designed for:
 
 ---
 
-## Thunderbird Restoration Project
+## [[thunderbird-restoration]] Project
 
 ### Rear Ashtray Blank Off Plate
 <img src="../../assets/renderings/thunderbird-rear-ashtray-blankoff.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Custom blank off plate to replace the brittle rear ashtrays in the 1968 Thunderbird. Designed to just kind of cover the opening. I used 1/4" VHB tape to stick it to the interior sheet metal trim
+**Description**: Custom blank off plate to replace the brittle rear ashtrays in the 1968 Thunderbird. Designed to just kind of cover the opening. I used 1/4" VHB tape to stick it to the interior sheet metal trim - see [[thunderbird-restoration]]
 
 **STL File**: [Download STL](../../assets/models/thunderbird-rear-ashtray-blankoff.stl)
 
 **Material**: PLA/PETG  
 **Installation**: VHB tape mounting  
-**Status**: ✅ Completed and installed  
+**Status**: Completed and installed  
 **Date Added**: August 2024
 
 ---
@@ -40,13 +40,13 @@ Most parts are designed for:
 ### Windshield Wiper Knob
 <img src="../../assets/renderings/thunderbird-wiper-knob.png" alt="3D Preview" width="300" height="200" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Replacement for the broken windshield wiper control knob. Matches the original design and fits the existing shaft.
+**Description**: Replacement for the broken windshield wiper control knob. Matches the original design and fits the existing shaft. - see [[thunderbird-restoration]]
 
 **STL File**: [Download STL](../../assets/models/thunderbird-wiper-knob.stl)
 
 **Material**: PLA  
 **Installation**: Press fit onto wiper control shaft  
-**Status**: ✅ Completed and installed  
+**Status**: Completed and installed  
 **Date Added**: July 2024
 
 ---
@@ -54,13 +54,13 @@ Most parts are designed for:
 
 <img src="../../assets/renderings/thunderbird-cup-holder.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Custom cup holder insert that fits in the center console ashtray space. Designed to hold modern beverage containers. The center console isn't quite square, and neither is this, it does have a slight taper of the base to fit better. 
+**Description**: Custom cup holder insert that fits in the center console ashtray space. Designed to hold modern beverage containers. The center console isn't quite square, and neither is this, it does have a slight taper of the base to fit better. - see [[thunderbird-restoration]] 
 
-**STL File**: [Download STL](../assets/models/thunderbird-cup-holder.stl)
+**STL File**: [Download STL](../../assets/models/thunderbird-cup-holder.stl)
 
 **Material**: PLA is fine, I've had no trouble with PLA inside my car.  
 **Installation**: Sits in the center console, underneath the lockable arm rest 
-**Status**: ✅ Completed and installed  
+**Status**: Completed and installed  
 **Date Added**: August 2025
 
 ## Tooling
@@ -75,7 +75,7 @@ Most parts are designed for:
 
 **Material**: PETG recommended for heat resistance  
 **Installation**: Clamps onto v-band flange with standard clamp  
-**Status**: ✅ Tested and working  
+**Status**: Tested and working  
 **Date Added**: August 2024
 
 
@@ -93,7 +93,7 @@ Most parts are designed for:
 
 **Material**: High-temp PETG or similar heat-resistant filament  
 **Installation**: Bolts between stock header and slip-on using existing hardware  
-**Status**: ✅ Tested and working  
+**Status**: Tested and working  
 **Date Added**: July 2024
 
 ---

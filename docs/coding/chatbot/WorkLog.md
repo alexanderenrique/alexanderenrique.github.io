@@ -39,7 +39,7 @@ tags: [ai, work-log, automation]
     - Start with simple, vector search related questions, or simple metadata questions
     - Really see what it did each step of the way
 - Need to analyze each step of the process
-- using pydantic to enfore types. Make base model class, each one is a string, makes 100% sure that we never deviate
+- using pydantic to enfore types. Make base model class, each one is a string, makes 100% sure that we never deviate - see [[Today-I-Learned]] for pydantic learnings
 - Moving all this to a super computer, off the local computer
 - whever you added openAI calls, add the logfire call
 - might not need such fine grained metadata, if you have good query classification and bring back a ton of docs. Then you only have to worry about broader conepts like document type
@@ -53,7 +53,7 @@ tags: [ai, work-log, automation]
 ### 08/07/2025
 - so what I'm hearing from Sam is that I should just build whatever I want with the stuff she provided. I'm going to clone this into my own repo and just go hard on it, I'll push it into the other repo periodically, but I want to be on my own main branch and do what I want if this is going to be my project
 ### 07/22/2025
-- further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs "guides" there is too much overlap in the documents
+- further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs "guides" there is too much overlap in the documents - related to [[NEMO Merger]] metadata work
 - Also not sure about "Procedure" vs "Guide", 
 - Added document logging so we can see what we've processed so far
 - Proccessed 47 documents from local doc to vectorization and metadata, and it went way way faster than it has in the past. Took like 3-4 hours where in the past it took all night to only do half. Not sure if that is becasue of the upgrade to pydantic V2 or maybe doclin g got better. I don't remember explicitly upgrading anything so I'm not sure why this changed

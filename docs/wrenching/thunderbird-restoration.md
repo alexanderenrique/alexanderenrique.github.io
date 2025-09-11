@@ -12,10 +12,10 @@
 - Tire change kit
 - organize spare kit
 - securing liquids in trunk
-- leaking trans (New fittings, hose)
+- leaking trans (New fittings, hose have been ordered)
 - Vinyl wrap
 - Bonus:
-  - Adding speakers to the back
+  - Adding speakers to the back (ordered) - part of [[Smart-T-Bird]] project
   - Oil Pan with turbo bung
 
 
@@ -112,7 +112,7 @@
 - New wheels and tires
 - Speakers in the back
 - Wiring in Wideband O2 Sensor
-- Arduino project, adding sensors
+- Arduino project, adding sensors - see [[Smart-T-Bird]] for details
 
 ## 3D Models & STL Files
 
@@ -121,7 +121,7 @@ Custom 3D printed parts designed for this project:
 - **Rear Ashtray Blank Off Plate** - Custom blank off plate to replace brittle rear ashtrays
 - **Windshield Wiper Knob** - Replacement for broken windshield wiper control knob
 
-[View all 3D models and download STL files →](3d-models.md)
+[[3d-models]] - View all 3D models and download STL files
 
 ## Accomplishments
 - New ignition coil

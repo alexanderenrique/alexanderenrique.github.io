@@ -39,6 +39,7 @@ tags: [electronics, classic-car, modernization]
 ## Project Overview
 - I love me some data, micro electronics, and old cars so let's put them all together. 
 - My dream is to have temperature data, PWM control of fans, and a cool hidden display where I can see all the readouts and what everything is doing, and also manually override sensors if say I want to put a fan on full blast or whatever else
+- This project integrates with the [[thunderbird-restoration]] work
 
 
 ## Current Tasks

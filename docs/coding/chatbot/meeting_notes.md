@@ -8,7 +8,7 @@ tags: [ai, meeting-notes, automation]
 ### Meeting Notes:
 #### 08/07/2025
 - Sam has taken on undergrads, they seem text book oriented
-- Worked with them on simplified chunking and embedding, crawl4AI
+- Worked with them on simplified chunking and embedding, crawl4AI - related to [[WorkLog Bot]] development
 - Doclings hybrid chunker was all over the place
 - Best practices for chunking: 
 - How do we want to work together: 
