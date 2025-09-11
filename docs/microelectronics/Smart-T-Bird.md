@@ -30,6 +30,7 @@ tags: [electronics, classic-car, modernization]
     - [07/23/2025](#07232025)
     - [07/22/2025](#07222025)
   - [Road Map](#road-map)
+  - [General notes:](#general-notes)
   - [Scope of work:](#scope-of-work)
     - [Sensors and controllers I want:](#sensors-and-controllers-i-want)
   - [Done](#done)
@@ -44,7 +45,7 @@ tags: [electronics, classic-car, modernization]
 
 ## Current Tasks
 - Getting the CAN working
-- Think about the larger picture of nodes, what needs to go where. If we're using full fat ESP32 with CAN, maximizing the IO from each to minimize the numer of CAN wires
+- Think about the larger picture of nodes, what needs to go where. If we're using full fat ESP32 with CAN, maximizing the IO from each to minimize the number of CAN wires
 - Then we can think about the GUI, etc
 
 
@@ -52,7 +53,7 @@ tags: [electronics, classic-car, modernization]
 ## Work Log
 
 ### 09/07/2025
-- I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would re boot
+- I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would reboot
 - I got it working again, learned my lesson to make incremental changes instead of everything at once
 - Made the UI nicer, it is displaying and updating the real time values as it should now
 
@@ -60,9 +61,9 @@ tags: [electronics, classic-car, modernization]
 ### 09/3/2025
 - completely reorganized the project space, created different nodes that make more sense
 - Wrote the code for a central node and the display node
-- Wrote some basic UI stuff. Getting the screen set back up was a mission, something was lost in translation, I had to remember all the user set up stuff for the screen
-- And the real trick was setting the rotation on the screen correctly, it get totally scrambled without the right orientation. 
-- Decided that the central node will do do 3 things, measure voltage, IMU, and temp/humidity.
+- Wrote some basic UI stuff. Getting the screen set back up was a mission, something was lost in translation, I had to remember all the user setup stuff for the screen
+- And the real trick was setting the rotation on the screen correctly, it gets totally scrambled without the right orientation. 
+- Decided that the central node will do 3 things, measure voltage, IMU, and temp/humidity.
 
 ### 09/2/2025
 - got the right transistors, and got the screen auto dim working!
@@ -96,23 +97,23 @@ tags: [electronics, classic-car, modernization]
 
 ### 08/28/2025
 - Finished the ashtray holder 1.0 and printed it. I was a little bit tight in the width, and long in the length. My bolt holes also weren't all that exact. 
-- I decided to use M3 bolts directly into the PLA. Should be tight enough, especially becasue the screen kind of rests on the ashtray itself
+- I decided to use M3 bolts directly into the PLA. Should be tight enough, especially because the screen kind of rests on the ashtray itself
 - Made changes and have V 2.0 printing right now at the lab.
-- Downloaded KiCAD. I think it's overkill for this project and I'll probably just use perf board, but I do love the sexyness of a real PCB. I kinda just want to create an MVP that works, and then I'll maybe make it nice. 
+- Downloaded KiCAD. I think it's overkill for this project and I'll probably just use perf board, but I do love the sexiness of a real PCB. I kinda just want to create an MVP that works, and then I'll maybe make it nice. 
 
 ### 08/27/2025
 - Started designing the ashtray holder for the screen
 
 ### 08/06/2025:
-- I Think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world
+- I think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world
 - I learned you must use a full blown ESP32 if you want to use can bus, the C3 and S3 don't natively speak canbus. 
-- And if you want to use CAN, you need a little break out board. Chat elegantly explained it as a walkie talkie. The ESPs already can communicate but they need the breakout board to send the message correctly. CAN does the whole high/low thing that the ESP can't drive
+- And if you want to use CAN, you need a little breakout board. Chat elegantly explained it as a walkie talkie. The ESPs already can communicate but they need the breakout board to send the message correctly. CAN does the whole high/low thing that the ESP can't drive
 
 ### 08/2/2025:
-- still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antennae thing.
-- uploaded the same SHT sketch to an esp32 (regular) and printed the wifi strength and in th kitchen right next to the AP the signal is like -68 dbm which isn't great, and then in the room it's -90 or less which is just terrible, could definitely contribute to the connectivity
--  added lines in the softAP that explicitly sets the max power at 20W, and makes sure the wifi doesn't sleep or go into low pwower mode
--  Considering either going to CAN Bus, which would make me a bit sad, or getting a stronger mini-AP, like an infrastructre spec one. 
+- still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antenna thing.
+- uploaded the same SHT sketch to an esp32 (regular) and printed the wifi strength and in the kitchen right next to the AP the signal is like -68 dbm which isn't great, and then in the room it's -90 or less which is just terrible, could definitely contribute to the connectivity
+-  added lines in the softAP that explicitly sets the max power at 20W, and makes sure the wifi doesn't sleep or go into low power mode
+-  Considering either going to CAN Bus, which would make me a bit sad, or getting a stronger mini-AP, like an infrastructure spec one. 
 -  Still trying to figure out if it's really a wifi strength thing or what. But I do feel like I'm asking a lot of the one little ESP to both drive a screen, touch polling, and set up a wifi network. 
 -  
 
@@ -123,14 +124,14 @@ tags: [electronics, classic-car, modernization]
 - I just want it to connect right away when powered up, and it doesn't matter if either lost power at any point or anything
 - Before these changes, it might take 2-3 reboots to connect
 ### 07/30/2025:
-- the TMP36 sensor seems pretty dang innacurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi
+- the TMP36 sensor seems pretty dang inaccurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi
 - So I added an offset but idk if it's linear. Should still be close enough for non-mission critical stuff
 - Also wrote code for an SHT sensor so I could measure office temperature, and further calibrate the TMP36
-- Might still use the SHT31 code fo
+- Might still use the SHT31 code for
 
 ### 07/29/2025:
-- wired upt the TMP36 sensor, got it working easily enough
-- learned about how the envirnmental variables work in PlatformIO
+- wired up the TMP36 sensor, got it working easily enough
+- learned about how the environmental variables work in PlatformIO
 - Tried learning about how to structure much more complicated programs, there'll be a lot of nodes with different environments, and main.cpp files
 
 ### 07/28/2025:
@@ -145,7 +146,7 @@ tags: [electronics, classic-car, modernization]
 
 ### 07/24/2025
 - Got the touch screen working, but the component that integrates to LVGL is still not working. Not sure how those are related
-- It works when I set the Baug rate to 96000 but not the default 115200, but I may just try that again
+- It works when I set the baud rate to 96000 but not the default 115200, but I may just try that again
 - LVGL and the regular touch out are related but different somehow. Like there is different code for LVGL to recognize a touch
 - reducing the touch sensitivity to 100 from 600 could be a good thing, really light touch is kind of nice
 
@@ -177,7 +178,7 @@ tags: [electronics, classic-car, modernization]
 - Power and wiring from car
 - Planning sensor nodes, perfboard
 
-##General notes:
+## General notes:
 - Screen pinout, from 1-X
   - VCC
   - GND

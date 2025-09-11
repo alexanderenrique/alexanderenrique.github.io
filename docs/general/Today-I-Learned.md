@@ -12,16 +12,16 @@ I'm learning just all the time and I think it's cool to look back and see what y
 ## Learnings
 
 ### 09/10/2025
-- When you manually start a google VM, you are using one set of permissions. When you cloud scheduler starts it using the SA (Service Account) it has a different set of permissions. And he SA needs to have the priveledges to say get credentials from GCP
+- When you manually start a google VM, you are using one set of permissions. When you cloud scheduler starts it using the SA (Service Account) it has a different set of permissions. And the SA needs to have the privileges to say get credentials from GCP
 - Also learned that at Harvard, if you work more than you job, you can get paid up to 1.25X your salary. Gonna be using that in the future.
 
 ### 09/09/2025
 - How to download and install modules from a tar.gz. file. Still don't really understand what they are, but there's tar balls and such?
-- You really do need to us Oath to schedule vm cron jobs in google cloud scheduler
+- You really do need to use OAuth to schedule vm cron jobs in google cloud scheduler
   - sub bullet point, sometimes you need to slow down and use your brain
 
 ### 09/08/2025
-- TSL over MQTT and how the CA credentialing works. Security will always be a whole thing on computers huh?
+- TLS over MQTT and how the CA credentialing works. Security will always be a whole thing on computers huh?
 - Learned about public and private I.P. addresses. Just because you can ping an address, doesn't mean you can access a specific port (like 8883 for SSL MQTT or 1833 for not-secure MQTT)
 
 ### 09/4/2025
@@ -40,13 +40,13 @@ I'm learning just all the time and I think it's cool to look back and see what y
 ### 08/30/2025
 - Seems obvious now, but you can't just use any old MOSFET or transistor for high side or low side switching. 
 - The LED screen I have only has control over LED power, so I'll have to PWM the high side. No control over ground - used in [[Smart-T-Bird]] display control
-- Learned abut BJTs vs MOSFETs. So many different kinds and types of doping and everything else
+- Learned about BJTs vs MOSFETs. So many different kinds and types of doping and everything else
 
 ### 08/29/2025
 - You can use an ESP32 C3 with CAN, you just need a module that goes from SPI to CAN. Lots of these modules already exist and have the transmitter built in. - used in [[Smart-T-Bird]] CAN bus communication 
 
 ### 08/28/2025
-- Temportary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one infront of my buck converter in my display - used in [[Smart-T-Bird]] power management
+- Temporary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one in front of my buck converter in my display - used in [[Smart-T-Bird]] power management
 
 ### 08/27/2025
 - Google cloud shell and how to set up cron jobs to turn the VM on an off. No need for it to stay on all the time just to run a job a couple times a day! - used in [[NEMO Merger]] automation
@@ -57,7 +57,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 
 #### 08/23/2025
-- Spanish Moss does not natively grow in California, it's acutally a lichen called lace lichen, and it's the state lichen of California. The more you know!
+- Spanish Moss does not natively grow in California, it's actually a lichen called lace lichen, and it's the state lichen of California. The more you know!
 
 #### 08/20/2025
 - mkdocs is the truth, started learning about how to lay out a blog using it instead of github pages themes - used to build this [[index]] site
@@ -70,39 +70,39 @@ I'm learning just all the time and I think it's cool to look back and see what y
   
 
 #### 08/05/2025
-- the google Oath doesn't work so well with a headless set up like in cron job. It needs to constantly open new oprts or whatever on the local host for authentication. It would work for a couple hours and then silently fail
+- the google OAuth doesn't work so well with a headless set up like in cron job. It needs to constantly open new ports or whatever on the local host for authentication. It would work for a couple hours and then silently fail
 - Service accounts are the way to go for Cron Jobs
 
 #### 08/05/2025
-- Messing with the cron job I feel like I have a much better grasp of interacting with the terminal and using nano to modify files. I don't know many commands but definiely the common useful ones. 
+- Messing with the cron job I feel like I have a much better grasp of interacting with the terminal and using nano to modify files. I don't know many commands but definitely the common useful ones. 
 
 #### 08/04/2025
 - there are limits to the max power your wifi is allowed to have, set by the FCC. Basically if any one person has too powerful a device it can mess things up for everyone
-- You can buy ESP32s without the integrated wifi antenna, and plug your own antennae in.
+- You can buy ESP32s without the integrated wifi antenna, and plug your own antennas in.
 - The C3s just have totally horrible antenna, they don't connect for shit
 - The programming language GO, I wonder if it could help me speed up some algo stuff. 
 - cronjobs, set up my first one on the collector computer
 
 #### 07/30/2025
-- learned about serial communications, man that stuff is cool. Synchronous, a synchronous, UART, I2C, SPI. It's like you use it and kinda know what's happening but cool to learn it
+- learned about serial communications, man that stuff is cool. Synchronous, asynchronous, UART, I2C, SPI. It's like you use it and kinda know what's happening but cool to learn it
   
 #### 07/28/2025
 - MQTT and how that works, kinda
 - Started learning about PRAM and the best way to drive displays
 - Sometimes deleting a token and reauthenticating is the way to go
-- Manually advancing the LVGL clock will solce your problems
+- Manually advancing the LVGL clock will solve your problems
 - Started learning about Data Structures and algorithms. Learned about "bigO" and the complexity of running nested loops, like how that increases exponentially
-- Kinda started on recursive algorithms but those my my head in a knot
+- Kinda started on recursive algorithms but those tie my head in a knot
 
 #### 07/25/2025
 - reflecting on a past learning, I got all mad at the higher ups because they weren't doing shit, but sometimes the higher ups are also fed up because their higher ups aren't doing shit. So while it's important for your voice to be heard, maybe give them the benefit of the doubt. Maybe. 
 
 #### 07/24/2025
-- learned about glancing angle xray spectroscopy for very thin films
+- learned about glancing angle x-ray spectroscopy for very thin films
 
 
 #### 07/23/2025
-- in PlatformIO and C/C++ header files are a lot like modules in python. Or like utils so that's where you put stuf you want to use globally
+- in PlatformIO and C/C++ header files are a lot like modules in python. Or like utils so that's where you put stuff you want to use globally
 - I think I learned about build flags, but not sure I get it yet
 - if there's errors in your IDE and lots of red lines it probably means your shit is broken
 - learned about MISO, MOSI, IRQ, and general SPI interface stuff
@@ -123,7 +123,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
   - Air hammers work ok, not as well as you'd want. Maybe mine just isn't that strong
 
 #### 07/19/2025
-- You can bend the hell out of a control arm with a hydralic press. You can't just push the center of a bushing as hard as you can and hope it pops out
+- You can bend the hell out of a control arm with a hydraulic press. You can't just push the center of a bushing as hard as you can and hope it pops out
 - MOSI/MISO. Master in slave out, slave out master in. 
 - About the stack of code you need to go from arduino IDE to a proper gui
   - It's the driver for the screen, then a graphics package (like LVGL), and then a GUI editor

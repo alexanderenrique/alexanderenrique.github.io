@@ -1,7 +1,7 @@
 # 1968 Thunderbird Work Log
 
 ## Project Overview
-- I bought this T-Bird froma buy in Watsonville, CA. Fired right up, had basically straight pipes with glass pack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have revers
+- I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse
 
 ## Current Tasks
 - Getting an alignment with all my new steering parts
@@ -22,7 +22,10 @@
 
 ## Work Log
 
-### 08/25/2024
+### 09/09/2025
+- Pulled the fittings for the trans cooler, turns out they are 1/4" NPSM, not 1/8 NPSM, so I bough a different adapter to go from 1/4" NPSM to -6AN to fit my 90 degree fitting
+
+### 08/25/2025
 - printed another blank off plate, used the last of four different spools of white
 
 ### 08/24/2025
@@ -31,13 +34,13 @@
 ### 08/20/2025
 - After a bit of time away, I received the rubber isolators and installed them. Behold, no more terrible rattle. 
 - I did notice that the "top" spring clip on both brake calipers was broken. I thought it was a feature the last few times I removed it, turns out just straight broken. I'll replace them some day maybe. I left the passenger side, and just removed the driver side to avoid it rattling around loose. I realized it on the second side, the drivers side
-- Measured up the rear speaker area, the hole is somthing like 5" square. Really unsure how it mounts
+- Measured up the rear speaker area, the hole is something like 5" square. Really unsure how it mounts
 - removed the rear ashtrays, and added some foam strips to take up any slack between the metal and the bolstering that could cause a rattle
 - I do like the ashtrays, but the plastic they are made out of is just so brittle and I don't think it's worth it to try and fix it. I'll design and 3D print a blank off plate so it looks complete
 
 ### 08/13/2025
 - Sometimes you just have to step away for a bit. It was the brakes!
-- I did a test where I hit a bunch of bumps while very lightly hitting the brakes, not a rattle, certainley not the loose change sound
+- I did a test where I hit a bunch of bumps while very lightly hitting the brakes, not a rattle, certainly not the loose change sound
 - I did some googling and it looks like I'm totally missing these rubber isolators that go on the slide pins. They weren't there when I took the brakes apart
 - I can't wait for them to arrive, about a week though.
 
@@ -45,25 +48,25 @@
 - Put everything back together, big day. 
 - It's all nice and tight in the suspension, but the rattle is still there!! I'm not sure what's causing it but I'll get to the bottom of it
 - Double checked the shocks and everything, current though is that something is just loose inside the body work
-- I also learned the parking break disengage is vacuum operated, so now that needs to be done manually if you want to remove the parking brake.
+- I also learned the parking brake disengagement is vacuum operated, so now that needs to be done manually if you want to remove the parking brake.
 - The fucking rattle just can't be suspension related, there must be some loose bolts or something in there
 
 ### 08/08/2025
 - Started putting everything back on the car! This is the good bit where the painted shiny stuff goes together
 - Everything went smooth, had to do some work jogging my memory on how the sway bar went in and how the brakes go together
-- The drivers side *crushed* LCA definitely has more play than the other side, but I was able to tighten the bolt to the point where it grabbed the inner part of the bushing and will hold. 
-- Did my best to alight the UCAs where they were before, and keep the tie rods to the correct length. 
-- The strut rods are interesting becasue it seems like they aren't really meant to be adjusted. Often you have nuts on either side of the bushing to move the rod forward and back relative to the car, but this one doesn't have that. 
-- The strut rods don't line up with the LCA until you tigthen them down and pull them forward
+- The driver's side *crushed* LCA definitely has more play than the other side, but I was able to tighten the bolt to the point where it grabbed the inner part of the bushing and will hold. 
+- Did my best to align the UCAs where they were before, and keep the tie rods to the correct length. 
+- The strut rods are interesting because it seems like they aren't really meant to be adjusted. Often you have nuts on either side of the bushing to move the rod forward and back relative to the car, but this one doesn't have that. 
+- The strut rods don't line up with the LCA until you tighten them down and pull them forward
 - I'm refraining from tightening any bushings until it's sitting at ride height
 
 ### 08/07/2025
-- Sand balsted the tie rod adjusting sleeves and painted them, they look nice
+- Sand blasted the tie rod adjusting sleeves and painted them, they look nice
 
 ### 08/06/2025
 - Sand blasted and painted the strut rods. 
 - Removed the tie rod ends, they were super easy to unthread which was surprising
-- With the bare minimum of inner tie rods installed, I gave the rack a wiggle and everything else feels pretty gand tight. There is a little bit of lash in the steering box, but really quite good on the old car scale
+- With the bare minimum of inner tie rods installed, I gave the rack a wiggle and everything else feels pretty good and tight. There is a little bit of lash in the steering box, but really quite good on the old car scale
 - Not finding any good replacements for the bump stops but I don't think I'll let that hold me back, just gonna send it. They can be added later if I really want
 
 
@@ -71,7 +74,7 @@
 - Started pressing in bushings, very satisfying
 - even my wonky arm accepted the bushing with a little violence
 - removed the strut rods, and the sway bar came out with it naturally. They're real rusty
-- I'm missing some bump stops on the strut rod on one side, and I desproyed the one ot the UCA ball joint bolt accidentally
+- I'm missing some bump stops on the strut rod on one side, and I destroyed the one on the UCA ball joint bolt accidentally
   - I guess I wonder how necessary they are? I mean they were installed from factory so they must be a good-ish idea
   - not sure if I can source replacements
 
@@ -81,10 +84,10 @@
 
 ### 07/24/2025
 - Continued sandblasting the control arms, painted them black
-- Recieved the strut rod bushings
+- Received the strut rod bushings
 
 ### 07/19/2025
-- started working on sand blasting and pushing the bushings outs. It went bad, I bent the fuck out of one of the arms with a hydraulic press. I felt bad. 
+- started working on sand blasting and pushing the bushings out. It went bad, I bent the fuck out of one of the arms with a hydraulic press. I felt bad. 
 - I fixed the hydraulic press too, just to mess my parts up
 - Sand blasting went fine, the knuckles turned out really nice, and I just love cleaning stuff up on the sand blaster
 
@@ -125,7 +128,7 @@ Custom 3D printed parts designed for this project:
 
 ## Accomplishments
 - New ignition coil
-- Fixed winshield wiper knob with 3D printed version
+- Fixed windshield wiper knob with 3D printed version
 - New windshield wipers
 - Blower motor and controls working
 - Turn signal bulb out in dash
@@ -163,5 +166,5 @@ Custom 3D printed parts designed for this project:
 - Make the shifter linkage work better
 - Weld in O2 sensor bung
 - rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
-- Adding vibration dampeners to brake calibers
+- Adding vibration dampeners to brake calipers
 - 3D printed blank off for rear ashtrays
