@@ -11,19 +11,37 @@ edit_uri: edit/main/docs/
 # Theme
 theme:
   name: material
+  font:
+    text: merriweather
+    code: merriweather
+    heading: merriweather
+    monospace: merriweather
+    weights: [400, 700, 900]
+    styles: [normal, italic]
+
+  icon:
+    logo: fontawesome/solid/wrench
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+
   palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
+    ## Dark mode
+    - scheme: slate
+      primary: green
+      accent: deep purple
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
+
+    ## Light mode
+    - scheme: standard
+      primary: green
+      accent: deep purple
       toggle:
         icon: material/toggle-switch-off-outline
         name: Switch to light mode
+
   features:
     - navigation.tabs
     - navigation.sections
@@ -34,10 +52,7 @@ theme:
     - content.code.copy
     - content.code.annotate
     - toc.integrate
-  icon:
-    repo: fontawesome/brands/github
-    edit: material/pencil
-    view: material/eye
+
 
 # Custom CSS to hide TOC
 extra_css:

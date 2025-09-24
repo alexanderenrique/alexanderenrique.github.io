@@ -32,8 +32,7 @@ Most parts are designed for:
 
 **Material**: PLA/PETG  
 **Installation**: VHB tape mounting  
-**Status**: Completed and installed  
-**Date Added**: August 2024
+**Status**: Completed and installed
 
 ---
 
@@ -46,8 +45,7 @@ Most parts are designed for:
 
 **Material**: PLA  
 **Installation**: Press fit onto wiper control shaft  
-**Status**: Completed and installed  
-**Date Added**: July 2024
+**Status**: Completed and installed
 
 ---
 ### Center Console Cup Holder
@@ -60,25 +58,21 @@ Most parts are designed for:
 
 **Material**: PLA is fine, I've had no trouble with PLA inside my car.  
 **Installation**: Sits in the center console, underneath the lockable arm rest 
-**Status**: Completed and installed  
-**Date Added**: August 2025
+**Status**: Completed and installed
 
 ## Tooling
 
 ### 2.5" v-band cap
 
-<img src="../../assets/renderings/vband-25-cap.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="../../assets/renderings/male-vband-25-cap.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **Description**: A **male** cap designed to fit 2.5" v-band flanges for purge welding. When welding stainless steel or other materials that require back-purging with inert gas, this cap creates a seal against the v-band flange. Includes a small port for gas outlet. The flow port is the decimal of the 2.5 on the face of the flange. I thought that was pretty clever. I designed this and never really tested it, not a big purge welding guy, just never really have the need. 
 
 **STL File**: [Download STL](../../assets/models/male-vband-25-cap.stl)
 
-**Material**: PETG recommended for heat resistance  
+**Material**: You'll want to keep this far from your weld, lest it melt, but I guess you could use some higher temp filament. I used PLA. 
 **Installation**: Clamps onto v-band flange with standard clamp  
 **Status**: Tested and working  
-**Date Added**: August 2024
-
-
 ---
 
 ## 2002 Yamaha FZ-1
@@ -87,14 +81,13 @@ Most parts are designed for:
 
 <img src="../../assets/renderings/FZ1-yoshimura-rs3-flange-adapter.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: This one will probably get me a cease and desist but whatever. It's a flange to adapt a 2.5" exhaust pipe, like say a midpipe on an FZ1, to the 3 bolt flange found on a Yoshimura RS3 muffler. You can send it to your favorite laser cutting service and they'll cut you one out of stainless steel to then weld onto your exhaust.
+**Description**: This one will probably get me a cease and desist but whatever. It's a flange to adapt a 2.5" exhaust pipe, like say a midpipe on an FZ1, to the 3 bolt flange found on a Yoshimura RS3 muffler. You can send it to your favorite laser cutting service and they'll cut you one out of stainless steel to then weld onto your custom midpipe. I found that a 2.5" SS pipe with a few lengthwise cuts gives it just enough wiggle to slide over the header box outlet thing.
 
 **STL File**: [Download STL](../../assets/models/FZ1-yoshimura-rs3-flange-adapter.stl)
 
-**Material**: High-temp PETG or similar heat-resistant filament  
-**Installation**: Bolts between stock header and slip-on using existing hardware  
+**Material**: Test print it from whatever, but you'll need to get it laser cut from stainless steel. 
+**Installation**: Weld to your custom midpipe. 
 **Status**: Tested and working  
-**Date Added**: July 2024
 
 ---
 
@@ -120,4 +113,5 @@ If you need a specific part designed or have questions about any of these models
 
 ---
 
-*Last Updated: August 2024*
+*Last updated: {{ git_revision_date_localized }}*
+

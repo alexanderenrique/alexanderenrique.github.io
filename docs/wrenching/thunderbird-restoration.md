@@ -12,15 +12,39 @@
 - Tire change kit
 - organize spare kit
 - securing liquids in trunk
-- leaking trans (New fittings, hose have been ordered)
+- leaking trans (New fittings, hoses, trans pan)
 - Vinyl wrap
 - Bonus:
-  - Adding speakers to the back (ordered) - part of [[Smart-T-Bird]] project
+  - Adding speakers to the back
   - Oil Pan with turbo bung
 
 
 
 ## Work Log
+
+### 09/23/2025
+- reprinted the speaker cup, it's the right depth now
+- Dropped the t bird off at the alignment shop, should be done tomorrow
+- took the old steel tires to the tire shop and they dismounted them for me, now just a shit load of hours with the wire wheel and painting before the trip. Tires come in tomorrow.
+
+### 09/22/2025
+- Somehow the speaker cup that I made was too shallow. Not sure how that happened, I really measued with a straight edge and I thought I gave myself clearence. Went from 1.75" to 2.1" cup depth.
+
+### 09/21/2025
+- Rough day on the t-bird, making progress but certainley trying.
+- I tried the new NPSM fitting, and it threads in but it still has a slight taper! Like 40 thou but the factory is truly straight, I'm losing my mind with it. 
+- So I cut it down and then tried to slam the fitting in, but that's when it wouldn't go in even a little and I realized the taper issue
+- In my attempt to force it in, I kind of rolled the threads inside inside the trans and I couldn't get the old fitting in.
+- Started losing hope but I chipped away at it, kinda unrolled it with a pick and cleaned it out, but it came good eventually, super stressful I was kicking myself
+- Got it all back together
+- Swapped the trans pans, the bolts on the old trans pan were straigh loose! yeah that'd cause a leak, but whatever I still installed the new pan and gasket
+- Went in fine, does seem to be slightly deeper but not massively, I think it's fine. It'll take a lot of fluid to fill, at least 6 quarts came out.
+- Pulled the seats and started figuring out how I want to do the seat belts.
+- Not going to be easy, will be making some modifications to the seat trim, but I want to do it safely and not compromise that. 
+- While I was at it I went on a side quest to figure out why the seats don't slide. It's the massive 6x9s and the box, like I thought. 
+- So I tested my small speakers, and they will fit nicely underneath the seats. I'd rather have the seats slide than great speakers up front.
+- I might put the old 6x9s in the back if I can fit them somehow.
+- 
 
 ### 09/09/2025
 - Pulled the fittings for the trans cooler, turns out they are 1/4" NPSM, not 1/8 NPSM, so I bough a different adapter to go from 1/4" NPSM to -6AN to fit my 90 degree fitting

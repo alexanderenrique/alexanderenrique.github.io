@@ -12,6 +12,8 @@ tags: [electronics, classic-car, modernization]
   - [Project Overview](#project-overview)
   - [Current Tasks](#current-tasks)
   - [Work Log](#work-log)
+    - [09/22/2025](#09222025)
+    - [09/21/2025](#09212025)
     - [09/07/2025](#09072025)
     - [09/3/2025](#0932025)
     - [09/2/2025](#0922025)
@@ -51,6 +53,15 @@ tags: [electronics, classic-car, modernization]
 
 
 ## Work Log
+
+### 09/22/2025
+- I shouldn't have been soldering in the condition I was in, the soldering is hella wonky and I'm not sure if I put the dimming circuit in correctly
+- So I recreated the dimming circuit, and like really understood it. 
+- I transfered that to the perf board, can't be sure if it works yet.
+
+### 09/21/2025
+-Just sent it on the woldering of the breadboard, kinda wonky soldering, and I'm hoping that I moved the transistor dimming circuit over from the breadboard correctly
+
 
 ### 09/07/2025
 - I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would reboot
