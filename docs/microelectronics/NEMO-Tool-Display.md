@@ -14,11 +14,10 @@ tags: [electronics, esp32, mqtt, display]
 - Clean and professional looking display that can be mounted near tools
 
 ## Current Tasks
-- Set up ESP32 with TFT display
-- Implement basic MQTT client functionality
-- Design simple UI layout for tool status
-- Test communication with MQTT broker
-- Create mounting solution for display
+- Making sure the SSL is working properly. The not secure one is working.
+- Testing end to end, going from NEMO to ESP32 to display
+- Cleaning up the NEMO plugin so that its something that can be used by other people
+
 
 ## Components Needed
 - ESP32 development board
@@ -46,9 +45,25 @@ tags: [electronics, esp32, mqtt, display]
 
 ## Work Log
 
+### 09/29/2025
+- Don;t you love it when you leave something and come back to it and like magically you left it in a working state, and you're ready to go onto the next big thing?
+- Fired it up this morning and basically the MQTT was working nicely, and my broker was able to pick it up using 1883.
+- Created a new repo and project to make a python package, my first package!
+- Package install went well, I got it installed on a test project and it seems to work.
+
+### 09/26/2025
+-Working on this more, learning about the whol "redi" thing which acts an an intermediary between NEMO and the MQTT service. Messages are sent to the redi and consumed by the MQTT so you can't trust the redi logs, you need to look at the MQTT. Which is what matters anywas. 
+
+### 09/25/2025
+- Got something coded up as a plugin, starting the testing phase, getting it to work the way I want
+- Well I got this crazy error where eveytime you initialize Django, like two instances of the MQTT plugin happen and then they fight eachother over connection to the port. I couldn't get it resolved so I changed architecture
+- It's tough becasue in real life I don't think Django initializes that often but it feels like good practice to maybe keep it more seperate
+- 
+
 ### 09/23/2025
 - Per Mathieu's request, I'm changing to a django signals method so that I don't have MQTT dependencies directly in the code. It's more modular and easier to maintain.
 - I'll need to add a bare minimum django.signal, to then trigger the MQTT plugin message.
+- Clobbered my old work and started with the signals, the initial work always goes quickly and then it's testing it and getting what you want that takes a lot of fine tuning. 
 
 ### 09/21/2025
 - man have done a heap of work on this. Got the MQTT working properly in bakersfield
@@ -95,3 +110,9 @@ tags: [electronics, esp32, mqtt, display]
 - Set up MQTT client code
 - Design UI layout
 - Create prototype enclosure
+
+## DONE:
+- Set up ESP32 with TFT display
+- Implement basic MQTT client functionality
+- Design simple UI layout for tool status
+- Test communication with MQTT broker

@@ -4,8 +4,13 @@
 - I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse
 
 ## Current Tasks
-- Getting an alignment with all my new steering parts
-- New Wheels and Tires
+- 3D print passenger side blank off plate
+- design know for driver side sun shade so it doesn't rattle
+- window switches
+- Oil leak from front of engine
+- "knee breeze" cable
+- Switching between defrost and forward vent
+
 
 
 ## Before My Birthday Road Trip
@@ -21,6 +26,23 @@
 
 
 ## Work Log
+
+### 09/27-28/25
+- Not really an update, but I drove it 450 miles down and back from Pismo and it worked just about flawlessly. A few issues and things that I want to fix, but all in all really solid and I'm happy about it.
+- No obvious leaks from the trans but I still need to get under it and really check
+- Some small leak from the front of the engine, could be oil pan or fron main seal. 
+
+### 09/26/2025
+- Finished installing the passenger seat belt
+- Wired up the 6x9s that were previously under the front seats into the back. I was able to kind of wedge them betwwen the wheel arch and the back of the parcel shelf, and the magnet in the speaker kinda helps them stay. I guess they're in there
+
+### 09/25/2025
+- Went to the tire shop and got new tires, they absolutely fuck they look so sick. I put them on and I really like the steely look. But then I put the hubcaps on and it felt even more right
+- Finished mounging the seatbelf on the passenger side
+- Finished installing the speaker cups. They do sound worse than the 6x9s, but at least the seat move freely now the way they should. I think that's worth it to me. 
+
+### 09/24/2025
+- Got it back from the alignment shop, might just be my perception but it feels like genearlly way tighter. Not only pulling straight and steering straight, but less clunks.
 
 ### 09/23/2025
 - reprinted the speaker cup, it's the right depth now
@@ -192,3 +214,5 @@ Custom 3D printed parts designed for this project:
 - rebuilding the front steering and suspension. It was making an alarming clunk over bumps, and the lower ball joints were definitely cooked. 
 - Adding vibration dampeners to brake calipers
 - 3D printed blank off for rear ashtrays
+- Getting an alignment with all my new steering parts
+- New Wheels and Tires
