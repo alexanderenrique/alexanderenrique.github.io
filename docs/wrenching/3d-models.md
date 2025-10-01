@@ -21,12 +21,12 @@ Most parts are designed for:
 
 ---
 
-## [[thunderbird-restoration]] Project
+## thunderbird-restoration Project
 
 ### Rear Ashtray Blank Off Plate
 <img src="../../assets/renderings/thunderbird-rear-ashtray-blankoff.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Custom blank off plate to replace the brittle rear ashtrays in the 1968 Thunderbird. Designed to just kind of cover the opening. I used 1/4" VHB tape to stick it to the interior sheet metal trim - see [[thunderbird-restoration]]
+**Description**: Custom blank off plate to replace the brittle rear ashtrays in the 1968 Thunderbird. Designed to just kind of cover the opening. I used 1/4" VHB tape to stick it to the interior sheet metal trim - see thunderbird-restoration
 
 **STL File**: [Download STL](../../assets/models/thunderbird-rear-ashtray-blankoff.stl)
 
@@ -39,7 +39,7 @@ Most parts are designed for:
 ### Windshield Wiper Knob
 <img src="../../assets/renderings/thunderbird-wiper-knob.png" alt="3D Preview" width="300" height="200" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Replacement for the broken windshield wiper control knob. Matches the original design and fits the existing shaft. - see [[thunderbird-restoration]]
+**Description**: Replacement for the broken windshield wiper control knob. Matches the original design and fits the existing shaft. - see thunderbird-restoration
 
 **STL File**: [Download STL](../../assets/models/thunderbird-wiper-knob.stl)
 
@@ -52,7 +52,7 @@ Most parts are designed for:
 
 <img src="../../assets/renderings/thunderbird-cup-holder.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
-**Description**: Custom cup holder insert that fits in the center console ashtray space. Designed to hold modern beverage containers. The center console isn't quite square, and neither is this, it does have a slight taper of the base to fit better. - see [[thunderbird-restoration]] 
+**Description**: Custom cup holder insert that fits in the center console ashtray space. Designed to hold modern beverage containers. The center console isn't quite square, and neither is this, it does have a slight taper of the base to fit better. - see thunderbird-restoration 
 
 **STL File**: [Download STL](../../assets/models/thunderbird-cup-holder.stl)
 

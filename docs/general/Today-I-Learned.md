@@ -25,42 +25,42 @@ I'm learning just all the time and I think it's cool to look back and see what y
 - Learned about public and private I.P. addresses. Just because you can ping an address, doesn't mean you can access a specific port (like 8883 for SSL MQTT or 1833 for insecure MQTT)
 
 #### 09/04/2025
-- more about MQTT and how [[NEMO Merger]] can communicate almost instantly with the tool interlocks
+- more about MQTT and how NEMO Merger can communicate almost instantly with the tool interlocks
 - The NEMO API doesn't support any kind of filtering or pagination, if you ping it, it returns the full object
 
 #### 09/03/2025
-- Digital low pass filters, especially in terms of IMUs. You don't want all the jittery high frequency noise, so you can implement a low pass filter to just give you the real stuff - used in [[Smart-T-Bird]] project
+- Digital low pass filters, especially in terms of IMUs. You don't want all the jittery high frequency noise, so you can implement a low pass filter to just give you the real stuff - used in Smart-T-Bird project
 
 
 #### 09/02/2025
 - g forces in a passenger car without sticky tires is really pretty low I've been told, like less than 1g in acceleration, cornering, and braking
-- It takes a serious track or electric vehicle to get you over 1g, or a fighter jet or f1 car - relevant for [[Smart-T-Bird]] IMU sensors
-- grounding resistors for an LDR make a huge difference. Without the resistor, the LDR is basically always high, like maxed out. I think a 2K resistor ended up being the sweet spot. Almost all the way up - used in [[Smart-T-Bird]] auto-dimming display
+- It takes a serious track or electric vehicle to get you over 1g, or a fighter jet or f1 car - relevant for Smart-T-Bird IMU sensors
+- grounding resistors for an LDR make a huge difference. Without the resistor, the LDR is basically always high, like maxed out. I think a 2K resistor ended up being the sweet spot. Almost all the way up - used in Smart-T-Bird auto-dimming display
 
 #### 08/30/2025
 - Seems obvious now, but you can't just use any old MOSFET or transistor for high side or low side switching. 
-- The LED screen I have only has control over LED power, so I'll have to PWM the high side. No control over ground - used in [[Smart-T-Bird]] display control
+- The LED screen I have only has control over LED power, so I'll have to PWM the high side. No control over ground - used in Smart-T-Bird display control
 - Learned about BJTs vs MOSFETs. So many different kinds and types of doping and everything else
 
 #### 08/29/2025
-- You can use an ESP32 C3 with CAN, you just need a module that goes from SPI to CAN. Lots of these modules already exist and have the transmitter built in. - used in [[Smart-T-Bird]] CAN bus communication 
+- You can use an ESP32 C3 with CAN, you just need a module that goes from SPI to CAN. Lots of these modules already exist and have the transmitter built in. - used in Smart-T-Bird CAN bus communication 
 
 #### 08/28/2025
-- Temporary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one in front of my buck converter in my display - used in [[Smart-T-Bird]] power management
+- Temporary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one in front of my buck converter in my display - used in Smart-T-Bird power management
 
 #### 08/27/2025
-- Google cloud shell and how to set up cron jobs to turn the VM on an off. No need for it to stay on all the time just to run a job a couple times a day! - used in [[NEMO Merger]] automation
+- Google cloud shell and how to set up cron jobs to turn the VM on an off. No need for it to stay on all the time just to run a job a couple times a day! - used in NEMO Merger automation
 
 #### 08/24/2025
 - RTOS and how that works, like FreeRTOS. I don't think I need it for any of my current work, but cool to know it exists
-- Learned how to do GD&T in OnShape for the yoshimura flange project, to get it on the blog - see [[3d-models]] for the final design
+- Learned how to do GD&T in OnShape for the yoshimura flange project, to get it on the blog - see 3d-models for the final design
 
 
 #### 08/23/2025
 - Spanish Moss does not natively grow in California, it's actually a lichen called lace lichen, and it's the state lichen of California. The more you know!
 
 #### 08/20/2025
-- mkdocs is the truth, started learning about how to lay out a blog using it instead of github pages themes - used to build this [[index]] site
+- mkdocs is the truth, started learning about how to lay out a blog using it instead of github pages themes - used to build this index site
 
 #### 08/17/2025
 - working with github pages I started learning about layouts of webpages and .scss files
