@@ -46,7 +46,7 @@ tags: [electronics, esp32, mqtt, display]
 ## Work Log
 
 ### 09/29/2025
-- Don;t you love it when you leave something and come back to it and like magically you left it in a working state, and you're ready to go onto the next big thing?
+- Don't you love it when you leave something and come back to it and like magically you left it in a working state, and you're ready to go onto the next big thing?
 - Fired it up this morning and basically the MQTT was working nicely, and my broker was able to pick it up using 1883.
 - Created a new repo and project to make a python package, my first package!
 - Package install went well, I got it installed on a test project and it seems to work.
