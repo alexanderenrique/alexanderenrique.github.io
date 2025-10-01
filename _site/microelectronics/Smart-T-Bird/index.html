@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Thunderbird Electronics | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>Smart Thunderbird Electronics</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h2>Project Overview</h2>
+<ul>
+<li>I love me some data, micro electronics, and old cars so let's put them all together.</li>
+<li>My dream is to have temperature data, PWM control of fans, and a cool hidden display where I can see all the readouts and what everything is doing, and also manually override sensors if say I want to put a fan on full blast or whatever else</li>
+<li>This project integrates with the thunderbird-restoration work</li>
+</ul>
+<h2>Current Tasks</h2>
+<ul>
+<li>Getting the CAN working</li>
+<li>Think about the larger picture of nodes, what needs to go where. If we're using full fat ESP32 with CAN, maximizing the IO from each to minimize the number of CAN wires</li>
+<li>Then we can think about the GUI, etc</li>
+</ul>
+<h2>Work Log</h2>
+<h3>09/22/2025</h3>
+<ul>
+<li>I shouldn't have been soldering in the condition I was in, the soldering is hella wonky and I'm not sure if I put the dimming circuit in correctly</li>
+<li>So I recreated the dimming circuit, and like really understood it.</li>
+<li>I transfered that to the perf board, can't be sure if it works yet.</li>
+</ul>
+<h3>09/21/2025</h3>
+<p>-Just sent it on the woldering of the breadboard, kinda wonky soldering, and I'm hoping that I moved the transistor dimming circuit over from the breadboard correctly</p>
+<h3>09/07/2025</h3>
+<ul>
+<li>I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would reboot</li>
+<li>I got it working again, learned my lesson to make incremental changes instead of everything at once</li>
+<li>Made the UI nicer, it is displaying and updating the real time values as it should now</li>
+</ul>
+<h3>09/3/2025</h3>
+<ul>
+<li>completely reorganized the project space, created different nodes that make more sense</li>
+<li>Wrote the code for a central node and the display node</li>
+<li>Wrote some basic UI stuff. Getting the screen set back up was a mission, something was lost in translation, I had to remember all the user setup stuff for the screen</li>
+<li>And the real trick was setting the rotation on the screen correctly, it gets totally scrambled without the right orientation.</li>
+<li>Decided that the central node will do 3 things, measure voltage, IMU, and temp/humidity.</li>
+</ul>
+<h3>09/2/2025</h3>
+<ul>
+<li>got the right transistors, and got the screen auto dim working!</li>
+<li>Played with a ton of different resistor values. Resistors to give the LDR the correct range, resistors to keep the BJTs happy, series resistors to keep the screen from flickering, etc. Lots going on.</li>
+<li>Tried all kinds of things to reduce the flicker, but what I learned is that as long as the background isn't white, the flicker is imperceptible on the other colors.</li>
+<li>I targeted 50,100,and 200 mA to the display. I could definitely make it dimmer, but the subtle flicker on white never went away.</li>
+</ul>
+<h3>08/31/2025</h3>
+<ul>
+<li>Tried to come up with the breadboard version of the screen central hub, it was a challenge!</li>
+<li>The resistor between the diode and ground really is necessary to get it to read properly</li>
+<li>I don't have the right transistors to build the circuit, I need some PNP transistors. And it's crazy that you use an NPN to trigger a PNP to make sure that the PNP is properly grounded. And there's math and resistors everywhere.</li>
+</ul>
+<h3>08/29/2025</h3>
+<ul>
+<li>came up with a screen holder print I'm pretty proud of. I don't think I'll need the securing bolts after all</li>
+<li>Started looking at the perf board layout, it's a lot to wrap your head around. Have to be super methodical, there is a lot going on.</li>
+<li>Here's my pin out from the ESP:
+<ul>
+<li>MOSI → GPIO23</li>
+<li>SCLK → GPIO18</li>
+<li>CS (chip select) → GPIO5 (can be any GPIO)</li>
+<li>DC (data/command) → GPIO16 (any GPIO)</li>
+<li>RST (reset) → GPIO17 (any GPIO)</li>
+<li>BLK/LED (backlight) → 5V from buck converter</li>
+<li>TFT GND -&gt; MOSFET Gate, pin 25</li>
+<li>TX to CAN -&gt; 21</li>
+<li>RX to CAN -&gt; 22</li>
+<li>In from LDR -&gt; 32</li>
+</ul>
+</li>
+<li>Additional considerations:
+<ul>
+<li>Need resistor between the LDR and ground to adjust sensitivity</li>
+<li>Need resistor between PWM pin and gate of mosfet to not blow stuff up</li>
+</ul>
+</li>
+</ul>
+<h3>08/28/2025</h3>
+<ul>
+<li>Finished the ashtray holder 1.0 and printed it. I was a little bit tight in the width, and long in the length. My bolt holes also weren't all that exact.</li>
+<li>I decided to use M3 bolts directly into the PLA. Should be tight enough, especially because the screen kind of rests on the ashtray itself</li>
+<li>Made changes and have V 2.0 printing right now at the lab.</li>
+<li>Downloaded KiCAD. I think it's overkill for this project and I'll probably just use perf board, but I do love the sexiness of a real PCB. I kinda just want to create an MVP that works, and then I'll maybe make it nice.</li>
+</ul>
+<h3>08/27/2025</h3>
+<ul>
+<li>Started designing the ashtray holder for the screen</li>
+</ul>
+<h3>08/06/2025:</h3>
+<ul>
+<li>I think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world</li>
+<li>I learned you must use a full blown ESP32 if you want to use can bus, the C3 and S3 don't natively speak canbus.</li>
+<li>And if you want to use CAN, you need a little breakout board. Chat elegantly explained it as a walkie talkie. The ESPs already can communicate but they need the breakout board to send the message correctly. CAN does the whole high/low thing that the ESP can't drive</li>
+</ul>
+<h3>08/2/2025:</h3>
+<ul>
+<li>still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antenna thing.</li>
+<li>uploaded the same SHT sketch to an esp32 (regular) and printed the wifi strength and in the kitchen right next to the AP the signal is like -68 dbm which isn't great, and then in the room it's -90 or less which is just terrible, could definitely contribute to the connectivity</li>
+<li>added lines in the softAP that explicitly sets the max power at 20W, and makes sure the wifi doesn't sleep or go into low power mode</li>
+<li>Considering either going to CAN Bus, which would make me a bit sad, or getting a stronger mini-AP, like an infrastructure spec one.</li>
+<li>Still trying to figure out if it's really a wifi strength thing or what. But I do feel like I'm asking a lot of the one little ESP to both drive a screen, touch polling, and set up a wifi network.</li>
+<li></li>
+</ul>
+<h3>07/31/2025:</h3>
+<ul>
+<li>got the C3 working and talking to the broker pretty easily, but the connection isn't the most reliable. I did two things:</li>
+<li>Disabled the DCHP and assigned static IP addresses to the sensor nodes</li>
+<li>Set the wifi frequency so that it goes to the same frequency everytime</li>
+<li>I just want it to connect right away when powered up, and it doesn't matter if either lost power at any point or anything</li>
+<li>Before these changes, it might take 2-3 reboots to connect</li>
+</ul>
+<h3>07/30/2025:</h3>
+<ul>
+<li>the TMP36 sensor seems pretty dang inaccurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi</li>
+<li>So I added an offset but idk if it's linear. Should still be close enough for non-mission critical stuff</li>
+<li>Also wrote code for an SHT sensor so I could measure office temperature, and further calibrate the TMP36</li>
+<li>Might still use the SHT31 code for</li>
+</ul>
+<h3>07/29/2025:</h3>
+<ul>
+<li>wired up the TMP36 sensor, got it working easily enough</li>
+<li>learned about how the environmental variables work in PlatformIO</li>
+<li>Tried learning about how to structure much more complicated programs, there'll be a lot of nodes with different environments, and main.cpp files</li>
+</ul>
+<h3>07/28/2025:</h3>
+<ul>
+<li>HAHA I WON! got the touch working with LVGL, it was all about lvgl not &quot;moving forward&quot; in time like it wasn't actually polling the screen. Everything was configured correctly, good wiring, LVGL just wasn't checking the screen if you can believe it</li>
+</ul>
+<h3>07/25/2025:</h3>
+<ul>
+<li>Still battling the touch screen in LVGL, just seems like a set up issue</li>
+<li>I deleted any mention of the esp32-C3 from the ini file, don't want to confuse anything</li>
+<li>Copied the suggested lv_conf.h from lvgl folder, so it's much more fine grained control</li>
+<li>removed the &quot;build simple&quot; build flag from the .ini, to make sure it uses my lvgl_config.h</li>
+<li>Commented out another lv_conf.h file that I found in the .pio/lvgl folder. I don't want it getting confused with different conf files.</li>
+</ul>
+<h3>07/24/2025</h3>
+<ul>
+<li>Got the touch screen working, but the component that integrates to LVGL is still not working. Not sure how those are related</li>
+<li>It works when I set the baud rate to 96000 but not the default 115200, but I may just try that again</li>
+<li>LVGL and the regular touch out are related but different somehow. Like there is different code for LVGL to recognize a touch</li>
+<li>reducing the touch sensitivity to 100 from 600 could be a good thing, really light touch is kind of nice</li>
+</ul>
+<h3>07/23/2025</h3>
+<ul>
+<li>short guide to PlatformIO</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Folder/File</th>
+<th>Purpose/Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.pio/</td>
+<td>Build output, temporary files (auto-generated)</td>
+</tr>
+<tr>
+<td>include/</td>
+<td>Project-wide header files</td>
+</tr>
+<tr>
+<td>lib/</td>
+<td>Custom libraries</td>
+</tr>
+<tr>
+<td>src/</td>
+<td>Main source code</td>
+</tr>
+<tr>
+<td>test/</td>
+<td>Unit tests</td>
+</tr>
+<tr>
+<td>platformio.ini</td>
+<td>Project configuration</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>first day of PlatformIO and I got the LVGL demo working, albeit with no touch yet but I feel great about it, learned a ton</li>
+<li></li>
+</ul>
+<h3>07/22/2025</h3>
+<ul>
+<li>made a branch in Jeff's repo for my PlatformIO project, I think that is the way to go as opposed to Arduino CLI + VSCode. I just don't want to have to configure everything manually sounds scary</li>
+<li>Started playing with PlatformIO</li>
+</ul>
+<h2>Road Map</h2>
+<ul>
+<li>ESP32 C3 reading temperature</li>
+<li>Broker talking to the C3 node</li>
+<li>two way communication, turn LED on and off</li>
+<li>OTA updates</li>
+<li>advanced features like PWM</li>
+<li>Power and wiring from car</li>
+<li>Planning sensor nodes, perfboard</li>
+</ul>
+<h2>General notes:</h2>
+<ul>
+<li>Screen pinout, from 1-X
+<ul>
+<li>VCC</li>
+<li>GND</li>
+<li>CS</li>
+<li>Reset</li>
+<li>DC/RS</li>
+<li>MOSI</li>
+<li>SCK</li>
+<li>LED</li>
+<li>MISO</li>
+<li>T_ClK</li>
+<li>T_CS</li>
+<li>T_DIN</li>
+<li>T_DO</li>
+<li>T_IRQ</li>
+</ul>
+</li>
+</ul>
+<h2>Scope of work:</h2>
+<h3>Sensors and controllers I want:</h3>
+<ul>
+<li>Coolant temp and PWM fan control</li>
+<li>Trans cooler temp and PWM fan control</li>
+<li>Oil Temperature</li>
+<li>Battery voltage</li>
+<li>Display that is getting all the data wirelessly from the sensor network</li>
+<li>The sensor should autodim based on light conditions</li>
+<li>Bonues
+<ul>
+<li>Diff temp</li>
+<li>fuel pressure eventually</li>
+<li>drive shaft speed, could inform other parts of the project</li>
+<li>Back up camera using LIDAR</li>
+<li>Six axis IMU with a display for g forces and stuff</li>
+<li>figuring out how to log and or transmit this data somewhere</li>
+</ul>
+</li>
+</ul>
+<h2>Done</h2>
+<ul>
+<li>figuring out PlatformIO</li>
+<li>Creating a github repo (shout out jeff)</li>
+<li>wiring the touch screen</li>
+<li>getting basic touch working</li>
+<li>getting LVGL to read touch</li>
+<li>ESP32 reading temperature</li>
+<li>ESP32s talking to eachother using MQTT</li>
+<li>Broker ESP going with MQTT</li>
+<li>Most basic UI to display temp</li>
+<li>Getting the code working with the C3s</li>
+<li>Further Calibrating the TMP36</li>
+</ul>
+<h2>Nodes:</h2>
+<ul>
+<li>
+<p>Screen Controller:</p>
+<ul>
+<li>Overview: Drives display, connected to the LDR for auto dimming, has a CAN transciever
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>From ESP32</th>
+<th>To ESP32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>light sensor</td>
+<td>???</td>
+<td>???</td>
+</tr>
+<tr>
+<td>Display</td>
+<td>SO MANY</td>
+<td>????</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>In center console:</p>
+<ul>
+<li>Overview: Measurement ESP32 that lives in the ashtray or somewhere inside the car for interior measurement</li>
+<li>Measures: Inside temp and humidity, IMU, Battery Voltage, trans temp if it'll reach</li>
+<li>Questions: Can we use the same buck converter and TVS to power two ESP32s?
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>From ESP32</th>
+<th>To ESP32</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SHT31</td>
+<td>pwr,grnd</td>
+<td>SDA/SCLK</td>
+</tr>
+<tr>
+<td>IMU</td>
+<td>is it I2C?</td>
+<td>?????</td>
+</tr>
+<tr>
+<td>Voltage</td>
+<td>voltage divider</td>
+<td>???</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Engine Bay:</p>
+<ul>
+<li>
+<p>Overview: Oil temp at pan, fan PWM, radiator temp, SHT31 (Ambient temp/humidity)</p>
+</li>
+<li>
+<p>Sensors: 2x TMP36, SHT31,</p>
+<table>
+<thead>
+<tr>
+<th>Sensor</th>
+<th>From C3</th>
+<th>To C3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TMP36</td>
+<td>pwr, grnd</td>
+<td>Analog in</td>
+</tr>
+<tr>
+<td>TMP36</td>
+<td>pwr, grnd</td>
+<td>Analog in</td>
+</tr>
+<tr>
+<td>SHT31</td>
+<td>pwr,grnd</td>
+<td>SDA/SCLK</td>
+</tr>
+<tr>
+<td>Mosfet</td>
+<td>pull down resistor, PWM</td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>Trunk:</p>
+<ul>
+<li>Overview: Back up camera, shows how far you are from whatever is behind you, run a temp sensor down to the diff</li>
+<li>Sensor: LiDAR backup
+| Sensor | From C3 | To C3 |
+--------|---------|-------
+| Backup camera | I2C, UART | ???? |</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

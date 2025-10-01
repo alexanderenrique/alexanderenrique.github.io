@@ -1,29 +1,71 @@
-# bits_and_bolts
-Alex's Blog where he talks about cars, code, microelectronics, and sometimes using code to program microelectronics for his car. It's a cross disciplinary adventure.
+# Bits and Bolts Blog
 
-## Automatic Deployment
+A modern, stylish blog about wrenching, coding, and microelectronics projects built with [11ty](https://www.11ty.dev/).
 
-This site is automatically built and deployed using GitHub Actions. When you push changes to the `main` branch:
-
-1. **GitHub Actions** automatically triggers a build
-2. **MkDocs** builds your site from the `docs/` directory
-3. **GitHub Pages** deploys the built site to `https://alexanderenrique.github.io/bits_and_bolts/`
-
-### Local Development
-
-To test changes locally before pushing:
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
-pip install -r requirements.txt
+npm install
 
-# Serve locally
-mkdocs serve
+# Start development server
+npm run serve
 
-# Build locally
-mkdocs build
+# Build for production
+npm run build
 ```
 
-### Manual Deployment
+## 📁 Project Structure
 
-You can also manually trigger a deployment from the GitHub Actions tab in your repository.
+```
+src/
+├── _includes/          # Reusable components
+├── _layouts/           # Page templates
+│   ├── base.njk       # Main layout
+│   └── page.njk       # Content page layout
+├── assets/            # Static assets (images, models, etc.)
+├── styles/            # CSS files
+├── js/                # JavaScript files
+├── coding/            # Coding projects
+├── wrenching/         # Wrenching projects
+├── microelectronics/  # Electronics projects
+├── general/           # General content
+└── index.md           # Homepage
+```
+
+## 🎨 Features
+
+- **Modern Design**: Clean, responsive design with smooth animations
+- **Fast Performance**: Static site generation with 11ty
+- **Mobile First**: Responsive design that works on all devices
+- **Dark Mode**: Automatic dark mode support
+- **Code Highlighting**: Syntax highlighting for code blocks
+- **Interactive Elements**: Hover effects, smooth scrolling, and animations
+
+## 🛠️ Development
+
+The site uses:
+- **11ty** for static site generation
+- **Nunjucks** for templating
+- **CSS Grid & Flexbox** for layout
+- **Vanilla JavaScript** for interactivity
+- **Luxon** for date formatting
+
+## 📝 Adding Content
+
+1. Create a new `.md` file in the appropriate directory
+2. Add frontmatter with `layout: page` and other metadata
+3. Write your content in Markdown
+4. The site will automatically rebuild and refresh
+
+## 🚀 Deployment
+
+The site builds to the `_site` directory. You can deploy this to any static hosting service like:
+- GitHub Pages
+- Netlify
+- Vercel
+- AWS S3
+
+## 📄 License
+
+MIT License - see LICENSE file for details.

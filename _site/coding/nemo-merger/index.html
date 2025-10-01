@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEMO Merger Work Log | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>NEMO Merger Work Log</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h1>NEMO Merger Work Log</h1>
+<h2>Project Overview</h2>
+<ul>
+<li>SNF and SNSF are merging and we need to have a unified lab management system, here we go - see WorkLog Bot for related automation tools</li>
+</ul>
+<h2>Current Tasks</h2>
+<ul>
+<li>Doing a gap analysis, getting all the requests together</li>
+<li>Figuring out what to report at Thursday Meeting</li>
+</ul>
+<h2>Procedure for Future Alex</h2>
+<ul>
+<li>Downloading the current SNF users and adding the area access to Allen they need</li>
+<li>Adding accounts</li>
+<li>Downloading the accounts so you can then map those to the projects you're going to upload</li>
+<li>Upload the tools (anytime, I might want to organize them in NEMO-Plan, then move that hierarchy to live NEMO)</li>
+</ul>
+<h2>Grant Questions:</h2>
+<ul>
+<li>do you actually want SNL or whatever in the tool name?
+<ul>
+<li>NO want to purge any instances of SNL, SNC, SMF</li>
+</ul>
+</li>
+<li>How are the area access going to work, what tool goes where?
+<ul>
+<li>Reconviene and understand how area access if going to work, what do the characterization people want? Each tool can be different, does each tool need to be its own area or is there another way?</li>
+</ul>
+</li>
+<li>list of consumables to upload?
+<ul>
+<li>in the inventory.txt file</li>
+</ul>
+</li>
+<li>How do we want to organize the consumables so people know where they are?
+<ul>
+<li>Add TEM supplies, more under AFM supplies, SMF supplies, XPS supplies (software licencse?)</li>
+</ul>
+</li>
+<li>For the rates, is there ever a difference between the other academic and local category?
+<ul>
+<li>No, one in the same</li>
+</ul>
+</li>
+<li>Do you specify any SBIR rates?
+<ul>
+<li>No, we might not either pretty soon LOL</li>
+</ul>
+</li>
+<li>Send me interlock i.p address list!</li>
+</ul>
+<h2>Work Log</h2>
+<h3>08/21/2025</h3>
+<ul>
+<li>My &quot;add allen prefix&quot; went a bit wild and added the prefix to the wrong things so I corrected it and moved the Shriram/Spilker all that to the right category</li>
+</ul>
+<h3>08/12/2025</h3>
+<ul>
+<li>the staff charges and tool training charges were previously set to be global, so only one staff chaarge and one staff training charge could exist
+<ul>
+<li>Seems to be some kind of bug, can't make staff charges tool by tool</li>
+</ul>
+</li>
+<li>Changed the tool hierarchy so everything in the SNF is now under Allen</li>
+<li>Up Next is adding the access areas like Grant and I talked about</li>
+</ul>
+<h3>08/11/2025</h3>
+<ul>
+<li>Started working on the gap analysis, honestly too hard to think of all the gaps</li>
+<li>Started coding instead, uploaded all the tools under the category SNSF</li>
+<li>I'm slowly finding the roots of things</li>
+<li>for example I'd like to upload users, but first I thought to Upload PTAs, but to upload those you need a to upload accounts</li>
+<li>So far I've uploaded all the tools, added Allen to our lab members,</li>
+<li>Mapping for new area access:
+<ul>
+<li>SMF =</li>
+<li>SNC =</li>
+<li>SNL</li>
+</ul>
+</li>
+</ul>
+<h2>September 1st Goals:</h2>
+<p>-Minimum:
+- Gap analysis (consolidating thoughts)
+- All Tools Into Merged NEMO, everyone has access</p>
+<ul>
+<li>Order of operations:
+<ul>
+<li>Meet up with Grant/Carsen, figure out the access areas</li>
+<li>Do a skeleton framework for tools</li>
+<li>Education sessions with tool owners so they can configure their tools</li>
+<li>SNSF review everything! I did my best to translate what I saw to NEMO language but it must be perfect on Jan 1st</li>
+<li>Creating Billing documents to share with admin team (what do we already have?)</li>
+</ul>
+</li>
+</ul>
+<h2>Thinking</h2>
+<ul>
+<li>
+<p>What's the order of operations for getting all the new users into NEMO?</p>
+<ul>
+<li>People are complicated, maybe I'll start with the tools</li>
+</ul>
+</li>
+<li>
+<p>What do people need to do versus what can I code?</p>
+</li>
+<li>
+<p>Migration:</p>
+<ul>
+<li>Getting tools, users, PTAs, everything into SNF NEMO</li>
+</ul>
+</li>
+<li>
+<p>Configuration</p>
+<ul>
+<li>Tool owners setting up their tools</li>
+<li>Areas</li>
+</ul>
+</li>
+<li>
+<p>Education</p>
+<ul>
+<li>Billing</li>
+<li>Staff education</li>
+</ul>
+</li>
+</ul>
+<h3>Timeline</h3>
+<ul>
+<li>Phase 1 (Date):</li>
+<li>Phase 2 (Date):</li>
+<li>Phase 3 (Date):</li>
+</ul>
+<h3>Known Issues/Challenges</h3>
+<ol>
+<li></li>
+<li></li>
+<li></li>
+</ol>
+<h2>Up Next</h2>
+<ul>
+<li></li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

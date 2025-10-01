@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEMO to Drive | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>NEMO to Drive</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h1>NEMO to Drive Work Log</h1>
+<h2>Project Overview</h2>
+<ul>
+<li>Script to automatically transfer files from NEMO to Google Drive</li>
+</ul>
+<h2>Current Tasks</h2>
+<ul>
+<li>Getting a basic billing NEMO to drive set up on the VM</li>
+</ul>
+<h2>Up Next</h2>
+<ul>
+<li></li>
+</ul>
+<h2>Work Log</h2>
+<h3>08/07/2025</h3>
+<ul>
+<li>The billing seems to be working nicely which is cool</li>
+<li>Started working on getting the post usage question data out and onto the drive, that seems to be working well. Just a lot of data processing steps</li>
+<li>Need to move it to the collector and then it'll be sorted</li>
+<li>My tool/user list is static as well so if i wanted it to be really robust I'd also have it update the tool and user lists</li>
+</ul>
+<h3>08/6/2025</h3>
+<ul>
+<li>Haha you thought! Changed everything over to run on the shared drive using a service account. You must use a shared Google drive if you are going to use a Service account bot buddy</li>
+<li>I clobbered the old instance on the collector and pulled a new version down once I figured out the whole new authentication scheme</li>
+<li>Also cleaned up the repo, It's be cool to share it some time</li>
+</ul>
+<h3>08/5/2025</h3>
+<ul>
+<li>never really done am I? The .env was not being correctly loaded in the cron job because there were spaces between the variable names and the actual key, so it wasn't working</li>
+<li>My scheduling was also whack and it was running at 8 minutes and 20 minutes past the hour, which I never remember setting. maybe I though 8am and 20:00=8pm? Anyways I changed it to run every hour cause why not</li>
+<li>I'm wondering if I should put a bit more work into this to make it something other people can implement in other labs. That said, the whole google auth thing is a bit of a pain so it isn't for the faint of heart</li>
+</ul>
+<h3>08/04/2025</h3>
+<ul>
+<li>made modifiactions to the bash script that does the master upload, seems to be working</li>
+<li>had to add steps to it compies the files to the nemo_automation folder, it also creates a venv automatically now, in later versions of the set up script</li>
+<li>I guess this project is done for now, until it breaks or we need new functionality</li>
+</ul>
+<h3>07/28/2025</h3>
+<ul>
+<li>Modified the existing script so that it can be run on a VM (or on the collector)</li>
+<li>I deleted the token and reauthenticated, and now things work OK.</li>
+</ul>
+<h2>Back Burner</h2>
+<ul>
+<li>Making it publishable?</li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

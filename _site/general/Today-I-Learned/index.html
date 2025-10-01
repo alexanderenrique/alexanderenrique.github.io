@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today I Learned | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>Today I Learned</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h1>Today I Learned</h1>
+<p>I'm learning just all the time and I think it's cool to look back and see what you learned and when. Just a simple list.</p>
+<h2>Learnings</h2>
+<p>###10/1/2025</p>
+<h4>09/10/2025</h4>
+<ul>
+<li>When you manually start a google VM, you are using one set of permissions. When you cloud scheduler starts it using the SA (Service Account) it has a different set of permissions. And the SA needs to have the privileges to say get credentials from GCP</li>
+<li>Also learned that at Harvard, if you work more than you job, you can get paid up to 1.25X your salary. Gonna be using that in the future.</li>
+</ul>
+<h4>09/09/2025</h4>
+<ul>
+<li>How to download and install modules from a tar.gz. file. Still don't really understand what they are, but there's tarballs and such?</li>
+<li>You really do need to use OAuth to schedule vm cron jobs in google cloud scheduler
+<ul>
+<li>sub bullet point, sometimes you need to slow down and use your brain</li>
+</ul>
+</li>
+</ul>
+<h4>09/08/2025</h4>
+<ul>
+<li>TLS over MQTT and how the CA credentialing works. Security will always be a whole thing on computers huh?</li>
+<li>Learned about public and private I.P. addresses. Just because you can ping an address, doesn't mean you can access a specific port (like 8883 for SSL MQTT or 1833 for insecure MQTT)</li>
+</ul>
+<h4>09/04/2025</h4>
+<ul>
+<li>more about MQTT and how NEMO Merger can communicate almost instantly with the tool interlocks</li>
+<li>The NEMO API doesn't support any kind of filtering or pagination, if you ping it, it returns the full object</li>
+</ul>
+<h4>09/03/2025</h4>
+<ul>
+<li>Digital low pass filters, especially in terms of IMUs. You don't want all the jittery high frequency noise, so you can implement a low pass filter to just give you the real stuff - used in Smart-T-Bird project</li>
+</ul>
+<h4>09/02/2025</h4>
+<ul>
+<li>g forces in a passenger car without sticky tires is really pretty low I've been told, like less than 1g in acceleration, cornering, and braking</li>
+<li>It takes a serious track or electric vehicle to get you over 1g, or a fighter jet or f1 car - relevant for Smart-T-Bird IMU sensors</li>
+<li>grounding resistors for an LDR make a huge difference. Without the resistor, the LDR is basically always high, like maxed out. I think a 2K resistor ended up being the sweet spot. Almost all the way up - used in Smart-T-Bird auto-dimming display</li>
+</ul>
+<h4>08/30/2025</h4>
+<ul>
+<li>Seems obvious now, but you can't just use any old MOSFET or transistor for high side or low side switching.</li>
+<li>The LED screen I have only has control over LED power, so I'll have to PWM the high side. No control over ground - used in Smart-T-Bird display control</li>
+<li>Learned about BJTs vs MOSFETs. So many different kinds and types of doping and everything else</li>
+</ul>
+<h4>08/29/2025</h4>
+<ul>
+<li>You can use an ESP32 C3 with CAN, you just need a module that goes from SPI to CAN. Lots of these modules already exist and have the transmitter built in. - used in Smart-T-Bird CAN bus communication</li>
+</ul>
+<h4>08/28/2025</h4>
+<ul>
+<li>Temporary Voltage Spike diodes and how they work. They're like blow off valves for high instantaneous voltage spikes. I'll need to put one in front of my buck converter in my display - used in Smart-T-Bird power management</li>
+</ul>
+<h4>08/27/2025</h4>
+<ul>
+<li>Google cloud shell and how to set up cron jobs to turn the VM on an off. No need for it to stay on all the time just to run a job a couple times a day! - used in NEMO Merger automation</li>
+</ul>
+<h4>08/24/2025</h4>
+<ul>
+<li>RTOS and how that works, like FreeRTOS. I don't think I need it for any of my current work, but cool to know it exists</li>
+<li>Learned how to do GD&amp;T in OnShape for the yoshimura flange project, to get it on the blog - see 3d-models for the final design</li>
+</ul>
+<h4>08/23/2025</h4>
+<ul>
+<li>Spanish Moss does not natively grow in California, it's actually a lichen called lace lichen, and it's the state lichen of California. The more you know!</li>
+</ul>
+<h4>08/20/2025</h4>
+<ul>
+<li>mkdocs is the truth, started learning about how to lay out a blog using it instead of github pages themes - used to build this index site</li>
+</ul>
+<h4>08/17/2025</h4>
+<ul>
+<li>working with github pages I started learning about layouts of webpages and .scss files</li>
+</ul>
+<h4>08/10/2025</h4>
+<ul>
+<li>I learned about jumbo mortgage loans, anything above about $1.1 million in the bay area</li>
+</ul>
+<h4>08/05/2025</h4>
+<ul>
+<li>the google OAuth doesn't work so well with a headless set up like in cron job. It needs to constantly open new ports or whatever on the local host for authentication. It would work for a couple hours and then silently fail</li>
+<li>Service accounts are the way to go for Cron Jobs</li>
+</ul>
+<h4>08/05/2025</h4>
+<ul>
+<li>Messing with the cron job I feel like I have a much better grasp of interacting with the terminal and using nano to modify files. I don't know many commands but definitely the common useful ones.</li>
+</ul>
+<h4>08/04/2025</h4>
+<ul>
+<li>there are limits to the max power your wifi is allowed to have, set by the FCC. Basically if any one person has too powerful a device it can mess things up for everyone</li>
+<li>You can buy ESP32s without the integrated wifi antenna, and plug your own antennas in.</li>
+<li>The C3s just have totally horrible antenna, they don't connect for shit</li>
+<li>The programming language GO, I wonder if it could help me speed up some algo stuff.</li>
+<li>cronjobs, set up my first one on the collector computer</li>
+</ul>
+<h4>07/30/2025</h4>
+<ul>
+<li>learned about serial communications, man that stuff is cool. Synchronous, asynchronous, UART, I2C, SPI. It's like you use it and kinda know what's happening but cool to learn it</li>
+</ul>
+<h4>07/28/2025</h4>
+<ul>
+<li>MQTT and how that works, kinda</li>
+<li>Started learning about PRAM and the best way to drive displays</li>
+<li>Sometimes deleting a token and reauthenticating is the way to go</li>
+<li>Manually advancing the LVGL clock will solve your problems</li>
+<li>Started learning about Data Structures and algorithms. Learned about &quot;bigO&quot; and the complexity of running nested loops, like how that increases exponentially</li>
+<li>Kinda started on recursive algorithms but those tie my head in a knot</li>
+</ul>
+<h4>07/25/2025</h4>
+<ul>
+<li>reflecting on a past learning, I got all mad at the higher ups because they weren't doing shit, but sometimes the higher ups are also fed up because their higher ups aren't doing shit. So while it's important for your voice to be heard, maybe give them the benefit of the doubt. Maybe.</li>
+</ul>
+<h4>07/24/2025</h4>
+<ul>
+<li>learned about glancing angle x-ray spectroscopy for very thin films</li>
+</ul>
+<h4>07/23/2025</h4>
+<ul>
+<li>in PlatformIO and C/C++ header files are a lot like modules in python. Or like utils so that's where you put stuff you want to use globally</li>
+<li>I think I learned about build flags, but not sure I get it yet</li>
+<li>if there's errors in your IDE and lots of red lines it probably means your shit is broken</li>
+<li>learned about MISO, MOSI, IRQ, and general SPI interface stuff</li>
+</ul>
+<h4>07/22/2025</h4>
+<ul>
+<li>If you need .env and pydantic is being a dick about it, just export it</li>
+</ul>
+<h4>07/21/2025</h4>
+<ul>
+<li>Started this blog! learned about Jekyll and hosting pages on GitHub. I feel cool</li>
+<li>Pydantic is useful because it can super quickly enforce things. You could write lengthy code to enforce types, but Pydantic reduces the boilerplate code you need</li>
+</ul>
+<h4>07/20/2025</h4>
+<ul>
+<li>The best way to remove bushings is to destroy them
+<ul>
+<li>always start by heating the rubber to get it to release from the metal</li>
+<li>Push out the rubber, or drill it out, or if you want cancer sooner just burn it out and carbonize it</li>
+<li>Then remove the shell of the bushing by cutting a groove in it and hammering it out</li>
+<li>Air hammers work ok, not as well as you'd want. Maybe mine just isn't that strong</li>
+</ul>
+</li>
+</ul>
+<h4>07/19/2025</h4>
+<ul>
+<li>You can bend the hell out of a control arm with a hydraulic press. You can't just push the center of a bushing as hard as you can and hope it pops out</li>
+<li>MOSI/MISO. Master in slave out, slave out master in.</li>
+<li>About the stack of code you need to go from arduino IDE to a proper gui
+<ul>
+<li>It's the driver for the screen, then a graphics package (like LVGL), and then a GUI editor</li>
+<li>Screens are actually kind of hard</li>
+</ul>
+</li>
+<li>It's a pain in the ass to set up arduino IDE in VS Code or Cursor</li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

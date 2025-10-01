@@ -1,0 +1,31 @@
+{
+  "name": "bits_and_bolts",
+  "version": "1.0.0",
+  "description": "Alex's Blog where he talks about cars, code, microelectronics, and sometimes using code to program microelectronics for his car. It's a cross disciplinary adventure.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderenrique/bits_and_bolts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alexanderenrique/bits_and_bolts/issues"
+  },
+  "homepage": "https://github.com/alexanderenrique/bits_and_bolts#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "luxon": "^3.7.2"
+  }
+}

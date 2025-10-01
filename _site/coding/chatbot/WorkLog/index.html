@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Log Bot | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>Work Log Bot</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h1>Nano Chatbot</h1>
+<h2>Project Overview</h2>
+<h2>Current Tasks</h2>
+<ul>
+<li>Creating a new repo, pushing my project there</li>
+<li>Setting up the interactive interpreter window</li>
+<li>Looking into the chunking, embedding, retrieval. How useful are metadata tags really?</li>
+<li></li>
+</ul>
+<h2>Up Next</h2>
+<ul>
+<li></li>
+</ul>
+<h2>To-do</h2>
+<ul>
+<li>
+<p>adding a query classification that classifies the query more broadly, pulls key words, etc</p>
+</li>
+<li>
+<p>retrieval: using the improved query classification to retrieve a bunch of docs</p>
+<ul>
+<li>Hybrid search maybe</li>
+<li>using cohere to compare what really matters for the query</li>
+</ul>
+</li>
+<li>
+<p>THEN with the cohere filtered results send that out for LLM</p>
+</li>
+<li>
+<p>Is there a way of just doing key word search?</p>
+</li>
+<li>
+<p>does it make sense to first re-word the prompt?</p>
+</li>
+<li>
+<p>Might need PGvector scale? for hybrid search? Cohere?</p>
+</li>
+<li>
+<p>Cohere makes sure that what you have retrieved is relevant</p>
+</li>
+<li>
+<p>Starting smaller, looking at it one doc, one chunk at a time</p>
+<ul>
+<li>Did it retrieve the metadata properly, did it classify the query?</li>
+<li>Start with simple, vector search related questions, or simple metadata questions</li>
+<li>Really see what it did each step of the way</li>
+</ul>
+</li>
+<li>
+<p>Need to analyze each step of the process</p>
+</li>
+<li>
+<p>using pydantic to enfore types. Make base model class, each one is a string, makes 100% sure that we never deviate - see Today-I-Learned for pydantic learnings</p>
+</li>
+<li>
+<p>Moving all this to a super computer, off the local computer</p>
+</li>
+<li>
+<p>whever you added openAI calls, add the logfire call</p>
+</li>
+<li>
+<p>might not need such fine grained metadata, if you have good query classification and bring back a ton of docs. Then you only have to worry about broader conepts like document type</p>
+</li>
+<li>
+<p>Once we start holding things in memory, we're better able to chat back and forth, massive context window</p>
+</li>
+<li>
+<p>We can release something when we really have something to give</p>
+</li>
+<li>
+<p>Inerface where people can drag and drop stuff and have it be classified and ingested</p>
+</li>
+</ul>
+<h2>Progress Log</h2>
+<h3>08/07/2025</h3>
+<ul>
+<li>so what I'm hearing from Sam is that I should just build whatever I want with the stuff she provided. I'm going to clone this into my own repo and just go hard on it, I'll push it into the other repo periodically, but I want to be on my own main branch and do what I want if this is going to be my project</li>
+</ul>
+<h3>07/22/2025</h3>
+<ul>
+<li>further broadend the metadata, removed the Operating instruction tag and am just calling thinfgs &quot;guides&quot; there is too much overlap in the documents - related to NEMO Merger metadata work</li>
+<li>Also not sure about &quot;Procedure&quot; vs &quot;Guide&quot;,</li>
+<li>Added document logging so we can see what we've processed so far</li>
+<li>Proccessed 47 documents from local doc to vectorization and metadata, and it went way way faster than it has in the past. Took like 3-4 hours where in the past it took all night to only do half. Not sure if that is becasue of the upgrade to pydantic V2 or maybe doclin g got better. I don't remember explicitly upgrading anything so I'm not sure why this changed</li>
+</ul>
+<h3>07/21/2025</h3>
+<ul>
+<li>Updated the metadate fields to be broader, more applicable to other groups</li>
+<li>implemented a hybrid pydantic/yaml approach so you only need to choose the metadata values in the yaml file</li>
+<li>For the metadata validation, moved to a case normalization/fuzzy matching method. I don't want to have to write similar or approximate names anywhere</li>
+<li>did work removing the metadata fields that were hard coded into a lot of file. It's only driven by the yaml file now.</li>
+<li>absolutely battled how pydantic treats its /env variables. I think I upgraded to pydantic V2 accidentally or something</li>
+<li>re-wrote a lot of the settings files to get the .env to work right with pydantic</li>
+</ul>
+<h2>How does this thing work?</h2>
+<h3>Docling Conversion:</h3>
+<h3>Meta Data Processing:</h3>
+<h4>1. <strong>Metadata Field Definitions (YAML)</strong></h4>
+<ul>
+<li><code>metadata_fields.yaml</code>: Defines metadata field names, types, and descriptions.</li>
+<li><code>standardized_values.yaml</code>: Lists allowed values and other field constraints.</li>
+</ul>
+<h4>2. <strong>Document Sent to LLM</strong></h4>
+<ul>
+<li>Raw document text is passed to a Large Language Model (e.g., OpenAI).</li>
+<li>Prompt instructs the LLM to extract metadata based on the YAML schema.</li>
+</ul>
+<h4>3. <strong>LLM Returns Raw Metadata</strong></h4>
+<ul>
+<li>LLM outputs a dictionary of extracted metadata.</li>
+<li>These values may be inconsistent or messy.</li>
+</ul>
+<h4>4. <strong>Standardization</strong></h4>
+<ul>
+<li>Each metadata value is:
+<ul>
+<li>Normalized (lowercased, trimmed, punctuation removed).</li>
+<li>Fuzzy matched against allowed YAML values.</li>
+</ul>
+</li>
+<li>If a close match is found, it’s replaced with the canonical value.</li>
+<li>Otherwise, the value is set to <code>None</code> or left unchanged based on logic.</li>
+</ul>
+<h4>5. <strong>Pydantic Validation</strong></h4>
+<ul>
+<li>A Pydantic model is dynamically generated from the YAML schema.</li>
+<li>Enforces:
+<ul>
+<li>Correct field names.</li>
+<li>Correct types.</li>
+<li>Valid values (for constrained fields).</li>
+</ul>
+</li>
+<li>Invalid entries raise an error.</li>
+</ul>
+<h4>6. <strong>Result</strong></h4>
+<ul>
+<li>Output is a clean, validated, and standardized metadata dictionary.</li>
+<li>Ready for storage**, search, or display.</li>
+</ul>
+<hr>
+<h4>Summary</h4>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>YAML</strong></td>
+<td>Source of truth for fields, types, and constraints</td>
+</tr>
+<tr>
+<td><strong>LLM</strong></td>
+<td>Extracts metadata from raw text</td>
+</tr>
+<tr>
+<td><strong>Standardizer</strong></td>
+<td>Cleans and corrects extracted values</td>
+</tr>
+<tr>
+<td><strong>Pydantic</strong></td>
+<td>Enforces types and constraints for final validation</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>Accomplishments</h2>
+<ul>
+<li>changing the metadata tags so that they are more broad, can be applied to more labs</li>
+<li>enforcing the metadata tags more smartly with a hybrid yaml/pydantic model</li>
+<li>cleaned it up so that the meta data info is just in the yaml files</li>
+<li>Making a logging file so that docling doesn't re-process things</li>
+</ul>
+<h2>Known Issues</h2>
+<ul>
+<li></li>
+</ul>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

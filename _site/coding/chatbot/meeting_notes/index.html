@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Notes Bot | Bits and Bolts</title>
+    <meta name="description" content="A badass blog about wrenching, coding, and microelectronics projects">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="/" class="nav__brand">
+                    <span class="nav__icon">🔧</span>
+                    Bits & Bolts
+                </a>
+                <ul class="nav__menu">
+                    <li><a href="/" class="nav__link">Home</a></li>
+                    <li class="nav__dropdown">
+                        <a href="/coding/" class="nav__link">Coding</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/coding/nemo-merger/">NEMO Merger</a></li>
+                            <li><a href="/coding/nemo-to-drive/">NEMO to Drive</a></li>
+                            <li><a href="/coding/chatbot/meeting_notes/">Meeting Notes Bot</a></li>
+                            <li><a href="/coding/chatbot/WorkLog/">Work Log Bot</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/wrenching/" class="nav__link">Wrenching</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/wrenching/thunderbird-restoration/">1968 Thunderbird</a></li>
+                            <li><a href="/wrenching/3d-models/">3D Models</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/microelectronics/" class="nav__link">Microelectronics</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/microelectronics/Smart-T-Bird/">Smart Thunderbird</a></li>
+                            <li><a href="/microelectronics/NEMO-Tool-Display/">NEMO Tool Display</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="/general/" class="nav__link">General</a>
+                        <ul class="nav__submenu">
+                            <li><a href="/general/Today-I-Learned/">Today I Learned</a></li>
+                            <li><a href="/general/Way-Backburner/">Way Backburner</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <article class="container">
+    <header class="page-header">
+        <h1>Meeting Notes Bot</h1>
+        
+    </header>
+    
+    <div class="page-content">
+        <h3>Meeting Notes:</h3>
+<h4>08/07/2025</h4>
+<ul>
+<li>Sam has taken on undergrads, they seem text book oriented</li>
+<li>Worked with them on simplified chunking and embedding, crawl4AI - related to WorkLog Bot development</li>
+<li>Doclings hybrid chunker was all over the place</li>
+<li>Best practices for chunking:</li>
+<li>How do we want to work together:
+<ul>
+<li>Mary wants Sam to guide it, doesn't want her to do it</li>
+<li>Use it as I see fit</li>
+<li>Just go off on my own branch and go hard</li>
+</ul>
+</li>
+<li>If I give away anything just let Sam know</li>
+<li>Chunking methodology:
+<ul>
+<li>Trying to do re-ranking, written and trained re-ranking models</li>
+<li>Worries that as soon as you use an LLM, you have probabilities to deal with</li>
+<li>LangChain has the text splitter, has some fancy and not fancy methods
+<ul>
+<li>Not fancy: aggregate chunk based on tokens</li>
+</ul>
+</li>
+<li>Hybrid chunker: first finds headings, new paragraphs, end in a period</li>
+<li>This results in very small chunks, not so useful!</li>
+<li>Cohere is working on the vectorization of things, when you put it in the db are you retrieing it if you need it</li>
+<li>Massive context windows are great but it has to retrieve the info before it can get the info from</li>
+<li>Pages composed of lots of components, if you're extracting based on character count you'll break tables apart and other stuff that's important</li>
+<li>Looking into objects in general is useful</li>
+<li>A lot of people emulate how OpenAI does their vector search for their assistants</li>
+<li>read their &quot;How it works&quot;, follow those steps! ( we walk through the steps)</li>
+<li>Cohere is good for the last step, the re-ranking</li>
+<li>Chunk overlap should be around 50%</li>
+<li>Merge peers: if you get a small chunk, merge it with another</li>
+<li>look up LangChain Text Splitting
+<ul>
+<li>Recursive character text splitting</li>
+</ul>
+</li>
+<li>Get into the interactive interpreter window!</li>
+<li>document is a Langchain object, you can dump it because it has a basemodel structure</li>
+<li>Everyone uses pydantic objects, OpenAI will return it to you</li>
+<li>extract out list of tables so you don't chunk those</li>
+</ul>
+</li>
+</ul>
+<p>please go through it -- it will give you a idea about the chunking step of this RAG process:
+https://www.youtube.com/watch?v=8OJC21T2SL4
+This guys &quot;ChunkViz&quot; seems useful!!
+https://chunkviz.up.railway.app/
+and here are the three methods in LangChain that I want you to try out:
+https://python.langchain.com/docs/how_to/character_text_splitter/
+https://python.langchain.com/docs/how_to/recursive_text_splitter/
+https://python.langchain.com/docs/how_to/markdown_header_metadata_splitter/
+I would like us to use #2, and #3... but #1 is the intro that I want you to start with.</p>
+
+    </div>
+</article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p>&copy; 2025 Alex - Bits and Bolts</p>
+            <div class="footer__social">
+                <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
