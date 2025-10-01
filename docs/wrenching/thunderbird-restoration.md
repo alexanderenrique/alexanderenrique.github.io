@@ -10,6 +10,7 @@
 - Oil leak from front of engine
 - "knee breeze" cable
 - Switching between defrost and forward vent
+- Getting some fix a flat in a can in case of flat
 
 
 
@@ -27,6 +28,8 @@
 
 ## Work Log
 
+### 09/30/2025
+- Made a mounting bracket for the vacuum control headlight switch, started plumbing it in.
 ### 09/27-28/25
 - Not really an update, but I drove it 450 miles down and back from Pismo and it worked just about flawlessly. A few issues and things that I want to fix, but all in all really solid and I'm happy about it.
 - No obvious leaks from the trans but I still need to get under it and really check
