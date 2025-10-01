@@ -1,7 +1,12 @@
+# Directories to ignore
 algo/
+work/
+.cursor/
+node_modules/
+_site/
 
 # Keep Way-Backburner.md local only (not tracked in git)
 docs/general/Way-Backburner.md
-.cursor/
 
-work/
+# OS files
+.DS_Store
