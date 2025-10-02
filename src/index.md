@@ -18,7 +18,7 @@ description: One person's journey through wrenching, coding, and microelectronic
                 <a href="/wrenching/" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
-                <img src="/images/fz-sticker.png" alt="FZ Sticker" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker" style="max-width: 100%; height: auto; border-radius: 8px;">
             </div>
         </div>
     </section>

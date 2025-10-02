@@ -5,8 +5,6 @@ categories: [wrenching]
 tags: [3d-printing, automotive, restoration]
 ---
 
-Welcome to the 3D Models section! Here you'll find all the custom 3D printed parts and tools I've designed for automotive projects.
-
 ## How to Use These Models
 
 1. **Browse** the models below to see what's available
