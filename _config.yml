@@ -1,10 +1,10 @@
-title: Bits and Bolts Blog
+title: Denton Works Blog
 theme: jekyll-theme-cayman
 author: Alex
 email: your-email@example.com
 description: >-
   A blog about wrenching, coding, and microelectronics projects.
-baseurl: "/bits_and_bolts" # the subpath of your site, e.g. /blog
+baseurl: "/denton_works" # the subpath of your site, e.g. /blog
 url: "https://alexanderenrique.github.io" # your GitHub Pages URL
 
 # Build settings

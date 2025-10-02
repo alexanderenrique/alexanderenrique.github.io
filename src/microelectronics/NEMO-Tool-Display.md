@@ -5,8 +5,6 @@ categories: [microelectronics]
 tags: [electronics, esp32, mqtt, display]
 ---
 
-# NEMO Tool Display Project
-
 ## Project Overview
 - Create a small display system that shows the current status and next reservation for NEMO tools
 - Uses ESP32 connected to TFT display to show real-time tool availability information

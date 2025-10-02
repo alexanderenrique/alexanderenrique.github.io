@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Meeting Notes Bot"
+title: "Meeting Notes"
 categories: [coding, chatbot]
 tags: [ai, meeting-notes, automation]
 ---

@@ -1,4 +1,4 @@
-# Bits and Bolts Blog
+# Denton Works Blog
 
 A modern, stylish blog about wrenching, coding, and microelectronics projects built with [11ty](https://www.11ty.dev/).
 

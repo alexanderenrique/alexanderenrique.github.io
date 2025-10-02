@@ -1,11 +1,9 @@
 ---
 layout: page
-title: "1968 Thunderbird Restoration"
+title: "1968 Thunderbird Restomod"
 categories: [wrenching]
 tags: [thunderbird, restoration, classic-car, 1968]
 ---
-
-# 1968 Thunderbird Work Log
 
 ## Project Overview
 - I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse

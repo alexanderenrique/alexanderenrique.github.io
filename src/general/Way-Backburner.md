@@ -5,8 +5,6 @@ categories: [general]
 tags: [ideas, planning, future-projects]
 ---
 
-# Project Ideas and Experiments
-
 ## Mechanical Projects
 - Repurpose a 3D printer into a CNC router  
 - 3D print:

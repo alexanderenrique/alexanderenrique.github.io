@@ -4,9 +4,6 @@ title: "NEMO Merger Work Log"
 categories: [coding]
 tags: [lab-management, automation, merger]
 ---
-
-# NEMO Merger Work Log
-
 ## Project Overview
 - SNF and SNSF are merging and we need to have a unified lab management system, here we go - see WorkLog Bot for related automation tools
 

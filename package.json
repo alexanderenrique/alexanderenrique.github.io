@@ -1,5 +1,5 @@
 {
-  "name": "bits_and_bolts",
+  "name": "denton_works",
   "version": "1.0.0",
   "description": "Alex's Blog where he talks about cars, code, microelectronics, and sometimes using code to program microelectronics for his car. It's a cross disciplinary adventure.",
   "main": "index.js",
@@ -14,16 +14,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexanderenrique/bits_and_bolts.git"
+    "url": "git+https://github.com/alexanderenrique/denton_works.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/alexanderenrique/bits_and_bolts/issues"
+    "url": "https://github.com/alexanderenrique/denton_works/issues"
   },
-  "homepage": "https://github.com/alexanderenrique/bits_and_bolts#readme",
+  "homepage": "https://github.com/alexanderenrique/denton_works#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2",
     "luxon": "^3.7.2"

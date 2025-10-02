@@ -5,14 +5,19 @@ categories: [general]
 tags: [learning, knowledge, daily]
 ---
 
-# Today I Learned
-
 I'm learning just all the time and I think it's cool to look back and see what you learned and when. Just a simple list. 
 
 ## Learnings
 
 
 ###10/1/2025
+- learned about 11ty and other ways to build a website
+
+### 09/25/2025
+- How python plugins are structured and how to make your own
+
+### 09/24/2025
+- REDIS as an intermediary between NEMO and the MQTT service, the concept of message queues and how they work
 
 #### 09/10/2025
 - When you manually start a google VM, you are using one set of permissions. When you cloud scheduler starts it using the SA (Service Account) it has a different set of permissions. And the SA needs to have the privileges to say get credentials from GCP

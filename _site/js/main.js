@@ -1,4 +1,4 @@
-// Main JavaScript for Bits and Bolts blog
+// Main JavaScript for Denton Works blog
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle

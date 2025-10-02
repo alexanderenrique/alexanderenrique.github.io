@@ -1,4 +1,4 @@
-# Welcome to Bits and Bolts 🚀
+# Welcome to Denton Works 🚀
 
 Welcome to my blog about **wrenching**, **coding**, and **microelectronics** projects! This is where I document my adventures in turning wrenches, writing code, and building circuits.
 
