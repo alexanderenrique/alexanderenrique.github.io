@@ -49,6 +49,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
+    pathPrefix: "/bits_and_bolts/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
