@@ -49,7 +49,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       layouts: "_layouts"
     },
-    pathPrefix: "/bits_and_bolts/",
+    pathPrefix: "/denton_works/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk"
