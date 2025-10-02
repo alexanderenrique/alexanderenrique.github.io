@@ -10,5 +10,5 @@ Welcome to the Wrenching Projects section! Here you'll find all my automotive re
 - [1968 Thunderbird Restoration](thunderbird-restoration.md) - Restoration and modification of a 1968 Thunderbird
 
 ## 3D Models & STL Files
-- [View All 3D Models](3d-models.md) - Custom 3D printed parts and tools for automotive projects
+- [View All 3D Models](3d-models/) - Custom 3D printed parts and tools for automotive projects
 

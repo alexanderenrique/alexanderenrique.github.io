@@ -7,11 +7,28 @@ tags: [learning, knowledge, daily]
 
 I'm learning just all the time and I think it's cool to look back and see what you learned and when. Just a simple list. 
 
+## Mermaid Diagram Test
+
+Here's a simple flowchart to test Mermaid integration:
+
+{% mermaid %}
+graph TD
+    A[Start Learning] --> B{Choose Topic}
+    B -->|Coding| C[Write Code]
+    B -->|Wrenching| D[Fix Car]
+    B -->|Electronics| E[Build Circuit]
+    C --> F[Document Learning]
+    D --> F
+    E --> F
+    F --> G[Add to Blog]
+{% endmermaid %}
+
 ## Learnings
 
 
 ###10/1/2025
 - learned about 11ty and other ways to build a website
+- learned about mermaid.js and ways to spice up my page with diagrams
 
 ### 09/25/2025
 - How python plugins are structured and how to make your own

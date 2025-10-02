@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 title: Welcome to Denton Works
-description: One person's journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place.
+description: One person's journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place. Or maybe just fixing some old broken stuff and learning new things along the way.
 ---
 
 <div class="hero">
     <h1 class="hero__title">Welcome to Denton Works</h1>
-    <p class="hero__subtitle">My journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place.</p>
+    <p class="hero__subtitle">My journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place. Or maybe just fixing some old broken stuff and learning new things along the way.</p>
 </div>
 
 <div class="sections">

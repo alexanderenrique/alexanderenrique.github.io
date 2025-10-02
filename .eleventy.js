@@ -35,6 +35,12 @@ module.exports = function(eleventyConfig) {
 
   // Add shortcodes
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
+  
+  // Mermaid diagram shortcode
+  eleventyConfig.addPairedShortcode("mermaid", function(diagram) {
+    const id = `mermaid-${Math.random().toString(36).substr(2, 9)}`;
+    return `<div class="mermaid" id="${id}">${diagram}</div>`;
+  });
 
   return {
     dir: {
