@@ -14,8 +14,8 @@ description: One person's journey through wrenching, coding, and microelectronic
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">Wrenching Projects</h2>
-                <p class="section__description">Classic car restoration and mechanical projects. Currently working on a <strong>1968 Thunderbird</strong> restoration - see <a href="/wrenching/thunderbird-restoration/">thunderbird-restoration</a> for details.</p>
-                <a href="/wrenching/" class="section__link">View All Projects →</a>
+                <p class="section__description">Classic car restoration and mechanical projects. Currently working on a <strong>1968 Thunderbird</strong> restoration - see <a href="{{ '/wrenching/thunderbird-restoration/' | url }}">thunderbird-restoration</a> for details.</p>
+                <a href="{{ '/wrenching/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
                 <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker" style="max-width: 100%; height: auto; border-radius: 8px;">
@@ -27,8 +27,8 @@ description: One person's journey through wrenching, coding, and microelectronic
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">Coding Projects</h2>
-                <p class="section__description">Software tools and automation projects, including <strong>NEMO lab management</strong> tools and <strong>AI chatbots</strong> - see <a href="/coding/nemo-merger/">NEMO Merger</a> and <a href="/coding/chatbot/WorkLog/">WorkLog Bot</a> for details.</p>
-                <a href="/coding/" class="section__link">View All Projects →</a>
+                <p class="section__description">Software tools and automation projects, including <strong>NEMO lab management</strong> tools and <strong>AI chatbots</strong> - see <a href="{{ '/coding/nemo-merger/' | url }}">NEMO Merger</a> and <a href="{{ '/coding/chatbot/WorkLog/' | url }}">WorkLog Bot</a> for details.</p>
+                <a href="{{ '/coding/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
                 <div class="placeholder-image">💻</div>
@@ -40,8 +40,8 @@ description: One person's journey through wrenching, coding, and microelectronic
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">Microelectronics</h2>
-                <p class="section__description">Modern electronics integration for classic cars and embedded systems projects - see <a href="/microelectronics/Smart-T-Bird/">Smart-T-Bird</a> for the Thunderbird electronics project.</p>
-                <a href="/microelectronics/" class="section__link">View All Projects →</a>
+                <p class="section__description">Modern electronics integration for classic cars and embedded systems projects - see <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}">Smart-T-Bird</a> for the Thunderbird electronics project.</p>
+                <a href="{{ '/microelectronics/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
                 <div class="placeholder-image">⚡</div>
@@ -53,8 +53,8 @@ description: One person's journey through wrenching, coding, and microelectronic
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">General Knowledge</h2>
-                <p class="section__description">Daily learnings, project ideas, and miscellaneous thoughts - see <a href="/general/Today-I-Learned/">Today-I-Learned</a> for daily discoveries.</p>
-                <a href="/general/" class="section__link">View All Content →</a>
+                <p class="section__description">Daily learnings, project ideas, and miscellaneous thoughts - see <a href="{{ '/general/Today-I-Learned/' | url }}">Today-I-Learned</a> for daily discoveries.</p>
+                <a href="{{ '/general/' | url }}" class="section__link">View All Content →</a>
             </div>
             <div class="section__image">
                 <div class="placeholder-image">📚</div>
