@@ -85,6 +85,8 @@ Most parts are designed for:
 
 <img src="/assets/renderings/FZ1-yoshimura-rs3-flange-adapter.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
+**GD&T Drawing**: [Yoshi-Drawing.pdf](/images/Yoshi-Drawing.pdf)
+
 **Description**: This one will probably get me a cease and desist but whatever. It's a flange to adapt a 2.5" exhaust pipe, like say a midpipe on an FZ1, to the 3 bolt flange found on a Yoshimura RS3 muffler. You can send it to your favorite laser cutting service and they'll cut you one out of stainless steel to then weld onto your custom midpipe. I found that a 2.5" SS pipe with a few lengthwise cuts gives it just enough wiggle to slide over the header box outlet thing.
 
 **STL File**: [Download STL](../../assets/models/FZ1-yoshimura-rs3-flange-adapter.stl)
