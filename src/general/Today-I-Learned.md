@@ -25,6 +25,10 @@ graph TD
 
 ## Learnings
 
+### 10/02/2025
+- how to buy a domain and link it to your github pages site
+- about DNS and TXT records and how to set them up and kinda what they do ish
+
 
 ###10/1/2025
 - learned about 11ty and other ways to build a website
