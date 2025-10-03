@@ -25,29 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Add loading animation to images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        // Set initial opacity to 0 for loading effect
-        img.style.opacity = '0';
-        img.style.transition = 'opacity 0.3s ease';
-        
-        // Check if image is already loaded (cached)
-        if (img.complete && img.naturalHeight !== 0) {
-            img.style.opacity = '1';
-        } else {
-            img.addEventListener('load', function() {
-                this.style.opacity = '1';
-            });
-            
-            // Fallback: show image after a timeout even if load event doesn't fire
-            setTimeout(() => {
-                if (img.style.opacity === '0') {
-                    img.style.opacity = '1';
-                }
-            }, 1000);
-        }
-    });
+    // Images will be handled by the Intersection Observer below
     
     // Add hover effects to cards
     const cards = document.querySelectorAll('.card');
@@ -127,8 +105,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-    // Observe all cards and sections
-    document.querySelectorAll('.card, section').forEach(el => {
+    // Observe all cards, sections, and images
+    document.querySelectorAll('.card, section, img').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
