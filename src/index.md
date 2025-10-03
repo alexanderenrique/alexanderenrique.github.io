@@ -1,13 +1,12 @@
 ---
 layout: base.njk
-title: Welcome to Denton Works
+title: Denton Works
 description: One curious engineer's journey through wrenching, coding, and microelectronics projects
 ---
 
 <div class="hero">
     <h1 class="hero__title">Welcome to Denton Works</h1>
     <p class="hero__subtitle">One curious engineer's journey through wrenching, coding, and microelectronics projects</p>
-</div>
 
 <div class="sections">
     <section class="section section--wrenching">

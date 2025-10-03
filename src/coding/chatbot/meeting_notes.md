@@ -2,7 +2,19 @@
 layout: page
 title: "Meeting Notes"
 categories: [coding, chatbot]
-tags: [ai, meeting-notes, automation]
+tags: 
+  - ai
+  - meeting-notes
+  - automation
+  - chatbot
+  - llm
+  - transcription
+  - summarization
+  - nemo
+  - lab-management
+  - #ai
+  - #work-log
+  - #nemo
 ---
 
 ### Meeting Notes:

@@ -2,7 +2,22 @@
 layout: page
 title: "3D Models & STL Files"
 categories: [wrenching]
-tags: [3d-printing, automotive, restoration]
+tags: 
+  - 3d-printing
+  - automotive
+  - restoration
+  - stl
+  - cad
+  - design
+  - fabrication
+  - thunderbird
+  - custom-parts
+  - replacement-parts
+  - interior
+  - exterior
+  - #thunderbird
+  - #electronics
+  - #restoration
 ---
 
 ## How to Use These Models

@@ -1,0 +1,55 @@
+---
+layout: base.njk
+---
+
+<div class="tag-page">
+    <h1>#{{ tag }}</h1>
+    <p class="tag-description">{{ description }}</p>
+    
+    <div class="tag-stats">
+        <div class="tag-stat">
+            <div class="number">{{ pages.length }}</div>
+            <div class="label">Pages</div>
+        </div>
+        <div class="tag-stat">
+            <div class="number">{{ relatedTags.length }}</div>
+            <div class="label">Related Tags</div>
+        </div>
+    </div>
+    
+    <div class="related-tags">
+        <h3>Related Tags</h3>
+        <div class="tag-cloud">
+            {% for relatedTag in relatedTags %}
+            <a href="/tags/{{ relatedTag.name }}" class="tag {{ relatedTag.size }}">{{ relatedTag.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="tag-content">
+        <h3>Pages with this tag</h3>
+        <div class="related-grid">
+            {% for page in pages %}
+            <a href="{{ page.url }}" class="related-card">
+                <h4>{{ page.title }}</h4>
+                <p>{{ page.description or page.excerpt }}</p>
+                <div class="card-tags">
+                    {% for tag in page.tags %}
+                    <span class="tag tag--small">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="backlinks">
+        <h3>Cross-references</h3>
+        <p>This tag appears in the following contexts:</p>
+        <ul>
+            {% for context in contexts %}
+            <li><a href="{{ context.url }}">{{ context.title }}</a> - {{ context.description }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

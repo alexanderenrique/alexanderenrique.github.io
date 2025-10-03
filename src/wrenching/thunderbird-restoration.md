@@ -2,7 +2,23 @@
 layout: page
 title: "1968 Thunderbird Restomod"
 categories: [wrenching]
-tags: [thunderbird, restoration, classic-car, 1968]
+tags: 
+  - thunderbird
+  - restoration
+  - classic-car
+  - 1968
+  - ford
+  - interior-work
+  - vacuum-system
+  - electrical-work
+  - engine-work
+  - transmission-work
+  - body-work
+  - road-trip
+  - project-car
+  - #electronics
+  - #3d-printing
+  - #can-bus
 ---
 
 ## Project Overview

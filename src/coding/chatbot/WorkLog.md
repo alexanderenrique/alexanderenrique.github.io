@@ -2,7 +2,22 @@
 layout: page
 title: "Work Log Bot"
 categories: [coding, chatbot]
-tags: [ai, work-log, automation]
+tags: 
+  - ai
+  - work-log
+  - automation
+  - chatbot
+  - llm
+  - embedding
+  - retrieval
+  - chunking
+  - metadata
+  - python
+  - nemo
+  - lab-management
+  - #nemo
+  - #lab-management
+  - #merger
 ---
 ## Project Overview
 

@@ -2,10 +2,20 @@
 layout: page
 title: "NEMO to Drive"
 categories: [coding]
-tags: [automation, file-transfer, google-drive, nemo]
+tags: 
+  - automation
+  - file-transfer
+  - google-drive
+  - nemo
+  - python
+  - api
+  - sync
+  - backup
+  - lab-management
+  - #nemo
+  - #lab-management
+  - #automation
 ---
-
-# NEMO to Drive Work Log
 
 ## Project Overview
 - Script to automatically transfer files from NEMO to Google Drive

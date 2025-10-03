@@ -2,7 +2,23 @@
 layout: page
 title: "Smart Thunderbird Electronics"
 categories: [microelectronics]
-tags: [electronics, classic-car, modernization]
+tags: 
+  - electronics
+  - classic-car
+  - modernization
+  - thunderbird
+  - esp32
+  - can-bus
+  - pwm
+  - sensors
+  - temperature
+  - fans
+  - display
+  - gui
+  - embedded
+  - #thunderbird
+  - #restoration
+  - #3d-printing
 ---
 
 ## Project Overview
