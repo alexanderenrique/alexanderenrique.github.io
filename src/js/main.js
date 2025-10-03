@@ -7,7 +7,26 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (navToggle && navMenu) {
         navToggle.addEventListener('click', function() {
+            const isOpen = navMenu.classList.contains('nav__menu--open');
             navMenu.classList.toggle('nav__menu--open');
+            navToggle.setAttribute('aria-expanded', !isOpen);
+        });
+        
+        // Close menu when clicking on a link
+        const navLinks = document.querySelectorAll('.nav__link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('nav__menu--open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('nav__menu--open');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
         });
     }
     
