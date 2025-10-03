@@ -28,13 +28,25 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add loading animation to images
     const images = document.querySelectorAll('img');
     images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        
         // Set initial opacity to 0 for loading effect
         img.style.opacity = '0';
         img.style.transition = 'opacity 0.3s ease';
+        
+        // Check if image is already loaded (cached)
+        if (img.complete && img.naturalHeight !== 0) {
+            img.style.opacity = '1';
+        } else {
+            img.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+            
+            // Fallback: show image after a timeout even if load event doesn't fire
+            setTimeout(() => {
+                if (img.style.opacity === '0') {
+                    img.style.opacity = '1';
+                }
+            }, 1000);
+        }
     });
     
     // Add hover effects to cards

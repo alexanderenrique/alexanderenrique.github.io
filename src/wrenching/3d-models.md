@@ -27,7 +27,7 @@ Most parts are designed for:
 ## T-Bird Designs
 
 ### Rear Ashtray Blank Off Plate
-<img src="/assets/renderings/thunderbird-rear-ashtray-blankoff.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="/images/thunderbird-rear-ashtray-blankoff.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **Description**: Custom blank off plate to replace the brittle rear ashtrays in the 1968 Thunderbird. Designed to just kind of cover the opening. I used 1/4" VHB tape to stick it to the interior sheet metal trim
 
@@ -40,7 +40,7 @@ Most parts are designed for:
 ---
 
 ### Windshield Wiper Knob
-<img src="/assets/renderings/thunderbird-wiper-knob.png" alt="3D Preview" width="300" height="200" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="/images/thunderbird-wiper-knob.png" alt="3D Preview" width="300" height="200" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **Description**: Replacement for the broken windshield wiper control knob. Matches the original design and fits the existing shaft. - see thunderbird-restoration
 
@@ -53,7 +53,7 @@ Most parts are designed for:
 ---
 ### Center Console Cup Holder
 
-<img src="/assets/renderings/thunderbird-cup-holder.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="/images/thunderbird-cup-holder.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **Description**: Custom cup holder insert that fits in the center console ashtray space. Designed to hold modern beverage containers. The center console isn't quite square, and neither is this, it does have a slight taper of the base to fit better. - see thunderbird-restoration 
 
@@ -67,7 +67,7 @@ Most parts are designed for:
 
 ### 2.5" v-band cap
 
-<img src="/assets/renderings/male-vband-25-cap.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="/images/male-vband-25-cap.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **Description**: A **male** cap designed to fit 2.5" v-band flanges for purge welding. When welding stainless steel or other materials that require back-purging with inert gas, this cap creates a seal against the v-band flange. Includes a small port for gas outlet. The flow port is the decimal of the 2.5 on the face of the flange. I thought that was pretty clever. I designed this and never really tested it, not a big purge welding guy, just never really have the need. 
 
@@ -81,7 +81,7 @@ Most parts are designed for:
 
 ### Yoshimura Flange Adapter
 
-<img src="/assets/renderings/FZ1-yoshimura-rs3-flange-adapter.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
+<img src="/images/FZ1-yoshimura-rs3-flange-adapter.png" alt="3D Preview" width="400" height="300" style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 10px 0;">
 
 **GD&T Drawing**: [Yoshi-Drawing.pdf](/images/Yoshi-Drawing.pdf)
 

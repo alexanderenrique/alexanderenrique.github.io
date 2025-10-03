@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 title: Welcome to Denton Works
-description: One person's journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place. Or maybe just fixing some old broken stuff and learning new things along the way.
+description: One curious engineer's journey through wrenching, coding, and microelectronics projects
 ---
 
 <div class="hero">
     <h1 class="hero__title">Welcome to Denton Works</h1>
-    <p class="hero__subtitle">My journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place. Or maybe just fixing some old broken stuff and learning new things along the way.</p>
+    <p class="hero__subtitle">One curious engineer's journey through wrenching, coding, and microelectronics projects</p>
 </div>
 
 <div class="sections">
@@ -18,7 +18,7 @@ description: One person's journey through wrenching, coding, and microelectronic
                 <a href="{{ '/wrenching/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
-                <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker" style="max-width: 100%; height: auto; border-radius: 8px;">
+                <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker">
             </div>
         </div>
     </section>
