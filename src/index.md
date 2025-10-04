@@ -26,7 +26,7 @@ description: One curious engineer's journey through wrenching, coding, and micro
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">Coding Projects</h2>
-                <p class="section__description">Software tools and automation projects, including <strong>NEMO lab management</strong> tools and <strong>AI chatbots</strong> - see <a href="{{ '/coding/nemo-merger/' | url }}">NEMO Merger</a> and <a href="{{ '/coding/chatbot/WorkLog/' | url }}">WorkLog Bot</a> for details.</p>
+                <p class="section__description">Software tools and automation projects, including <strong>NEMO lab management</strong> tools and <strong>MQTT integration</strong> - see <a href="{{ '/coding/nemo-merger/' | url }}">NEMO Merger</a> and <a href="{{ '/coding/NEMO-MQTT-Plugin/' | url }}">NEMO MQTT Plugin</a> for details.</p>
                 <a href="{{ '/coding/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">

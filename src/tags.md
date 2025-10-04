@@ -77,7 +77,6 @@ Welcome to the Denton Works knowledge base! This page showcases all the tags tha
 ### 🤖 AI & Automation
 - **ai** - Artificial intelligence and machine learning
 - **automation** - Process automation and scripting
-- **chatbot** - Conversational AI interfaces
 - **llm** - Large language models
 - **embedding** - Vector embeddings and similarity
 - **retrieval** - Information retrieval systems
