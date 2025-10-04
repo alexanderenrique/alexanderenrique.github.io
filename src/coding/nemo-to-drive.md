@@ -18,13 +18,13 @@ tags:
 ---
 
 ## Project Overview
-- Script to automatically transfer files from NEMO to Google Drive
+- Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. **GitHub Repo:**
 
-## Current Tasks
-- Getting a basic billing NEMO to drive set up on the VM
+
 
 ## Up Next
-- 
+- Finish automating the post usage question data download and clean up
+- Improve the clean up of the data, staff members are scared of nested JSONs. I mean aren't we all?
 
 ## Work Log
 
