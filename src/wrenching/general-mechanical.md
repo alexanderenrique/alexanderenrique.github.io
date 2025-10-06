@@ -15,9 +15,48 @@ tags:
 ---
 
 ## Project Overview
-This is just a general log of work that isn't really related to any one project. Car related, garage related, mechanical stuff. For the cars that don't get their own log, or other people's cars and bikes.
+This is just a general log of work that isn't really related to any one project. Car related, garage related, mechanical stuff. For the projects that don't get their own log, or other people's cars and bikes.
 
 ## Work Log
+
+###10/5/2025
+**Category:** Public Cruiser Bicycle
+
+**Task:** Removing tires, servicing hubs, tensioning wheel
+
+**Notes:**
+- Removed the rear wheel, the free wheel actually spins pretty nicely, it was the rear hub that was very seized in there
+- It's a cup and cone style which is great, pulled it apart and started cleaning the old grease
+- Removed front and rear wheels, removed tires, tensioned spokes 1/2 turn tighter all around. They're still decently true
+- Lubed the brake calipers and the brake lines, they're working much better now 
+
+
+### 10/4/2025
+**Category:** Ford Ranger
+
+**Task:** Engine cranking, spark checking, fuel pump testing, injector testing
+
+**Notes:**
+- Started by turning the engine by hand, it did two complete revolutions freely which was great
+- Checked the fluids, it has trans and engine oil, the engine oil was very black. I may have seen a little metal on the engine oil dip stick but could be paranoia
+- Installed the battery from the t bird, tried cranking but nothing from the starter motor
+- I jacked up the car and hit on the starter while Mark cranked it, and would you believe it started turning???
+- Had to do this cranking and hitting a couple times but it broke free for good eventually
+- I pulled a plug and checked for spark, and it had spark!
+- I put some carb cleaner straight down the intake and it actually tried to go! A great sign
+- Of course it didn't want to start on its own fuel natually, since it was like varnish, so I disconnected a fuel line under the truck connected to the back side of the fuel filter
+- Very varnishy gas came out, I'm a bit nostalgic about that smell. Means you're having fun.
+- We turned the key with the line disconnected and no fuel came out, no noise from the fuel pump
+  - I guess thinking back, we assumed there was something to pump in the tank, but no flow and no noise
+- Pulled the high pressure frame rail mounted fuel pump and connected it straight to a battery. It was kinda trying to turn you could tell, but it was locked up. Couldn't smack this one back to life
+- So we got creative and joined the fuel pump on the isuzu to the back of the fuel filter on the Ranger
+  - This worked! The problem was it's a return style fuel rail in the Ranger, so I was basically pumping my tank out into the Rangers
+- Tried to start it again, and it wasn't even close to starting. We did verify the fuel rail had high pressure fuel, burped the rail
+- Made the bold choice to pull the injectors! Taking off the top of the manifold wasn't that bad, just a head of rat poop everywhere.
+- Tested the injectors and sure enough none of them were firing even when connected directly to a battery
+- However some carb cleaner down them to break up the varnish and they all started clicking again! Who knows what their flow is like, but at least they open and close
+- That's where we left it. Debating on buying a new fuel pump. They're only like $40, probably worth it. 
+- The questions is always "why was this parked?" And I haven't found the answer yet. The injectors and fuel pump weren't working, but that seems like a symptom of just sitting. I noticed the rear tires were worn to the threads, maybe best case it the tires were so old they'd rather park it than replace it, and then it wouldn't start because of the fuel pump and it just sat?
 
 ### 10/03/2025
 **Category:** Miscellaneous
