@@ -19,6 +19,11 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 10/04/2025
+- Ford Rangers use a dual pump fuel system.
+- Hitting a starter motor with a wrench CAN actually work
+
+
 ### 10/02/2025
 - how to buy a domain and link it to your github pages site
 - about DNS and TXT records and how to set them up and kinda what they do ish

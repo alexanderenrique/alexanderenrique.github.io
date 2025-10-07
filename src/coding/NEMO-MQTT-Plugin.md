@@ -26,8 +26,11 @@ A plugin for [[NEMO]] that enables real-time tool status updates via MQTT messag
 {% mermaid %}
 graph LR
     A[NEMO Django Application] --> B[Redis Message Queue]
-    B --> C[MQTT Broker]
-    C --> D[NEMO Tool Display Hardware]
+    B --> C[MQTT Publisher]
+    A --> D[MQTT configuration page]
+    D --> C[MQTT Publisher]
+    C --> F[MQTT Broker]
+    F --> G[NEMO Tool Display Hardware]
 {% endmermaid %}
 
 ### Key Components
@@ -54,6 +57,18 @@ graph LR
 
 
 ## Work Log
+
+### 10/06/2025
+- Not sure what I was on about withe the MQTT working last time, it definitely was not working. 
+- Redi was recieving the message but not sending it to the broker. 
+- Cursor was trying tp implement some garbage Django integration into the MQTT part to I made a simple MQTT plug in and it started working. 
+  - Makes me think actually, MQTT publisher needs to know the port of the broker where to send it, which it gets fron the config in the NEMO page.
+  - So am I getting the port from the config in the NEMO page?
+- Made encompasing start and stop scripts. A problem I learned about with this is that you can have a bunch of instances of REDIS and MQTT running at the same time, and they will fight eachother over the port. So you need to make sure you kill the old instances before starting the new ones.
+- I get it now, I was running into problems becasue my package envirnment lives outside of the django project, so it wasn't getting the config information it needed from nemo
+- What I need to do is pip install the package in the django project, and then it will have access to the config information from the NEMO page.
+  - Kinda slows down the development process, but it's a necessary evil.
+- Also added a standalone MQTT broker to keep things going.
 
 ### 09/29/2025
 - Don't you love it when you leave something and come back to it and like magically you left it in a working state, and you're ready to go onto the next big thing?

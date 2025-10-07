@@ -19,7 +19,20 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
-###10/5/2025
+### 10/06/2025
+**Category:** Public Cruiser Bicycle
+
+**Task:** Rebuilding Hubs, Mounting Tires, conneecting brakes, new chain
+
+**Notes:**
+- rebuilt the rear wheel, it strikes me that the axle is bent so it'll never roll right. I got it good enough to dilly dally but I'll buy a new axple
+- White tires went on easy enough, they're folding styl and came very flat so it was a chellenge to get them to take the cured shape
+- Put everyhing back together, adjusted brakes. Still needs more brake love.
+- New chain with master link, funny that I've been using the same chain breaker for 10 years.
+- Cleaned up the seat tube, it was fucked with rust. I went a bit too hard with the wire wheel and scuffed the aluminum but you get that
+- Rode it around the block, the seat and grips are worse than I thought, the seat is like sand paper.
+
+### 10/5/2025
 **Category:** Public Cruiser Bicycle
 
 **Task:** Removing tires, servicing hubs, tensioning wheel
@@ -57,6 +70,30 @@ This is just a general log of work that isn't really related to any one project.
 - However some carb cleaner down them to break up the varnish and they all started clicking again! Who knows what their flow is like, but at least they open and close
 - That's where we left it. Debating on buying a new fuel pump. They're only like $40, probably worth it. 
 - The questions is always "why was this parked?" And I haven't found the answer yet. The injectors and fuel pump weren't working, but that seems like a symptom of just sitting. I noticed the rear tires were worn to the threads, maybe best case it the tires were so old they'd rather park it than replace it, and then it wouldn't start because of the fuel pump and it just sat?
+
+## Troubleshooting Process
+
+{% mermaid %}
+graph TD
+    A[Start: Engine won't start] --> B[Turn engine by hand]
+    B --> C[Check fluids]
+    C --> D[Install battery from T-Bird]
+    D --> E[Try cranking]
+    E --> F[Jack up car & hit starter]
+    F --> G[Check for spark]
+    G --> H[Spray carb cleaner down intake]
+    H --> I[Disconnect fuel line]
+    I --> J[Check fuel flow]
+    J --> K[Test fuel pump directly]
+    K --> L[Use Isuzu fuel pump]
+    L --> M[Connect to Ranger fuel filter]
+    M --> N[Try starting with external pump]
+    N --> O[Pull injectors]
+    O --> P[Test injectors with battery]
+    P --> Q[Clean with carb cleaner]
+    Q --> R[Reinstall injectors]
+    R --> S[Ready for new fuel pump]
+{% endmermaid %}
 
 ### 10/03/2025
 **Category:** Miscellaneous
