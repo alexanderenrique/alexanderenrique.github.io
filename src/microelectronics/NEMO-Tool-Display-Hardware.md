@@ -27,6 +27,23 @@ tags:
 - MQTT communication with broker to receive tool status updates
 - Clean and professional looking display that can be mounted near tools
 
+## Process Flow
+{% mermaid %}
+graph LR
+    A["VM recieves MQTT message from NEMO<br><small><i>(Secure SSL if configured)</i></small>"]
+  A --> B["Processes message, trims excess data"]
+  B --> C["VM publishes MQTT message on port 1883 on the LAN"]
+  C --> D["ESP32 subscribes to the topic"]
+  D --> E["ESP32 displays the data on the TFT display"]
+{% endmermaid %}
+
+
+## Things to keep in mind:
+- The ESP32 can only handle a few bytes over MQTT, so keeping message size down is important.
+- NEMO sends information on tool status, user, enable time etc. The only reason I went with the whole plugin and not an API call was for speed of enables and disables, it's instant with the plugin, but it's very slowwith the API call.
+  - This is to say if you want to add non time sensitive information from the API, this is the place to do it.
+  - You can ping the API for next reservation, requested configuration, etc.
+
 ## Current Tasks
 - Making sure the SSL is working properly. The not secure one is working.
 - Testing end to end, going from NEMO to ESP32 to display
@@ -38,6 +55,8 @@ tags:
 - TFT display (ILI9341 or similar)
 - Power supply
 - Enclosure/mounting hardware
+- **Link to custom PCB**
+- **Link to 3D printed enclosure**
 
 ## Technical Details
 ### Required hardware:

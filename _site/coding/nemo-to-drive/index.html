@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Mermaid CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.css">
 </head>
 <body>
     <header class="header">
@@ -75,14 +75,32 @@
     <div class="page-content">
         <h2>Project Overview</h2>
 <ul>
-<li>Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. <strong>GitHub Repo:</strong></li>
+<li>Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. <a href="https://github.com/SNF-Root/NEMO-VM"><strong>GitHub Repo</strong></a></li>
 </ul>
+<h2>Process Flow</h2>
+<div class="mermaid" id="mermaid-wwd6kngbu">
+graph LR
+    A["Runs main function<br><small><i>(Every Hour)</i></small>"]
+  A --> B["Fetches current month's data<br><small><i>(from 1st of month to now)</i></small>"]
+  B --> C["Uploads monthly CSV on Google Drive<br><small><i>(Overwrites existing file)</i></small>"]
+  C --> D["Updates master CSV on Google Drive<br><small><i>(Appends new data to existing file)</i></small>"]
+  D --> E["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
+  C --> F["Creates New Month file on 1st of the month"]
+</div>
 <h2>Up Next</h2>
 <ul>
 <li>Finish automating the post usage question data download and clean up</li>
-<li>Improve the clean up of the data, staff members are scared of nested JSONs. I mean aren't we all?</li>
+<li>Why are there duplicate septemeber and October, both ending on the second of the month?</li>
+<li>Setting up Google VM for all the scripts</li>
 </ul>
 <h2>Work Log</h2>
+<h3>10/10/2025</h3>
+<ul>
+<li>Turns our Eli has made progress on the Tableu side, so I need to make sure the data is there for him</li>
+<li>My Daemon on the collector has been working this whole time which is pretty cool I hadn't checked on it in forever.</li>
+<li>Slight bug where it made a new monthly report for the first two days of the month and then made a seperate report correctly with the entire month</li>
+<li>Worked fixing that bug, and generating an annual report with ALL the years data</li>
+</ul>
 <h3>08/07/2025</h3>
 <ul>
 <li>The billing seems to be working nicely which is cool</li>
@@ -146,7 +164,7 @@
 
     <script src="/js/main.js"></script>
     <!-- Mermaid JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js"></script>
     <script>
         mermaid.initialize({ 
             startOnLoad: true,

@@ -20,43 +20,78 @@ tags:
 ---
 
 ## Project Overview
-A plugin for [[NEMO]] that enables real-time tool status updates via MQTT messaging. Uses Redis as a message queue intermediary between NEMO and MQTT broker. Originally I wanted to use MQTT directly in the code, but that created additional dependencies and the developer thought it better to use the existing system of signals in Django. So I used Redis as a message queue intermediary, and that then creates an MQTT message.
+A plugin for NEMO that enables real-time tool status updates via MQTT messaging. Uses Redis as a message queue intermediary between NEMO and MQTT broker. Originally I wanted to use MQTT directly in the code, but that created additional dependencies and the developer thought it better to use the existing system of signals in Django. So I used Redis as a message queue intermediary, and that then creates an MQTT message.
 
+### Notes for tomorrow:
+- it's not actually connecting to port 1884 when I change the config, I think that's becasue of hard coded development setting
+- On the config page, nothing is actually happening in the MQTT logs or event filters not sure why
+- It WAS working on port 1883 but I think that's becasue it's hard coded in the plugin
+- but when I change the borker port, the monitor DOES keep working so that is good
+- 
 ### Architecture
 {% mermaid %}
 graph LR
-    A[NEMO Django Application] --> B[Redis Message Queue]
-    B --> C[MQTT Publisher]
-    A --> D[MQTT configuration page]
-    D --> C[MQTT Publisher]
-    C --> F[MQTT Broker]
-    F --> G[NEMO Tool Display Hardware]
+  A@{ shape: subproc, label: "This is a subprocess" }
 {% endmermaid %}
+
+
+### High Level Architecture
+{% mermaid %}
+graph LR
+    A@{shape: rounded, label: "Tool enabled/disabled by labmember"}
+    A --> B(("NEMO Django Signal"))
+    B --> C[("Redis Message Queue")]
+    C --> D(("JSON to MQTT Service"))
+    D --> E(("MQTT Broker"))
+    E --> F["NEMO Tool Display Hardware"]
+    G["MQTT customization page"] --> E
+{% endmermaid %}
+
 
 ### Key Components
 - Django signals for event handling
 - Redis pub/sub for message queueing 
-- MQTT client for broker communication
-- SSL/TLS security for MQTT messages
-
-### Message Flow
-1. NEMO event triggers Django signal
-2. Signal handler publishes to Redis queue
-3. Redis consumer forwards to MQTT broker
-4. Broker distributes to subscribed clients
+- MQTT service for converting from JSON to MQTT message
+- Plugin MQTT broker for distributing messages to subscribed clients
+- SSL/TLS security for MQTT messages to VM broker
+- MQTT monitor page for displaying messages in a user friendly way
 
 ### Configuration
 - Broker connection settings
-- Redis connection settings
 - SSL/TLS certificates
-- Topic structure
 
 ## Up Next:
-- Getting the message monitoring working, like a seperate page so it's super easy for non-techies to see what's going on
+- Connecting to a truly seperate MQTT broker
 - Testing SSL/TLS
+- Making the monitor format easier to read by humans instead of a dense JSON object
 
 
 ## Work Log
+
+### 10/09/2025
+- Ok so debugging why Django is doing its job perfectly and publishing all the messages exactly as it should, but the moniotr page (which is basically a dummy subsriber) is not receiving all of the messages. It's always werid to me when something half works on a computer. Like where is it going?
+- Ok so it turns out that the JSON to MQTT service was something that was running outside of the plugin and I think that was causing issues
+  - I wanted the mqtt to be outside of the django sure, but it WAS a seperate script that lived in a different directory that had to be stopped and started seperately to consume the redis and publish them. 
+- Still battling the multiple django initializations. I remember it was a battle previously, and now that the MQTT and Redis are inside of the django project I needed to add flags so that it only initializes the plugin once. 
+- THE DUPLICATES EVERYWHERE!
+- Had this problem also with the duplicate redis.
+  - I learned that you can have multiple redis DBs, so what I did was move the nemo DB in redis to DB1 as to not interfere with the default DB0.
+  - Like if someone wants to install this and their Redis is already turned on, I don't want to just clobber it.
+- Holy cow I think I got it working for reals how good is that?
+- I cleaned up the work space and made it a proper pypi package which looks great but I may have jumped the gun becasue there's more testing to do. 
+
+### 10/08/2025
+- Mostly spent time figuring out the front end of the mqtt/monitor page. The java script wasn't loading correctly, fixed the messges fading after 5 seconds, added a bunch of debug to the mqtt/monitor page.
+- Another issue was the API, I learned that the 
+
+### 10/07/2025
+- heaps of progress! I got the plugin installed in the NEMO-CE and installed the URLS and everything seems to be working.
+- I still need to work on the mqtt/monitor page. It's close, the messages are showing up but they're at the top and kind of fade away for no reason? Th UI isn't what I want it to be.
+- This is just a bloody confusing project to me because things need to talk to eachother in so many different ways, like Django config needs to feed to the mqtt publisher setting and Django also talks to redis which feeds the MQTT publisher etc.
+- It's also confusing because I'm developing the package in one work space, and then it's pip installed in the nemo-ce, but I've also made a symlink between them which I've never done before. So I have to constantly ask myself if my changes just didn't work, or it hasn't updated or what
+- Same with the constant issue of multiple Django servers, Redis ques and MQTT brokers on different ports.
+- I tried using Symlink to connect the mqtt plugin inside of NEMO to the plugin development environment, but it didn't work.
+- I ended up with a short shell script that deletes the old plugin and redownloads the new one.
 
 ### 10/06/2025
 - Not sure what I was on about withe the MQTT working last time, it definitely was not working. 
@@ -64,9 +99,9 @@ graph LR
 - Cursor was trying tp implement some garbage Django integration into the MQTT part to I made a simple MQTT plug in and it started working. 
   - Makes me think actually, MQTT publisher needs to know the port of the broker where to send it, which it gets fron the config in the NEMO page.
   - So am I getting the port from the config in the NEMO page?
-- Made encompasing start and stop scripts. A problem I learned about with this is that you can have a bunch of instances of REDIS and MQTT running at the same time, and they will fight eachother over the port. So you need to make sure you kill the old instances before starting the new ones.
+- Made encompasing start and stop scripts. A problem I learned about with this is that you can have a bunch of instances of Redis and MQTT running at the same time, and they will fight eachother over the port. So you need to make sure you kill the old instances before starting the new ones.
 - I get it now, I was running into problems becasue my package envirnment lives outside of the django project, so it wasn't getting the config information it needed from nemo
-- What I need to do is pip install the package in the django project, and then it will have access to the config information from the NEMO page.
+- What I need to do is pip install the package in the Django project, and then it will have access to the config information from the NEMO page.
   - Kinda slows down the development process, but it's a necessary evil.
 - Also added a standalone MQTT broker to keep things going.
 
@@ -89,3 +124,67 @@ graph LR
 - Per Mathieu's request, I'm changing to a django signals method so that I don't have MQTT dependencies directly in the code. It's more modular and easier to maintain.
 - I'll need to add a bare minimum django.signal, to then trigger the MQTT plugin message.
 - Clobbered my old work and started with the signals, the initial work always goes quickly and then it's testing it and getting what you want that takes a lot of fine tuning. 
+
+
+### Detailed Architecture
+#### Django
+
+{% mermaid %}
+graph LR
+    A@{ shape: event, label: "User Starts Using Tool" } --> B@{ shape: cyl, label: "Django Saves UsageEvent to DB<br><small><i>(DB CALL)</i></small>" }
+    B --> C@{ shape: rounded, label: "Signal Handler Receives UsageEvent Instance" }
+    C --> D@{ shape: rect, label: "Signal Handler Creates object with user, tool, start, end, etc.<br><small><i>(JSON)</i></small>" }
+    D --> E@{ shape: cyl, label: "JSON Goes to Redis" }
+{% endmermaid %}
+
+#### JSON to MQTT Service
+{% mermaid %}
+graph LR
+    F@{ shape: cyl, label: "Redis has its own db to store the message<br><small><i>(JSON Event, stored in Redis DB1)</i></small>" }
+    F --> G@{ shape: rect, label: "JSON to MQTT Service consumes message" }
+    G --> H@{ shape: rect, label: "JSON to MQTT Service converts to MQTT<br><small><i>(MQTT Message)</i></small>" }
+    H --> I@{ shape: cyl, label: "MQTT Broker distributes message to subscribed clients<br><small><i>(MQTT Message)</i></small>" }
+    I --> J@{ shape: rect, label: "MQTTWebMonitor" }
+    I --> K@{ shape: cyl, label: "Second external broker that lives on VM<br><small><i>(MQTT Message)</i></small>" }
+{% endmermaid %}
+
+#### MQTT Monitor Logic
+{% mermaid %}
+graph TD
+    A@{ shape: rect, label: "MQTTWebMonitor subscribes to all<br>NEMO topics from the broker<br><small><i>(MQTT message)</i></small>" } --> B@{ shape: rounded, label: "MQTTWebMonitor recieves message<br><small><i>(MQTT message)</i></small>" }
+    B --> C@{ shape: rect, label: "MQTTWebMonitor converts to python dictionary<br><small><i>(Python Dictionary)</i></small>" }
+    C --> D@{ shape: win-pane, label: "MQTTWebMonitor stores in Memory<br><small><i>(Python Array)</i></small>" }
+    D --> E@{ shape: event, label: "Web page loads /mqtt/monitor/" }
+    E --> F@{ shape: rect, label: "Frontend JavaScript makes an<br>HTTP GET request to /mqtt/monitor/api/" }
+    F --> G@{ shape: rounded, label: "Django view mqtt_monitor_api receives the request" }
+    G --> H@{ shape: win-pane, label: "View accesses monitor.messages<br><small><i>(in-memory Python array)</i></small>" }
+    H --> I@{ shape: rect, label: "View filters for MQTT messages only" }
+    I --> J@{ shape: doc, label: "View returns JSON response<br><small><i>(JSON string)</i></small>" }
+    J --> K@{ shape: rect, label: "JavaScript receives JSON response<br><small><i>(JSON string)</i></small>" }
+    K --> L@{ shape: rect, label: "JavaScript parses JSON into JavaScript objects<br><small><i>(JavaScript objects)</i></small>" }
+    L --> M@{ shape: rect, label: "JavaScript processes and formats the data" }
+    M --> N@{ shape: display, label: "JavaScript updates HTML DOM to display messages<br><small><i>(HTML elements)</i></small>" }
+{% endmermaid %}
+
+
+### Django Plugin Startup Process
+{% mermaid %}
+graph TD
+    A@{ shape: event, label: "Django Startup" } --> B@{ shape: rounded, label: "AppConfig.ready()" }
+    B --> C@{ shape: diam, label: "Already Initialized?" }
+    C -->|Yes| D@{ shape: rect, label: "Skip Initialization" }
+    C -->|No| E@{ shape: rect, label: "Migration Check" }
+    E --> F@{ shape: diam, label: "Migration Command?" }
+    F -->|Yes| G@{ shape: rect, label: "Skip MQTT Init" }
+    F -->|No| H@{ shape: rect, label: "Import Signal Handlers" }
+    H --> I@{ shape: rect, label: "Import Customization" }
+    I --> J@{ shape: rect, label: "Mark as Initialized" }
+    J --> K@{ shape: cyl, label: "Initialize Redis Publisher" }
+    K --> L@{ shape: rect, label: "Get MQTT Configuration" }
+    L --> M@{ shape: diam, label: "Config Enabled?" }
+    M -->|Yes| N@{ shape: rect, label: "Start JSON to MQTT Service" }
+    M -->|No| O@{ shape: rect, label: "Start Service Anyway for Dev" }
+    N --> P@{ shape: rect, label: "Auto MQTT Service Start" }
+    O --> P
+    P --> Q@{ shape: rounded, label: "Service Running" }
+{% endmermaid %}

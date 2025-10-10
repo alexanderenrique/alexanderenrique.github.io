@@ -18,15 +18,35 @@ tags:
 ---
 
 ## Project Overview
-- Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. **GitHub Repo:**
+- Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. [**GitHub Repo**](https://github.com/SNF-Root/NEMO-VM)
+
+## Process Flow
+{% mermaid %}
+graph LR
+    A["Runs main function<br><small><i>(Every Hour)</i></small>"]
+  A --> B["Fetches current month's data<br><small><i>(from 1st of month to now)</i></small>"]
+  B --> C["Uploads monthly CSV on Google Drive<br><small><i>(Overwrites existing file)</i></small>"]
+  C --> D["Updates master CSV on Google Drive<br><small><i>(Appends new data to existing file)</i></small>"]
+  D --> E["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
+  C --> F["Creates New Month file on 1st of the month"]
+{% endmermaid %}
+
+
 
 
 
 ## Up Next
 - Finish automating the post usage question data download and clean up
-- Improve the clean up of the data, staff members are scared of nested JSONs. I mean aren't we all?
+- Why are there duplicate septemeber and October, both ending on the second of the month?
+- Setting up Google VM for all the scripts
 
 ## Work Log
+
+### 10/10/2025
+- Turns our Eli has made progress on the Tableu side, so I need to make sure the data is there for him
+- My Daemon on the collector has been working this whole time which is pretty cool I hadn't checked on it in forever. 
+- Slight bug where it made a new monthly report for the first two days of the month and then made a seperate report correctly with the entire month
+- Worked fixing that bug, and generating an annual report with ALL the years data
 
 ### 08/07/2025
 - The billing seems to be working nicely which is cool

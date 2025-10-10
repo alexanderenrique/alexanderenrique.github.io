@@ -25,11 +25,11 @@ This is just a general log of work that isn't really related to any one project.
 **Task:** Rebuilding Hubs, Mounting Tires, conneecting brakes, new chain
 
 **Notes:**
-- rebuilt the rear wheel, it strikes me that the axle is bent so it'll never roll right. I got it good enough to dilly dally but I'll buy a new axple
+- Rebuilt the rear wheel bearings, it strikes me that the axle is bent so it'll never roll right. I got it good enough to dilly dally but I'll buy a new axle.
 - White tires went on easy enough, they're folding styl and came very flat so it was a chellenge to get them to take the cured shape
 - Put everyhing back together, adjusted brakes. Still needs more brake love.
 - New chain with master link, funny that I've been using the same chain breaker for 10 years.
-- Cleaned up the seat tube, it was fucked with rust. I went a bit too hard with the wire wheel and scuffed the aluminum but you get that
+- Cleaned up the seat tube, it was coated with rust from the down tube. The seatpost itself is aluminum. I went a bit too hard with the wire wheel and scuffed the aluminum but you get that.
 - Rode it around the block, the seat and grips are worse than I thought, the seat is like sand paper.
 
 ### 10/5/2025
