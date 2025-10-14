@@ -19,6 +19,17 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 10/08/2025
+**Category:** Public Cruiser Bicycle
+
+**Task:** Rebuilding Hubs, New Rear Brakes, New Seat and Grips
+
+**Notes:**
+- Installed new seat and grips
+- Installed new rear brake pads, I took some from my mystery box. They're a different style than the origincal and they sit a lot closer to the rim. Definitely dragging just a little bit becasue the wheel is aout of true and the axle is loose
+- Tried replacing the axle with one I bought but the size of the cone was off and the pitch was different so I wasn't able to re-use the old cone. It really feels like it should work not sure why it's fighting me.
+
+
 ### 10/06/2025
 **Category:** Public Cruiser Bicycle
 

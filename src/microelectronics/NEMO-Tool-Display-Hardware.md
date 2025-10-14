@@ -78,6 +78,15 @@ graph LR
 
 ## Work Log
 
+### 10/14/2025
+- Ok so the plugin side seems to be working which is great, but I did change some things which seems to have broken the display side.
+- We're easily receiving the messages, consistently connecting to the broker, etc, but now the publishing and trimming of messages is not working.
+- The main problem was that I decided to use Redis db1 instead of db0, and the consolidated connection manager script was using db0.
+- Shot myself in the foot with one of my clean up scripts. when NEMO fires up, I had written in that it should stop all mqtt brokers, and only restart the one that it needs.
+  - However since we're all on the same machine, it was also killing port 1883 which is the ESP32 MQTT broker.
+  - So I wrote in the start code to re-open port 1883 when it launches, and don't try and connect unless the port is open.
+  - That quiet closing of the ESP32 port was the problem!
+
 
 ### 09/21/2025
 - man have done a heap of work on this. Got the MQTT working properly in bakersfield

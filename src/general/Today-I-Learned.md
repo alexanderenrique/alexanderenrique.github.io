@@ -19,6 +19,10 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 10/13/2025
+- learned about Jitter in the sense of retrying a connectino as a way to mitigate many seperate things trying to connect at the exact same time.
+  - Evidentely plus or minus 10% is ideal, not too long and wasting time, not too short and not solving you "trampling herd" problem.
+
 ### 10/04/2025
 - Ford Rangers use a dual pump fuel system.
 - Hitting a starter motor with a wrench CAN actually work

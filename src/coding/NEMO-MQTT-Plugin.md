@@ -61,12 +61,27 @@ graph LR
 - SSL/TLS certificates
 
 ## Up Next:
+- Is there auto reconnect if the NEMO MQTT disconects or Mosquitto dies?
 - Connecting to a truly seperate MQTT broker
 - Testing SSL/TLS
 - Making the monitor format easier to read by humans instead of a dense JSON object
 
 
 ## Work Log
+
+### 10/14/2025
+- I did a pretty big refactor at the end of the day, cleaning up the way the MQTT broker starts and killing old instances of mosquitto.
+- Of course it didn't work right away and there was some collateral damage in the form of a customization file, luckily github had my back
+- Way better connection and retyr logic with exponential delay and jittering.
+- Added debugging to make sure it picks up when it connects and disconects
+- Really hard testing things all on the same machine, it'd be nice to have a seperate instance of mosquitto and all these things.
+### 10/13/2025
+- Un-hardcoded the MQTT port.
+- Now there is a django signal so that when you save the config in the NEMO page, the cached mqtt port is actually delted
+  - This prompts the MQTT to check the port from the DB and updates it
+  - Pretty clever right?
+- It does seem to work now that the port is dynamic, I was able to get it going on port 1884
+- There are challenges in having everything on the same machine. Like when I do the quick restart of mqtt broker it kills all instances of mosquitto which kills whatever connection NEMO had to the broker.
 
 ### 10/09/2025
 - Ok so debugging why Django is doing its job perfectly and publishing all the messages exactly as it should, but the moniotr page (which is basically a dummy subsriber) is not receiving all of the messages. It's always werid to me when something half works on a computer. Like where is it going?

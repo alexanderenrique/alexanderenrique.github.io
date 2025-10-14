@@ -21,7 +21,8 @@ tags: [ideas, planning, future-projects]
   - Create NEMO data dashboard  
   - Add processing techniques from ArXiv to repository
   - Something to actually read my handwritting, training an LLM
-  - 
+  - A Plugin that clones the DB somewhere else so that we can have direct access to the data from tableu or whatever else we want
+
 - **Smart Assistants & Bots**
   - Voice commands to interact with the Thunderbird (e.g. ask car status)  
   - Scrape personal emails to create a personalized email response bot  

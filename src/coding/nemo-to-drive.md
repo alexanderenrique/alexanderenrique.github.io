@@ -29,24 +29,32 @@ graph LR
   C --> D["Updates master CSV on Google Drive<br><small><i>(Appends new data to existing file)</i></small>"]
   D --> E["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
   C --> F["Creates New Month file on 1st of the month"]
+  B --> G["Pings the API for the latest tool and user lists to generaate look up table"]
+  G --> H["Downloads Post Usage Questions data"]
+  H --> I["Creates a new CSV file for each tool"]
+  I --> J["Swaps the user and tool ID for their common names"]
+  J --> K["Uploads the new CSV file to Google Drive"]
+  K --> L["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
 {% endmermaid %}
 
-
-
-
-
 ## Up Next
-- Finish automating the post usage question data download and clean up
-- Why are there duplicate septemeber and October, both ending on the second of the month?
 - Setting up Google VM for all the scripts
 
 ## Work Log
+
+### 10/13/2025
+- Had the script set up to run every hour on the bottom of the hour on my local machine but I didn't test it at all so it wasn't actually running
+- Made somechanges and now it should actually run, classic token/env stuff not set up right.
+- Also updated the post usage question script so that it was actually automated. It last ran in august.
+- Changed the usage questions to pull only the latest month just like the billing data.
+
 
 ### 10/10/2025
 - Turns our Eli has made progress on the Tableu side, so I need to make sure the data is there for him
 - My Daemon on the collector has been working this whole time which is pretty cool I hadn't checked on it in forever. 
 - Slight bug where it made a new monthly report for the first two days of the month and then made a seperate report correctly with the entire month
 - Worked fixing that bug, and generating an annual report with ALL the years data
+- Can't NoMachine into the collector for some reason, so I set up the script to run locally every half hour on my local machine for now, just kinda for funsises.
 
 ### 08/07/2025
 - The billing seems to be working nicely which is cool
