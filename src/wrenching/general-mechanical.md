@@ -19,6 +19,28 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 10/14/2025
+**Category:** Precursor Rack
+
+**Task:** Keep designing, start printing
+
+**Notes:**
+- Finished up the top plate, I figured out a work around for the issue where it wouldn't let me use the voronoi feature inside of two different sketches
+  - I just made a second sketch
+- Added countersunk bolt holes for m3 bolts, I figured that's better than attempting to snap them together with the tolerances on our printer
+- Also made up some side plates. The good news is that none of this is load bearing so I don't have to be too robust or rigorous in my design.
+
+### 10/14/2025
+**Category:** Precursor Rack
+
+**Task:** Start designing a better precursor rack
+
+**Notes:**
+- My intern did a lovely job designing a precursor rack a couple years ago, all heavy duty aluminum, must've cost a fortune at the machine shop.
+- He designed it true to the constraints of the time which was to maximize precursors, but now that we've significantly reduced the number of precursors, we can design a better rack.
+- I'm 3D printing it, spacing out the precursors a lot more to accomodate them when they are unopened and have the red valve caps on them.
+- As an added fun, I'm going headvy on the Voronoi design which looks sweet and should use less material.
+
 ### 10/08/2025
 **Category:** Public Cruiser Bicycle
 

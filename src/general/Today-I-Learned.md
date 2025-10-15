@@ -19,9 +19,24 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 10/15/2025
+- Learned about Brewster angles again. 
+  - p-polarized light (polarized in the plane of incidence) is not reflected — it all transmits.
+  - s-polarized light (polarized perpendicular to the plane) still reflects.
+  - So basically in ellipsometery: near the Brewster angle, the reflectance of p-polarized light drops sharply. Small changes in film thickness or refractive index cause large measurable changes in the reflected polarization.
+
+### 10/14/2025
+- learned about Voronoi and how to use them in onshape designs
+- U, V, and Seed parameters.
+  
+
 ### 10/13/2025
 - learned about Jitter in the sense of retrying a connectino as a way to mitigate many seperate things trying to connect at the exact same time.
   - Evidentely plus or minus 10% is ideal, not too long and wasting time, not too short and not solving you "trampling herd" problem.
+
+### 10/10/2025
+- I feel like I really understood birefringence for the first time, thought I've tried to learn it countless times
+- Learned in the context of ellipsometery of course
 
 ### 10/04/2025
 - Ford Rangers use a dual pump fuel system.

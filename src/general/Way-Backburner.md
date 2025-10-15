@@ -12,7 +12,8 @@ tags: [ideas, planning, future-projects]
   - Cone expander  
   - Watch holder  
 - Fuse 3D printed filament together (e.g. splicing/joining technique)
-- Set up digitization station for diaries  
+- Set up digitization station for diaries 
+- Better precursor rack  
 
 ## Programming / Software
 - **NEMO Features**
@@ -25,10 +26,12 @@ tags: [ideas, planning, future-projects]
 
 - **Smart Assistants & Bots**
   - Voice commands to interact with the Thunderbird (e.g. ask car status)  
-  - Scrape personal emails to create a personalized email response bot  
+  - Scrape personal emails to create a personalized email response bot
+
 - **Productivity & Quantified Self**
   - ESP32-CAM to monitor time spent at desk daily  
-  - Strava API: calories burned per day  
+  - Strava API: calories burned per day
+    
 - **Infrastructure & Systems**
   - Pi-hole DNS for home  
   - Inventory management system better than spreadsheets  
