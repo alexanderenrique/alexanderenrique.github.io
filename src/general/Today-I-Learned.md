@@ -19,6 +19,9 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 10/16/2025
+- Learned about TLS handshake and how it works.
+
 ### 10/15/2025
 - Learned about Brewster angles again. 
   - p-polarized light (polarized in the plane of incidence) is not reflected — it all transmits.

@@ -19,6 +19,17 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 10/16/2025
+**Category:** Precursor Rack
+
+**Task:** Keep designing, start printing
+
+**Notes:**
+- tested the top plate that I printed yesterday, mostly good, 1.3" is wayy too generous for the 1" cylinders, tightened that up. Missed some dimensioning previously
+- First stab at the side plate, just working too fast and straight forgot to dimension some stuff so there were holes but all the wrong size and places
+- Learned the 3D printer is pretty dimensionally tight actually. To within a couple thousands so for the m3 bolt that measures .113 I made a .1 hole and it threads well. 
+- Got a proper top and side plate screwed together and it is so cool. Lots of people saying it looks like art, which is the highest compliment I think.
+
 ### 10/14/2025
 **Category:** Precursor Rack
 

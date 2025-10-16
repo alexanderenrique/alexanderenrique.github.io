@@ -66,11 +66,10 @@ graph LR
 - The custom PCB, to make things nicer to solder together
 - 3D printed enclosure
 
-### MQTT Topics
-- Tool status: `nemo/tools/{tool_id}/status`
-- Next reservation: `nemo/tools/{tool_id}/next`
 
 ### Up Next/To figure out:
+- Getting SSL to work between NEMO and the VM
+- Moving the code to the collector
 - adding another tool to my NEMO test
 - making sure it is only listening to the correct tool
 

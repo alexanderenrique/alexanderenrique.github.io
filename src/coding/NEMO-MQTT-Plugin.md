@@ -69,12 +69,26 @@ graph LR
 
 ## Work Log
 
+### 10/16/2025
+- Got the TLS working and connecting, the certificate I generated was missing some key parts.
+- Had to learn a lot about how the whole TLS hadnshake occurse but that's ok because it's not restricted to MQTT, it's a general thing that happens in all network communication.
+- The TLS was working but then the monitor page wasn't getting the messages
+  - It was configured statically to a certain port to get it working but now it pulls the latest from the db
+- This project is so damn confusing becasue even my monitor page acts as its own broker so I have brokers and connections all over the place all starting and stopping and competing for ports. 
+- The next step is to make sure the "VM" is actually recieving messages over TLS.
+
+### 10/15/2025
+- I kinda don't want to work on it anymore but I want to push this across the finish line.
+- The TLS just wan;t working even a little bit, like it was a shell method so everything broke when I enabled it
+- Started grinding through the iterations to get it working.
+
 ### 10/14/2025
 - I did a pretty big refactor at the end of the day, cleaning up the way the MQTT broker starts and killing old instances of mosquitto.
 - Of course it didn't work right away and there was some collateral damage in the form of a customization file, luckily github had my back
-- Way better connection and retyr logic with exponential delay and jittering.
+- Way better connection and retry logic with exponential delay and jittering.
 - Added debugging to make sure it picks up when it connects and disconects
 - Really hard testing things all on the same machine, it'd be nice to have a seperate instance of mosquitto and all these things.
+
 ### 10/13/2025
 - Un-hardcoded the MQTT port.
 - Now there is a django signal so that when you save the config in the NEMO page, the cached mqtt port is actually delted
