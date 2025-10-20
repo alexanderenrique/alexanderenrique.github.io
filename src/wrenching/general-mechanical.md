@@ -19,6 +19,27 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 10/18/2025
+**Category:** Ford Ranger
+
+**Task:** Getting it started!
+
+**Notes:**
+- Went back to the property, installed the new fuel pump
+- Put the cleaned injectors back in and reassembled the intake manifold. That all went pretty smoothly.
+- Created a system where we had a line going from a jerry can to the high pressure fuel pump, and then a return line also going into the jerry can
+- Primed it with fuel first, verified the pump was working and all was good
+- Tested the voltage at the pump when the key was turned. There was a super short priming pule where I saw about 11V, then while cranking I saw 9V at the pump
+- So we plugged in the pump to the car wiring system, and IT STARTED FIRST TRY
+- It was crazy, but then the engine sputtered out
+- We did this a couple times and then we connected the fuel pump directly to an external battery, and it idled right along it was awesome. 
+- Connected the back half of the fuel system and used the pump to pump fuel from the tank into another jerry can.
+- Then we filled the tank with about 5 gallons, and got it to run on its own tank and return system!
+- It idles pretty well, sounds like it has lifter tick to me. It goes away when you give it a rev and oil pressure comes up. Nothing worth getting worked up about just yet.
+- We changed the oil, nothing unusual in the engine oil which is rad
+- The fuel going through the rail just sounds bad, like lots of air in it and a gurgling noise. I think the high pressure fuel pump has too much asked of it and it can't pick up all the way from the tank, or there is some kind of air getting in. We need to re-visit the jerry can fuel system I think.
+- End of the day I jacked up the rear of the car, put it in drive, and the rear left wheel started spinning with some force! It was the only wheel off the ground, very exciting. 
+
 ### 10/16/2025
 **Category:** Precursor Rack
 
@@ -29,6 +50,23 @@ This is just a general log of work that isn't really related to any one project.
 - First stab at the side plate, just working too fast and straight forgot to dimension some stuff so there were holes but all the wrong size and places
 - Learned the 3D printer is pretty dimensionally tight actually. To within a couple thousands so for the m3 bolt that measures .113 I made a .1 hole and it threads well. 
 - Got a proper top and side plate screwed together and it is so cool. Lots of people saying it looks like art, which is the highest compliment I think.
+
+**Category:** Dan's 2004 Subaru Outback
+
+**Task:** Diagnose front end shake
+
+**Notes:**
+- Jacked up the car, inspect the front right wheel, everything was tight there
+- Jacked up fron left, that wehll had a lot of play in it. The lug nuts were tight but I was able to move the entire assembly inside the steering knuckle so it wasn't ball joints
+- My thinking is it's just the bearings, short test drive and there was definitely growling coming from that front corner, not safe to drive really. 
+
+**Category:** Mark's Ranger
+
+**Task:** Test and re-assemble fuel pump assembly
+
+**Notes:**
+- Applied 12v to the new pump, it worked right away, thank god
+- Rebuilt the little fuel pump assembly, it was trivial to put together.
 
 ### 10/14/2025
 **Category:** Precursor Rack

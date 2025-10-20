@@ -22,19 +22,36 @@ tags:
 ---
 
 ## Project Overview
-- I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse
+- I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse. This lead to a whole transmission rebuild. Other accomplishements and improvements can be seen at the bottom of the page.
 
-## Current Tasks
-- 3D print passenger side blank off plate
-- design know for driver side sun shade so it doesn't rattle
-- window switches
+## Before the Christmas Road Trip!
+
+### Must Do:
+- Radiator and cooling system
+- Window trims and weather stripping
+- Comprehensive flat kit
+- Flushing the brake lines
+- Inspecting rear brakes and bearings
+- change plugs, measure compression, deduce compression ratio
+
+### Massive but not critical:
+- Wrapping the car
+- New starter motor
+- Windshield washer bottle
+
+### Nice to Have Smaller Tasks:
+- Verify temperature gauge is accurate
+- Fuel level reading accurately
+- Automatic parking brake release
+- Passenger side blank off plate
+- Driver side sun shade so it doesn't rattle
+- Window switches
 - Oil leak from front of engine
 - "knee breeze" cable
 - Switching between defrost and forward vent
 - Getting some fix a flat in a can in case of flat
 - Finish the front seatbelts
-- Finish Vacuum headlight switch
-- Finish automatic parking brake release
+
 
 ## Work Log
 
