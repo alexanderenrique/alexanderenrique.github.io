@@ -13,7 +13,18 @@ A work log tracking the evolution of this website from simple Markdown to a full
 - Keep the tech stack simple but extensible
 - Focus on styling AND content
 
+## Up Next:
+- Adding github links to the code based projects
+- Adding more 3D models, precursor rack
+- 
+
 ## Work Log
+
+### 11/2/2025
+**Main Task:** Formatting work logs
+
+**Notes:**
+- Standardized the formatting of the work logs
 
 ### 10/03/2025
 - Added tagging and a couple of general pages

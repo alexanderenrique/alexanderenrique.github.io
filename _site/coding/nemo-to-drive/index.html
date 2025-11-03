@@ -78,27 +78,33 @@
 <li>Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. <a href="https://github.com/SNF-Root/NEMO-VM"><strong>GitHub Repo</strong></a></li>
 </ul>
 <h2>Process Flow</h2>
-<div class="mermaid" id="mermaid-tttffqjdb">
+<div class="mermaid" id="mermaid-qqeqgazjr">
 graph LR
     A["Runs main function<br><small><i>(Every Hour)</i></small>"]
   A --> B["Fetches current month's data<br><small><i>(from 1st of month to now)</i></small>"]
-  B --> C["Uploads monthly CSV on Google Drive<br><small><i>(Overwrites existing file)</i></small>"]
-  C --> D["Updates master CSV on Google Drive<br><small><i>(Appends new data to existing file)</i></small>"]
-  D --> E["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
+  B --> C["Uploads monthly CSV on Google Drive Sub folder<br><small><i>(Overwrites existing file)</i></small>"]
+  C --> D["Update a yearly master CSV on Google Drive<br><small><i>(Deletes and re-uploads the last 40 days)</i></small>"]
+  D --> E["Updates all time master CSV at root directory<br><small><i>(Deletes and re-uploads the last 40 days)</i></small>"]
   C --> F["Creates New Month file on 1st of the month"]
-  B --> G["Pings the API for the latest tool and user lists to generaate look up table"]
-  G --> H["Downloads Post Usage Questions data"]
-  H --> I["Creates a new CSV file for each tool"]
-  I --> J["Swaps the user and tool ID for their common names"]
-  J --> K["Uploads the new CSV file to Google Drive"]
-  K --> L["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
+  E --> G["Cleans up local files<br><small><i>(Deletes old files)</i></small>"]
 </div>
 <h2>Up Next</h2>
 <ul>
 <li>Setting up Google VM for all the scripts</li>
 </ul>
 <h2>Work Log</h2>
+<h3>11/2/2025</h3>
+<p><strong>Main Task:</strong> Master CSV bug fix and annual report creation</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>There was a bug in the master csv. because I was only appending new entries, the old ones were never being corrected like if there was an erroniously long usage event</li>
+<li>I made it so the last 40 days are deleted and re-downloaded everytime the script runs</li>
+<li>Also made a master csv with all years data in the root directory</li>
+<li>Now on NEMO there is an easy way to see the post usage questions, so I'm removing that from this program. Feels bad to waste time but you get that.</li>
+</ul>
 <h3>10/13/2025</h3>
+<p><strong>Main Task:</strong> Scheduling and automation fixes, post usage questions update</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Had the script set up to run every hour on the bottom of the hour on my local machine but I didn't test it at all so it wasn't actually running</li>
 <li>Made somechanges and now it should actually run, classic token/env stuff not set up right.</li>
@@ -106,6 +112,8 @@ graph LR
 <li>Changed the usage questions to pull only the latest month just like the billing data.</li>
 </ul>
 <h3>10/10/2025</h3>
+<p><strong>Main Task:</strong> Monthly report bug fix and annual report generation</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Turns our Eli has made progress on the Tableu side, so I need to make sure the data is there for him</li>
 <li>My Daemon on the collector has been working this whole time which is pretty cool I hadn't checked on it in forever.</li>
@@ -114,6 +122,8 @@ graph LR
 <li>Can't NoMachine into the collector for some reason, so I set up the script to run locally every half hour on my local machine for now, just kinda for funsises.</li>
 </ul>
 <h3>08/07/2025</h3>
+<p><strong>Main Task:</strong> Post usage questions data processing</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>The billing seems to be working nicely which is cool</li>
 <li>Started working on getting the post usage question data out and onto the drive, that seems to be working well. Just a lot of data processing steps</li>
@@ -121,31 +131,35 @@ graph LR
 <li>My tool/user list is static as well so if i wanted it to be really robust I'd also have it update the tool and user lists</li>
 </ul>
 <h3>08/6/2025</h3>
+<p><strong>Main Task:</strong> Migration to Google Drive service account</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Haha you thought! Changed everything over to run on the shared drive using a service account. You must use a shared Google drive if you are going to use a Service account bot buddy</li>
 <li>I clobbered the old instance on the collector and pulled a new version down once I figured out the whole new authentication scheme</li>
 <li>Also cleaned up the repo, It's be cool to share it some time</li>
 </ul>
 <h3>08/5/2025</h3>
+<p><strong>Main Task:</strong> Cron job configuration fixes</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>never really done am I? The .env was not being correctly loaded in the cron job because there were spaces between the variable names and the actual key, so it wasn't working</li>
 <li>My scheduling was also whack and it was running at 8 minutes and 20 minutes past the hour, which I never remember setting. maybe I though 8am and 20:00=8pm? Anyways I changed it to run every hour cause why not</li>
 <li>I'm wondering if I should put a bit more work into this to make it something other people can implement in other labs. That said, the whole google auth thing is a bit of a pain so it isn't for the faint of heart</li>
 </ul>
 <h3>08/04/2025</h3>
+<p><strong>Main Task:</strong> Master upload script improvements</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>made modifiactions to the bash script that does the master upload, seems to be working</li>
 <li>had to add steps to it compies the files to the nemo_automation folder, it also creates a venv automatically now, in later versions of the set up script</li>
 <li>I guess this project is done for now, until it breaks or we need new functionality</li>
 </ul>
 <h3>07/28/2025</h3>
+<p><strong>Main Task:</strong> VM deployment and authentication</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Modified the existing script so that it can be run on a VM (or on the collector)</li>
 <li>I deleted the token and reauthenticated, and now things work OK.</li>
-</ul>
-<h2>Back Burner</h2>
-<ul>
-<li>Making it publishable?</li>
 </ul>
 
     </div>

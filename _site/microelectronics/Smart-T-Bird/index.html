@@ -87,20 +87,30 @@
 </ul>
 <h2>Work Log</h2>
 <h3>09/22/2025</h3>
+<p><strong>Main Task:</strong> Dimming circuit recreation and perf board transfer</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>I shouldn't have been soldering in the condition I was in, the soldering is hella wonky and I'm not sure if I put the dimming circuit in correctly</li>
 <li>So I recreated the dimming circuit, and like really understood it.</li>
 <li>I transfered that to the perf board, can't be sure if it works yet.</li>
 </ul>
 <h3>09/21/2025</h3>
-<p>-Just sent it on the woldering of the breadboard, kinda wonky soldering, and I'm hoping that I moved the transistor dimming circuit over from the breadboard correctly</p>
+<p><strong>Main Task:</strong> Breadboard soldering and dimming circuit transfer</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Just sent it on the woldering of the breadboard, kinda wonky soldering, and I'm hoping that I moved the transistor dimming circuit over from the breadboard correctly</li>
+</ul>
 <h3>09/07/2025</h3>
+<p><strong>Main Task:</strong> GUI bug fixes and UI improvements</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>I tried making some changes to the GUI offline, but it resulted in some serious bugs. I had deleted the power and current from the display, but that caused this crazy bug where the memory was looking for something at a certain memory address and it couldn't find it so it would reboot</li>
 <li>I got it working again, learned my lesson to make incremental changes instead of everything at once</li>
 <li>Made the UI nicer, it is displaying and updating the real time values as it should now</li>
 </ul>
 <h3>09/3/2025</h3>
+<p><strong>Main Task:</strong> Project reorganization and node architecture</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>completely reorganized the project space, created different nodes that make more sense</li>
 <li>Wrote the code for a central node and the display node</li>
@@ -109,6 +119,8 @@
 <li>Decided that the central node will do 3 things, measure voltage, IMU, and temp/humidity.</li>
 </ul>
 <h3>09/2/2025</h3>
+<p><strong>Main Task:</strong> Screen auto dimming implementation</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>got the right transistors, and got the screen auto dim working!</li>
 <li>Played with a ton of different resistor values. Resistors to give the LDR the correct range, resistors to keep the BJTs happy, series resistors to keep the screen from flickering, etc. Lots going on.</li>
@@ -116,12 +128,16 @@
 <li>I targeted 50,100,and 200 mA to the display. I could definitely make it dimmer, but the subtle flicker on white never went away.</li>
 </ul>
 <h3>08/31/2025</h3>
+<p><strong>Main Task:</strong> Breadboard prototyping and circuit design</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Tried to come up with the breadboard version of the screen central hub, it was a challenge!</li>
 <li>The resistor between the diode and ground really is necessary to get it to read properly</li>
 <li>I don't have the right transistors to build the circuit, I need some PNP transistors. And it's crazy that you use an NPN to trigger a PNP to make sure that the PNP is properly grounded. And there's math and resistors everywhere.</li>
 </ul>
 <h3>08/29/2025</h3>
+<p><strong>Main Task:</strong> Screen holder design and perf board planning</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>came up with a screen holder print I'm pretty proud of. I don't think I'll need the securing bolts after all</li>
 <li>Started looking at the perf board layout, it's a lot to wrap your head around. Have to be super methodical, there is a lot going on.</li>
@@ -147,6 +163,8 @@
 </li>
 </ul>
 <h3>08/28/2025</h3>
+<p><strong>Main Task:</strong> Ashtray holder 3D printing and PCB planning</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Finished the ashtray holder 1.0 and printed it. I was a little bit tight in the width, and long in the length. My bolt holes also weren't all that exact.</li>
 <li>I decided to use M3 bolts directly into the PLA. Should be tight enough, especially because the screen kind of rests on the ashtray itself</li>
@@ -154,25 +172,32 @@
 <li>Downloaded KiCAD. I think it's overkill for this project and I'll probably just use perf board, but I do love the sexiness of a real PCB. I kinda just want to create an MVP that works, and then I'll maybe make it nice.</li>
 </ul>
 <h3>08/27/2025</h3>
+<p><strong>Main Task:</strong> Ashtray holder design start</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Started designing the ashtray holder for the screen</li>
 </ul>
-<h3>08/06/2025:</h3>
+<h3>08/06/2025</h3>
+<p><strong>Main Task:</strong> Architecture change from WiFi to CAN Bus</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>I think I'm giving up on my wifi dreams and going CAN BUS like the rest of the automotive world</li>
 <li>I learned you must use a full blown ESP32 if you want to use can bus, the C3 and S3 don't natively speak canbus.</li>
 <li>And if you want to use CAN, you need a little breakout board. Chat elegantly explained it as a walkie talkie. The ESPs already can communicate but they need the breakout board to send the message correctly. CAN does the whole high/low thing that the ESP can't drive</li>
 </ul>
-<h3>08/2/2025:</h3>
+<h3>08/2/2025</h3>
+<p><strong>Main Task:</strong> WiFi reliability troubleshooting</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>still working on this wifi reliability thing, I think the c3 is just worse generally, maybe an antenna thing.</li>
 <li>uploaded the same SHT sketch to an esp32 (regular) and printed the wifi strength and in the kitchen right next to the AP the signal is like -68 dbm which isn't great, and then in the room it's -90 or less which is just terrible, could definitely contribute to the connectivity</li>
 <li>added lines in the softAP that explicitly sets the max power at 20W, and makes sure the wifi doesn't sleep or go into low power mode</li>
 <li>Considering either going to CAN Bus, which would make me a bit sad, or getting a stronger mini-AP, like an infrastructure spec one.</li>
 <li>Still trying to figure out if it's really a wifi strength thing or what. But I do feel like I'm asking a lot of the one little ESP to both drive a screen, touch polling, and set up a wifi network.</li>
-<li></li>
 </ul>
-<h3>07/31/2025:</h3>
+<h3>07/31/2025</h3>
+<p><strong>Main Task:</strong> ESP32 C3 WiFi connection reliability improvements</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>got the C3 working and talking to the broker pretty easily, but the connection isn't the most reliable. I did two things:</li>
 <li>Disabled the DCHP and assigned static IP addresses to the sensor nodes</li>
@@ -180,24 +205,32 @@
 <li>I just want it to connect right away when powered up, and it doesn't matter if either lost power at any point or anything</li>
 <li>Before these changes, it might take 2-3 reboots to connect</li>
 </ul>
-<h3>07/30/2025:</h3>
+<h3>07/30/2025</h3>
+<p><strong>Main Task:</strong> Temperature sensor calibration and SHT sensor integration</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>the TMP36 sensor seems pretty dang inaccurate like there is a big offset of 15C, I guess this can have to do with the actual power supply voltage, the ADC quality, even noise from the wifi</li>
 <li>So I added an offset but idk if it's linear. Should still be close enough for non-mission critical stuff</li>
 <li>Also wrote code for an SHT sensor so I could measure office temperature, and further calibrate the TMP36</li>
 <li>Might still use the SHT31 code for</li>
 </ul>
-<h3>07/29/2025:</h3>
+<h3>07/29/2025</h3>
+<p><strong>Main Task:</strong> TMP36 sensor wiring and PlatformIO learning</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>wired up the TMP36 sensor, got it working easily enough</li>
 <li>learned about how the environmental variables work in PlatformIO</li>
 <li>Tried learning about how to structure much more complicated programs, there'll be a lot of nodes with different environments, and main.cpp files</li>
 </ul>
-<h3>07/28/2025:</h3>
+<h3>07/28/2025</h3>
+<p><strong>Main Task:</strong> LVGL touch screen fix</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>HAHA I WON! got the touch working with LVGL, it was all about lvgl not &quot;moving forward&quot; in time like it wasn't actually polling the screen. Everything was configured correctly, good wiring, LVGL just wasn't checking the screen if you can believe it</li>
 </ul>
-<h3>07/25/2025:</h3>
+<h3>07/25/2025</h3>
+<p><strong>Main Task:</strong> LVGL touch screen configuration troubleshooting</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Still battling the touch screen in LVGL, just seems like a set up issue</li>
 <li>I deleted any mention of the esp32-C3 from the ini file, don't want to confuse anything</li>
@@ -206,6 +239,8 @@
 <li>Commented out another lv_conf.h file that I found in the .pio/lvgl folder. I don't want it getting confused with different conf files.</li>
 </ul>
 <h3>07/24/2025</h3>
+<p><strong>Main Task:</strong> Touch screen integration with LVGL</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>Got the touch screen working, but the component that integrates to LVGL is still not working. Not sure how those are related</li>
 <li>It works when I set the baud rate to 96000 but not the default 115200, but I may just try that again</li>
@@ -213,6 +248,8 @@
 <li>reducing the touch sensitivity to 100 from 600 could be a good thing, really light touch is kind of nice</li>
 </ul>
 <h3>07/23/2025</h3>
+<p><strong>Main Task:</strong> PlatformIO setup and LVGL demo</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>short guide to PlatformIO</li>
 </ul>
@@ -252,9 +289,10 @@
 </table>
 <ul>
 <li>first day of PlatformIO and I got the LVGL demo working, albeit with no touch yet but I feel great about it, learned a ton</li>
-<li></li>
 </ul>
 <h3>07/22/2025</h3>
+<p><strong>Main Task:</strong> PlatformIO project initialization</p>
+<p><strong>Notes:</strong></p>
 <ul>
 <li>made a branch in Jeff's repo for my PlatformIO project, I think that is the way to go as opposed to Arduino CLI + VSCode. I just don't want to have to configure everything manually sounds scary</li>
 <li>Started playing with PlatformIO</li>

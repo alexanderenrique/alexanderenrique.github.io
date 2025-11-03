@@ -19,6 +19,34 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 11/2/2025
+**Category:** Precursor Rack
+
+**Task:** Version 2.0
+
+**Notes:**
+- Desinged rack 2.0. Previously the sides of the box took 2 hours to print. I made one that way and it was sexy as hell but took a total of 6 hours to print.
+- Re-did it with a tab and slot design so it'll just snap together.
+
+**Notes:**
+### 10/30/2025:
+**Category:** Ford Ranger
+
+**Task:** Getting it started!
+
+**Notes:**
+- brought my charged air complressor to the property, got all the tires up to 26-Ish PSI. They all help air, though the rear right is in absolutely terrible shape
+- Changed the fuel ssytem to run from the jerry can to try and solve the off idle bog. It still had the little bit of the flat spot, but the burgling noise was gone
+- Installed a fuel pressure guage inline, read a solid 42 PSI static, dropping when at idle as it should
+- Changed back to the fuel tank, that read more like 40 PSI static, and bouncing +/- 2 PSI on account of some air in the line, as I thought
+- Pulled the air filter off, it was a giant mouse next. I blasted out the air filter with the bit of compressed air I had left. It was gnarly.
+- Cleared the back of the truck out, just threw everything on the ground behind it
+- Amanda and Norma cleaned off the glass, really transformed the look of it.
+- Tried driving it, but it was stuck! Pulled it out using the Isuzu. I half toasted my clutch accomplishing that, but it did work. 
+- Temp guage works, it came up to temp and held there which was cool. Radio works.
+- No signs of life from the fuel guage, surely just wiring.
+- Took it to the Summit store for beer, it was pretty cool. I have some truck envy.
+
 ### 10/18/2025
 **Category:** Ford Ranger
 

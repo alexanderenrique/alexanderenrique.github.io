@@ -69,7 +69,24 @@ graph LR
 
 ## Work Log
 
+### 10/24/2025
+**Main Task:** Config page cleanup and testing fixes
+
+**Notes:**
+- Had too many projects on the brain lately, and this one just feels like a party trick so it went to the back burner.
+- Today I cleaned up the config page, there were lots of settings that were not needed
+  - Don't need to select which version of TLS, 1.2 is fine
+  - Less authentication options like username and password, only need the CA certificate
+- Making it so that is passe all the tests
+  - It was failing one of the redis test because it was connect to redis so it couldn't verify the retry logic, leading to a failed test.
+- Learned abut tests, and their purpose in software development.
+  - Tests are a way to verify that the code is working as expected
+  - can help you pin point what dependencies you need or where you're falling short
+
 ### 10/16/2025
+**Main Task:** TLS implementation and monitor page fixes
+
+**Notes:**
 - Got the TLS working and connecting, the certificate I generated was missing some key parts.
 - Had to learn a lot about how the whole TLS hadnshake occurse but that's ok because it's not restricted to MQTT, it's a general thing that happens in all network communication.
 - The TLS was working but then the monitor page wasn't getting the messages
@@ -78,11 +95,17 @@ graph LR
 - The next step is to make sure the "VM" is actually recieving messages over TLS.
 
 ### 10/15/2025
+**Main Task:** TLS troubleshooting and debugging
+
+**Notes:**
 - I kinda don't want to work on it anymore but I want to push this across the finish line.
 - The TLS just wan;t working even a little bit, like it was a shell method so everything broke when I enabled it
 - Started grinding through the iterations to get it working.
 
 ### 10/14/2025
+**Main Task:** MQTT broker refactor and connection logic improvements
+
+**Notes:**
 - I did a pretty big refactor at the end of the day, cleaning up the way the MQTT broker starts and killing old instances of mosquitto.
 - Of course it didn't work right away and there was some collateral damage in the form of a customization file, luckily github had my back
 - Way better connection and retry logic with exponential delay and jittering.
@@ -90,6 +113,9 @@ graph LR
 - Really hard testing things all on the same machine, it'd be nice to have a seperate instance of mosquitto and all these things.
 
 ### 10/13/2025
+**Main Task:** Dynamic MQTT port configuration
+
+**Notes:**
 - Un-hardcoded the MQTT port.
 - Now there is a django signal so that when you save the config in the NEMO page, the cached mqtt port is actually delted
   - This prompts the MQTT to check the port from the DB and updates it
@@ -98,6 +124,9 @@ graph LR
 - There are challenges in having everything on the same machine. Like when I do the quick restart of mqtt broker it kills all instances of mosquitto which kills whatever connection NEMO had to the broker.
 
 ### 10/09/2025
+**Main Task:** Duplicate initialization fixes and package creation
+
+**Notes:**
 - Ok so debugging why Django is doing its job perfectly and publishing all the messages exactly as it should, but the moniotr page (which is basically a dummy subsriber) is not receiving all of the messages. It's always werid to me when something half works on a computer. Like where is it going?
 - Ok so it turns out that the JSON to MQTT service was something that was running outside of the plugin and I think that was causing issues
   - I wanted the mqtt to be outside of the django sure, but it WAS a seperate script that lived in a different directory that had to be stopped and started seperately to consume the redis and publish them. 
@@ -110,10 +139,16 @@ graph LR
 - I cleaned up the work space and made it a proper pypi package which looks great but I may have jumped the gun becasue there's more testing to do. 
 
 ### 10/08/2025
+**Main Task:** Monitor page frontend work
+
+**Notes:**
 - Mostly spent time figuring out the front end of the mqtt/monitor page. The java script wasn't loading correctly, fixed the messges fading after 5 seconds, added a bunch of debug to the mqtt/monitor page.
 - Another issue was the API, I learned that the 
 
 ### 10/07/2025
+**Main Task:** Plugin installation and integration
+
+**Notes:**
 - heaps of progress! I got the plugin installed in the NEMO-CE and installed the URLS and everything seems to be working.
 - I still need to work on the mqtt/monitor page. It's close, the messages are showing up but they're at the top and kind of fade away for no reason? Th UI isn't what I want it to be.
 - This is just a bloody confusing project to me because things need to talk to eachother in so many different ways, like Django config needs to feed to the mqtt publisher setting and Django also talks to redis which feeds the MQTT publisher etc.
@@ -123,6 +158,9 @@ graph LR
 - I ended up with a short shell script that deletes the old plugin and redownloads the new one.
 
 ### 10/06/2025
+**Main Task:** MQTT service fixes and package structure
+
+**Notes:**
 - Not sure what I was on about withe the MQTT working last time, it definitely was not working. 
 - Redi was recieving the message but not sending it to the broker. 
 - Cursor was trying tp implement some garbage Django integration into the MQTT part to I made a simple MQTT plug in and it started working. 
@@ -135,21 +173,32 @@ graph LR
 - Also added a standalone MQTT broker to keep things going.
 
 ### 09/29/2025
+**Main Task:** Python package creation
+
+**Notes:**
 - Don't you love it when you leave something and come back to it and like magically you left it in a working state, and you're ready to go onto the next big thing?
 - Fired it up this morning and basically the MQTT was working nicely, and my broker was able to pick it up using 1883.
 - Created a new repo and project to make a python package, my first package!
 - Package install went well, I got it installed on a test project and it seems to work.
 
 ### 09/26/2025
--Working on this more, learning about the whol "redi" thing which acts an an intermediary between NEMO and the MQTT service. Messages are sent to the redi and consumed by the MQTT so you can't trust the redi logs, you need to look at the MQTT. Which is what matters anywas. 
+**Main Task:** Redis learning and testing
+
+**Notes:**
+- Working on this more, learning about the whol "redi" thing which acts an an intermediary between NEMO and the MQTT service. Messages are sent to the redi and consumed by the MQTT so you can't trust the redi logs, you need to look at the MQTT. Which is what matters anywas. 
 
 ### 09/25/2025
+**Main Task:** Initial plugin development and architecture changes
+
+**Notes:**
 - Got something coded up as a plugin, starting the testing phase, getting it to work the way I want
 - Well I got this crazy error where eveytime you initialize Django, like two instances of the MQTT plugin happen and then they fight eachother over connection to the port. I couldn't get it resolved so I changed architecture
-- It's tough becasue in real life I don't think Django initializes that often but it feels like good practice to maybe keep it more seperate
-- 
+- It's tough becasue in real life I don't think Django initializes that often but it feels like good practice to maybe keep it more seperate 
 
 ### 09/23/2025
+**Main Task:** Django signals refactor
+
+**Notes:**
 - Per Mathieu's request, I'm changing to a django signals method so that I don't have MQTT dependencies directly in the code. It's more modular and easier to maintain.
 - I'll need to add a bare minimum django.signal, to then trigger the MQTT plugin message.
 - Clobbered my old work and started with the signals, the initial work always goes quickly and then it's testing it and getting what you want that takes a lot of fine tuning. 

@@ -51,9 +51,84 @@ tags:
 - Switching between defrost and forward vent
 - Getting some fix a flat in a can in case of flat
 - Finish the front seatbelts
+- Spare alternator fused wire
+
+### Spares Box:
+- Ignition coil
+- Fuel pump (mechanical or electrical, whatever we're running at the time)
+- Cap and rotor
+- Few plug wires
+- Keep a few old plugs
+- Fusible link
+- Fuses
 
 
 ## Work Log
+
+### 11/2/2025
+**Main Task:** Radiator replacement
+
+**Notes:**
+- Chopped up the radiator I bought,there were these 1/4" bars on the top and bottom lke stand offs butt they weren't right
+- Re-made the radiator support mounts, got the old flux core welder out which is always fun
+- Started remanking the e-fan bracket. Using box section cut in half to make C-channel. 
+
+
+### 11/1/2025
+**Main Task:** Radiator replacement
+
+**Notes:**
+- Just went for it and chopped the trans cooler lines and removed the radiator
+- 
+
+### 10/28/2025
+**Main Task:** Window Trims, Radiator Flush
+
+**Notes:**
+- Flushed the oxalic acid out of the radiaotr, it was quite green which was interesting. Like a dull green.
+- Installed sound deadening inside the driver door on the outside. There was already some sounds deadening sprayed on but I figure this will help
+- Added butyl and foam sound deadenint to the door car, the epoxy had cured. One corner had already cured and it was ben so that's permanent now.
+- Re-installed the door card. The clips inside the rotten door card was a nightmare. I added think I should've re-inforced the clip holes with epoxy and maybe a 3d printed thing.
+- Added a foam gasket to help the door car seal. It's just so warped I'm not sure if it's recoverable really.
+- Installed the vertical window seal with the black gasket material. Seems to be holding in there well. It's all glue, no real mechanical connection.
+- Adjusted the window limits, it was too high in the rear and had to push the window out.
+- Door closes beautifully now, no rattle at all it's wonderful.
+- Played with the window switches, still can't figure out the pinout. 
+- Put the switches back where they belong, now to install the arm rest.
+
+
+10/24/2025
+**Main Task:** Window Trims, Radiator Flush
+
+**Notes:**
+- Made up a super thin 2 part epoxy and poured it on the door card. Placed the big ABS sheets on it with some really heavy stuff to try and flatten it.
+- Not sure I poured enough, I made 60g worth or about a 1/2 cup. I could get away without it but this'll help the crumbling.
+- Drained the coolan from the radiator and engine, must've flushed it every which direction for ten minutes. Brown water just would not stop flowing out.
+- Removed the thermostat to encourage flow from every direction
+- Flushed the heater core, also heaps of brown water
+- 
+
+### 10/23/2025
+**Main Task:** Window Trims
+
+**Notes:**
+- Fixed the driver door that wouldn't open from the outside. There is an e clip missing that allowed this pin to ecer so slightly slide out. I couldn't find an e clip so I used a piece of wire. Better than nothing, and if it breaks in the future I'll know what it is
+- Put the door back togeterh except for the door card
+- Worked to attached the interior window trim/ I tried the included staples, rivets that didn;t work, and settled on my own kind of staple. It doesn't look that great but hopefuly no one sees it.
+
+### 10/22/2025
+**Main Task:** Window Trims
+
+**Notes:**
+- Started pulling apart the driver door to install the new window trim
+- It's low key a nightmare, I dissasembled way too much of the door and window mechanism before realizing you don't need to remove the window to access the trim
+- Not that I know how it works, should be much easier on the passenger side. Which is also not nearly as bad as the driver side.
+- The kit I got doesn't include the vertical rubber which is a bummer, so another $50 there
+- Lubed the window mechanism while I was in there. 
+- Becasue of everything I took apart, I'll need to readjust the limits of the window travel. There a front and read stopped that are adjustable, as awell as a low limit stop.
+- Measured up for a replacement radiator, found a 3 row option for like $150 that was $100 cheaper than the other options
+- The door card is a fiber board that is just crumbling apart, so I'm going to have to do some work to restore it.
+  - Penertrating epoxy to harden it up, and then I think I'm going to bond it to ABS plastic sheet.
 
 ### 09/30/2025
 **Main Task:** Vacuum headlight switch installation

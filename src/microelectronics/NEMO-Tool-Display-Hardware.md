@@ -78,6 +78,9 @@ graph LR
 ## Work Log
 
 ### 10/14/2025
+**Main Task:** Plugin and display integration fixes
+
+**Notes:**
 - Ok so the plugin side seems to be working which is great, but I did change some things which seems to have broken the display side.
 - We're easily receiving the messages, consistently connecting to the broker, etc, but now the publishing and trimming of messages is not working.
 - The main problem was that I decided to use Redis db1 instead of db0, and the consolidated connection manager script was using db0.
@@ -88,6 +91,9 @@ graph LR
 
 
 ### 09/21/2025
+**Main Task:** MQTT integration and UI development
+
+**Notes:**
 - man have done a heap of work on this. Got the MQTT working properly in bakersfield
 - I learned that there is kind of a maximum message size that can be sent over MQTT, and that's about 1000 bytes. So I need to be careful about what I'm sending and how often I'm sending it., the ESP can only handle a few bytes over MQTT. Like 600+ is too many
 - Had a super random error that cost me a couple hours. Made a mundane UI change, and something must have gotten corrupted because I got the white screen of death. I even tried pulling the working version from github and that still white screened
@@ -100,6 +106,9 @@ graph LR
 - Tons of work on the UI, basically started from the beginning with my reboot problem
 
 ### 09/17/2025
+**Main Task:** Broker configuration and PCB design start
+
+**Notes:**
 - Wrote a bit more code on the plane to configure the broker on the VM, hopefully it works, it's just a bit hard to test
 - The collector computer at work has a public IP I can ping but the ports are protected by a firewall, and the raspberry pi at home has no restrictions but it doesn't have a public IP, it has NAT going on. 
 - Made the messaging tool specific, so that each node can subscripe to one tool from the broker
@@ -108,7 +117,10 @@ graph LR
 - I mentioned I don't want touch capabilities, mostly because people have filthy gloves and it might destroy my display. Though it might be nice to cycle through two screens, one that displays the status, and another for problems. Idk if that's worth it. 
 
 ### 09/08/2025
--Thought about it over the weekend, I don't want to have people need to go into the back end of NEMO to initialize all this stuff.
+**Main Task:** NEMO configuration page and SSL setup
+
+**Notes:**
+- Thought about it over the weekend, I don't want to have people need to go into the back end of NEMO to initialize all this stuff.
 - So throught the magic of cursor, I created a new page under configuration and got it working so that you can select the address and port of your broker as well as the user name and password
 - Spent a lot of time on Nomachine messing around with the colector comupter installing Mosquitto and getting the authentication on the SSL/TSL going
 - Learned about sharing credentials and stuff, which lead me back to modifying the NEMO page so that there is now a field to enter for CA credentials for you broker. Looks legit!
@@ -116,9 +128,15 @@ graph LR
 - I think the next step is to try and configure my raspberryPi at home to see if it has a public IP and if I can get MQTT messages out to it. 
 
 ### 09/06/2025
--Clones NEMO-CE, and got the MQTT working locally! created a dummy user in the back end, got the hook written. I was using port 1883 without any security for testing, I was amazed how fast I/cursor got it going
+**Main Task:** Initial MQTT hook development
+
+**Notes:**
+- Clones NEMO-CE, and got the MQTT working locally! created a dummy user in the back end, got the hook written. I was using port 1883 without any security for testing, I was amazed how fast I/cursor got it going
 
 ### 09/05/2025
+**Main Task:** Initial project planning and architecture decision
+
+**Notes:**
 - Initial project planning and component selection
 - Researching display options and MQTT implementation
 - Learned that the NEMO API doesn't support any kind of filtering
