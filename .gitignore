@@ -5,8 +5,5 @@ work/
 node_modules/
 _site/
 
-# Keep Way-Backburner.md local only (not tracked in git)
-docs/general/Way-Backburner.md
-
 # OS files
 .DS_Store

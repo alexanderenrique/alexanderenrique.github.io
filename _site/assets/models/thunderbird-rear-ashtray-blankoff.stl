@@ -1,9 +1,0 @@
-# This is a placeholder for the actual STL file
-# In reality, this would be a binary STL file exported from Fusion 360, Blender, etc.
-# 
-# To add your actual STL files:
-# 1. Export from your 3D software as STL
-# 2. Place the file here with the same name
-# 3. Commit to git
-# 
-# Example: thunderbird-rear-ashtray-blank.stl
