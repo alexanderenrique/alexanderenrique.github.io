@@ -92,6 +92,32 @@ Most parts are designed for:
 
 **Installation**: Clamps onto v-band flange with standard clamp  
 
+## Lab Equipment
+
+### Precursor Rack
+
+<model-viewer 
+    src="/assets/models/Precursor-Rack.glb" 
+    alt="Precursor Rack 3D Model"
+    camera-controls 
+    auto-rotate
+    interaction-prompt="none"
+    exposure="1.5"
+    shadow-intensity="0.5"
+    environment-image="neutral"
+    tone-mapping="commerce"
+    style="width: 100%; height: 500px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; background-color: #e3f2fd;">
+</model-viewer>
+
+**Description**: 3D model of a precursor rack for lab organization. Rotate and zoom to explore the design.
+
+**GLB File**: [Download GLB](../../assets/models/Precursor-Rack.glb)
+
+**Material**: N/A (3D model for reference)  
+**Status**: Design model
+
+---
+
 ## 2002 Yamaha FZ-1
 
 ### Yoshimura Flange Adapter

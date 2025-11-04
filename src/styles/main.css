@@ -971,6 +971,16 @@ img {
     }
 }
 
+/* Model Viewer Styling */
+model-viewer {
+    --poster-color: transparent;
+}
+
+/* Ensure model-viewer background-color attribute works */
+model-viewer[background-color] {
+    background-color: var(--background-color, #f5f5f5) !important;
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
     :root {
