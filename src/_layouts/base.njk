@@ -58,7 +58,6 @@
                         <ul class="nav__submenu">
                             <li><a href="{{ '/general/Today-I-Learned/' | url }}">Today I Learned</a></li>
                             <li><a href="{{ '/general/everything-else/' | url }}">Everything Else</a></li>
-                            <li><a href="{{ '/tags/' | url }}">Knowledge Base</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -68,11 +67,6 @@
 
     <main class="main">
         {{ content | safe }}
-        
-        <!-- Tag System Components -->
-        {% if tags %}
-        <div class="tag-cloud"></div>
-        {% endif %}
     </main>
 
     <footer class="footer">

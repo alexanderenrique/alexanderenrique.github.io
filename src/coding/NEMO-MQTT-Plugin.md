@@ -14,9 +14,6 @@ tags:
   - tool-status
   - lab-management
   - ssl
-  - #nemo
-  - #lab-management
-  - #coding
 ---
 
 ## Project Overview
@@ -27,14 +24,7 @@ A plugin for NEMO that enables real-time tool status updates via MQTT messaging.
 - On the config page, nothing is actually happening in the MQTT logs or event filters not sure why
 - It WAS working on port 1883 but I think that's becasue it's hard coded in the plugin
 - but when I change the borker port, the monitor DOES keep working so that is good
-- 
-### Architecture
-{% mermaid %}
-graph LR
-  A@{ shape: subproc, label: "This is a subprocess" }
-{% endmermaid %}
-
-
+  
 ### High Level Architecture
 {% mermaid %}
 graph LR
@@ -46,7 +36,6 @@ graph LR
     E --> F["NEMO Tool Display Hardware"]
     G["MQTT customization page"] --> E
 {% endmermaid %}
-
 
 ### Key Components
 - Django signals for event handling
