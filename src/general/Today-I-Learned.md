@@ -19,6 +19,9 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 11/3/2025
+- Converting from OBJ to GLB, and how to use them in model-viewer
+
 ### 10/29/2025
 - Really learned about traing on margin, I think I actually get it now.
 

@@ -10,3 +10,5 @@ src/general/Way-Backburner.md
 
 # OS files
 .DS_Store
+
+*.obj

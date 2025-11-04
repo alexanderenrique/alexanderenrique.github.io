@@ -15,8 +15,6 @@ A work log tracking the evolution of this website from simple Markdown to a full
 
 ## Up Next:
 - Adding github links to the code based projects
-- Adding more 3D models, precursor rack
-- 
 
 ## Work Log
 
@@ -25,6 +23,7 @@ A work log tracking the evolution of this website from simple Markdown to a full
 
 **Notes:**
 - Standardized the formatting of the work logs
+- Added the fun 3d rotating models to the 3d models page
 
 ### 10/03/2025
 - Added tagging and a couple of general pages
