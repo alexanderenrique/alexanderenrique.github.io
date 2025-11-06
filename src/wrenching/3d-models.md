@@ -43,13 +43,10 @@ tags:
 **Material**: PLA  
 **Installation**: Press fit onto wiper control shaft  
 
---
-
 ## Tooling
 
 ### 2.5" v-band cap
 
-### Windshield Wiper Knob
 <model-viewer 
     src="/assets/models/male-vband-25.glb" 
     alt="2.5 V-Band Cap 3D Model"
@@ -88,14 +85,9 @@ tags:
     style="width: 100%; height: 500px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; background-color: #f6bd60;">
 </model-viewer>
 
-**Description**: 3D model of a precursor rack for lab organization. Rotate and zoom to explore the design.
+**Description**: Hold 6 Swagelok96-1070 precursor cylinders. I printed four of them and stuck them to a shelf inside a fire proof cabinet for precursor storage. VHB works well in my esperience with 3D prints. The spacing is large enough to accomodate all kinds of valves so long as the valve points out. Takes about 100g of material to print.
 
-**GLB File**: [Download GLB](../../assets/models/Precursor-Rack.glb)
-
-**Material**: N/A (3D model for reference)  
-**Status**: Design model
-
----
+**STL File**: Coming soon
 
 ## 2002 Yamaha FZ-1
 
@@ -122,8 +114,5 @@ tags:
 
 **Material**: Test print it from whatever, but you'll need to get it laser cut from stainless steel. 
 **Installation**: Weld to your custom midpipe. 
-**Status**: Tested and working  
-
----
 
 *Last updated: {{ git_revision_date_localized }}*

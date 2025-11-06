@@ -65,6 +65,32 @@ tags:
 
 ## Work Log
 
+### 11/5/2025
+**Main Task:** Radiator replacement
+
+**Notes:**
+- Installed the upper mounts. Replaced the old rubber with like door weather stripping lol. It's thicker and I'm thinking it'll be up to the job temperature wise but mostly messing around.
+- Tightened the Transmission pan bolts, it's leaking from that gasket again! They were all 1/4 turn loose, I guess that's just the gasket settleing but it's annoying
+  - I still want to laser cut som re-inforcing tabs for the stamped steel pan so I can really wail on those bolts.
+- Installed the new lower rad hose. It's ever so slightly kinked and about a thumb width away from the power steering belt. Shouldn't be an issue though. "A miss is as good as a mile"
+- New transmission cooler lines, routing was pretty easy, though they aren't very well secured
+- Added heat shielding that was left over from the maverick to where the rubber lines get close to the header
+- I had the thought that the lines are rated for the pressure no problem, but I don't know about the rating at temperature. 
+- I also don't know which one is supposed to be supply and return, but I feel like it doesn't matter *too* much?
+  - Update I read the forums, front fitting is the supply, which I have plumbed in to the lower port
+  - I like this, because then the trans cooler in the rad will fill with trans fluid before flowing back
+  - Other way around and the fluid would just dribble through the radiator and then be returned, not filling the heat exchanger.
+- The rear fitting for the trans cooler was loose I was able to wiggle it, but it wasn't leaking? 
+
+### 11/3/2025
+**Main Task:** Radiator replacement
+
+**Notes:**
+- Sandblasted the brackets I made yesterday
+- Painted them
+- PTFE tape on the 1/8 barbs for the trans cooler lines
+- Finished making up the fan brackets. 
+
 ### 11/2/2025
 **Main Task:** Radiator replacement
 

@@ -35,6 +35,26 @@ tags:
 
 
 ## Work Log
+**Main Task:** KiCAD Circuit Design
+
+**Notes:**
+- Transitioning from the schematic to the layout. The Schemtic is just alogical diagram
+- Learned the O2 sensor actually gives a 0-3V output which is great becasue then I don't need a voltage divider
+
+### 11/4/2025
+**Main Task:** KiCAD Circuit Design
+
+**Notes:**
+- Balled out on the node circuit design, one of those cases where you just have to use your brain for a while and then it works out.
+
+### 11/3/2025
+**Main Task:** KiCAD Circuit Design
+
+**Notes:**
+- I think I got ahead of myself in just putting the circuit on perf board, it looks bad and makes me feel bad
+- I started designing one of the nodes, complete with SHT31, IMU, O2 Sensor, Voltage sensor, and CAN
+- Sharpening my KiCAD skills. I'm realizign anything with circuits takes a whole lot of planning and thought. You can't just slam some wires togetether when doing this complicated stuff.
+- Circuit design is hard. I wish there was an AI to help, cause this must be a solved problem.
 
 ### 09/22/2025
 **Main Task:** Dimming circuit recreation and perf board transfer
@@ -310,3 +330,29 @@ tags:
   --------|---------|-------
   | Backup camera | I2C, UART | ???? |
 
+O2 sensor node
+- 6 axis IMU
+  - VCC
+  - GND
+  - SCL
+  - SDA
+
+- SHT31 temp/humidity
+  - VCC
+  - GND
+  - SCL
+  - SDA
+- O2 sensor
+  - 12V Out to sensor
+  - common ground
+  - voltage divider to 3.3V
+- Voltage sensor
+  - Car 12V
+  - GND
+  - VCC
+  - GND
+- CAN bus
+  - VCC GND
+  - rx
+  - tx
+- CAN Out                    

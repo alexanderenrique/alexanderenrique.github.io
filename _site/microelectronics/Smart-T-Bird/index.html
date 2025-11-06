@@ -86,6 +86,27 @@
 <li>Then we can think about the GUI, etc</li>
 </ul>
 <h2>Work Log</h2>
+<p><strong>Main Task:</strong> KiCAD Circuit Design</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Transitioning from the schematic to the layout. The Schemtic is just alogical diagram</li>
+<li>Learned the O2 sensor actually gives a 0-3V output which is great becasue then I don't need a voltage divider</li>
+</ul>
+<h3>11/4/2025</h3>
+<p><strong>Main Task:</strong> KiCAD Circuit Design</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Balled out on the node circuit design, one of those cases where you just have to use your brain for a while and then it works out.</li>
+</ul>
+<h3>11/3/2025</h3>
+<p><strong>Main Task:</strong> KiCAD Circuit Design</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>I think I got ahead of myself in just putting the circuit on perf board, it looks bad and makes me feel bad</li>
+<li>I started designing one of the nodes, complete with SHT31, IMU, O2 Sensor, Voltage sensor, and CAN</li>
+<li>Sharpening my KiCAD skills. I'm realizign anything with circuits takes a whole lot of planning and thought. You can't just slam some wires togetether when doing this complicated stuff.</li>
+<li>Circuit design is hard. I wish there was an AI to help, cause this must be a solved problem.</li>
+</ul>
 <h3>09/22/2025</h3>
 <p><strong>Main Task:</strong> Dimming circuit recreation and perf board transfer</p>
 <p><strong>Notes:</strong></p>
@@ -478,6 +499,55 @@
 --------|---------|-------
 | Backup camera | I2C, UART | ???? |</li>
 </ul>
+</li>
+</ul>
+<p>O2 sensor node</p>
+<ul>
+<li>
+<p>6 axis IMU</p>
+<ul>
+<li>VCC</li>
+<li>GND</li>
+<li>SCL</li>
+<li>SDA</li>
+</ul>
+</li>
+<li>
+<p>SHT31 temp/humidity</p>
+<ul>
+<li>VCC</li>
+<li>GND</li>
+<li>SCL</li>
+<li>SDA</li>
+</ul>
+</li>
+<li>
+<p>O2 sensor</p>
+<ul>
+<li>12V Out to sensor</li>
+<li>common ground</li>
+<li>voltage divider to 3.3V</li>
+</ul>
+</li>
+<li>
+<p>Voltage sensor</p>
+<ul>
+<li>Car 12V</li>
+<li>GND</li>
+<li>VCC</li>
+<li>GND</li>
+</ul>
+</li>
+<li>
+<p>CAN bus</p>
+<ul>
+<li>VCC GND</li>
+<li>rx</li>
+<li>tx</li>
+</ul>
+</li>
+<li>
+<p>CAN Out</p>
 </li>
 </ul>
 

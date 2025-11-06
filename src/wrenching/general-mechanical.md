@@ -18,6 +18,14 @@ tags:
 This is just a general log of work that isn't really related to any one project. Car related, garage related, mechanical stuff. For the projects that don't get their own log, or other people's cars and bikes.
 
 ## Work Log
+### 11/4/2025
+**Category:** RFS Box
+
+**Task:** Designing, printing, and assembling
+
+**Notes:**
+- Designed a swanky box for Mohammed's Realtime Furnce System
+- Lots of voronoi, hoping it snaps together nicely
 
 ### 11/2/2025
 **Category:** Precursor Rack
