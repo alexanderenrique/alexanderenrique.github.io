@@ -19,6 +19,9 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 11/07/2025
+-Learned that Web Socket Http, ModbusTCP and ProXr are all communications protocols, which I half knew, but I was able to decipher which protocol was being used by the standard port used on the SNSF interlocks. Probably. They can have differeent ports of course. 
+
 ### 11/3/2025
 - Converting from OBJ to GLB, and how to use them in model-viewer
 - React and CSS, like how they work together and interact

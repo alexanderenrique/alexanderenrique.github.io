@@ -124,6 +124,20 @@
     style="width: 100%; height: 500px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; background-color: #f6bd60;">
 </model-viewer></p>
 <p><strong>Description</strong>: Hold 6 Swagelok96-1070 precursor cylinders. I printed four of them and stuck them to a shelf inside a fire proof cabinet for precursor storage. VHB works well in my esperience with 3D prints. The spacing is large enough to accomodate all kinds of valves so long as the valve points out. Takes about 100g of material to print.</p>
+<h3>Raspberry Pi with camera holder</h3>
+<p><model-viewer 
+    src="/assets/models/RFS-Box.glb" 
+    alt="Raspberry Pi with camera holder 3D Model"
+    camera-controls 
+    auto-rotate
+    interaction-prompt="none"
+    exposure="1.5"
+    shadow-intensity="0.5"
+    environment-image="neutral"
+    tone-mapping="commerce"
+    style="width: 100%; height: 500px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; background-color: #f6bd60;">
+</model-viewer></p>
+<p><strong>Description</strong>: Hold a raspberry pi inside a basic case, with a pedestal inside it to hold the foot of a basic webcam. It's used to monitor the furnace system tree lights. The lights tell you the status of the process. This info is then fed to NEMO to let lab users know the if their process has errored out, finished, or is in progress.</p>
 <p><strong>STL File</strong>: Coming soon</p>
 <h2>2002 Yamaha FZ-1</h2>
 <h3>Yoshimura Flange Adapter</h3>
@@ -144,6 +158,14 @@
 <p><strong>STL File</strong>: <a href="../../assets/models/FZ1-yoshimura-rs3-flange-adapter.stl">Download STL</a></p>
 <p><strong>Material</strong>: Test print it from whatever, but you'll need to get it laser cut from stainless steel.
 <strong>Installation</strong>: Weld to your custom midpipe.</p>
+<h4>Notes:</h4>
+<ul>
+<li>So, you've forgotten how to convert from OBJ to GLB? You'll want to use assimp to convert it.
+<ul>
+<li>assimp export input.obj output.glb</li>
+</ul>
+</li>
+</ul>
 <p>*Last updated: *</p>
 
     </div>

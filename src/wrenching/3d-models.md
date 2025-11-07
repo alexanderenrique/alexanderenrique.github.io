@@ -87,6 +87,23 @@ tags:
 
 **Description**: Hold 6 Swagelok96-1070 precursor cylinders. I printed four of them and stuck them to a shelf inside a fire proof cabinet for precursor storage. VHB works well in my esperience with 3D prints. The spacing is large enough to accomodate all kinds of valves so long as the valve points out. Takes about 100g of material to print.
 
+### Raspberry Pi with camera holder
+
+<model-viewer 
+    src="/assets/models/RFS-Box.glb" 
+    alt="Raspberry Pi with camera holder 3D Model"
+    camera-controls 
+    auto-rotate
+    interaction-prompt="none"
+    exposure="1.5"
+    shadow-intensity="0.5"
+    environment-image="neutral"
+    tone-mapping="commerce"
+    style="width: 100%; height: 500px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin: 20px 0; background-color: #f6bd60;">
+</model-viewer>
+
+**Description**: Hold a raspberry pi inside a basic case, with a pedestal inside it to hold the foot of a basic webcam. It's used to monitor the furnace system tree lights. The lights tell you the status of the process. This info is then fed to NEMO to let lab users know the if their process has errored out, finished, or is in progress.
+
 **STL File**: Coming soon
 
 ## 2002 Yamaha FZ-1
@@ -114,5 +131,9 @@ tags:
 
 **Material**: Test print it from whatever, but you'll need to get it laser cut from stainless steel. 
 **Installation**: Weld to your custom midpipe. 
+
+#### Notes:
+- So, you've forgotten how to convert from OBJ to GLB? You'll want to use assimp to convert it. 
+  - assimp export input.obj output.glb
 
 *Last updated: {{ git_revision_date_localized }}*
