@@ -65,6 +65,36 @@ tags:
 
 ## Work Log
 
+### 11/13/2025
+**Main Task:** LED tail lights, floppy door card
+
+**Notes:**
+- Tried installing LEDs in the tail lights, they don't play nicely with the circuitry. As running lights, the voltage is too low to activate them, and they don't draw enough current to do the rolling light effect
+- add it to the way back burner to create an LED controller circuit. 
+
+### 11/8/2025
+**Main Task:** Adding trans fluid
+
+**Notes:**
+- Made it to pismo
+- 12.9 MPG
+- Odometer reads 5% low, which is slightly less than the 7% low the speedometer reads. Splitting hairs but that's who I am.
+- Added a quart of trans fluid, it wasn't as low as I thought it would be.
+- Fiddled with the idle screws on the carb. The passenger side was 1.5 turns out, drivers was 2 turns. Honestly it was pretty good, I couldn't make it better. Played with lowering the idle as well but it was fine.
+  - I'll hook up a proper vacuum guage to it for real tuning. All circuits impact the cruise, but I think the main jet is the biggest factor.
+- Started loosening the choke, I think it stays on way too long and causes smoking. 
+
+
+### 11/7/2025
+**Main Task:** Roadtrip Stories, Loose Trans cooler lines
+
+**Notes:**
+- Drove up to Berekeley, I couldn't tell what was going on but something was smoking a bit on and off
+- Pulled into the parking garage at UC Berekeley and there was a puddle of trans fluid under the car.
+- Jacked it up, the supply line was very loose and the return line was ok-ish
+- I tightened both up, ran it a bit and didn't see any leaks
+- The problem is that the pressure varies based on engine RPMS and maybe load? So just sitting at idle there's not much pressure
+
 ### 11/5/2025
 **Main Task:** Radiator replacement
 

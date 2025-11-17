@@ -77,6 +77,18 @@
 <ul>
 <li>SNF and SNSF are merging and we need to have a unified lab management system, here we go.</li>
 </ul>
+<h2>Example standard process flow:</h2>
+<div class="mermaid" id="mermaid-f6o57ezgz">
+graph LR
+    A["Download rate types"] --> B["Generate a rate matching scheme<br>that associates a rate type<br>with a NEMO ID"]
+    B --> C["Download existing accounts"]
+    C --> D["Map SNSF spreadsheet columns<br>to NEMO fields"]
+    D --> E["Check against existing accounts"]
+    E --> F["Upload New accounts"]
+</div>
+<p>Dependency tree:</p>
+<p>Rate types -&gt; Accounts -&gt; PTAs -&gt; Projects -&gt; Lab members</p>
+<p>Lab members have: Projects, user types, qualifications, projects</p>
 <h2>Up Next:</h2>
 <ul>
 <li>Adding interlock cards, which defines the IP address, port, and protocol
@@ -103,6 +115,7 @@
 <ul>
 <li>Make tools visible</li>
 <li>Enable interlocks</li>
+<li>Moving Allen tools to the Allen folder</li>
 </ul>
 <h2>Actual Process flow for other people to follow:</h2>
 <ul>
@@ -116,6 +129,12 @@
 <li>Check against current account list to see if it already exists</li>
 </ul>
 </li>
+<li>Interlocks:
+<ul>
+<li>Download interlock categories</li>
+<li></li>
+</ul>
+</li>
 </ul>
 <h2>Procedure for Future Alex</h2>
 <ul>
@@ -126,11 +145,58 @@
 </ul>
 <h2>Stats:</h2>
 <ul>
-<li>Accounts: 317-&gt;613</li>
-<li>Projects:</li>
-<li>Lab Members:</li>
+<li>Accounts: 317-&gt;590</li>
+<li>Projects: 882-&gt; 1311</li>
+<li>Lab Members: 1120 -&gt; 1778 (internal only) -&gt; XXX (internal and external)</li>
+<li>Interlocks: 144 -&gt;</li>
+<li>Tools: 200 -&gt; 421</li>
 </ul>
+<p>Total accounts: 590
+Accounts with projects: 525
+Accounts without projects: 65</p>
+<p>37 PTAs are duplicated
+99 projects use these duplicate PTAs</p>
 <h2>Work Log</h2>
+<p>11/10/2025:
+<strong>Main Task:</strong> Uploading Tools, Uploading Internal lab members</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Downloaded the tool from NEMO-Plan, which had the hierarchy that grant wanted</li>
+<li>Uploaded them to NEMO, making them invisible until we're ready to launch</li>
+<li>Uploaded the internal lab members. It was tricky because there was also a column that had multiple PTAs, so I had to do a look up for that field as well</li>
+<li></li>
+</ul>
+<p>11/9/2025:
+<strong>Main Task:</strong> Uploading PTAs</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Uploaded the PTAs, went pretty well</li>
+<li>PTAs must each have a unique name, so I wasn't able to upload the duplicate TSMC - SNSF PTA, currently have a RFI out to the admins</li>
+<li>For the external users, the username is the SUNet ID, but the email can be whatever username they want.</li>
+<li></li>
+</ul>
+<p>11/8/2025:
+<strong>Main Task:</strong> Un-Fucking the accounts</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Ok so I jumped the gun and added too many accounts, here are some specs just to remember:</li>
+<li>Total PIs in Excel: 361
+Duplicate accounts (already exist): 113
+New accounts to create: 248
+Successfully created: 242
+Failed to create: 6
+Success rate: 97.6%
+(venv) (base) adenton@SOE-FVFHW06VQ05F NEMO-Merger % /Users/adenton/Desktop
+/NEMO-Merger/venv/bin/python /Users/adenton/Desktop/NEMO-Merger/download_ac
+counts.py
+Starting account download from NEMO API...
+API Endpoint: https://nemo.stanford.edu/api/accounts/</li>
+<li>here's how I'm going to un-fuck it: I'm going to upload all the new accounts, and the associated PTAs.</li>
+<li>THEN is an accoount doesn't have a PTA, I will mark is as inactive</li>
+<li>HAHA!</li>
+<li>Also compared the dirty list I uploaded and the clean list and then deleted the dirty ones that I may have uploaded by mistake.</li>
+<li>Edited the project upload to work from the new clean excel file.</li>
+</ul>
 <h3>11/7/2025</h3>
 <p><strong>Main Task:</strong> Update</p>
 <p><strong>Notes:</strong></p>

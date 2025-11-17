@@ -37,6 +37,19 @@ graph LR
 
 ## Work Log
 
+### 11/13/2025
+**Main Task:** Data not matching
+
+**Notes:**
+- there are discrepancies in the length between the monthly, annual, and master csvs.
+- Update, the nummber of billing data will not be the same as usage events, becasue consumables also count as billing data.
+- The yearly download was broken and was only downloading the last 40 days.
+- There was a large discrepancy in the files, looks like the overwriting the last 40 days wasn't enough.
+- Also it seems like sometime multiple events with the same item_id were downloaded, which is really strange to me because this should be a unique value in nemo. I think it has to do with my overwrite script or something
+  - Now if it sees items with the same item_id, it will delete the old one and keep the new one.
+- Update, I was right, nemo can't have duplicate item_ids, I was the one introducing them by accident.
+- Made the download so it does no clean up, just straight download, and it does the whole year everytime. 
+
 ### 11/2/2025
 **Main Task:** Master CSV bug fix and annual report creation
 

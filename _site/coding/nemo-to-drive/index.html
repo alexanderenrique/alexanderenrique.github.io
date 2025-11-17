@@ -78,7 +78,7 @@
 <li>Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. <a href="https://github.com/SNF-Root/NEMO-VM"><strong>GitHub Repo</strong></a></li>
 </ul>
 <h2>Process Flow</h2>
-<div class="mermaid" id="mermaid-27p5a10ve">
+<div class="mermaid" id="mermaid-wr4lzhlyx">
 graph LR
     A["Runs main function<br><small><i>(Every Hour)</i></small>"]
   A --> B["Fetches current month's data<br><small><i>(from 1st of month to now)</i></small>"]
@@ -93,6 +93,22 @@ graph LR
 <li>Setting up Google VM for all the scripts</li>
 </ul>
 <h2>Work Log</h2>
+<h3>11/13/2025</h3>
+<p><strong>Main Task:</strong> Data not matching</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>there are discrepancies in the length between the monthly, annual, and master csvs.</li>
+<li>Update, the nummber of billing data will not be the same as usage events, becasue consumables also count as billing data.</li>
+<li>The yearly download was broken and was only downloading the last 40 days.</li>
+<li>There was a large discrepancy in the files, looks like the overwriting the last 40 days wasn't enough.</li>
+<li>Also it seems like sometime multiple events with the same item_id were downloaded, which is really strange to me because this should be a unique value in nemo. I think it has to do with my overwrite script or something
+<ul>
+<li>Now if it sees items with the same item_id, it will delete the old one and keep the new one.</li>
+</ul>
+</li>
+<li>Update, I was right, nemo can't have duplicate item_ids, I was the one introducing them by accident.</li>
+<li>Made the download so it does no clean up, just straight download, and it does the whole year everytime.</li>
+</ul>
 <h3>11/2/2025</h3>
 <p><strong>Main Task:</strong> Master CSV bug fix and annual report creation</p>
 <p><strong>Notes:</strong></p>
