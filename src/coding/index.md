@@ -4,15 +4,55 @@ title: "Coding Projects"
 categories: [coding]
 tags: [programming, automation, tools, software]
 ---
-Welcome to the Coding Projects section! Here you'll find all my programming adventures and tools.
 
-## NEMO Projects
-- [NEMO Merger Work Log](nemo-merger.md) - Merger tool for NEMO files
-- [NEMO to Drive Integration](nemo-to-drive.md) - NEMO to Google Drive integration
-- [NEMO MQTT Plugin](NEMO-MQTT-Plugin.md) - Real-time tool status updates via MQTT
+<div class="hero">
+    <img src="{{ '/images/pandas3.png' | url }}" alt="Pandas" style="max-width: 200px; margin: 0 auto var(--spacing-md); display: block;">
+    <h1 class="hero__title">Coding Projects</h1>
+    <p class="hero__subtitle">Software tools, automation, and programming adventures</p>
+</div>
 
-## Website Development
-- [Denton Works Website Development](denton-works.md) - Evolution of this website from Markdown to static site
+<div class="grid grid--2">
+    <div class="card">
+        <h3 class="card__title">NEMO Merger</h3>
+        <p class="card__description">Merger tool for NEMO files with automated processing and validation. Streamlines lab management workflows.</p>
+        <a href="{{ '/coding/nemo-merger/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">NEMO</span>
+            <span class="tag">automation</span>
+            <span class="tag">lab tools</span>
+        </div>
+    </div>
 
-## About This Section
-This section covers all my software development projects, from lab management tools to MQTT integration. Each project includes detailed work logs and technical notes.
+    <div class="card">
+        <h3 class="card__title">NEMO to Drive Integration</h3>
+        <p class="card__description">NEMO to Google Drive integration for seamless data backup and collaboration.</p>
+        <a href="{{ '/coding/nemo-to-drive/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">NEMO</span>
+            <span class="tag">Google Drive</span>
+            <span class="tag">integration</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="card__title">NEMO MQTT Plugin</h3>
+        <p class="card__description">Real-time tool status updates via MQTT. Enables live monitoring and notifications for lab equipment.</p>
+        <a href="{{ '/coding/NEMO-MQTT-Plugin/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">NEMO</span>
+            <span class="tag">MQTT</span>
+            <span class="tag">real-time</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3 class="card__title">Denton Works Website</h3>
+        <p class="card__description">Evolution of this website from Markdown to static site. Built with Eleventy and modern web technologies.</p>
+        <a href="{{ '/coding/denton-works/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">web development</span>
+            <span class="tag">Eleventy</span>
+            <span class="tag">static site</span>
+        </div>
+    </div>
+</div>

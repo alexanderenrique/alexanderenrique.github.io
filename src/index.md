@@ -13,8 +13,8 @@ description: One curious engineer's journey through wrenching, coding, and micro
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">Wrenching Projects</h2>
-                <p class="section__description">Classic car restoration and mechanical projects. Currently working on a <strong>1968 Thunderbird</strong> restoration - see <a href="{{ '/wrenching/thunderbird-restoration/' | url }}">thunderbird-restoration</a> for details.</p>
-                <a href="{{ '/wrenching/' | url }}" class="section__link">View All Projects →</a>
+                <p class="section__description">Classic car restoration and mechanical projects. Currently working on a <strong> <a href="{{ '/wrenching/thunderbird-restoration/' | url }}">1968 Thunderbird Restomod</a> </p>
+                <a href="{{ '/wrenching/' | url }}" class="section__link">View All Projects →</a></strong>
             </div>
             <div class="section__image">
                 <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker">
