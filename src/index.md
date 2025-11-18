@@ -30,7 +30,7 @@ description: One curious engineer's journey through wrenching, coding, and micro
                 <a href="{{ '/coding/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
-                <div class="placeholder-image">💻</div>
+                <img src="{{ '/images/pandas3.png' | url }}" alt="Pandas">
             </div>
         </div>
     </section>
@@ -43,7 +43,7 @@ description: One curious engineer's journey through wrenching, coding, and micro
                 <a href="{{ '/microelectronics/' | url }}" class="section__link">View All Projects →</a>
             </div>
             <div class="section__image">
-                <div class="placeholder-image">⚡</div>
+                <img src="{{ '/images/wiring-sticker.png' | url }}" alt="Wiring Sticker">
             </div>
         </div>
     </section>

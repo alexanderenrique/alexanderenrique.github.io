@@ -17,6 +17,17 @@ Stuff that doesn't fit into any other category. Things like painting a house, or
 
 ## Worklog
 
+### 11/17/2025
+**Category:** Home Improvement
+
+**Task:** Bathroom remodelling
+
+**Notes:**
+- Slowly becoming a trim carpenter, man it's time consuming and tedious to get it just right. 
+- Started nailing on some of the ship lap
+- Vanity assembly is almost done, Amanda worked really ahrd on that. 
+- Hoping the plumbing stuff comes soon so we can have a functional sink.
+
 ## 11/15/2025
 **Category:** Home Improvement
 

@@ -40,11 +40,14 @@ Rate types -> Accounts -> PTAs -> Projects -> Lab members
 Lab members have: Projects, user types, qualifications, projects
 
 ## Up Next:
-- Adding interlock cards, which defines the IP address, port, and protocol
-  - This also includes the name of the tool, just to make it easier to identify
-  - Interlock card tool name is not binding, just a label
-- Adding interlock, this is where it is associalted with the tool
-  - Can be set to false so it doesn't trigger tools until we're ready.
+- Adding PTA expiration dates
+- Making sure staff cannot modify tool names
+- Adding Dependencies to SNSF tools
+- removing that dependency
+- Making SNSF tools visible in NEMO
+
+## Done:
+- Uploading and testing interlocks cards/interlocks in SNSF buildings (Grant)
 
 Questions:
 - When Adding the external lab members, should I include the expiration date of their SUNet ID?
@@ -55,17 +58,6 @@ Questions:
 - Enable interlocks
 - Moving Allen tools to the Allen folder
 
-## Actual Process flow for other people to follow:
-- Download account types
-- Create the accounts, these are some of the most fundamental blocks
-  - Download accounts from current NEMO
-  - Compare these to the accounts you want to upload
-  - The other thiing about the accounts is that the internal/externa/SBIR has a different name between SNSF and NEMO so you also meed a mapping step
-  - Map accounts against account types
-  - Check against current account list to see if it already exists
-- Interlocks:
-  - Download interlock categories
-  - 
 
 ## Procedure for Future Alex
 - Downloading the current SNF users and adding the area access to Allen they need
@@ -76,8 +68,9 @@ Questions:
 ## Stats:
 - Accounts: 317->590
 - Projects: 882-> 1311
-- Lab Members: 1120 -> 1778 (internal only) -> XXX (internal and external)
+- Lab Members: 1120 -> 1778 (internal only) -> 1904 (internal and external)
 - Interlocks Cards: 144 -> 247
+- Interlocks: 172 -> 269
 - Tools: 200 -> 421
 
 Total accounts: 590
@@ -89,10 +82,12 @@ Accounts without projects: 65
 
 ## Work Log
 
-11/13/2025:
-**Main Task:** Uploading Interlocks
+11/17/2025:
+**Main Task:** Uploading Interlocks Cards, starting interlocks
 
 **Notes:**
+- Uploaded interlock cards, did a test push to nemo-plan which was a good ide
+- 
 
 11/10/2025:
 **Main Task:** Uploading Tools, Uploading Internal lab members

@@ -78,7 +78,7 @@
 <li>SNF and SNSF are merging and we need to have a unified lab management system, here we go.</li>
 </ul>
 <h2>Example standard process flow:</h2>
-<div class="mermaid" id="mermaid-f6o57ezgz">
+<div class="mermaid" id="mermaid-2zkhawcaz">
 graph LR
     A["Download rate types"] --> B["Generate a rate matching scheme<br>that associates a rate type<br>with a NEMO ID"]
     B --> C["Download existing accounts"]
@@ -91,17 +91,15 @@ graph LR
 <p>Lab members have: Projects, user types, qualifications, projects</p>
 <h2>Up Next:</h2>
 <ul>
-<li>Adding interlock cards, which defines the IP address, port, and protocol
-<ul>
-<li>This also includes the name of the tool, just to make it easier to identify</li>
-<li>Interlock card tool name is not binding, just a label</li>
+<li>Adding PTA expiration dates</li>
+<li>Making sure staff cannot modify tool names</li>
+<li>Adding Dependencies to SNSF tools</li>
+<li>removing that dependency</li>
+<li>Making SNSF tools visible in NEMO</li>
 </ul>
-</li>
-<li>Adding interlock, this is where it is associalted with the tool
+<h2>Done:</h2>
 <ul>
-<li>Can be set to false so it doesn't trigger tools until we're ready.</li>
-</ul>
-</li>
+<li>Uploading and testing interlocks cards/interlocks in SNSF buildings (Grant)</li>
 </ul>
 <p>Questions:</p>
 <ul>
@@ -117,25 +115,6 @@ graph LR
 <li>Enable interlocks</li>
 <li>Moving Allen tools to the Allen folder</li>
 </ul>
-<h2>Actual Process flow for other people to follow:</h2>
-<ul>
-<li>Download account types</li>
-<li>Create the accounts, these are some of the most fundamental blocks
-<ul>
-<li>Download accounts from current NEMO</li>
-<li>Compare these to the accounts you want to upload</li>
-<li>The other thiing about the accounts is that the internal/externa/SBIR has a different name between SNSF and NEMO so you also meed a mapping step</li>
-<li>Map accounts against account types</li>
-<li>Check against current account list to see if it already exists</li>
-</ul>
-</li>
-<li>Interlocks:
-<ul>
-<li>Download interlock categories</li>
-<li></li>
-</ul>
-</li>
-</ul>
 <h2>Procedure for Future Alex</h2>
 <ul>
 <li>Downloading the current SNF users and adding the area access to Allen they need</li>
@@ -147,8 +126,9 @@ graph LR
 <ul>
 <li>Accounts: 317-&gt;590</li>
 <li>Projects: 882-&gt; 1311</li>
-<li>Lab Members: 1120 -&gt; 1778 (internal only) -&gt; XXX (internal and external)</li>
-<li>Interlocks: 144 -&gt;</li>
+<li>Lab Members: 1120 -&gt; 1778 (internal only) -&gt; 1904 (internal and external)</li>
+<li>Interlocks Cards: 144 -&gt; 247</li>
+<li>Interlocks: 172 -&gt; 269</li>
 <li>Tools: 200 -&gt; 421</li>
 </ul>
 <p>Total accounts: 590
@@ -157,6 +137,13 @@ Accounts without projects: 65</p>
 <p>37 PTAs are duplicated
 99 projects use these duplicate PTAs</p>
 <h2>Work Log</h2>
+<p>11/17/2025:
+<strong>Main Task:</strong> Uploading Interlocks Cards, starting interlocks</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Uploaded interlock cards, did a test push to nemo-plan which was a good ide</li>
+<li></li>
+</ul>
 <p>11/10/2025:
 <strong>Main Task:</strong> Uploading Tools, Uploading Internal lab members</p>
 <p><strong>Notes:</strong></p>

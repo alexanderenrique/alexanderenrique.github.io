@@ -15,6 +15,8 @@ A work log tracking the evolution of this website from simple Markdown to a full
 
 ## Up Next:
 - Adding github links to the code based projects
+- Finish adding STLs to model pages
+- Improving the "middle man" pages
 
 ## Work Log
 

@@ -25,7 +25,10 @@ This is just a general log of work that isn't really related to any one project.
 
 **Notes:**
 - Designed a swanky box for Mohammed's Realtime Furnce System
-- Lots of voronoi, hoping it snaps together nicely
+- Lots of voronoi, hoping it snaps together
+- The zero tolerance tolerance on our creality printer creates the perfect interference fit.
+- Realized what looked weird on the RFS. With all the voronoi patterns, the large square back plate was out of place, so I rounded the hole for the wire pass through
+- Also threw a hard fillet on the corners to round them
 
 ### 11/2/2025
 **Category:** Precursor Rack
