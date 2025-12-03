@@ -77,8 +77,8 @@
 <ul>
 <li>SNF and SNSF are merging and we need to have a unified lab management system, here we go.</li>
 </ul>
-<h2>Example standard process flow:</h2>
-<div class="mermaid" id="mermaid-owc9wljs0">
+<h2>Example uploadflow:</h2>
+<div class="mermaid" id="mermaid-a6ovr9qip">
 graph LR
     A["Download rate types"] --> B["Generate a rate matching scheme<br>that associates a rate type<br>with a NEMO ID"]
     B --> C["Download existing accounts"]
@@ -86,41 +86,28 @@ graph LR
     D --> E["Check against existing accounts"]
     E --> F["Upload New accounts"]
 </div>
-<p>Dependency tree:</p>
-<p>Rate types -&gt; Accounts -&gt; PTAs -&gt; Projects -&gt; Lab members</p>
-<p>Lab members have: Projects, user types, qualifications, projects</p>
 <h2>Up Next:</h2>
 <ul>
-<li>Adding PTA expiration dates</li>
-<li>Making sure staff cannot modify tool names</li>
-<li>Adding Dependencies to SNSF tools</li>
-<li>removing that dependency</li>
-<li>Making SNSF tools visible in NEMO</li>
-</ul>
-<h2>Done:</h2>
+<li>Writing a script that does the door charges automatically from the linel data.
 <ul>
-<li>Uploading and testing interlocks cards/interlocks in SNSF buildings (Grant)</li>
-</ul>
-<p>Questions:</p>
-<ul>
-<li>When Adding the external lab members, should I include the expiration date of their SUNet ID?
-<ul>
-<li>I could add this to the &quot;Active access expiration date&quot; field</li>
+<li>Waiting on sample linel data.</li>
 </ul>
 </li>
+<li>Creating a sheet for everything lab members need to check</li>
+<li>Everything Staff needs to check</li>
+<li>List of things to upload over break
+<ul>
+<li>When can I get the last user and qualification lists?</li>
+</ul>
+</li>
+<li>Updating the knowledge bases for staff and lab members</li>
+<li>Adding the Kiosk Issue to gitlab</li>
 </ul>
 <h2>Notes for Launch day:</h2>
 <ul>
-<li>Make tools visible</li>
 <li>Enable interlocks</li>
 <li>Moving Allen tools to the Allen folder</li>
-</ul>
-<h2>Procedure for Future Alex</h2>
-<ul>
-<li>Downloading the current SNF users and adding the area access to Allen they need</li>
-<li>Adding accounts</li>
-<li>Downloading the accounts so you can then map those to the projects you're going to upload</li>
-<li>Upload the tools (anytime, I might want to organize them in NEMO-Plan, then move that hierarchy to live NEMO)</li>
+<li>Make consumables visible in NEMO</li>
 </ul>
 <h2>Stats:</h2>
 <ul>
@@ -134,9 +121,23 @@ graph LR
 <p>Total accounts: 590
 Accounts with projects: 525
 Accounts without projects: 65</p>
-<p>37 PTAs are duplicated
-99 projects use these duplicate PTAs</p>
 <h2>Work Log</h2>
+<h3>12/2/2025</h3>
+<p><strong>Main Task:</strong> Adding consumables</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Added consumables</li>
+<li>Added consumable rates</li>
+<li>Worked with admins to figure out eh whole door access and billing thing.</li>
+</ul>
+<h3>11/21/2025</h3>
+<p><strong>Main Task:</strong> Adding NEMO launch resource to tools, making tools visible</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Added the NEMO launch resource as a dependency to the tools</li>
+<li>Scheduled a resource outage to end on December 31st at midnight</li>
+<li>Made the tools visible in NEMO, mingling with the old Allen tools.</li>
+</ul>
 <p>11/17/2025:
 <strong>Main Task:</strong> Uploading Interlocks Cards, starting interlocks</p>
 <p><strong>Notes:</strong></p>
@@ -237,106 +238,34 @@ API Endpoint: https://nemo.stanford.edu/api/accounts/</li>
 <li>I'm slowly finding the roots of things</li>
 <li>for example I'd like to upload users, but first I thought to Upload PTAs, but to upload those you need a to upload accounts</li>
 <li>So far I've uploaded all the tools, added Allen to our lab members,</li>
-<li>Mapping for new area access:
+</ul>
+<h2>Done:</h2>
 <ul>
-<li>SMF =</li>
-<li>SNC =</li>
-<li>SNL</li>
+<li><s>adding consumables</s></li>
+<li><s>adding consumable rates</s></li>
+<li><s>Adding PTA expiration dates</s></li>
+<li><s>Fixing existing lab members, making sure they have the PTAs they need</s></li>
+<li><s>Adding Core facilities to tools for billing purposes</s>
+<ul>
+<li><s>Email Carsen, can't be done via api, needs to be done manually</s></li>
 </ul>
 </li>
-</ul>
-<h2>September 1st Goals:</h2>
-<p>-Minimum:
-- Gap analysis (consolidating thoughts)
-- All Tools Into Merged NEMO, everyone has access</p>
+<li><s>Adding tool qualifications</s>
 <ul>
-<li>Order of operations:
-<ul>
-<li>Meet up with Grant/Carsen, figure out the access areas</li>
-<li>Do a skeleton framework for tools</li>
-<li>Education sessions with tool owners so they can configure their tools</li>
-<li>SNSF review everything! I did my best to translate what I saw to NEMO language but it must be perfect on Jan 1st</li>
-<li>Creating Billing documents to share with admin team (what do we already have?)</li>
+<li><s>only adding active user qualifications</s></li>
 </ul>
 </li>
-</ul>
-<h2>Thinking</h2>
+<li><s>Assigning interlocks to tools</s></li>
+<li><s>Making sure staff cannot modify tool names (can't be done)</s></li>
+<li><s>Adding Dependencies to SNSF tools</s></li>
+<li><s>removing that dependency</s></li>
+<li><s>Making SNSF tools visible in NEMO</s></li>
+<li><s>Wendy and different lab member priveledges</s>
 <ul>
-<li>
-<p>What's the order of operations for getting all the new users into NEMO?</p>
-<ul>
-<li>People are complicated, maybe I'll start with the tools</li>
-</ul>
-</li>
-<li>
-<p>What do people need to do versus what can I code?</p>
-</li>
-<li>
-<p>Migration:</p>
-<ul>
-<li>Getting tools, users, PTAs, everything into SNF NEMO</li>
+<li><s>Decided to give lab members staff priveledges on the tools they are super users on.</s></li>
 </ul>
 </li>
-<li>
-<p>Configuration</p>
-<ul>
-<li>Tool owners setting up their tools</li>
-<li>Areas</li>
-</ul>
-</li>
-<li>
-<p>Education</p>
-<ul>
-<li>Billing</li>
-<li>Staff education</li>
-</ul>
-</li>
-</ul>
-<h3>Timeline</h3>
-<ul>
-<li>Phase 1 (Date):</li>
-<li>Phase 2 (Date):</li>
-<li>Phase 3 (Date):</li>
-</ul>
-<h3>Known Issues/Challenges</h3>
-<ol>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h2>Grant Questions:</h2>
-<ul>
-<li>do you actually want SNL or whatever in the tool name?
-<ul>
-<li>NO want to purge any instances of SNL, SNC, SMF</li>
-</ul>
-</li>
-<li>How are the area access going to work, what tool goes where?
-<ul>
-<li>Reconviene and understand how area access if going to work, what do the characterization people want? Each tool can be different, does each tool need to be its own area or is there another way?</li>
-</ul>
-</li>
-<li>list of consumables to upload?
-<ul>
-<li>in the inventory.txt file</li>
-</ul>
-</li>
-<li>How do we want to organize the consumables so people know where they are?
-<ul>
-<li>Add TEM supplies, more under AFM supplies, SMF supplies, XPS supplies (software licencse?)</li>
-</ul>
-</li>
-<li>For the rates, is there ever a difference between the other academic and local category?
-<ul>
-<li>No, one in the same</li>
-</ul>
-</li>
-<li>Do you specify any SBIR rates?
-<ul>
-<li>No, we might not either pretty soon LOL</li>
-</ul>
-</li>
-<li>Send me interlock i.p address list!</li>
+<li><s>Adding IDs to lab members for door charges</s></li>
 </ul>
 
     </div>

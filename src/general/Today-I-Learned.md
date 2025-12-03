@@ -19,6 +19,20 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 11/26/2025
+- Learned how the guages in the t bird work. They're just bimetallic springs. Lower resistance from sensor, more current flows through, more deflection of the spring, more movement of the pointer.
+
+### 11/25/2025
+- More about RS-485, it's the physical layer with the modbus protocol on top.
+
+### 11/21/2025
+- Learned about the RS-485 protocol, and how to use it to communicate with the ESP32s.
+- Learned about how LEDs operate on a fundamental level. The whole current not scaling linearly with voltage is a trip.
+- Learned about constant current dimming and how to use it to dim LEDs
+- Learned about RSENSE and how to use the external resistor to guide how much current the IC will push
+  - It isn't safe to set it to a high value and forget about it! You need to set it according to your current needs
+- Learned about inductors on constant current boards, and the internal frequency clock type deals. They all play together, so interesting.
+
 ### 11/07/2025
 -Learned that Web Socket Http, ModbusTCP and ProXr are all communications protocols, which I half knew, but I was able to decipher which protocol was being used by the standard port used on the SNSF interlocks. Probably. They can have differeent ports of course. 
 

@@ -24,22 +24,56 @@ tags:
 ## Project Overview
 - I love me some data, micro electronics, and old cars so let's put them all together. 
 - My dream is to have temperature data, PWM control of fans, and a cool hidden display where I can see all the readouts and what everything is doing, and also manually override sensors if say I want to put a fan on full blast or whatever else
-- This project integrates with the thunderbird-restoration work
 
 
 ## Current Tasks
-- Getting the CAN working
-- Think about the larger picture of nodes, what needs to go where. If we're using full fat ESP32 with CAN, maximizing the IO from each to minimize the number of CAN wires
-- Then we can think about the GUI, etc
-
-
+- Minimum Viable Product for the roadtrip:
+- O2 and voltage sensor connected directly to the screen
+- On/Off switch for the screen, or better yet enabling touchscreen functionality, tap on and tap off
+- 
 
 ## Work Log
+
+### 11/30/2025
+**Main Task:** C++ for the engine baynode
+
+**Notes:**
+- Trying to learn things and really code myself, i's acutlaly fun to learn about C++
+- I'm debating between welding in sensor bungs, or just sticking some sensors on the side of the pans and calling it a day.
+  - The perfectionist in my knows I should weld them in for the most accurate reading, but I don't want to pull the pans and get covered in fluid and weld stuff in. 
+
+### 11/29/2025
+**Main Task:** Soldering a lot
+
+**Notes:**
+- I wrapped my head around how to use perf board, big loops, don't be a perfectionist, just has to make electrical contact
+- Attached the screen, ESP32, buck converter, and other parts
+- Re-did the dimming circuit with the P type transistor, seems like it works better than the PNP in the previous circuit
+- The PWM pin goes high on boot causing some flashing which is annoying, and I can't get rid of it in code, I'll have to do a hardware fix
+  - I started by adding a 100kOhm resistor between the PWM pin and ground, but that didn't do anything, the boot voltage spike was too high
+  - Gonna try a 50kOhm resistor between the PWM pin and ground, and see if that helps.
+  - Learning about all the resistors and current is interesting, keeping in mind how much current the esp32 can handle through the pins, how hard it can dirvve stuff
+- I learned ADC1 is the truth, I tried to put the voltage divider for the input voltage and the O2 sensor on ADC2 but it wasn't working right.
+- Learned about ADC offsets and calibrations, turns out it isn't as simple as I thought.
+- I  did some fudge factors and magic numbers to get the input coltages right, doesn't exactly align with my math, but it's balls on at 8.9V, which is what the power supply I was using was providing.
+- Also added the RS-485 module to the board, easy enough to install. 
+
+### 11/21/2025
+**Main Task:** Re-thinking our architecture
+
+**Notes:**
+- Previouslt I was thinking about using CAN, but only the full fat ESP32s can do CAN. The C3 and S3 can't do CAN natively.
+- CAN has a lot of dependencies and the stack is quite large, so I started to look at different options
+- I can use an RS-485 module, and this works with any ESP32! This should make it smaller and easier to implement. And it has a chance of fitting on the perf board.
+- I think technically the display can run on a C3 but with the limited buffer size it might not be able to handle any decent refresh rate.
+
+### 11/5/2025
 **Main Task:** KiCAD Circuit Design
 
 **Notes:**
 - Transitioning from the schematic to the layout. The Schemtic is just alogical diagram
 - Learned the O2 sensor actually gives a 0-3V output which is great becasue then I don't need a voltage divider
+- I tried soldering stuff onto perf board, but it just sucks, I just don't think there is a nice way to do perf board and nobody likes kloogey solder jobs. They make me feel bad.
 
 ### 11/4/2025
 **Main Task:** KiCAD Circuit Design

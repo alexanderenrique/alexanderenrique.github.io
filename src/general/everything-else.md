@@ -17,6 +17,20 @@ Stuff that doesn't fit into any other category. Things like painting a house, or
 
 ## Worklog
 
+### 11/18/2025
+**Category:** Home Improvement
+
+**Task:** Bathroom remodelling
+
+**Notes:**
+- Continued on the trim, sure is fiddly
+- Started on the sink install, many challenges to overcome
+  - The drain outlet from the wall clashed with the rear support bar on the vanity, so I had to remove some of that support
+  - Then the P trap didn't limeup with the bottom of the sink, so I had to find the right flex join.
+  - But by adding the flex joint I had to shorten the drain from the bottom of the sink
+- Also replaced the leaking cold side valve from the wall which involved shutting the water off to the whole house
+- Mocked up the vanity and mirror, with a little luck everything will fit. The light is low on the wall, the mirror is tall, and the vanity is also tall so the three of those are a tight squeeze.
+
 ### 11/17/2025
 **Category:** Home Improvement
 

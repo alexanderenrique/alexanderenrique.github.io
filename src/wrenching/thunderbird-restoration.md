@@ -27,7 +27,7 @@ tags:
 ## Before the Christmas Road Trip!
 
 ### Must Do:
-- Radiator and cooling system
+- ~~Radiator and cooling system~~
 - Window trims and weather stripping
 - Comprehensive flat kit
 - Flushing the brake lines
@@ -53,6 +53,12 @@ tags:
 - Finish the front seatbelts
 - Spare alternator fused wire
 
+## Up Next:
+- Testing the IVR, seeing if grounding the sensors gets us 100 percent values
+- Adding shunt resistor to the alternator cable, wiring to the guage
+- Vented gas cap, the old fashioned way
+
+
 ### Spares Box:
 - Ignition coil
 - Fuel pump (mechanical or electrical, whatever we're running at the time)
@@ -64,6 +70,23 @@ tags:
 
 
 ## Work Log
+
+### 11/30/2025
+**Main Task:** IVR voltage
+
+**Notes:**
+- Had the clever idea to measure the voltage at the coolant temp guage, problem is the IVR doesn't output a stable voltage, it's a contact thaat switches on and off. Multi meter couldn't read it.
+
+### 11/29/2025
+**Main Task:** Just learning
+
+**Notes:**
+- Learned why my current guage wasn't reading anything. It's because there's no current running through it.
+  - Back in the day, all the alternator voltage ran through the guage on its way to the battery. The current difference would move the needle.
+  - I'll need to add a shunt resistor between the battery and alternator and take the current difference from there
+  - Obviously the guage can't handle a 140A from the new alternator going through it
+- Also learned about the IVR, could be the reason my temp and fuel guages read low, not enough current going through them cause the voltage is too low. 
+- Started coding in the modbus, actually writing my own code and learning like way way way more than just having cursor do all the work.
 
 ### 11/13/2025
 **Main Task:** LED tail lights, floppy door card

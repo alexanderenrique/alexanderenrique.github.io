@@ -23,7 +23,7 @@ tags:
 ## Project Overview
 - SNF and SNSF are merging and we need to have a unified lab management system, here we go.
 
-## Example standard process flow:
+## Example uploadflow:
 {% mermaid %}
 graph LR
     A["Download rate types"] --> B["Generate a rate matching scheme<br>that associates a rate type<br>with a NEMO ID"]
@@ -33,37 +33,22 @@ graph LR
     E --> F["Upload New accounts"]
 {% endmermaid %}
 
-Dependency tree:
-
-Rate types -> Accounts -> PTAs -> Projects -> Lab members
-
-Lab members have: Projects, user types, qualifications, projects
 
 ## Up Next:
-- Adding PTA expiration dates
-- Making sure staff cannot modify tool names
-- Adding Dependencies to SNSF tools
-- removing that dependency
-- Making SNSF tools visible in NEMO
+- Writing a script that does the door charges automatically from the linel data. 
+  - Waiting on sample linel data.
+- Creating a sheet for everything lab members need to check
+- Everything Staff needs to check
+- List of things to upload over break
+  - When can I get the last user and qualification lists?
+- Updating the knowledge bases for staff and lab members
+- Adding the Kiosk Issue to gitlab
 
-## Done:
-- Uploading and testing interlocks cards/interlocks in SNSF buildings (Grant)
-
-Questions:
-- When Adding the external lab members, should I include the expiration date of their SUNet ID?
-  - I could add this to the "Active access expiration date" field
 
 ## Notes for Launch day:
-- Make tools visible
 - Enable interlocks
 - Moving Allen tools to the Allen folder
-
-
-## Procedure for Future Alex
-- Downloading the current SNF users and adding the area access to Allen they need
-- Adding accounts
-- Downloading the accounts so you can then map those to the projects you're going to upload
-- Upload the tools (anytime, I might want to organize them in NEMO-Plan, then move that hierarchy to live NEMO)
+- Make consumables visible in NEMO
 
 ## Stats:
 - Accounts: 317->590
@@ -77,10 +62,23 @@ Total accounts: 590
 Accounts with projects: 525
 Accounts without projects: 65
 
-37 PTAs are duplicated
-99 projects use these duplicate PTAs
-
 ## Work Log
+
+### 12/2/2025
+**Main Task:** Adding consumables 
+
+**Notes:**
+- Added consumables 
+- Added consumable rates
+- Worked with admins to figure out eh whole door access and billing thing. 
+
+### 11/21/2025
+**Main Task:** Adding NEMO launch resource to tools, making tools visible
+
+**Notes:**
+- Added the NEMO launch resource as a dependency to the tools
+- Scheduled a resource outage to end on December 31st at midnight
+- Made the tools visible in NEMO, mingling with the old Allen tools. 
 
 11/17/2025:
 **Main Task:** Uploading Interlocks Cards, starting interlocks
@@ -168,58 +166,21 @@ API Endpoint: https://nemo.stanford.edu/api/accounts/
 - I'm slowly finding the roots of things
 - for example I'd like to upload users, but first I thought to Upload PTAs, but to upload those you need a to upload accounts
 - So far I've uploaded all the tools, added Allen to our lab members, 
-- Mapping for new area access: 
-  - SMF = 
-  - SNC = 
-  - SNL
 
-## September 1st Goals:
--Minimum:
-    - Gap analysis (consolidating thoughts)
-    - All Tools Into Merged NEMO, everyone has access
-- Order of operations:
-  - Meet up with Grant/Carsen, figure out the access areas
-  - Do a skeleton framework for tools
-  - Education sessions with tool owners so they can configure their tools
-  - SNSF review everything! I did my best to translate what I saw to NEMO language but it must be perfect on Jan 1st
-  - Creating Billing documents to share with admin team (what do we already have?)
-
-## Thinking
-- What's the order of operations for getting all the new users into NEMO?
-  - People are complicated, maybe I'll start with the tools
-
-- What do people need to do versus what can I code?
-
-- Migration:
-  - Getting tools, users, PTAs, everything into SNF NEMO
-- Configuration
-  - Tool owners setting up their tools
-  - Areas
-- Education
-  - Billing
-  - Staff education
-
-### Timeline
-- Phase 1 (Date):
-- Phase 2 (Date):
-- Phase 3 (Date):
-
-### Known Issues/Challenges
-1. 
-2. 
-3. 
-
-## Grant Questions:
-- do you actually want SNL or whatever in the tool name?
-  - NO want to purge any instances of SNL, SNC, SMF
-- How are the area access going to work, what tool goes where?
-  - Reconviene and understand how area access if going to work, what do the characterization people want? Each tool can be different, does each tool need to be its own area or is there another way?
-- list of consumables to upload?
-  - in the inventory.txt file
-- How do we want to organize the consumables so people know where they are?
-  - Add TEM supplies, more under AFM supplies, SMF supplies, XPS supplies (software licencse?)
-- For the rates, is there ever a difference between the other academic and local category?
-  - No, one in the same
-- Do you specify any SBIR rates?
-  - No, we might not either pretty soon LOL
-- Send me interlock i.p address list!
+## Done:
+- ~~adding consumables~~
+- ~~adding consumable rates~~
+- ~~Adding PTA expiration dates~~
+- ~~Fixing existing lab members, making sure they have the PTAs they need~~
+- ~~Adding Core facilities to tools for billing purposes~~
+  - ~~Email Carsen, can't be done via api, needs to be done manually~~
+- ~~Adding tool qualifications~~
+  - ~~only adding active user qualifications~~
+- ~~Assigning interlocks to tools~~
+- ~~Making sure staff cannot modify tool names (can't be done)~~
+- ~~Adding Dependencies to SNSF tools~~
+- ~~removing that dependency~~
+- ~~Making SNSF tools visible in NEMO~~
+- ~~Wendy and different lab member priveledges~~
+  - ~~Decided to give lab members staff priveledges on the tools they are super users on.~~
+- ~~Adding IDs to lab members for door charges~~
