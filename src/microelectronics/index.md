@@ -34,3 +34,15 @@ tags: [electronics, embedded-systems, microcontrollers]
         </div>
     </div>
 </div>
+
+    <div class="card">
+        <h3 class="card__title">500mA LED Driver</h3>
+        <p class="card__description">Constant current LED driver for dimming LEDs.</p>
+        <a href="{{ '/microelectronics/500mA-LED-Driver/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">electronics</span>
+            <span class="tag">LED</span>
+            <span class="tag">dimming</span>
+        </div>
+    </div>
+</div>

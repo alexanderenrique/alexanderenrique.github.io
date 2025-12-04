@@ -1,7 +1,7 @@
 #  Constant Current LED Driver
 
 ## Project Overview
-As hobbyist, there aren't any off the shelf modules for driving LEDs at constant current if you want to do dimming. The way people mostly do it now is to do PWM on the voltage supply or ground of the LED which isn't as good. Not as healthy for the lED because the current is not constant, and especially as things begin to heat up.
+As hobbyist, there aren't any off the shelf modules for driving LEDs at constant current if you want to do dimming. The way people mostly do it now is to do PWM on the voltage supply or ground of the LED which isn't as good. Not as healthy for the lED because the current is not constant, especially as things begin to heat up.
 
 However, constant current has its own set of challenges, and there aren't any hobbyist friendly breadboards that are designed around these chips. They have way more inputs, outputs, configuratbility options and just generally things to know. So I'm building my own.
 
