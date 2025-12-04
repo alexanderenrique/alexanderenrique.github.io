@@ -6,6 +6,14 @@
     <title>NEMO to Drive | Denton Works</title>
     <meta name="description" content="My journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place.">
     <meta name="tags" content="automation, file-transfer, google-drive, nemo, python, api, sync, backup, lab-management, null">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4VMNE2JPX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D4VMNE2JPX');
+    </script>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +86,7 @@
 <li>Script to automatically transfer files from NEMO to Google Drive. It started with just billing data to be ingested into Tableu, but I am also adding post usage questions data. Currently, staff memebrs don't have an easy way to see the post usage questions data. <a href="https://github.com/SNF-Root/NEMO-VM"><strong>GitHub Repo</strong></a></li>
 </ul>
 <h2>Process Flow</h2>
-<div class="mermaid" id="mermaid-5553dr5g6">
+<div class="mermaid" id="mermaid-zfd17gj1x">
 graph LR
     A["Runs main function<br><small><i>(Every Hour)</i></small>"]
   A --> B["Fetches current month's data<br><small><i>(from 1st of month to now)</i></small>"]

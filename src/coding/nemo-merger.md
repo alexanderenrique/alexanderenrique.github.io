@@ -35,6 +35,9 @@ graph LR
 
 
 ## Up Next:
+- Adding onboardgin phases to lab members
+  - If they have a "last sign in" then they must have been an SNF user
+  - If they are in the SNSF spreadsheets, they will get the SNSF onboarding phase
 - Writing a script that does the door charges automatically from the linel data. 
   - Waiting on sample linel data.
 - Creating a sheet for everything lab members need to check
@@ -61,6 +64,20 @@ graph LR
 Total accounts: 590
 Accounts with projects: 525
 Accounts without projects: 65
+
+Figuring out Onboarding Phases, currently:
+SNSF count: 1361/1919
+SNF count: 348/1919
+neither count: 208/1919
+both count: 2/1919
+
+(# for adding SNF onboarding phase)
+Total lab members processed: 1919
+Lab members successfully updated: 568
+Lab members skipped: 1351
+Lab members with failed updates: 0
+
+✓ 568 lab member(s) had phase 1 added to their onboarding phases
 
 ## Work Log
 

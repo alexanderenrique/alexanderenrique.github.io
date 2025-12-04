@@ -36,6 +36,21 @@ However, constant current has its own set of challenges, and there aren't any ho
 - RSENSE Resistor: 0.2–0.3 Ω, to limit power to 0.5A (enough for most any single LED)
 - LT3478: 2MHz switching frequency (minimize that ripple)
 - Inductor: 4.7uH, this is a good value for a buck/boost converter where Vin=Vout
+- ATTiny402/412 family MCU: This will get info from the Vin, Vout, NTC temp, and RSENSE max current to determine the LED current. Then it will drive the CTRL pin on the LT3478 to set the current. Analog control for the LT3478, very nice!
+
+{% mermaid %}
+graph LR
+    A["User PWM Input (0–3.3/5V)"] --> B["ATTiny402 MCU"]
+    C["ADC: VIN Divider"] --> B
+    D["ADC: VLED Divider"] --> B
+    E["ADC: NTC Temp"] --> B
+    F["Measure PWM Duty"] --> B
+    G --> B["Compute Target Current (I_target)"]
+    B --> H["Generate PWM_out (~100 kHz)"]
+    H --> I["RC Filter: 10k:47–100nF"]
+    I --> J["LT3478 CTRL Pin: Sets LED Current"]
+    J --> K["LED Current Regulation"]
+{% endmermaid %}
 
 ## Control flow:
 {% mermaid %}
