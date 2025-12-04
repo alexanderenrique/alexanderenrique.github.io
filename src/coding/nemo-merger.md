@@ -36,8 +36,9 @@ graph LR
 
 ## Up Next:
 - Adding onboardgin phases to lab members
-  - If they have a "last sign in" then they must have been an SNF user
-  - If they are in the SNSF spreadsheets, they will get the SNSF onboarding phase
+  - adding onboarding if they are also qualified on the "SNF safety training" tool
+  - ~~If they have a "last sign in" then they must have been an SNF user~~
+  - ~~If they are in the SNSF spreadsheets, they will get the SNSF onboarding phase~~
 - Writing a script that does the door charges automatically from the linel data. 
   - Waiting on sample linel data.
 - Creating a sheet for everything lab members need to check

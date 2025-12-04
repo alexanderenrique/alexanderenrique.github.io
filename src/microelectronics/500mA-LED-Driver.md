@@ -32,36 +32,35 @@ However, constant current has its own set of challenges, and there aren't any ho
 - Includes a small MCU for control and configurability
 - Designed to be breadboard-friendly and commercializable
 
+## Advantages of analog voltage control over PWM straight from microcontroller:
+- The LED stays on constantly
+  - No massive inrush of current when the LED is turned on
+- The current is simply reduced or increased smoothly
+- No blink, no flicker, no color shift.
+- Onboard MCU has the ability to:
+  - Thermal derate the LED
+  - Respect the input voltage drop-out
+  - Avoid inductor saturation
+  - Stay under safe power dissipation
+  - Apply soft dimming transitions
+
 ## Fixed Values in the design:
 - RSENSE Resistor: 0.2–0.3 Ω, to limit power to 0.5A (enough for most any single LED)
 - LT3478: 2MHz switching frequency (minimize that ripple)
 - Inductor: 4.7uH, this is a good value for a buck/boost converter where Vin=Vout
 - ATTiny402/412 family MCU: This will get info from the Vin, Vout, NTC temp, and RSENSE max current to determine the LED current. Then it will drive the CTRL pin on the LT3478 to set the current. Analog control for the LT3478, very nice!
 
-{% mermaid %}
-graph LR
-    A["User PWM Input (0–3.3/5V)"] --> B["ATTiny402 MCU"]
-    C["ADC: VIN Divider"] --> B
-    D["ADC: VLED Divider"] --> B
-    E["ADC: NTC Temp"] --> B
-    F["Measure PWM Duty"] --> B
-    G --> B["Compute Target Current (I_target)"]
-    B --> H["Generate PWM_out (~100 kHz)"]
-    H --> I["RC Filter: 10k:47–100nF"]
-    I --> J["LT3478 CTRL Pin: Sets LED Current"]
-    J --> K["LED Current Regulation"]
-{% endmermaid %}
 
 ## Control flow:
 {% mermaid %}
-flowchart TD
-    A[User<br>sets PWM<br>brightness] --> B[MCU<br>reads PWM<br>input]
-    B --> C[MCU<br>determines<br>LED current<br>(uses Vin, Vout,<br>NTC temp,<br>RSENSE max current)]
-    C --> D[MCU outputs<br>PWM signal]
-    D --> E[RC circuit<br>smooths PWM<br>(0–1.24V)]
-    E --> F[CTRL1 input<br>on LT3478]
-    G[NTC<br>(temperature sensor)] --> H[CTRL2 input<br>on LT3478]
-    F & H --> I[LT3478<br>drives LED<br>at commanded current]
+graph LR
+    A["User<br>sets PWM<br>brightness"] --> B["MCU<br>reads PWM<br>input"]
+    B --> C["MCU determines LED current<br>(uses Vin, Vout, NTC temp, RSENSE max current)"]
+    C --> D["MCU outputs<br>PWM signal (~100 kHz)"]
+    D --> E["RC circuit<br>smooths PWM<br>(0–1.24V)"]
+    E --> F["CTRL1 input<br>on LT3478"]
+    G["Failsafe NTC<br>(temp sensor)"] --> H["CTRL2 input<br>on LT3478"]
+    F & H --> I["LT3478<br>drives LED<br>at commanded current"]
 {% endmermaid %}
 
 ## Hardware Components Decided so far:
