@@ -1,7 +1,23 @@
-#  Constant Current LED Driver
+---
+layout: page
+title: "500mA Constant Current LED Driver"
+categories: [microelectronics]
+tags: 
+  - electronics
+  - LED
+  - dimming
+  - constant-current
+  - pwm
+  - embedded
+  - power-supply
+  - buck-boost
+  - LT3478
+---
+
+# Constant Current LED Driver
 
 ## Project Overview
-As hobbyist, there aren't any off the shelf modules for driving LEDs at constant current if you want to do dimming. The way people mostly do it now is to do PWM on the voltage supply or ground of the LED which isn't as good. Not as healthy for the lED because the current is not constant, especially as things begin to heat up.
+As hobbyist, there aren't any off the shelf modules for driving LEDs at constant current if you want to do dimming. The way people mostly do it now is to do PWM on the voltage supply or ground of the LED which isn't as good. Not as healthy for the LED because the current is not constant, especially as things begin to heat up.
 
 However, constant current has its own set of challenges, and there aren't any hobbyist friendly breadboards that are designed around these chips. They have way more inputs, outputs, configuratbility options and just generally things to know. So I'm building my own.
 
@@ -77,6 +93,6 @@ flowchart TD
 - RC circuit to smooth the PWM signal to CTRL1
   
 ## Other Things to figure out:
-- Do I really want two NTCs? Like if the MCU chip frags it's already game over.
+- Do I really want two NTCs? Like if the MCU chip fails it's already game over.
 - Re-flow oven, creating a little PID controlled oven for the reflow
 - Silk screen the solder paste on
