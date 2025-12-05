@@ -8,6 +8,9 @@ _site/
 # Keep Way-Backburner.md local only (not tracked in git)
 src/general/Way-Backburner.md
 
+# Keep 500mA-LED-Driver.md local only (not tracked in git)
+src/microelectronics/500mA-LED-Driver.md
+
 # OS files
 .DS_Store
 
