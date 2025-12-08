@@ -33,4 +33,15 @@ tags: [electronics, embedded-systems, microcontrollers]
             <span class="tag">display</span>
         </div>
     </div>
+
+    <div class="card">
+        <h3 class="card__title">Vacuum Pump Monitor Module</h3>
+        <p class="card__description">Preventive monitoring system for vacuum pumps using temperature sensors, IMU, and current sensing to holistically monitor pump health and performance.</p>
+        <a href="{{ '/microelectronics/pump_monitor_module/' | url }}" class="section__link">View Project →</a>
+        <div class="card-tags">
+            <span class="tag">monitoring</span>
+            <span class="tag">NEMO</span>
+            <span class="tag">sensors</span>
+        </div>
+    </div>
 </div>
