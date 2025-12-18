@@ -39,6 +39,7 @@ tags:
 
 ## Pump module hardware:
 - ATtiny 3216
+  - Takes all the analog inputs, the I2C from the acceperometer and converts to SPI that the screen ESP can poll from. 
 - 3.5mm female headphone jack
 - Resistors, capacitors, etc.
 - CT sensor sct-013-000
@@ -46,30 +47,69 @@ tags:
 - 10 kOhm ntc
 - MPU6050 accelerometer
 - LDO 5v to 3.3v
+- op amp for CT sensor
 
 ## Screen Monitor Hardware
 - 2.8" TFT display
 - ESP32 with u.fl antennae
+- RJ45 connector with 8 pins
 - u.fl to SMA connector
 - SMA rubber ducky antenna
 
 
 ## Pin outs:
-- Pump Module:
-Pair 1: SCLK + GND
-Pair 2: MOSI + GND
-Pair 3: MISO + GND
-Pair 4: CS + 5V
+- Yet to be determined, need to prototype first
 
 ## Don't forget:
 - series resistors into the ADCs
 - 22-47 ohm series resistors near the ATtiny 3216 for SCLK, MOSI, and MISO
-- optional CS pullup resistor.
-- large 1- 4.7uf Capacitor on output of the LDO
+- optional CS pullup resistor at ATTiny, to stop it from "chatting" with the ESP32 unless it's supposed to.
+- large 1- 4.7uf Capacitor on output of the LDO on the pump module board
 - small 100nf capacitor on the input of VDD on the ATtiny 3216
   
+## Up Next:
+- ~~getting my test device online and sending to NEMO, ideally before break.~~
+- Testing the proposed CT-Opamp - ATtiny 3216 set up on a perfboard or breadboard
+- Over break start Breadboard testing the screen unit, getting the code working and maybe start designing a UI
+- Once everything has been breadboarded and tested, I can design the PCBs and get them manufactured
+- At which point I can design and 3D print some enclosures and get the device out into the world
+
 
 ## Work Log:
+
+12/18/2025
+**Task:** Final tweaks to pump beta, Screen UI on Squareline
+
+**Notes:**
+- Modified the RMV to amperage correction factor. Super interesting that the V-RMS is way higher when it's connected to the external power supply as opposed to my laptop. Maybe the laptop introduces some additional sag onto th midpoint bias?
+- Anyways adjusted the correction from about 4 mV_RMS/A to about 8 mV_RMS/A, which takes my calculated amperage from 8 to 4, which is what my Fluke DMM was reading.
+- Got the free edition of squarline studio working, licensing took me a sec to figure out. 
+
+### 12/17/2025
+**Task:** Organizing project, getting the test device online, TFT screen wiring and configuration
+
+**Notes:**
+- Organized the folders, now the KiCAD and all the code is in the same repo on git hub, so I can back up my KiCAD too! Fucking brilliant.
+- Looked at the collector code, somehow date is part of the ESP32 payload, which kinda doesn't make sense? No idea how the interns are managing to get a date from the ESp32 unless I'm missing something.
+- This proves that i will need some way to tell time on the ESP32, either an RTC or a way to get the time from the internet.
+- For my set up, it makes way more sense for the collector to add the dat to the PUSH. 
+- Finished getting the prototype online and sneding data to NEMO, very excited about that. Got temp sensors mounted to the pump and motor. 
+- The CT sensor is kind of flaky, but it has the odds stacked against it on the hardware side. 
+- I'm not going to sweat this version, I know I need an op amp and a larger capacitor to clean up the signal.
+- Learned that I may not need the SMA antennae, the provided tiny cheap antennae connects right away even in the Savannah enclosure.
+- Massive day, recieved the 2.8" module and some other parts, I bread boarded the screen and go the touch and display working!
+- When I first did this like six months ago, this was a two week project, so stoked to have done it in like 90 minutes. Touch and everything. 
+
+### 12/16/2025
+**Task:** Playing KiCAD
+
+**Notes:**
+- Didin't make much progress, but I did realize I;m putting the cart before the horse a bit. 
+- I want to get the test online first, and I need to have my hands on the hardware before I can really do a layout
+- Did learn all about how I can use the SD card to store data, it's an SPI connection
+- AND the ESP32 has two SPI channels so I can use one to drive the screen and the other for the sensor and SD card
+- Learned the UI shouldn't be too heavy on the scale of things, even if I have lots of config steps
+- Also learned more about NVM and how that works on the ESP32.
 
 ### 12/15/2025
 **Task:** KiCAD, design changes
@@ -80,6 +120,7 @@ Pair 4: CS + 5V
 - The module MCU can take care of converting I2C to SPI from the IMU, which will lengthen our max cable run
 - It can also take care of the ADC locally
 - This makes the wiring at the RJ45 connector much simpler and increases the max length of the cable
+- However I will need to learn how the hell to program the ATtiny 3216, it's a whole new world of microcontrollers.
 
 ### 12/14/2025
 **Task:** Learning, more sensors?!

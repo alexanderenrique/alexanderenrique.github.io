@@ -71,11 +71,27 @@ tags:
 
 ## Work Log
 
+12/18/2025
+**Main Task:** Thermostat swap
+
+**Notes:**
+- Now that I know it's actually running cool and not totally guage error, I swapped the 180f thermostat for a 195F.
+- Drove to work the long way, and even afer 30 minutes the guage was in about the same place, and the engine read about 175-180F at the thermostat housing.
+- Weird on two fronts:
+  - Still over cooling with the new thermostat, even though by all acounts it seems to be in there fine
+  - It just occured to me, what if that super thick gasket allows the thermostat to bounce around in there, causing a bunch of coolant to bypass it? That would explain why it's slightly better now, but not totaly fixed
+  - Second problem is that though the temp seems to be higher, the guage isn't much higher. I'm starting to suspect the resistance curve for this bad boy just aint right. 
+- I might try putting a resistor of known value between the guage wire and ground, just to see exactly what resistance value correcponds to the middle of the guage. It'll be around 20ohms if I had to guess.
+
 ### 11/30/2025
 **Main Task:** IVR voltage
 
 **Notes:**
 - Had the clever idea to measure the voltage at the coolant temp guage, problem is the IVR doesn't output a stable voltage, it's a contact thaat switches on and off. Multi meter couldn't read it.
+- When I grounded the guge wire, it shot to 100% as expected so I don't think it's the IVR.
+- Measured the temp after driving around a bit, and it really was at 150C which is way too cool. Resistance was around 50 ohms.
+- I also noticed 10ohms between the base of the guage and the battery, which would definitely throw reading off.
+- I removed the guage and cleaned both the male and female threads, perfect continuity between guage body and battery now
 
 ### 11/29/2025
 **Main Task:** Just learning
