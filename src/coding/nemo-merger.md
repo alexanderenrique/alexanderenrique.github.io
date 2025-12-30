@@ -53,6 +53,8 @@ graph LR
 - Enable interlocks
 - Moving Allen tools to the Allen folder
 - Make consumables visible in NEMO
+- Final upload
+- rates, 
 
 ## Stats:
 - Accounts: 317->590

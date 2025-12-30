@@ -77,7 +77,14 @@ tags:
 
 ## Work Log:
 
-12/18/2025
+###12/29/2025
+**Task:** ATTiny 402 code
+
+**Notes:**
+- Spent the last few days learning to write C for the ATTiny 402, it's interesting learning about bit masks and the the quirks and features of directly configuring the hardware.
+- Also configured the github repoo for this project
+
+### 12/18/2025
 **Task:** Final tweaks to pump beta, Screen UI on Squareline
 
 **Notes:**
