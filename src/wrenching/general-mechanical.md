@@ -18,6 +18,17 @@ tags:
 This is just a general log of work that isn't really related to any one project. Car related, garage related, mechanical stuff. For the projects that don't get their own log, or other people's cars and bikes.
 
 ## Work Log
+
+### 01/02/2026
+**Category:** Honda CRV
+
+**Task:** Diagnosing No Start
+
+**Notes:**
+- Amanda tried jumping the car with my battery pack, and from the T-Bird, and I tried, and it clicks and sometimes just barely turns over
+- Tried banging on the starter as one does, but it aint coming back
+- I think the way to go is just pulling the intake and replacing the starter motor, super weird it would just die but everything else checks out.
+
 ### 11/4/2025
 **Category:** RFS Box
 

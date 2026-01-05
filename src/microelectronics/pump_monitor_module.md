@@ -29,13 +29,19 @@ tags:
 
 ## Architecture:
 - Monitor module:
-  - just the screen, ESP32, and RJ45 connector with SPI connections
+  - Screen to display data
+  - ESP32 with external Wifi Antennae to connect to NEMO
+  - RJ45 connector for SPI connections to the pump module
+  - Real time clock for timekeeping
+  - SD card for data storage
+
 - Pump monitor module:
-  - Will recieve 5v and regulate down to 3.3v usind an LDO
+  - LDO regulator from 5v to 3.3v for the ATtiny 3216 and sensors
   - Screw terminal connections for NTCs, jack for a CT sensor, and an I2C accelerometer inside
-  - These will all feed into an ATtiny 3216 that has ADCs, I2C connector
+  - These will all feed into an ATtiny 3216 that has ADCs, I2C connector and SPI output
   - Process this data and puts in an SPI buffer for the screen to pick up
   - Sampling doesn't have to be fast at all, maybe 2Hz
+  - ESP32 will poll the ATtiny 3216 over SPI and display the data on the screen
 
 ## Pump module hardware:
 - ATtiny 3216
@@ -61,6 +67,7 @@ tags:
 - Yet to be determined, need to prototype first
 
 ## Don't forget:
+- real time clock and writing to the SD card!
 - series resistors into the ADCs
 - 22-47 ohm series resistors near the ATtiny 3216 for SCLK, MOSI, and MISO
 - optional CS pullup resistor at ATTiny, to stop it from "chatting" with the ESP32 unless it's supposed to.

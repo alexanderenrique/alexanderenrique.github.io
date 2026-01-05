@@ -17,6 +17,14 @@ Stuff that doesn't fit into any other category. Things like painting a house, or
 
 ## Worklog
 
+### 01/05/2026
+**Category:** Home Maintenance
+
+**Task:** Damn doors won't close again
+
+**Notes:**
+- Got the router and the die grinder out, moved striker plates, sanded doors, crazy how the house just shifts in every which direction
+
 ### 11/18/2025
 **Category:** Home Improvement
 

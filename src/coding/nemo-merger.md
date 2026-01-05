@@ -50,11 +50,13 @@ graph LR
 
 
 ## Notes for Launch day:
-- Enable interlocks
-- Moving Allen tools to the Allen folder
-- Make consumables visible in NEMO
-- Final upload
-- rates, 
+- ~~Enable interlocks~~
+- ~~Moving Allen tools to the Allen folder~~
+- ~~Make consumables visible in NEMO~~
+- ~~Final upload of qualifications, users~~
+- rates
+- Adding poriveledges for recurring charges
+- Remove the NPC personal storage space, and FCR personal storage bin
 
 ## Stats:
 - Accounts: 317->590
@@ -83,6 +85,14 @@ Lab members with failed updates: 0
 ✓ 568 lab member(s) had phase 1 added to their onboarding phases
 
 ## Work Log
+
+### 12/31/2025
+**Main Task:** Made consumables visible, made the interlocks acive
+
+**Notes:**
+- Made consumables visible
+- Made the interlocks active at 12:57pm on 12/31/2025
+- Added the final qualification of users from Badger to NEMO
 
 ### 12/2/2025
 **Main Task:** Adding consumables 
