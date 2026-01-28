@@ -71,7 +71,34 @@ tags:
 
 ## Work Log
 
-12/18/2025
+### 1/21/2026
+**Main Task:** Cup holder V3
+
+**Notes:**
+- Final print worked! Taped it in there with VHB tape, gods gift to man. 
+- Looks really good, rock solid. I kinda wish it held something bigger than cans, but I like how it looks, and it's all the space I had.
+
+### 1/17/2026
+**Main Task:** Cup holder V2
+
+**Notes:**
+- Spent the last couple days designing a replacement cup holder to go where I thought the screen would go
+- That plastic is crazy brittle and I tries smashing a slightly large cup holder in. Trouble was the plastic shattered around the ash tray opening. 
+
+
+### 1/9/2026
+**Main Task:** Thermostat check, Coolant Gauge Resistance
+
+**Notes:**
+- Checked my gasket theory, that wasn't it. The thermostat is very securely in there, and the gasket does help keep it down. 
+- Maybe 175F on the outside of the thermostat housing is just ok? Maybe the coolant is 20 degrees hotter and it's all fine? I feel like it's close enough to correct, and if anything the cool side is fine by me. 
+- I think I'll add a resistor in parallel to drive the gauge up a bit more. I learn 10 ohms is absolutely hot, so I want to target 20-30 ohms when at operating temp. Currently it sits around 50 ohms
+  - 25ohm= 1/((1/50ohm)+(1/r2))
+  - r2 = about 25 ohm
+
+
+
+###12/18/2025
 **Main Task:** Thermostat swap
 
 **Notes:**

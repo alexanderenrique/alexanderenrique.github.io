@@ -28,24 +28,25 @@ tags:
 - There is a monitor PCB and then different modules can connect to it, making it modular. 
 
 ## Architecture:
-- Monitor module:
+- Monitor BOM:
   - Screen to display data
   - ESP32 with external Wifi Antennae to connect to NEMO
   - RJ45 connector for SPI connections to the pump module
   - Real time clock for timekeeping
   - SD card for data storage
+  - RS-485 transceiver for communication with the pump module
 
-- Pump monitor module:
+
+- Pump monitor module BOM:
   - LDO regulator from 5v to 3.3v for the ATtiny 3216 and sensors
   - Screw terminal connections for NTCs, jack for a CT sensor, and an I2C accelerometer inside
-  - These will all feed into an ATtiny 3216 that has ADCs, I2C connector and SPI output
+  - These will all feed into an ATtiny 3216 that has ADCs, I2C connector and SPI output for the monitor ESP32 to poll from
   - Process this data and puts in an SPI buffer for the screen to pick up
   - Sampling doesn't have to be fast at all, maybe 2Hz
-  - ESP32 will poll the ATtiny 3216 over SPI and display the data on the screen
 
 ## Pump module hardware:
-- ATtiny 3216
-  - Takes all the analog inputs, the I2C from the acceperometer and converts to SPI that the screen ESP can poll from. 
+- ESP32C3-SEEED
+  - Takes all the analog inputs, the I2C from the accelerometer and converts to SPI that the screen ESP can poll from. 
 - 3.5mm female headphone jack
 - Resistors, capacitors, etc.
 - CT sensor sct-013-000
@@ -55,34 +56,172 @@ tags:
 - LDO 5v to 3.3v
 - op amp for CT sensor
 
-## Screen Monitor Hardware
-- 2.8" TFT display
-- ESP32 with u.fl antennae
-- RJ45 connector with 8 pins
-- u.fl to SMA connector
-- SMA rubber ducky antenna
 
-
-## Pin outs:
-- Yet to be determined, need to prototype first
 
 ## Don't forget:
 - real time clock and writing to the SD card!
 - series resistors into the ADCs
-- 22-47 ohm series resistors near the ATtiny 3216 for SCLK, MOSI, and MISO
-- optional CS pullup resistor at ATTiny, to stop it from "chatting" with the ESP32 unless it's supposed to.
 - large 1- 4.7uf Capacitor on output of the LDO on the pump module board
-- small 100nf capacitor on the input of VDD on the ATtiny 3216
+- small 100nf capacitor on the input of VDD on the SEED c3
   
 ## Up Next:
+- Prototype the hardware, get it working, then design the PCBs
+  - Monitor module:
+    - ~~Testing and adding the RTC~~
+    - ~~Testing and adding the SD card~~
+    - Testing RS485 communication
+  - Pump module:
+    - Testing Op Amp wiring
+    - Testing RS-485 communication
+      - Buying the RS-485 transciever
+- Design the PCBs
+
+## Notes for next time:
+Connect T_IRQ
+- Use interrupt or at least GPIO read
+- Only read touch when IRQ is low
+- Increase touch SPI clock to ~2 MHz
+- Never poll touch inside long drawing loops
+
+
+## Done:
 - ~~getting my test device online and sending to NEMO, ideally before break.~~
-- Testing the proposed CT-Opamp - ATtiny 3216 set up on a perfboard or breadboard
-- Over break start Breadboard testing the screen unit, getting the code working and maybe start designing a UI
-- Once everything has been breadboarded and tested, I can design the PCBs and get them manufactured
-- At which point I can design and 3D print some enclosures and get the device out into the world
+- ~~Comapring the ESP32-C3 to the SEED studio version, figuring out if the pinout is similar enough that we can just swap one for the other on the pump module board~~
+- - ~~Over break start Breadboard testing the screen unit, getting the code working and maybe start designing a UI~~
+
+## Workingpin out for PCB design:
+| Pin Function          | GPIO | Description                                 |
+|-----------------------|------|---------------------------------------------|
+| MOSI                  | 23   | SPI Master Out Slave In (shared: TFT + SD)  |
+| MISO                  | 19   | SPI Master In Slave Out (SD card only)      |
+| SCK                   | 18   | SPI Clock (shared: TFT + SD)                |
+| CS (TFT display)      | 16   | TFT display chip select                     |
+| DC (Data/Command)     | 5    | TFT data/command control                    |
+| RST (Reset)           | 17   | TFT reset pin                               |
+| CS (SD card)          | 33   | SD card chip select                         |
+| CS (Touch controller) | 27   | Touch controller chip select                |
+| SDA                   | 21   | I2C data line                               |
+| SCL                   | 22   | I2C clock line                              |
+| RX                    | 3    | RS-485 receive                              |
+| TX                    | 1    | RS-485 transmit                             |
+
+## Proposed pin out for PCB design:
+| Pin Function          | GPIO | Description                                 |
+|-----------------------|------|---------------------------------------------|
+| MOSI                  | 23   | SPI Master Out Slave In (shared: TFT + SD)  |
+| MISO                  | 19   | SPI Master In Slave Out (SD card only)      |
+| SCK                   | 18   | SPI Clock (shared: TFT + SD)                |
+| CS (TFT display)      | 16   | TFT display chip select                     |
+| DC (Data/Command)     | 5    | TFT data/command control                    |
+| RST (Reset)           | 17   | TFT reset pin                               |
+| CS (SD card)          | 33   | SD card chip select                         |
+| CS (Touch controller) | 27   | Touch controller chip select                |
+| SDA                   | 21   | I2C data line                               |
+| SCL                   | 22   | I2C clock line                              |
+| RX                    | 3    | RS-485 receive                              |
+| TX                    | 1    | RS-485 transmit                             |
+
 
 
 ## Work Log:
+
+### 01/21/2026
+**Task:** Designing the PCBs
+
+**Notes:**
+- Learned that my 5V RS-485 transceiver isn't going to work. I thought it just needed 5V supply and that the logic would be handled at logic (3.3v) levels, but it's actually a 5V logic level device. Which I guess makes sense for such a cheap device.
+- I changed plan to  MAX3485 Transciever, it's 50 for $8 which is crazy. i thought it was $8 each and I was all mad, but it's a deal.
+- Started designing the PCB, always a time consuming head scratcher, but it is fun. 
+- Kinda hacked together a PCB, I figure there will be lots of iterations and bread board time and re-assigning pins, so instead of trying to get everything perfect, I'm just going to make something then iterate. 
+- Ok so after much frustration, my big chatGPT revelation is that I can just re-assign the heck out of all these pins, most any pin can be anything, so that'ss require more bread boarding, but hopefully I can re-assign things.
+
+### 01/16/2026
+**Task:** SD card writing
+
+**Notes:**
+- Flaky ass connections on the breadboard make me lose my mind, SD card wouldn't mount with the exact same code and pinout as yesterday. Fiddled with it and now it's good
+- Edited the formatting of the data, removed the milliseconds column, not necessary with the RTC
+- I've got the SD card writing well enough on the breadboard, I think I can slowly start designing the PCBs
+- Last thing to test is the RS-485 communication. I know it'll work if I use the pre-made module, but I want to design my own little one on perfboard to make sure my PCB design is correct in the future.
+  
+
+### 01/15/2026
+**Task:** SD card writing, taking a step back on the UI
+
+**Notes:**
+- Soldered the SPI connections to try and get the SD card working
+- Connected it to the HSPI. The one that didn't want to work as the ESP32-C3 master, but it might work here
+- Update: I gave up on HSPI pretty quick I moved it to the VSPI that the touch and display are on, and it worked!
+- IDK what it is with the problem is with the HSPI
+- 
+
+### 01/14/2026
+**Task:** Playing with the RTC
+
+**Notes:**
+- It takes a CR2032 battery, but I learned the 2025s are dimensionally almost the same, jsut thinner and lower capacity
+- The battery ground and the rest of the grounds are connected, but the positive has very high resistance to the other voltage in pins. I suspect this is because the battery only needs to power the chip and oscillator and doesn't (shouldn't) power the LED or anything unnecessary
+- The battery IS supplied with 3V, seemingly regulated? i applied 3.3v to the pin in, and read 3v out the battery out.
+- The code for the RTC is pretty simple, integrated nicely with the rest of the code.
+- Learned that you have to have the UART disconected between the c3 and esp32 while flashing, otherwise it will fail to flash
+- futzed with the time setting UI, the location of the touch input is just not right at all
+
+### 01/13/2026
+**Task:** Learning about RTC and RS485
+
+**Notes:**
+- Will need recharargable 2032 battery for the RTC
+- The RS-485 is definitely the right way to do it, but it does involve adding at least 3 resistors.
+  - Pull up and pull down resistors (1k-5kOhm)
+  - Terminating resistors (120Ohm)
+- Kinda came up with a roadmap for how to implement it
+
+### 01/12/2026
+**Task:** Learning, scheming
+
+**Notes:**
+- Learned more about taking this thing to the next level, OSHWA and FCC compliance
+- The UART works nice on my bench here with a 3" wire run, but I learned that if I ever wanted to meaningfully sell these I'd need FCC 15b compliance
+- The very fast rise time on the UART especially on a long cable would prove to be a challenge. It's not about Baud, it's about the rise times and how much EMI it generates
+- The fix is to use differential pairs like RS-485, which would mean adding another chip which is a bit of a bummer, but doable. 
+- RS-485 doesn't need to happen right away, it could be a V2 thing. 
+- Good option for RS-485 transciever: https://www.digikey.com/en/products/detail/texas-instruments/SN75176BP/277385
+
+### 01/09/2026
+**Task:** Connecting two ESP32s via SPI, then bit banging SPI, then UART. FUCK.
+
+**Notes:**
+- Spent forever trying to get the SPI working. Trouble shooting every pin, battling sneaky pull ups, probing with the mutlimeter, etc
+- Finally got a bit banging SPI version working, but then I though if you're gonna bit bang there's gotta be a way to do it with less than four wires.
+- UART is the hero, changed the code to use 1 wire UART, should really simplify things.
+- UART worked, just worked right away. Gotta remind myself that is how you learn. Trying things and suffering. 
+
+### 01/07/2026
+**Task:** SEED c3 vs regular c3 comparison, connecting master and slave ESP32s via SPI
+
+**Notes:**
+- SO bad new, the pinouts of the two are wildly different, the SEED c3 is not a drop in replacement for the regular c3.
+- I guess my question is, how bad is the wifi on the regular C3, and is it worth the premium to just use the SEED c3?
+- I'm gonna go with yes, the $5 board with the antenna will save heaps of headaches. Nothing worse than Wifi not working.
+- The SPI display stopped working when I connected the slave ESP32 to the HSPI connection. I spent like an hour testing all my wiring, it was fine but something about connecting pin 12 on the master to the MISO pin on the slave was causing the display to stop working.
+- I moved the MISO pin to pin 25 on the master and it didn't transmit data, but it did stop the SPI problems.
+- Wrote some dummy code on the slave to generate random values and hold onto them until the master ESP32 polls it. Not working yet. 
+
+### 01/06/2026
+**Task:** Re-thinking hardware choices, screen programming
+
+**Notes:**
+- Looking at the cost versus complexity of going to the attiny 3216 vs the ESP32-C3 for the pump module MCU, it just makes way more sense to stick with the ESP32-C3
+  - The ATTiny needs special programming tricks, written in C, and it's only like $1 cheaper than the ESP32-C3
+  - Being an SMD also makes it wayyyyyyy harder to work with.
+  - If I'm clever, I think I can build a pump moniotr module board that can use either the cheap bare bones ESP32-C3 OR the SEEED studio version. That way you can have the cost savings of the cheap one if you're already attaching a monitor, or if you want a headless standalone you can just use the SEEED studio version.
+  - The Op-Amp is similar, turns out there is a DIP version of the MCP6022 that I can use instead of the SOIC. 
+  - I really do want this to get out into the world, and through hole packaging is way easier to work with than SMD.
+- Screen Programming:
+  - Trying to keep it simple for version 1.0, though cursor makes the UI stuff so easy it's hard not to go all out
+  - Went from Hello World to a basic UI that displays the data
+  - Added touch alarm acknowledgment, it changes to red if the values are outside a certain range
+  - Added SPI logging via SD card for people that want a stand alone system. 
 
 ###12/29/2025
 **Task:** ATTiny 402 code
@@ -228,7 +367,7 @@ tags:
 - Soldered together the perfboard, went well actually. Made a firecracker of a device I've gotten way better at perf board building, I get it now. 
 - I made the mistake of putting the NTCs on the bottom of the voltage divider, but I'm just going to try it as is and see what happens.
 
-
+===============================================
 ## Open questions:
 - What is the current range of our pumps? Do we need different current ranges for different pumps?
 - Should I subtract out some baseline for the vibration sensor? It does have a bit of noise, like in the 1 m/s^2 category
@@ -245,3 +384,35 @@ tags:
 - Designing in kiCAD, do I really need an op-amp
   - Yes I really do need it, and I shoudl go for a dual channel op amp because it can also provide a stable voltage midpoint bias, unlike my high resistance voltage divider. 
 - Understanding op-amp wiring
+
+
+## Brain Dump, Just getting it out there:
+- OSHWA certification: easy enough to do, just putting everything together in an open source format
+- FCC 15b certification: Required for whatever you're selling. Might be able to get away with selling some kits under the radar, expensive-ish at $3-5k
+  - This is where we'd really need RS-485, though it might be a good idea to bake it in from the start
+- Stanford Office of Technology Licensing:
+  - Might be a good idea to disclose it since now and get them in the loop
+  - I guess I feel apprehension that OTL may restrict what I can do with it, and it's hard to argue that this is unrelated to my job or anything. 
+  - I could file something now to get ahead of it, and just be really good here on out about only using personal resources for this. 
+- Taxes and LLCs
+  - Bare PCBs and Kits can be done just as a sole proprietor, technically should pay taxes on it and report to IRS
+  - Bare PCB requires no FCC compliance, the kit is a legal grey zone, the fully assembled unit absolutely requires FCC and an LLC
+  - LLC really just provides legal protection
+
+## To-Do/Don't Forget:
+- What kind of licensing do I need for the very first steps, like selling the kit?
+- What is the right legal language to prevent me from getting sued out the balls?
+- How would I accept payment for these? Do I need to integrate into some university's systems?
+- When do I talk to OTL? 
+
+## Before UGIM:
+- Have Boards and kits available to sell
+- OSHWA certification
+  - Would mean cleaning up my github, should probably happen anyways
+- Licensing Language very abundantly clear.
+  - Throw this on the silk screen: “This is a hobbyist / research tool. Not a certified instrument. Not for safety-critical or production use.”
+- Payment Method figured out
+- making the website center around the kit
+- Creating documentation for the kit
+
+“I am developing a small, open-source pump monitoring board on my own time using personal equipment. It is inspired by my work environment but not part of my job or any grant. I want to open-source it and maybe sell boards and kits. I want to confirm whether Stanford has any IP claim.”

@@ -19,6 +19,71 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 01/24/2026
+**Category:** FZ1 Carbs
+
+**Task:** Carburetor rebuild
+
+**Notes:**
+- nothing I haven;t done before, pulled the carbs off. 
+- Only one pilot jet was clogged, there was no smoking gun as to why it wasn't running at all.
+- Put it all back together and it started right up and ran just like before, stoked on it. 
+
+### 01/24/2026
+**Category:** Honda CRV Ignition switch replacement
+
+**Task:** Glovebox lock cylinder replacement
+
+**Notes:**
+- Third, final, and easiest replacement. The CRV is officially re-keyed. 
+
+
+### 01/18/2026
+**Category:** Honda CRV Ignition switch replacement
+
+**Task:** Ignition switch replacement
+
+**Notes:**
+- Started looking at what it would take to replace the ignition. Of course it's riveted on there and sandwiched super hard between the dash and the wheel.
+- Turns out the old key does have an RF tag, so it's not enough to just replace the mechanical components.
+- If you dont have the RF tag, it'll start and die immediately. Like cuts the fuel pump or something.
+- I also learned at the RF coding is in a wire antenna that sits around the ignition barrel. So I moved this to the new barrel with the new metal but existing RF tag, and it worked!
+- So I re-jigged the keys to have the new metal but existing RF tag.
+- The die grinder with the cut off wheel turned out to be the ticket in cutting the old riveted ignition collar off. It was a pain in the ass but I got it done.
+- Things went back smoothly. The new one has a green ring around the ignition barrel so that looks cool. 
+
+### 01/17/2026
+**Category:** Honda CRV starter motor
+
+**Task:** Starter motor replacement
+
+**Notes:**
+- I had previously finished removing the intake manifold, actually removing the starter wasn't too bad
+- I bench tested the old starter, the solenoid click but it barely turned over if at all, just totally dead.
+- Installing the new one and putting it back together was easy enough, it started right up no vacuum leaks or anything
+- I did loce mayve 1/4 cup of coolant when I disconnected the throttle body, but it seems fine.
+
+### 01/10/2026
+**Category:** Ford Ranger, Volvo 
+
+**Task:** Volvo Parasitic Draw, Ranger Battery and Tires
+
+**Notes:**
+- Measured the parasitic draw on the volvo, it measured 0.16A with everything off and disconnected. At first that didn't seem so bad, but after some math I learned that can kill the battery and cause a no start in about a week!
+- Found a random battery on the property that measured 12V, put it on the solar powered trickle charger I bought Mark and the surface charge was all the way up to 12.8V when I installed, it, did go down to 12.2V after a crank or two and running the truck for like ten minutes, but it did have enough amps to crank it strongly!
+- Bed of the truck is absolutely crushed and fucked up from a tree falling on it
+- Went to watsonville and bought two used tires for the rear. Better than what was on there, definitely not as good as new tires. Feels like on of the "expensive to be poor" moments. But good enough for our purposes. 
+- I noticed the shift selector indicator wasn't moving, though the shifter did move and the clicks felt positive. It took a second or two to switch between reverse and drive and what not. Low gear definitely worked so that's what I used to drive it around the property.
+
+### 01/08/2026
+**Category:** CRV
+
+**Task:** Starter motor, removing intake manifold
+
+**Notes:**
+- Started removing the intake to acccess the starter motor. The only suprise was a coolant connection to the throttle body. Small leak, only lost a few tablespoons of coolant.
+- Most of the intake manifold bolts were easy to get to, just had to know where they are
+
 ### 01/02/2026
 **Category:** Honda CRV
 
