@@ -76,7 +76,7 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 - Creating an API that that the ESP can hit to get custom messages, per friend
 
 
-## Befor Launch:
+## Before Launch:
 - Make sure it deep sleeps
 - Checks for OTA updates at midnight and on boot
 
