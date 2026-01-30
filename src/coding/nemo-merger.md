@@ -86,6 +86,14 @@ Lab members with failed updates: 0
 
 ## Work Log
 
+### 01/30/2026
+**Main Task:** Adding Departments to accounts in NEMO
+
+**Notes:**
+- Never ends, working on adding departments to accounts in NEMO
+- There are also disciplines in nemo, but those don't seem to be reflected in the billing  reports
+- Elise sent over her massive list of departments fo I'll start the 4-5 step process of adding them to NEMO
+
 ### 12/31/2025
 **Main Task:** Made consumables visible, made the interlocks acive
 

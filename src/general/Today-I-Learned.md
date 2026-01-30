@@ -19,6 +19,48 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 01/27/2026
+- Robot control systems require enabling servo motors before homing commands
+- Pressure gauge communication systems use Rx/TX boxes for signal transmission
+
+### 01/20/2026
+- Ellipsometry: Psi and delta represent phase change and amplitude ratio from material interaction
+- MSE (Mean Squared Error) measures fit quality between model and experimental data, good range is 1-20 depending on sample complexity
+- Thin film interference creates peaks and valleys in data when light travels through film, more peaks indicate thicker films
+- Cauchy dispersion relation describes wavelength dependence of refractive index, usually increases at shorter wavelengths
+- Effective medium approximation models rough surfaces by averaging optical constants from adjacent layers
+- Complex refractive index (n + ik) and complex dielectric constant describe how materials affect light propagation and absorption
+- Kramers-Kronig relationship ties real and imaginary parts of dielectric function - material can't respond until light interacts
+- B-Spline layers use basis functions to model dielectric constants across photon energies
+- Metals show flat data at 50-100nm thickness because they absorb everywhere, preventing interference features
+
+### 01/12/2026
+- OSHWA certification for open source hardware
+- FCC 15b certification required for selling electronic products, expensive ($3-5k)
+- Stanford OTL (Office of Technology Licensing) process for IP disclosure
+- Legal distinctions: bare PCBs need no FCC, kits are grey zone, assembled units require FCC and LLC
+- Organizational alignment equals execution - culture matters more than strategy
+- Culture is pattern of behavior reinforced over time, not beliefs but actions
+- Variational autoencoders for defect detection: encoder -> latent space -> decoder, trained on normal wafers
+- Ruthenium ALD: low resistivity, good for interconnects, no diffusion barrier needed
+- FTIR fingerprint region 500-1500 cm-1 for material identification
+- Diatoms use photonic crystals to manipulate light, absorbing at 400nm and reflecting UV
+- DUV lithography uses KrF laser at 248nm, EUV at 13.5nm (basically xray)
+- EBL proximity effect: electrons scatter up to 70um deep, requires energy compensation based on feature density
+- PUF (Physically Unclonable Functions) use chip imperfections for security keys
+- Loss aversion: pain from loss greater than joy from gain, affects bonus-based incentives
+- Intrinsic motivation requires autonomy, mastery, relatedness, and purpose
+- Removing pain points motivates better than adding new features
+
+### 01/07/2026
+- NEMO API requires complete rate data to generate billing reports
+- Filed invention disclosure with OTL for ESP32 e-ink module, navigating Stanford IP requirements
+
+### 10/06/2025
+- Woollam lamp alignment: mirror held by one bolt and double-sided tape, UV beam focuses to tiny spot
+- VCR o-rings can flatten from heat, causing vacuum leaks
+- CpIn precursor should be bright yellow when fresh, grey indicates quality issues
+
 ### 11/26/2025
 - Learned how the guages in the t bird work. They're just bimetallic springs. Lower resistance from sensor, more current flows through, more deflection of the spring, more movement of the pointer.
 

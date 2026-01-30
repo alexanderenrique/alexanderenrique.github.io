@@ -19,7 +19,7 @@ tags:
 Creating battery-powered ESP32 tags for storage cabinets. These tags will display information about who owns each cabinet, updating wirelessly and running on battery power for extended periods. The goal is to have a low-maintenance system that helps organize and track storage locations.
 
 ## Design Goals:
-- Long battery life - months to years on a single battery
+- Long battery life - months on a single battery
 - Wireless updates - no need to physically access tags to update information
 - Clear display - readable at a glance
 - Low cost - keep per-tag cost reasonable
@@ -51,29 +51,36 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 - Update frequency considerations
 - Display size and resolution
 
-### Communication
-- Update frequency vs battery life tradeoffs
+## V1.0:
+### Hardware:
+- ~~Designing the PCB, SMD and Through hole components~~
+- Designing the enclosure
+- Receive and solder it together
+- Testing power consumption in various sleep modes
 
-## Up Next:
-- ~~Improve code so it runs in low power mode, only wakes to check APIs~~
-- Test power consumption in various sleep modes
-- ~~Start designing the PCB~~
-- Adding OTA updates
-  - Making sure the OTA runs at the right time
-  - Setting up an endpoint for it to hit
-  - Adding CA in ESP32 and on the server
-- ~~Adding if else for wifi/no wifi and adding wifi strength~~
-- ~~Testing voltage divider battery measurement~~
-- ~~Removing the "no wifi" text when there's no wifi. That'd get annoying.~~
-- Start designing the enclosure, designing PCB around different battery options
-- ~~Testing new pin out to make room for battery voltage measurement.~~
-- ~~Clean up code so there are distinct files for APIs, Display, etc.~~
-- Figuring out how to send messages OTA, does it have to be a full firmware update?
-- Making the web server on the Pi robust so it reboots if it crashes or on startup
-- Security features:
-  - Setting up signed firmware.
-  - HTTP header, maybe make these unique to each device
-- Creating an API that that the ESP can hit to get custom messages, per friend
+### Firmware:
+- Finish OTA updates
+  - Adding CA, locking it down
+- Adding an API so that I can send messages to other displays
+- Displaying "battery low" message before it goes to sleep
+
+
+
+
+### Software:
+- No software needed for this version
+
+## V2.0:
+### Hardware:
+- Revising, potentially adding switches to engage programming mode
+- Smaller Cap, mosfets
+- More capcitors, especially small ones
+
+### Firmware:
+- Integrating BLE mode
+
+### Software:
+- Creating an app for configuration
 
 
 ## Before Launch:
