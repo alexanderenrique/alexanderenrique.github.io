@@ -95,6 +95,16 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 
 ## Work Log:
 
+### 01/30/2025
+**Task:** Brainstorming V2
+
+**Notes:**
+- I know I should be working on V1, but I'm thinking about how to add a button and an LED to V1
+- I think I can repurpose my ADC pin that is currently doing the battery measurement
+I'll need to do a super high resistivity pull up resistor on the pin, and then use the button to take it to ground
+- I can put the LED on pin 20, which isn't currently doing anything.
+- Designed the box enclosure, cool cool
+
 ### 01/27/2025
 **Task:** Setting up OTA Pipeline
 
