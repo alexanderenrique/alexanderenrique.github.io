@@ -97,7 +97,7 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 ## Work Log:
 
 ### 02/02/2025
-**Task:** Printing the enclosure
+**Task:** Printing the enclosure, thinking
 
 **Notes:**
 - V1 was surprisingly close! I don;t have the PCB yet so I'm not sure about the total depth, but I was a bit gerenous with it. I may be able to make it flatter, also battery dependent.
