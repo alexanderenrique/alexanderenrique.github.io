@@ -61,6 +61,7 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 ### Firmware:
 - Finish OTA updates
   - Adding CA, locking it down
+  - Creating a manifest.json to store the latest version
 - Adding an API so that I can send messages to other displays
 - Displaying "battery low" message before it goes to sleep
 
@@ -95,6 +96,14 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 
 ## Work Log:
 
+### 02/02/2025
+**Task:** Printing the enclosure
+
+**Notes:**
+- V1 was surprisingly close! I don;t have the PCB yet so I'm not sure about the total depth, but I was a bit gerenous with it. I may be able to make it flatter, also battery dependent.
+- Realized if you want it to be desk mounted, you might want little feet to prop it up and point it at you. But for a shelf it's lovely.
+- Oh yeah and I'll need to add a port for the USB-C port.
+
 ### 02/01/2025
 **Task:** OTA Updates
 
@@ -105,12 +114,14 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 
 
 ### 01/30/2025
-**Task:** Brainstorming V2
+**Task:** Enclosure Design, Brainstorming V2
 
 **Notes:**
+- Designed an enclosure for the battery and tag. 
+- Only part I;m not 100% on is how the back attaches, I opted for a four tounge and groove set up with a hole in it so It's easy to pull out. I guess we'll see how it works.
 - I know I should be working on V1, but I'm thinking about how to add a button and an LED to V1
 - I think I can repurpose my ADC pin that is currently doing the battery measurement
-I'll need to do a super high resistivity pull up resistor on the pin, and then use the button to take it to ground
+-I'll need to do a super high resistivity pull up resistor on the pin, and then use the button to take it to ground
 - I can put the LED on pin 20, which isn't currently doing anything.
 - Designed the box enclosure, cool cool
 
