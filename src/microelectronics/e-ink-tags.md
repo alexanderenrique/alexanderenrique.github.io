@@ -95,6 +95,15 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 
 ## Work Log:
 
+### 02/01/2025
+**Task:** OTA Updates
+
+**Notes:**
+- Did the first successful OTA update!! It was so exciting, hella cool to watch it download firmware off the internet
+- Learned that I had the wrong CA certificate, I needed one of the google ones, v4 or something? I still don't fully get how that works but cursor came in solid on this one and found the one I needed
+- With the OTA I realized I really do need the versioning, so I created a manifest.json that will store the latest version, and it creates a SHA-256 key
+
+
 ### 01/30/2025
 **Task:** Brainstorming V2
 

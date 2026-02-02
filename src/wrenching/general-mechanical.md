@@ -19,6 +19,36 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 02/1/2026
+**Category:** Volvo, Ranger
+
+**Task:** Volvo Charging, Ranger Trans, Fuel, Interior
+
+**Notes:**
+- Mark had replaced the alternator correctly, the belt wasn't tight enough!
+- SOmeone has messed with the exciter wire and it no longer lights up the dash, or supplies 12v with the key on. And yet somehow it does excited the alternator.
+- Just tightened the belt and we were on our way there
+- With the ranger, first I fixed and lubed up the shifter, I figured out why the indicator wasn't working. I'll make a more permanent fix but basically this plastic shell wasn't rotating as it should
+- Figured out the trans was slipping because it was 1.5 quarts low on fluid! once we filled it, it started working perfectly, can you imagine??
+-Tried to go on a couple test drives but it kept dying from lack of fuel on the hills
+- This is a known issue, so we dropped the fuel tank, the old pump and sender was totally messed up
+- Also no power at the rear pump, but I realized I was testing it wrong
+- The ECU does a 2 second prime, and then only supplies power once the engine is running. It's a safety feautre.
+- Also, the fuell filler did get kinked in the bed collapse, not sure exacly how we'll fix that one, might just run without the inner hose
+- The inside of the tank is an absolute sand pit, so so much rust flakes and stuff. That said, the metal still looks pretty thick so I think it might just be fine
+
+### 01/27/2026
+**Category:** Porsche
+
+**Task:** Active exhaust flap spring
+
+**Notes:**
+- Porsche was making a hell of a rattling from the active exhaust butterfly
+- turns out it's a common thing where this spring brakes and it rattles around
+Removed the exhaust tip with two t30 screws, then three 11mm bolts holding the servo on
+- Super easy actually, 30 minute job
+
+
 ### 01/24/2026
 **Category:** FZ1 Carbs
 
