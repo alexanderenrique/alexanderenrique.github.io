@@ -134,11 +134,57 @@
 <li>Fuses</li>
 </ul>
 <h2>Work Log</h2>
+<h3>1/21/2026</h3>
+<p><strong>Main Task:</strong> Cup holder V3</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Final print worked! Taped it in there with VHB tape, gods gift to man.</li>
+<li>Looks really good, rock solid. I kinda wish it held something bigger than cans, but I like how it looks, and it's all the space I had.</li>
+</ul>
+<h3>1/17/2026</h3>
+<p><strong>Main Task:</strong> Cup holder V2</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Spent the last couple days designing a replacement cup holder to go where I thought the screen would go</li>
+<li>That plastic is crazy brittle and I tries smashing a slightly large cup holder in. Trouble was the plastic shattered around the ash tray opening.</li>
+</ul>
+<h3>1/9/2026</h3>
+<p><strong>Main Task:</strong> Thermostat check, Coolant Gauge Resistance</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Checked my gasket theory, that wasn't it. The thermostat is very securely in there, and the gasket does help keep it down.</li>
+<li>Maybe 175F on the outside of the thermostat housing is just ok? Maybe the coolant is 20 degrees hotter and it's all fine? I feel like it's close enough to correct, and if anything the cool side is fine by me.</li>
+<li>I think I'll add a resistor in parallel to drive the gauge up a bit more. I learn 10 ohms is absolutely hot, so I want to target 20-30 ohms when at operating temp. Currently it sits around 50 ohms
+<ul>
+<li>25ohm= 1/((1/50ohm)+(1/r2))</li>
+<li>r2 = about 25 ohm</li>
+</ul>
+</li>
+</ul>
+<p>###12/18/2025
+<strong>Main Task:</strong> Thermostat swap</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Now that I know it's actually running cool and not totally guage error, I swapped the 180f thermostat for a 195F.</li>
+<li>Drove to work the long way, and even afer 30 minutes the guage was in about the same place, and the engine read about 175-180F at the thermostat housing.</li>
+<li>Weird on two fronts:
+<ul>
+<li>Still over cooling with the new thermostat, even though by all acounts it seems to be in there fine</li>
+<li>It just occured to me, what if that super thick gasket allows the thermostat to bounce around in there, causing a bunch of coolant to bypass it? That would explain why it's slightly better now, but not totaly fixed</li>
+<li>Second problem is that though the temp seems to be higher, the guage isn't much higher. I'm starting to suspect the resistance curve for this bad boy just aint right.</li>
+</ul>
+</li>
+<li>I might try putting a resistor of known value between the guage wire and ground, just to see exactly what resistance value correcponds to the middle of the guage. It'll be around 20ohms if I had to guess.</li>
+</ul>
 <h3>11/30/2025</h3>
 <p><strong>Main Task:</strong> IVR voltage</p>
 <p><strong>Notes:</strong></p>
 <ul>
 <li>Had the clever idea to measure the voltage at the coolant temp guage, problem is the IVR doesn't output a stable voltage, it's a contact thaat switches on and off. Multi meter couldn't read it.</li>
+<li>When I grounded the guge wire, it shot to 100% as expected so I don't think it's the IVR.</li>
+<li>Measured the temp after driving around a bit, and it really was at 150C which is way too cool. Resistance was around 50 ohms.</li>
+<li>I also noticed 10ohms between the base of the guage and the battery, which would definitely throw reading off.</li>
+<li>I removed the guage and cleaned both the male and female threads, perfect continuity between guage body and battery now</li>
 </ul>
 <h3>11/29/2025</h3>
 <p><strong>Main Task:</strong> Just learning</p>
@@ -552,7 +598,7 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <p>&copy; 2025 Alex - Denton Works</p>
+            <p>&copy; 2026 Alex - Denton Works</p>
             <div class="footer__social">
                 <a href="https://github.com/alexanderenrique" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://twitter.com/yourusername" target="_blank" rel="noopener">Twitter</a>

@@ -991,3 +991,55 @@ model-viewer[background-color] {
         --color-border: #374151;
     }
 }
+
+/* E-Ink Mode Selection */
+.e-ink-intro {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.e-ink-modes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+}
+
+.mode-card {
+    padding: var(--spacing-xl);
+    background: var(--color-bg-alt);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.mode-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.mode-card h3 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 1.25rem;
+}
+
+.mode-card p {
+    margin: 0;
+    color: var(--color-text-light);
+    flex: 1;
+}
+
+.mode-card .btn {
+    margin-top: var(--spacing-sm);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .e-ink-modes {
+        grid-template-columns: 1fr;
+    }
+}

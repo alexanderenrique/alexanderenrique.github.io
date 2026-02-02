@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: "E-Ink Display Setup - Shelf Label"
+permalink: /e-ink/label/
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/setup.css' | url }}">
+
+<article class="container">
+    <header class="page-header">
+        <h1>E-Ink Display Setup - Shelf Label</h1>
+        <p class="page-description">Connect and configure your e-ink display for shelf labels</p>
+    </header>
+    
+    <div class="page-content">
+        <div class="setup-container">
+            <!-- Status Display -->
+            <div id="status-container" class="status-container">
+                <div id="status-message" class="status-message">Ready to connect</div>
+                <div id="status-indicator" class="status-indicator status-ready"></div>
+            </div>
+
+            <!-- Connection Section -->
+            <section class="setup-section">
+                <h2>Connection</h2>
+                <div class="form-group">
+                    <button id="scan-btn" class="btn btn-primary">Scan for Devices</button>
+                    <button id="connect-btn" class="btn btn-secondary" disabled>Connect</button>
+                    <button id="disconnect-btn" class="btn btn-secondary" disabled>Disconnect</button>
+                </div>
+                <div id="device-list" class="device-list"></div>
+            </section>
+
+            <!-- Configuration Form -->
+            <section class="setup-section">
+                <h2>Shelf Label Configuration</h2>
+                <form id="config-form" class="config-form">
+                    <div class="form-group">
+                        <label for="label-text">Label Text</label>
+                        <input type="text" id="label-text" name="labelText" placeholder="Enter label text to display" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="refresh-interval">Refresh Interval (minutes)</label>
+                        <input type="number" id="refresh-interval" name="refreshInterval" min="1" value="60" required>
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="send-config-btn" class="btn btn-primary" disabled>Send Configuration</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</article>
+
+<script type="module" src="{{ '/assets/js/setup.js' | url }}"></script>

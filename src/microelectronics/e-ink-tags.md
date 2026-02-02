@@ -103,6 +103,8 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 - V1 was surprisingly close! I don;t have the PCB yet so I'm not sure about the total depth, but I was a bit gerenous with it. I may be able to make it flatter, also battery dependent.
 - Realized if you want it to be desk mounted, you might want little feet to prop it up and point it at you. But for a shelf it's lovely.
 - Oh yeah and I'll need to add a port for the USB-C port.
+- I was thinking a huge part of this is lab oriented, I'm thinking I should start putting some emphasis on the lab portion of the display
+  - Like setting it up so that it's very easy to configure in 
 
 ### 02/01/2025
 **Task:** OTA Updates

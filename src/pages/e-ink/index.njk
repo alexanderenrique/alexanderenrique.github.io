@@ -1,0 +1,40 @@
+---
+layout: base.njk
+title: "E-Ink Display Configuration"
+permalink: /e-ink/
+---
+
+<article class="container">
+    <header class="page-header">
+        <h1>E-Ink Display Configuration</h1>
+        <p class="page-description">Configure your ESP32 battery-powered e-ink storage tags</p>
+    </header>
+    
+    <div class="page-content">
+        <div class="e-ink-intro">
+            <p>Welcome to the e-ink display configuration portal. Use this tool to configure your ESP32-powered storage tags wirelessly via Bluetooth Low Energy (BLE).</p>
+            
+            <p>Select a configuration mode:</p>
+            
+            <div class="e-ink-modes">
+                <div class="mode-card">
+                    <h3>Shelf Label</h3>
+                    <p>Configure e-ink displays for shelf labels.</p>
+                    <a href="{{ '/e-ink/label/' | url }}" class="btn btn-primary">Configure Shelf Label</a>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>Fun Mode</h3>
+                    <p>Configure displays for fun, interactive content and animations.</p>
+                    <a href="{{ '/e-ink/fun/' | url }}" class="btn btn-primary">Configure Fun Mode</a>
+                </div>
+                
+                <div class="mode-card">
+                    <h3>Sensor Mode</h3>
+                    <p>Configure displays for sensor data visualization and monitoring with NEMO sensor integration.</p>
+                    <a href="{{ '/e-ink/sensor/' | url }}" class="btn btn-primary">Configure Sensor Mode</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
