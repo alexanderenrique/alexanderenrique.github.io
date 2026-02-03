@@ -79,6 +79,7 @@ class EInkSetup {
 
     async scanForDevices() {
         try {
+            console.log('[Setup] Starting device scan...');
             this.statusUI.connecting('Scanning for devices...');
             
             // Request device - this will show the browser's device picker
@@ -88,12 +89,18 @@ class EInkSetup {
             );
             
             this.selectedDevice = this.ble.device;
+            console.log('[Setup] Device selected:', {
+                name: this.ble.device.name,
+                id: this.ble.device.id
+            });
+            
             this.statusUI.success(`Found device: ${this.ble.device.name || 'Unknown'}`);
             
             // Enable connect button
             document.getElementById('connect-btn').disabled = false;
             
         } catch (error) {
+            console.error('[Setup] Scan error:', error);
             if (error.name === 'NotFoundError') {
                 this.statusUI.warning('No devices found. Make sure your device is powered on and in pairing mode.');
             } else if (error.name === 'SecurityError') {
@@ -106,22 +113,46 @@ class EInkSetup {
 
     async connectToDevice() {
         try {
+            console.log('[Setup] Starting connection to device...');
+            
             if (!this.selectedDevice && !this.ble.device) {
+                console.log('[Setup] No device selected, scanning first...');
                 await this.scanForDevices();
             }
 
             this.statusUI.connecting('Connecting to device...');
             
+            // Log available services before attempting to connect
+            console.log('[Setup] Waiting a moment for services to be ready...');
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            console.log('[Setup] Fetching available services before protocol init...');
+            try {
+                const services = await this.ble.getAvailableServices();
+                console.log('[Setup] Services available on device:', services.length);
+                services.forEach((service, index) => {
+                    console.log(`[Setup]   [${index + 1}] ${service.uuid}`);
+                });
+            } catch (e) {
+                console.log('[Setup] Could not fetch services:', e.message);
+                console.log('[Setup] This might be normal - some devices don\'t expose services via getPrimaryServices()');
+                console.log('[Setup] Will attempt to access service directly...');
+            }
+            
             // Initialize protocol
+            console.log('[Setup] Initializing protocol...');
             this.protocol = new Protocol(this.ble);
             await this.protocol.initialize();
+            console.log('[Setup] Protocol initialized successfully');
             
             // Set up notification handler
+            console.log('[Setup] Setting up notification handler...');
             await this.protocol.onNotification((data) => {
                 this.handleDeviceResponse(data);
             });
             
             this.statusUI.success('Connected successfully!');
+            console.log('[Setup] Connection successful!');
             
             // Update UI
             document.getElementById('connect-btn').disabled = true;
@@ -131,15 +162,33 @@ class EInkSetup {
             this.formUI.setEnabled(true);
             
         } catch (error) {
-            this.statusUI.error(`Connection failed: ${error.message}`);
+            console.error('[Setup] Connection error:', error);
+            // If service not found, try to show available services
+            if (error.message.includes('Service') && error.message.includes('not found')) {
+                try {
+                    console.log('[Setup] Service not found, fetching all available services...');
+                    const services = await this.ble.getAvailableServices();
+                    const serviceList = services.map(s => s.uuid).join('\n');
+                    console.log('[Setup] Available services:', serviceList);
+                    this.statusUI.error(`${error.message}\n\nAvailable services:\n${serviceList}`);
+                } catch (e) {
+                    console.error('[Setup] Error fetching services:', e);
+                    this.statusUI.error(`Connection failed: ${error.message}`);
+                }
+            } else {
+                this.statusUI.error(`Connection failed: ${error.message}`);
+            }
         }
     }
 
     async disconnect() {
         try {
+            console.log('[Setup] Disconnecting from device...');
             await this.ble.disconnect();
+            console.log('[Setup] Disconnected');
             this.handleDisconnect();
         } catch (error) {
+            console.error('[Setup] Disconnect error:', error);
             this.statusUI.error(`Disconnect failed: ${error.message}`);
         }
     }
@@ -157,15 +206,26 @@ class EInkSetup {
     }
 
     async handleFormSubmit(data) {
+        console.log('[Setup] ========================================');
+        console.log('[Setup] FORM SUBMISSION STARTED');
+        console.log('[Setup] ========================================');
+        console.log('[Setup] Form data received:', data);
+        
         if (!this.protocol || !this.ble.isConnected()) {
+            console.error('[Setup] Cannot send config - not connected');
             this.statusUI.error('Not connected to device');
             return;
         }
+
+        console.log('[Setup] Connection verified - protocol and BLE are ready');
 
         try {
             this.statusUI.connecting('Sending configuration...');
             
             // Prepare config object based on mode
+            console.log('[Setup] Preparing configuration object...');
+            console.log('[Setup] Current mode:', this.mode);
+            
             const config = {
                 mode: this.mode,
                 timestamp: Date.now()
@@ -173,9 +233,11 @@ class EInkSetup {
 
             // Add mode-specific configuration
             if (this.mode === 'shelf' || this.mode === 'label') {
+                console.log('[Setup] Processing shelf/label mode configuration');
                 // Shelf label mode - simple text label
                 if (data.labelText) {
                     config.labelText = data.labelText;
+                    console.log('[Setup]   Added labelText:', data.labelText);
                 }
                 // Legacy shelf mode with NEMO config
                 if (data.nemoApiEndpoint) {
@@ -183,40 +245,92 @@ class EInkSetup {
                     config.nemoToken = data.nemoToken;
                     config.nemoSensorId = data.nemoSensorId;
                     config.sensorLocation = data.sensorLocation;
+                    console.log('[Setup]   Added NEMO config:', {
+                        endpoint: data.nemoApiEndpoint,
+                        sensorId: data.nemoSensorId,
+                        location: data.sensorLocation
+                    });
                 }
                 config.refreshInterval = parseInt(data.refreshInterval);
+                console.log('[Setup]   Refresh interval:', config.refreshInterval);
             } else if (this.mode === 'fun') {
+                console.log('[Setup] Processing fun mode configuration');
                 config.refreshInterval = parseInt(data.refreshInterval);
+                console.log('[Setup]   Refresh interval:', config.refreshInterval);
                 // Add API endpoints configuration
                 if (data.apis) {
                     config.apis = data.apis;
+                    console.log('[Setup]   Added APIs config:', data.apis);
                 }
             } else if (this.mode === 'sensor') {
+                console.log('[Setup] Processing sensor mode configuration');
                 // Sensor mode - NEMO API configuration
                 config.nemoApiEndpoint = data.nemoApiEndpoint;
                 config.nemoToken = data.nemoToken;
                 config.nemoSensorId = data.nemoSensorId;
                 config.sensorLocation = data.sensorLocation;
                 config.refreshInterval = parseInt(data.refreshInterval);
+                console.log('[Setup]   NEMO config:', {
+                    endpoint: data.nemoApiEndpoint,
+                    sensorId: data.nemoSensorId,
+                    location: data.sensorLocation,
+                    refreshInterval: config.refreshInterval
+                });
             }
 
+            console.log('[Setup] Final configuration object:', config);
+            console.log('[Setup] Configuration object keys:', Object.keys(config));
+            console.log('[Setup] Configuration size (estimated):', JSON.stringify(config).length, 'characters');
+
             // Send configuration
+            console.log('[Setup] Calling protocol.sendConfig()...');
+            const startTime = performance.now();
             await this.protocol.sendConfig(config);
+            const endTime = performance.now();
+            const duration = endTime - startTime;
+            
+            console.log('[Setup] Configuration sent successfully!');
+            console.log('[Setup] Send duration:', duration.toFixed(2), 'ms');
+            console.log('[Setup] ========================================');
             
             this.statusUI.success('Configuration sent successfully!');
             
         } catch (error) {
+            console.error('[Setup] ========================================');
+            console.error('[Setup] CONFIGURATION SEND FAILED');
+            console.error('[Setup] ========================================');
+            console.error('[Setup] Error:', error);
+            console.error('[Setup] Error message:', error.message);
+            console.error('[Setup] Error stack:', error.stack);
             this.statusUI.error(`Failed to send configuration: ${error.message}`);
         }
     }
 
     handleDeviceResponse(data) {
-        console.log('Device response:', data);
+        console.log('[Setup] ========================================');
+        console.log('[Setup] DEVICE RESPONSE RECEIVED');
+        console.log('[Setup] ========================================');
+        console.log('[Setup] Raw response data:', data);
+        console.log('[Setup] Response type:', typeof data);
+        console.log('[Setup] Response keys:', data ? Object.keys(data) : 'null');
+        
+        if (data && data.status) {
+            console.log('[Setup] Response status:', data.status);
+        }
+        
+        if (data && data.message) {
+            console.log('[Setup] Response message:', data.message);
+        }
+        
+        console.log('[Setup] Full response object:', JSON.stringify(data, null, 2));
+        console.log('[Setup] ========================================');
         
         if (data.status === 'ok') {
             this.statusUI.success('Device confirmed configuration');
         } else if (data.status === 'error') {
             this.statusUI.error(`Device error: ${data.message || 'Unknown error'}`);
+        } else {
+            console.log('[Setup] Unknown response status, displaying anyway');
         }
     }
 }
