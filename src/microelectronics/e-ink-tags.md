@@ -96,6 +96,20 @@ R2 = bottom resistor (ADC pin → R2 -> GND)
 
 ## Work Log:
 
+### 02/03/2025
+**Task:** Adding BLE Mode
+
+**Notes:**
+- Started chipping away at the BLE, getting there.
+  - First, it was a mission to make the ESP32 discoverable by the browser. I was able to find it using a python script that detects everything, but the browser is particular
+  - I had to add a service UUID to the ESP32, as well as TX power and all this other stuff
+  - Then once it was found by the browser, it wouldn't connect because it was not advertising and services/characteristics
+  - Once I broadcasted the right characteristics it was able to connect
+- Sending from the computer to the ESP was actually pretty easy, that worked right away
+- Cleaned up some UI, moved buttons around
+- Added a feature so that after you upload the configuration, it reboots and applies the new configuration, and also doesn't do the BLE connection again
+- BLE and Wifi use the same antenna so you can't use both at the same time.
+
 ### 02/02/2025
 **Task:** Printing the enclosure, thinking
 

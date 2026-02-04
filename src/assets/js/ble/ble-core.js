@@ -27,14 +27,30 @@ class BLECore {
             console.log('[BLE] Requesting device connection...');
             console.log('[BLE] Service UUID:', serviceUUID || 'none');
             
-            // For debugging: accept all devices
+            // Build filter options
             const options = {
-                acceptAllDevices: true,
                 optionalServices: serviceUUID ? [serviceUUID] : []
             };
 
-            // Note: When acceptAllDevices is true, filters cannot be used
-            // This allows connecting to any BLE device for debugging
+            // Use filters to only show devices with the specific service UUID
+            // This filters out "unknown" devices that don't advertise our service
+            if (serviceUUID) {
+                options.filters = [{
+                    services: [serviceUUID]
+                }];
+                console.log('[BLE] Using service filter:', serviceUUID);
+            } else if (deviceName) {
+                // If no service UUID but device name provided, filter by name
+                options.filters = [{
+                    name: deviceName
+                }];
+                console.log('[BLE] Using name filter:', deviceName);
+            } else {
+                // Fallback: if no filters specified, use acceptAllDevices
+                // This should rarely be needed, but kept for backwards compatibility
+                options.acceptAllDevices = true;
+                console.log('[BLE] No filters specified, accepting all devices');
+            }
 
             this.device = await navigator.bluetooth.requestDevice(options);
             console.log('[BLE] Device selected:', {

@@ -58,28 +58,16 @@ class EInkSetup {
     }
 
     setupEventHandlers() {
-        // Scan button
-        const scanBtn = document.getElementById('scan-btn');
-        if (scanBtn) {
-            scanBtn.addEventListener('click', () => this.scanForDevices());
-        }
-
-        // Connect button
-        const connectBtn = document.getElementById('connect-btn');
-        if (connectBtn) {
-            connectBtn.addEventListener('click', () => this.connectToDevice());
-        }
-
-        // Disconnect button
-        const disconnectBtn = document.getElementById('disconnect-btn');
-        if (disconnectBtn) {
-            disconnectBtn.addEventListener('click', () => this.disconnect());
+        // Scan and Connect button (combined)
+        const scanConnectBtn = document.getElementById('scan-connect-btn');
+        if (scanConnectBtn) {
+            scanConnectBtn.addEventListener('click', () => this.scanAndConnect());
         }
     }
 
-    async scanForDevices() {
+    async scanAndConnect() {
         try {
-            console.log('[Setup] Starting device scan...');
+            console.log('[Setup] Starting scan and connect...');
             this.statusUI.connecting('Scanning for devices...');
             
             // Request device - this will show the browser's device picker
@@ -94,32 +82,6 @@ class EInkSetup {
                 id: this.ble.device.id
             });
             
-            this.statusUI.success(`Found device: ${this.ble.device.name || 'Unknown'}`);
-            
-            // Enable connect button
-            document.getElementById('connect-btn').disabled = false;
-            
-        } catch (error) {
-            console.error('[Setup] Scan error:', error);
-            if (error.name === 'NotFoundError') {
-                this.statusUI.warning('No devices found. Make sure your device is powered on and in pairing mode.');
-            } else if (error.name === 'SecurityError') {
-                this.statusUI.error('Permission denied. Please allow Bluetooth access.');
-            } else {
-                this.statusUI.error(`Scan failed: ${error.message}`);
-            }
-        }
-    }
-
-    async connectToDevice() {
-        try {
-            console.log('[Setup] Starting connection to device...');
-            
-            if (!this.selectedDevice && !this.ble.device) {
-                console.log('[Setup] No device selected, scanning first...');
-                await this.scanForDevices();
-            }
-
             this.statusUI.connecting('Connecting to device...');
             
             // Log available services before attempting to connect
@@ -155,16 +117,17 @@ class EInkSetup {
             console.log('[Setup] Connection successful!');
             
             // Update UI
-            document.getElementById('connect-btn').disabled = true;
-            document.getElementById('disconnect-btn').disabled = false;
-            document.getElementById('scan-btn').disabled = true;
+            document.getElementById('scan-connect-btn').disabled = true;
             document.getElementById('send-config-btn').disabled = false;
             this.formUI.setEnabled(true);
             
         } catch (error) {
-            console.error('[Setup] Connection error:', error);
-            // If service not found, try to show available services
-            if (error.message.includes('Service') && error.message.includes('not found')) {
+            console.error('[Setup] Scan and connect error:', error);
+            if (error.name === 'NotFoundError') {
+                this.statusUI.warning('No devices found. Make sure your device is powered on and in pairing mode.');
+            } else if (error.name === 'SecurityError') {
+                this.statusUI.error('Permission denied. Please allow Bluetooth access.');
+            } else if (error.message.includes('Service') && error.message.includes('not found')) {
                 try {
                     console.log('[Setup] Service not found, fetching all available services...');
                     const services = await this.ble.getAvailableServices();
@@ -181,26 +144,12 @@ class EInkSetup {
         }
     }
 
-    async disconnect() {
-        try {
-            console.log('[Setup] Disconnecting from device...');
-            await this.ble.disconnect();
-            console.log('[Setup] Disconnected');
-            this.handleDisconnect();
-        } catch (error) {
-            console.error('[Setup] Disconnect error:', error);
-            this.statusUI.error(`Disconnect failed: ${error.message}`);
-        }
-    }
-
     handleDisconnect() {
         this.statusUI.warning('Disconnected from device');
         this.protocol = null;
         
         // Update UI
-        document.getElementById('connect-btn').disabled = false;
-        document.getElementById('disconnect-btn').disabled = true;
-        document.getElementById('scan-btn').disabled = false;
+        document.getElementById('scan-connect-btn').disabled = false;
         document.getElementById('send-config-btn').disabled = true;
         this.formUI.setEnabled(false);
     }
@@ -219,7 +168,19 @@ class EInkSetup {
 
         console.log('[Setup] Connection verified - protocol and BLE are ready');
 
+        // Get the send config button and update its state
+        const sendBtn = document.getElementById('send-config-btn');
+        const originalText = sendBtn ? sendBtn.textContent : 'Send Configuration';
+        const originalClasses = sendBtn ? sendBtn.className : '';
+
         try {
+            // Update button to show sending state
+            if (sendBtn) {
+                sendBtn.textContent = 'Sending...';
+                sendBtn.disabled = true;
+                sendBtn.classList.remove('btn-success');
+            }
+            
             this.statusUI.connecting('Sending configuration...');
             
             // Prepare config object based on mode
@@ -230,6 +191,16 @@ class EInkSetup {
                 mode: this.mode,
                 timestamp: Date.now()
             };
+
+            // Add WiFi configuration (common to all modes)
+            if (data.wifiSsid) {
+                config.wifiSsid = data.wifiSsid;
+                console.log('[Setup]   Added WiFi SSID:', data.wifiSsid);
+            }
+            if (data.wifiPassword) {
+                config.wifiPassword = data.wifiPassword;
+                console.log('[Setup]   Added WiFi Password: [hidden]');
+            }
 
             // Add mode-specific configuration
             if (this.mode === 'shelf' || this.mode === 'label') {
@@ -293,6 +264,14 @@ class EInkSetup {
             console.log('[Setup] Send duration:', duration.toFixed(2), 'ms');
             console.log('[Setup] ========================================');
             
+            // Update button to show success state
+            if (sendBtn) {
+                sendBtn.textContent = 'Configuration Sent!';
+                sendBtn.classList.remove('btn-primary');
+                sendBtn.classList.add('btn-success');
+                sendBtn.disabled = false;
+            }
+            
             this.statusUI.success('Configuration sent successfully!');
             
         } catch (error) {
@@ -302,6 +281,14 @@ class EInkSetup {
             console.error('[Setup] Error:', error);
             console.error('[Setup] Error message:', error.message);
             console.error('[Setup] Error stack:', error.stack);
+            
+            // Reset button to original state on error
+            if (sendBtn) {
+                sendBtn.textContent = originalText;
+                sendBtn.className = originalClasses;
+                sendBtn.disabled = false;
+            }
+            
             this.statusUI.error(`Failed to send configuration: ${error.message}`);
         }
     }

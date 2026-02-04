@@ -24,11 +24,8 @@ permalink: /e-ink/fun/
             <section class="setup-section">
                 <h2>Connection</h2>
                 <div class="form-group">
-                    <button id="scan-btn" class="btn btn-primary">Scan for Devices</button>
-                    <button id="connect-btn" class="btn btn-secondary" disabled>Connect</button>
-                    <button id="disconnect-btn" class="btn btn-secondary" disabled>Disconnect</button>
+                    <button id="scan-connect-btn" class="btn btn-primary">Scan and Connect</button>
                 </div>
-                <div id="device-list" class="device-list"></div>
             </section>
 
             <!-- Configuration Form -->
@@ -64,6 +61,16 @@ permalink: /e-ink/fun/
                                 <span>Useless Facts</span>
                             </label>
                         </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-ssid">WiFi SSID</label>
+                        <input type="text" id="wifi-ssid" name="wifiSsid" placeholder="Enter WiFi network name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-password">WiFi Password</label>
+                        <input type="password" id="wifi-password" name="wifiPassword" placeholder="Enter WiFi password" required>
                     </div>
 
                     <div class="form-group">
