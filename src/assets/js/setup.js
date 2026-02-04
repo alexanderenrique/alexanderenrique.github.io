@@ -241,11 +241,13 @@ class EInkSetup {
                 config.nemoSensorId = data.nemoSensorId;
                 config.sensorLocation = data.sensorLocation;
                 config.refreshInterval = parseInt(data.refreshInterval);
+                config.temperatureUnit = data.temperatureUnit || 'C';
                 console.log('[Setup]   NEMO config:', {
                     endpoint: data.nemoApiEndpoint,
                     sensorId: data.nemoSensorId,
                     location: data.sensorLocation,
-                    refreshInterval: config.refreshInterval
+                    refreshInterval: config.refreshInterval,
+                    temperatureUnit: config.temperatureUnit
                 });
             }
 
