@@ -6,6 +6,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/styles");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/install-sensor");
+  eleventyConfig.addPassthroughCopy("src/install-shelf-label");
+  eleventyConfig.addPassthroughCopy("src/install-fun-app");
 
   // Add collections
   eleventyConfig.addCollection("coding", function(collectionApi) {

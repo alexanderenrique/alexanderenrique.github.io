@@ -1043,3 +1043,28 @@ model-viewer[background-color] {
         grid-template-columns: 1fr;
     }
 }
+
+/* Install button styles */
+.install-btn {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: var(--shadow);
+    font-family: var(--font-family);
+}
+
+.install-btn:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.install-btn:active {
+    transform: translateY(0);
+}
