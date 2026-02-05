@@ -238,13 +238,15 @@ class EInkSetup {
                 // Sensor mode - NEMO API configuration
                 config.nemoApiEndpoint = data.nemoApiEndpoint;
                 config.nemoToken = data.nemoToken;
-                config.nemoSensorId = data.nemoSensorId;
+                config.temperatureSensorId = data.temperatureSensorId;
+                config.humiditySensorId = data.humiditySensorId;
                 config.sensorLocation = data.sensorLocation;
                 config.refreshInterval = parseInt(data.refreshInterval);
                 config.temperatureUnit = data.temperatureUnit || 'C';
                 console.log('[Setup]   NEMO config:', {
                     endpoint: data.nemoApiEndpoint,
-                    sensorId: data.nemoSensorId,
+                    temperatureSensorId: data.temperatureSensorId,
+                    humiditySensorId: data.humiditySensorId,
                     location: data.sensorLocation,
                     refreshInterval: config.refreshInterval,
                     temperatureUnit: config.temperatureUnit

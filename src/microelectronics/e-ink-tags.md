@@ -76,6 +76,9 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 - Cleaned up some UI, moved buttons around
 - Added a feature so that after you upload the configuration, it reboots and applies the new configuration, and also doesn't do the BLE connection again
 - BLE and Wifi use the same antenna so you can't use both at the same time.
+- Yeah just did a shit load of work, also added the nemo stuff
+- It occurs to me that to have this be as flexible as possible, I should really just ship them with a bare minimum bluetooth set up, and then the end user can download thier own firmare. I guess this makes sense??
+- At some level people need to be able to flash their own shit if they but their own ESP32s that I never touch. Hmm complex.
 
 ### 02/02/2025
 **Task:** Printing the enclosure, thinking
