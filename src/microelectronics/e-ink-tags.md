@@ -46,14 +46,14 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 
 
 
-## Before Launch:
-- Make sure it deep sleeps
-- Checks for OTA updates at midnight and on boot
+## Before UGIM:
+- .bin uploader on web working
+- Sensor and Shelf modes working
+- Testing power consumption
+- OSHWA certification
+- Stanford OTL Blessing
+- 
 
-## Voltage divider:
-47k and 60k (or so, check the code for exact values)
-R1 = top resistor (battery → R1 -> ADC pin)
-R2 = bottom resistor (ADC pin → R2 -> GND)
 
 ## Work Log:
 
