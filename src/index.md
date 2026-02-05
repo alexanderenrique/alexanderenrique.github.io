@@ -7,56 +7,31 @@ description: One curious engineer's journey through wrenching, coding, and micro
 <div class="hero">
     <h1 class="hero__title">Welcome to Denton Works</h1>
     <p class="hero__subtitle">One curious engineer's journey through wrenching, coding, and microelectronics projects</p>
+</div>
 
 <div class="sections">
-    <section class="section section--wrenching">
+    <section class="section section--eink">
         <div class="section__content">
             <div class="section__text">
-                <h2 class="section__title">Wrenching Projects</h2>
-                <p class="section__description">Classic car restoration and mechanical projects. Currently working on a <strong> <a href="{{ '/wrenching/thunderbird-restoration/' | url }}">1968 Thunderbird Restomod</a> </p>
-                <a href="{{ '/wrenching/' | url }}" class="section__link">View All Projects →</a></strong>
+                <h2 class="section__title">E-Ink Display</h2>
+                <p class="section__description">Configure and install firmware for ESP32 battery-powered e-ink storage tags. Use the <a href="{{ '/e-ink/' | url }}">e-ink display portal</a> to set up your displays wirelessly via Bluetooth Low Energy (BLE), or install firmware directly from your browser.</p>
+                <a href="{{ '/e-ink/' | url }}" class="section__link">E-Ink Display →</a>
             </div>
             <div class="section__image">
-                <img src="{{ '/images/fz-sticker.png' | url }}" alt="FZ Sticker">
+                <div class="placeholder-image">📱</div>
             </div>
         </div>
     </section>
 
-    <section class="section section--coding">
+    <section class="section section--blog">
         <div class="section__content">
             <div class="section__text">
-                <h2 class="section__title">Coding Projects</h2>
-                <p class="section__description">Software tools and automation projects, including <strong>NEMO lab management</strong> tools and <strong>MQTT integration</strong> - see <a href="{{ '/coding/nemo-merger/' | url }}">NEMO Merger</a> and <a href="{{ '/coding/NEMO-MQTT-Plugin/' | url }}">NEMO MQTT Plugin</a> for details.</p>
-                <a href="{{ '/coding/' | url }}" class="section__link">View All Projects →</a>
+                <h2 class="section__title">Blog</h2>
+                <p class="section__description">Work logs documenting projects across coding, wrenching, microelectronics, and general learnings. Explore <a href="{{ '/coding/' | url }}">coding projects</a> like NEMO lab management tools, <a href="{{ '/wrenching/thunderbird-restoration/' | url }}">classic car restoration</a>, <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}">electronics integration</a>, and <a href="{{ '/general/Today-I-Learned/' | url }}">daily discoveries</a>.</p>
+                <a href="{{ '/coding/' | url }}" class="section__link">View Blog →</a>
             </div>
             <div class="section__image">
-                <img src="{{ '/images/pandas3.png' | url }}" alt="Pandas">
-            </div>
-        </div>
-    </section>
-
-    <section class="section section--microelectronics">
-        <div class="section__content">
-            <div class="section__text">
-                <h2 class="section__title">Microelectronics</h2>
-                <p class="section__description">Modern electronics integration for classic cars and embedded systems projects - see <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}">Smart-T-Bird</a> for the Thunderbird electronics project.</p>
-                <a href="{{ '/microelectronics/' | url }}" class="section__link">View All Projects →</a>
-            </div>
-            <div class="section__image">
-                <img src="{{ '/images/wiring-sticker.png' | url }}" alt="Wiring Sticker">
-            </div>
-        </div>
-    </section>
-
-    <section class="section section--general">
-        <div class="section__content">
-            <div class="section__text">
-                <h2 class="section__title">General Knowledge</h2>
-                <p class="section__description">Daily learnings, project ideas, and miscellaneous thoughts - see <a href="{{ '/general/Today-I-Learned/' | url }}">Today-I-Learned</a> for daily discoveries.</p>
-                <a href="{{ '/general/' | url }}" class="section__link">View All Content →</a>
-            </div>
-            <div class="section__image">
-                <div class="placeholder-image">📚</div>
+                <img src="{{ '/images/pandas3.png' | url }}" alt="Blog">
             </div>
         </div>
     </section>

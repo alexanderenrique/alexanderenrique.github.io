@@ -171,6 +171,14 @@ body {
     color: var(--color-primary);
 }
 
+.nav__submenu-divider {
+    height: 1px;
+    background-color: var(--color-border);
+    margin: var(--spacing-xs) 0;
+    padding: 0;
+    list-style: none;
+}
+
 /* Main content */
 .main {
     min-height: calc(100vh - 8rem);
@@ -424,6 +432,16 @@ img {
 
 .section--general {
     background: linear-gradient(135deg, #f9ca24, #f0932b);
+    color: white;
+}
+
+.section--eink {
+    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
+    color: white;
+}
+
+.section--blog {
+    background: linear-gradient(135deg, #10b981, #34d399);
     color: white;
 }
 

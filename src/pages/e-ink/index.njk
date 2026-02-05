@@ -1,38 +1,38 @@
 ---
 layout: base.njk
-title: "E-Ink Display Configuration"
+title: "E-Ink Display"
 permalink: /e-ink/
 ---
 
 <article class="container">
     <header class="page-header">
-        <h1>E-Ink Display Configuration</h1>
-        <p class="page-description">Configure your ESP32 battery-powered e-ink storage tags</p>
+        <h1>E-Ink Display</h1>
+        <p class="page-description">ESP32 battery-powered e-ink storage tags</p>
     </header>
     
     <div class="page-content">
         <div class="e-ink-intro">
-            <p>Welcome to the e-ink display configuration portal. Use this tool to configure your ESP32-powered storage tags wirelessly via Bluetooth Low Energy (BLE).</p>
+            <p>Welcome to the e-ink display portal. Here you can configure and install firmware for your ESP32-powered storage tags.</p>
             
-            <p>Select a configuration mode:</p>
-            
-            <div class="e-ink-modes">
-                <div class="mode-card">
-                    <h3>Shelf Label</h3>
-                    <p>Configure e-ink displays for shelf labels.</p>
-                    <a href="{{ '/e-ink/label/' | url }}" class="btn btn-primary">Configure Shelf Label</a>
+            <div class="e-ink-actions" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div class="action-card" style="padding: 2rem; border: 1px solid var(--color-border); border-radius: var(--border-radius); background: var(--color-bg-alt);">
+                    <h3>Configuration</h3>
+                    <p>Configure your displays wirelessly via Bluetooth Low Energy (BLE). Set up sensor monitoring, shelf labels, or fun interactive content.</p>
+                    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="{{ '/e-ink/config-sensor/' | url }}" class="btn" style="display: inline-block;">Configure Sensor</a>
+                        <a href="{{ '/e-ink/config-label/' | url }}" class="btn" style="display: inline-block;">Configure Shelf Label</a>
+                        <a href="{{ '/e-ink/config-fun/' | url }}" class="btn" style="display: inline-block;">Configure Fun</a>
+                    </div>
                 </div>
                 
-                <div class="mode-card">
-                    <h3>Fun Mode</h3>
-                    <p>Configure displays for fun, interactive content and animations.</p>
-                    <a href="{{ '/e-ink/fun/' | url }}" class="btn btn-primary">Configure Fun Mode</a>
-                </div>
-                
-                <div class="mode-card">
-                    <h3>Sensor Mode</h3>
-                    <p>Configure displays for sensor data visualization and monitoring with NEMO sensor integration.</p>
-                    <a href="{{ '/e-ink/sensor/' | url }}" class="btn btn-primary">Configure Sensor Mode</a>
+                <div class="action-card" style="padding: 2rem; border: 1px solid var(--color-border); border-radius: var(--border-radius); background: var(--color-bg-alt);">
+                    <h3>Firmware Installation</h3>
+                    <p>Install firmware directly from your browser. Choose from Sensor Mode, Shelf Label, or Fun App firmware.</p>
+                    <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+                        <a href="{{ '/install-sensor/' | url }}" class="btn" style="display: inline-block;">Install Sensor Firmware</a>
+                        <a href="{{ '/install-shelf-label/' | url }}" class="btn" style="display: inline-block;">Install Shelf Label Firmware</a>
+                        <a href="{{ '/install-fun-app/' | url }}" class="btn" style="display: inline-block;">Install Fun App Firmware</a>
+                    </div>
                 </div>
             </div>
         </div>
