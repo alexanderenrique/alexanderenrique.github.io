@@ -18,43 +18,11 @@ tags:
 ## Project Overview
 Creating battery-powered ESP32 tags for storage cabinets. These tags will display information about who owns each cabinet, updating wirelessly and running on battery power for extended periods. The goal is to have a low-maintenance system that helps organize and track storage locations.
 
-## Design Goals:
-- Long battery life - months on a single battery
-- Wireless updates - no need to physically access tags to update information
-- Clear display - readable at a glance
-- Low cost - keep per-tag cost reasonable
-- Easy deployment - simple setup and configuration
-- Low maintenance - minimal intervention required
-
-## Architecture:
-- ESP32 microcontroller for wireless connectivity
-- E-ink display for low-power information display
-- Battery power management for extended operation
-- Smart Lab 2.4GHz wireless 
-- Central management system for updating tag information
-
-## Hardware Components:
-- ESP32 development board (or custom PCB)
-- E-ink display module
-- Battery (LiPo or similar)
-- Power management IC
-- Enclosure/mounting hardware
-
-## Technical Details:
-### Power Management:
-- Deep sleep modes to minimize power consumption
-- Wake on wireless trigger or scheduled updates
-- Battery monitoring and low-battery alerts
-
-### Display:
-- E-ink display for zero-power display retention
-- Update frequency considerations
-- Display size and resolution
-
 ## V1.0:
 ### Hardware:
 - ~~Designing the PCB, SMD and Through hole components~~
-- Designing the enclosure
+- ~~Designing the enclosure~~
+  - Design enclosure V2
 - Receive and solder it together
 - Testing power consumption in various sleep modes
 
@@ -64,37 +32,36 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
   - Creating a manifest.json to store the latest version
 - Adding an API so that I can send messages to other displays
 - Displaying "battery low" message before it goes to sleep
+- Adding web based .bin uploader
+
+### Per App Breakdown:
+#### Sensor Mode:
+- Adding a second field JSON to the sensor ID field, since temp and humidity each need their own sensor ID.
+- Making sure the 
+#### Shelf Label:
+- Start working on pinging the NEMO API to et the shelf info
+- Writing a script for the VM to share the shelf info
+#### Fun Mode:
+- Adding more APIs?
 
 
 
-
-### Software:
-- No software needed for this version
-
-## V2.0:
-### Hardware:
-- Revising, potentially adding switches to engage programming mode
-- Smaller Cap, mosfets
-- More capcitors, especially small ones
-
-### Firmware:
-- Integrating BLE mode
-
-### Software:
-- Creating an app for configuration
-
-
-## Before Launch:
-- Make sure it deep sleeps
-- Checks for OTA updates at midnight and on boot
-
-## Voltage divider:
-47k and 60k (or so, check the code for exact values)
-R1 = top resistor (battery → R1 -> ADC pin)
-R2 = bottom resistor (ADC pin → R2 -> GND)
+## Before UGIM:
+- .bin uploader on web working
+- Sensor and Shelf modes working
+- Testing power consumption
+- OSHWA certification
+- Stanford OTL Blessing
+- 
 
 
 ## Work Log:
+
+### 02/04/2025
+**Task:** Adding Deep Sleep to Shelf and Sensor
+
+**Notes:**
+
 
 ### 02/03/2025
 **Task:** Adding BLE Mode
