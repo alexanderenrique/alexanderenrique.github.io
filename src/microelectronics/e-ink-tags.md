@@ -57,11 +57,20 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 
 ## Work Log:
 
-### 02/04/2025
-**Task:** Adding Deep Sleep to Shelf and Sensor
+### 02/06/2025
+**Task:** Adding battery message
 
 **Notes:**
+- Added a message to display when battery <5%
+- Wakes up when charge is >10%, waking up every 5 minutes to check the battery level
 
+### 02/05/2025
+**Task:** Firmware from the browser
+
+**Notes:**
+- Added a page on the website for firmware updates, it needs a few different binaries to work
+- It installed first try actually, but the partitions weren't correct so it was stuck in an infinite loop of boots
+- 
 
 ### 02/03/2025
 **Task:** Adding BLE Mode
