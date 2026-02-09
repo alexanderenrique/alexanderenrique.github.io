@@ -14,7 +14,7 @@ description: One curious engineer's journey through wrenching, coding, and micro
         <div class="section__content">
             <div class="section__text">
                 <h2 class="section__title">E-Ink Display</h2>
-                <p class="section__description">Configure and install firmware for ESP32 battery-powered e-ink storage tags. Use the <a href="{{ '/e-ink/' | url }}">e-ink display portal</a> to set up your displays wirelessly via Bluetooth Low Energy (BLE), or install firmware directly from your browser.</p>
+                <p class="section__description">Configure and install firmware for ESP32 battery-powered e-ink displays. Use the <a href="{{ '/e-ink/' | url }}">e-ink display portal</a> to set up your displays wirelessly via Bluetooth Low Energy (BLE), or install firmware directly from your browser.</p>
                 <a href="{{ '/e-ink/' | url }}" class="section__link">E-Ink Display →</a>
             </div>
             <div class="section__image">

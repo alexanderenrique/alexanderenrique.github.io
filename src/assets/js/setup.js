@@ -29,6 +29,8 @@ class EInkSetup {
             return 'fun';
         } else if (path.includes('/sensor')) {
             return 'sensor';
+        } else if (path.includes('/messages')) {
+            return 'messages';
         } else if (path.includes('/label')) {
             return 'label';
         } else {
@@ -250,6 +252,17 @@ class EInkSetup {
                     location: data.sensorLocation,
                     refreshInterval: config.refreshInterval,
                     temperatureUnit: config.temperatureUnit
+                });
+            } else if (this.mode === 'messages') {
+                console.log('[Setup] Processing messages mode configuration');
+                config.refreshInterval = parseInt(data.refreshInterval) || 10;
+                for (let i = 1; i <= 10; i++) {
+                    const key = `message${i}`;
+                    config[key] = (data[key] && data[key].trim()) ? data[key].trim() : '';
+                }
+                console.log('[Setup]   Messages config:', {
+                    refreshInterval: config.refreshInterval,
+                    messageCount: 10
                 });
             }
 

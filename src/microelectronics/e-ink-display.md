@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "ESP32 Battery-Powered Storage Tags"
+title: "E-Ink Display"
 categories: [microelectronics]
 tags: 
   - electronics
@@ -11,38 +11,51 @@ tags:
   - iot
   - low-power
   - wireless
-  - tags
+  - displays
   - inventory
 ---
 
 ## Project Overview
-Creating battery-powered ESP32 tags for storage cabinets. These tags will display information about who owns each cabinet, updating wirelessly and running on battery power for extended periods. The goal is to have a low-maintenance system that helps organize and track storage locations.
+Creating battery-powered ESP32 e-ink displays for storage cabinets. These displays will show information about who owns each cabinet, updating wirelessly and running on battery power for extended periods. The goal is to have a low-maintenance system that helps organize and track storage locations.
 
 ## V1.0:
 ### Hardware:
 - ~~Designing the PCB, SMD and Through hole components~~
 - ~~Designing the enclosure~~
   - Design enclosure V2
-- Receive and solder it together
+- ~~Receive and solder it together~~
 - Testing power consumption in various sleep modes
+- Hardware V2 revisions:
+  - moving the location of the battery throughole pads
+  - making the battery connection holes larger
+  - moving the ESP32 farther away so it doesn't clash with the port for the tags
+  - Shrinking the pads for the ESP32, it doesn't need to be that big
+  - Flipping it so the ESP is on the opposite side? Doesn't make that much sense to put the ESP on the same side. 
+
 
 ### Firmware:
 - Finish OTA updates
   - Adding CA, locking it down
   - Creating a manifest.json to store the latest version
 - Adding an API so that I can send messages to other displays
-- Displaying "battery low" message before it goes to sleep
-- Adding web based .bin uploader
+- ~~Displaying "battery low" message before it goes to sleep~~
+- ~~Adding web based .bin uploader~~
 
 ### Per App Breakdown:
 #### Sensor Mode:
-- Adding a second field JSON to the sensor ID field, since temp and humidity each need their own sensor ID.
-- Making sure the 
+- ~~Adding a second field JSON to the sensor ID field, since temp and humidity each need their own sensor ID.~~
+- Making sure the nemo sensor actually pushes
+
 #### Shelf Label:
-- Start working on pinging the NEMO API to et the shelf info
+- Start working on pinging the NEMO API to get the shelf info
 - Writing a script for the VM to share the shelf info
+- Generally testing, is it even useful
+
 #### Fun Mode:
 - Adding more APIs?
+
+#### Message Mode:
+- Testing
 
 
 
@@ -56,6 +69,13 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 
 
 ## Work Log:
+
+### 02/07/2025
+**Task:** Soldering PCB
+
+**Notes:**
+- Received my PCBs back, they worked!! all the connections were correct, holy cow
+- 
 
 ### 02/06/2025
 **Task:** Adding battery message
@@ -112,7 +132,7 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 **Task:** Enclosure Design, Brainstorming V2
 
 **Notes:**
-- Designed an enclosure for the battery and tag. 
+- Designed an enclosure for the battery and display. 
 - Only part I;m not 100% on is how the back attaches, I opted for a four tounge and groove set up with a hole in it so It's easy to pull out. I guess we'll see how it works.
 - I know I should be working on V1, but I'm thinking about how to add a button and an LED to V1
 - I think I can repurpose my ADC pin that is currently doing the battery measurement
@@ -195,8 +215,8 @@ Creating battery-powered ESP32 tags for storage cabinets. These tags will displa
 
 ## Open Questions:
 - What's the target battery life?
-- How often do tags need to update?
-- What information should be displayed on each tag?
+- How often do displays need to update?
+- What information should be displayed on each display?
 - Do we need a central server/management system?
 - What's the range/coverage needed for wireless updates?
 

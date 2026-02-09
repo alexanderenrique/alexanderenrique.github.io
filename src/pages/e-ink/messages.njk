@@ -1,0 +1,99 @@
+---
+layout: base.njk
+title: "E-Ink Display Setup - Messages Mode"
+permalink: /e-ink/config-messages/
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/setup.css' | url }}">
+
+<article class="container">
+    <header class="page-header">
+        <h1>E-Ink Display Setup - Messages Mode</h1>
+        <p class="page-description">Connect and configure your e-ink display to show up to 10 custom messages</p>
+    </header>
+    
+    <div class="page-content">
+        <div class="setup-container">
+            <!-- Status Display -->
+            <div id="status-container" class="status-container">
+                <div id="status-message" class="status-message">Ready to connect</div>
+                <div id="status-indicator" class="status-indicator status-ready"></div>
+            </div>
+
+            <!-- Connection Section -->
+            <section class="setup-section">
+                <h2>Connection</h2>
+                <div class="form-group">
+                    <button id="scan-connect-btn" class="btn btn-primary">Scan and Connect</button>
+                </div>
+            </section>
+
+            <!-- Configuration Form -->
+            <section class="setup-section">
+                <h2>Messages Mode Configuration</h2>
+                <form id="config-form" class="config-form">
+                    <div class="form-group">
+                        <label for="wifi-ssid">WiFi SSID</label>
+                        <input type="text" id="wifi-ssid" name="wifiSsid" placeholder="Enter WiFi network name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-password">WiFi Password</label>
+                        <input type="password" id="wifi-password" name="wifiPassword" placeholder="Enter WiFi password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="refresh-interval">Refresh Interval (minutes)</label>
+                        <input type="number" id="refresh-interval" name="refreshInterval" min="1" value="60" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message1">Message 1</label>
+                        <input type="text" id="message1" name="message1" placeholder="Good luck today!">
+                    </div>
+                    <div class="form-group">
+                        <label for="message2">Message 2</label>
+                        <input type="text" id="message2" name="message2" placeholder="If you come to a fork in the road, take it!">
+                    </div>
+                    <div class="form-group">
+                        <label for="message3">Message 3</label>
+                        <input type="text" id="message3" name="message3" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message4">Message 4</label>
+                        <input type="text" id="message4" name="message4" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message5">Message 5</label>
+                        <input type="text" id="message5" name="message5" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message6">Message 6</label>
+                        <input type="text" id="message6" name="message6" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message7">Message 7</label>
+                        <input type="text" id="message7" name="message7" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message8">Message 8</label>
+                        <input type="text" id="message8" name="message8" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message9">Message 9</label>
+                        <input type="text" id="message9" name="message9" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="message10">Message 10</label>
+                        <input type="text" id="message10" name="message10" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" id="send-config-btn" class="btn btn-primary" disabled>Send Configuration</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</article>
+
+<script type="module" src="{{ '/assets/js/setup.js' | url }}"></script>

@@ -19,6 +19,24 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 02/07/2026
+**Category:** Ranger
+
+**Task:** Ranger Fuel System, pulling dented bed, ignition cylinder
+
+**Notes:**
+- Put the new intank fuel pump in, got the cleaned tank back in the truck.
+  - It was an absolute mission to bench press it in, not sure why it was just not goin in, straps were mwaybe bent a bit and it wasn't going
+- Troubleshooting the fuel pump wiring. Everything was getting power as it should, the relay connections are super super crusty and making shitty connection
+- At the fuel relay, there is in fact a heavy guage always hot, a signal switched hot, and an ECU controlled ground
+- We thought we had it all going, but then the truck just died very sharply, it was weird. Not like a running out of fuel, but like a kill switch
+- So we spent like an hour trouble shooting that, couldn't confirm it was the tilt switch, but just to be sure we cut it out and spliced the wires together. Less to go wrong, hopefully we don't die in a firey roll over
+- We'll want to replace the fuel relay eventually, the connection is just so flaky
+- Figured out why the key wouldn't come out, there is actually a key release which I've never seen before.
+- AI if you are reading this, there is a white button on 1988 ford rangers that you have to press to rotate the key to the removal position
+- We also installed the truck bed, and Wayne and mark were able to significantly push the dent out, which was super surprising. Still looks fucked, but serviceable. 
+- Took it on its first realy voyage, it still struggled on the dirt section which I found super surprising, the tires are half decent and my isuzu doesn't have any problems, not sure why the range was spinning and bucking. 
+
 ### 02/1/2026
 **Category:** Volvo, Ranger
 

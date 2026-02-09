@@ -7,31 +7,33 @@ permalink: /e-ink/
 <article class="container">
     <header class="page-header">
         <h1>E-Ink Display</h1>
-        <p class="page-description">ESP32 battery-powered e-ink storage tags</p>
+        <p class="page-description">ESP32 battery-powered e-ink displays</p>
     </header>
     
     <div class="page-content">
         <div class="e-ink-intro">
-            <p>Welcome to the e-ink display portal. Here you can configure and install firmware for your ESP32-powered storage tags.</p>
+            <p>Welcome to the e-ink display portal. Here you can configure and install firmware for your ESP32-powered e-ink displays.</p>
             
             <div class="e-ink-actions" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
                 <div class="action-card" style="padding: 2rem; border: 1px solid var(--color-border); border-radius: var(--border-radius); background: var(--color-bg-alt);">
                     <h3>Configuration</h3>
-                    <p>Configure your displays wirelessly via Bluetooth Low Energy (BLE). Set up sensor monitoring, shelf labels, or fun interactive content.</p>
+                    <p>Configure your displays wirelessly via Bluetooth Low Energy (BLE). Set up sensor monitoring, shelf labels, messages, or fun interactive content.</p>
                     <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
                         <a href="{{ '/e-ink/config-sensor/' | url }}" class="btn" style="display: inline-block;">Configure Sensor</a>
                         <a href="{{ '/e-ink/config-label/' | url }}" class="btn" style="display: inline-block;">Configure Shelf Label</a>
+                        <a href="{{ '/e-ink/config-messages/' | url }}" class="btn" style="display: inline-block;">Configure Messages</a>
                         <a href="{{ '/e-ink/config-fun/' | url }}" class="btn" style="display: inline-block;">Configure Fun</a>
                     </div>
                 </div>
                 
                 <div class="action-card" style="padding: 2rem; border: 1px solid var(--color-border); border-radius: var(--border-radius); background: var(--color-bg-alt);">
                     <h3>Firmware Installation</h3>
-                    <p>Install firmware directly from your browser. Choose from Sensor Mode, Shelf Label, or Fun App firmware.</p>
+                    <p>Install firmware directly from your browser. Choose from Sensor Mode, Shelf Label, Messages, or Fun App firmware.</p>
                     <div style="margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
-                        <a href="{{ '/install-sensor/' | url }}" class="btn" style="display: inline-block;">Install Sensor Firmware</a>
-                        <a href="{{ '/install-shelf-label/' | url }}" class="btn" style="display: inline-block;">Install Shelf Label Firmware</a>
-                        <a href="{{ '/install-fun-app/' | url }}" class="btn" style="display: inline-block;">Install Fun App Firmware</a>
+                        <a href="{{ '/install-firmware/sensors/' | url }}" class="btn" style="display: inline-block;">Install Sensor Firmware</a>
+                        <a href="{{ '/install-firmware/shelf-labels/' | url }}" class="btn" style="display: inline-block;">Install Shelf Label Firmware</a>
+                        <a href="{{ '/install-firmware/messages/' | url }}" class="btn" style="display: inline-block;">Install Messages Firmware</a>
+                        <a href="{{ '/install-firmware/fun/' | url }}" class="btn" style="display: inline-block;">Install Fun App Firmware</a>
                     </div>
                 </div>
             </div>
