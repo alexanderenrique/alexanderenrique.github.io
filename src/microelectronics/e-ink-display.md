@@ -30,7 +30,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
   - making the battery connection holes larger
   - moving the ESP32 farther away so it doesn't clash with the port for the tags
   - Shrinking the pads for the ESP32, it doesn't need to be that big
-  - Flipping it so the ESP is on the opposite side? Doesn't make that much sense to put the ESP on the same side. 
+  - Flipping it so the ESP is on the opposite side? Doesn't make that much sense to put the ESP on the same side. I've learned.
 
 
 ### Firmware:
@@ -69,6 +69,16 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 
 ## Work Log:
+
+### 02/10/2026
+**Task:** Fixing Messages Mode
+
+**Notes:**
+- Changes on the messages app on the web side so it sends the right config mode
+- I learned there is a packet maximum of 512 bytes, so the move is really to send the messages in chunks. But that would require some work on the ESP32 side
+- Increased the spacing between words so it's way more readable, this is done in the text render function by adding more pixels to the spacing, you can't just add more spaces I learned
+- Re-designed the enclosure. Now that I know where the port is, I made a hole for it to plug in.
+- General improvements to the box, just polishing it off.
 
 ### 02/07/2025
 **Task:** Soldering PCB

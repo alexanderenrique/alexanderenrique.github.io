@@ -25,16 +25,22 @@ class EInkSetup {
 
     detectMode() {
         const path = window.location.pathname;
-        if (path.includes('/fun')) {
+        console.log('[Setup] Detecting mode from path:', path);
+        if (path.includes('/config-fun')) {
+            console.log('[Setup] Mode detected: fun');
             return 'fun';
-        } else if (path.includes('/sensor')) {
+        } else if (path.includes('/config-sensor')) {
+            console.log('[Setup] Mode detected: sensor');
             return 'sensor';
-        } else if (path.includes('/messages')) {
+        } else if (path.includes('/config-messages')) {
+            console.log('[Setup] Mode detected: messages');
             return 'messages';
-        } else if (path.includes('/label')) {
+        } else if (path.includes('/config-label')) {
+            console.log('[Setup] Mode detected: label');
             return 'label';
         } else {
-            return 'shelf'; // Default to shelf label mode (legacy)
+            console.log('[Setup] Mode detected: shelf (default)');
+            return 'sensor'; // Default to sensor mode (legacy)
         }
     }
 
