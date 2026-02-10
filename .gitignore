@@ -1,17 +1,22 @@
-# Directories to ignore
-algo/
-work/
-.cursor/
+# Dependencies & build
 node_modules/
 _site/
 
-# Keep Way-Backburner.md local only (not tracked in git)
-src/general/Way-Backburner.md
+# Local / scratch
+algo/
+work/
+.cursor/
 
-# Keep 500mA-LED-Driver.md local only (not tracked in git)
+# Keep these local only (not tracked in git)
+src/general/Way-Backburner.md
 src/microelectronics/500mA-LED-Driver.md
 
-# OS files
+# OS & editor
 .DS_Store
-
+**/.DS_Store
 *.obj
+
+# Env / secrets (if you add any later)
+.env
+.env.*
+!.env.example
