@@ -256,13 +256,20 @@ class EInkSetup {
             } else if (this.mode === 'messages') {
                 console.log('[Setup] Processing messages mode configuration');
                 config.refreshInterval = parseInt(data.refreshInterval) || 10;
+                const messages = [];
                 for (let i = 1; i <= 10; i++) {
                     const key = `message${i}`;
-                    config[key] = (data[key] && data[key].trim()) ? data[key].trim() : '';
+                    const value = (data[key] && data[key].trim()) ? data[key].trim() : '';
+                    config[key] = value;
+                    messages.push(value);
                 }
+                config.messages = messages;
+                const nonEmptyCount = messages.filter(m => m.length > 0).length;
                 console.log('[Setup]   Messages config:', {
                     refreshInterval: config.refreshInterval,
-                    messageCount: 10
+                    messageCount: messages.length,
+                    nonEmptyMessages: nonEmptyCount,
+                    messages: messages
                 });
             }
 
