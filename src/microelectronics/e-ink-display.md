@@ -82,7 +82,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 - Added detection for mismatch between the config that is sent and the firmware available
 - Started modifying the PCB for V2. Changes include:
   - Narrowing the throughole for the ESP32
-  - Changing the ESP pad design to be smaller
+  - Changing the ESP pad design to be smaller, no need for the massive rectangle pads
   - Widening the battery connection holes from the ESP32 to the board
   - Enlarging the battery connection holes for the plastic charger case
   - Switching the side of the board the ESP is on to make things more compact
