@@ -60,18 +60,37 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 
 ## Before UGIM:
+- Have a proper PCB that people can buy and use
+- Have an SOP written on how to solder and assemble the display
+- Proper website with documentation and support
 - .bin uploader on web working
 - Sensor and Shelf modes working
 - Testing power consumption
-- OSHWA certification
+- OSHWA certification(?)
 - Stanford OTL Blessing
-- 
+
 
 
 ## Work Log:
 
+### 02/11/2026
+**Task:** Adding OTA URLs to the Raspberry Pi, Code, PCB
+
+**Notes:**
+- Logged in to the Pi, created more folders to hold the OTA updates, including manifests and firmware files
+- Created a bash script that uploads the files automatically, figures out the pathing and everything else
+- Added detection for mismatch between the config that is sent and the firmware available
+- Started modifying the PCB for V2. Changes include:
+  - Narrowing the throughole for the ESP32
+  - Changing the ESP pad design to be smaller
+  - Widening the battery connection holes from the ESP32 to the board
+  - Enlarging the battery connection holes for the plastic charger case
+  - Switching the side of the board the ESP is on to make things more compact
+  - Moving where the components are placed so that it doesn't clash with anything on the back side of the display PCB
+- Also Added a Root level readme to the GitHub. 
+
 ### 02/10/2026
-**Task:** Fixing Messages Mode
+**Task:** Fixing Messages Mode, Many Case re-designs
 
 **Notes:**
 - Changes on the messages app on the web side so it sends the right config mode
@@ -79,6 +98,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 - Increased the spacing between words so it's way more readable, this is done in the text render function by adding more pixels to the spacing, you can't just add more spaces I learned
 - Re-designed the enclosure. Now that I know where the port is, I made a hole for it to plug in.
 - General improvements to the box, just polishing it off.
+- It always takes more versions than you think, lining up the USB-C port was weirdly challenging. On try #3. 
 
 ### 02/07/2025
 **Task:** Soldering PCB
