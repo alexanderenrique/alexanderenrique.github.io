@@ -27,6 +27,18 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 02/11/2026
+**Category:** CB350
+
+**Task:** Carburetor #1, always carb #1
+
+**Notes:**
+- Took the CB out before trying to sell it just to make sure it was running right.
+- It was not of course, carb #1 was kinda half idling but just not pulling at all
+- It did have gas, so I took everything apart again again again and cleaned it all up.
+- NOthing obviously wrong, first time I put it back togehter the needle was stuck so it wasn't getting any gas. 
+- Put it back together and it started up and idled decent enough, pulls good enough too. Not totally ripping but it's alright. 
+
 ### 02/15/2026
 **Category:** Isuzu Pickup
 

@@ -6,6 +6,7 @@ _site/
 algo/
 work/
 .cursor/
+src/general/birth-of-the-works.md
 
 # Keep these local only (not tracked in git)
 src/general/Way-Backburner.md
