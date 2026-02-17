@@ -17,7 +17,29 @@ tags:
 ## Project Overview
 This is just a general log of work that isn't really related to any one project. Car related, garage related, mechanical stuff. For the projects that don't get their own log, or other people's cars and bikes.
 
+## Up Next List:
+### Isuzu Pickup:
+- Replacing the busted vents
+- Getting the AC button to stay engaged
+- Fixing the blower motor control switch
+- Finding the oil leak??
+- Replacing the oil pressure sender
+
 ## Work Log
+
+### 02/15/2026
+**Category:** Isuzu Pickup
+
+**Task:** Exhaust gasket, diff oil, trans oil, engine oil
+
+**Notes:**
+- Replaced the notorious exhaust gasket
+- I had to make new studs, I didn't realize I was cross threading the hell out of the studs by using the wrong nuts, like an idiot
+- Went with one stud and one bolt, hope it holds, I tensioned everything up good
+- No exhaust leaks now, way way quieter I am stoked
+- Just felt inspired and also change the engine oil, transmission was a bit low on oil as well so I filled that up, and then went for gold and did the diff too
+- I think I had done the diff previously when I first got the car, same as the trans
+- Occured to me that the oil leak could either be coming from either the trans or the back of the engine. The oil crust is so thick it's really hard to tell where it's coming from 
 
 ### 02/07/2026
 **Category:** Ranger

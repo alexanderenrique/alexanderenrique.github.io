@@ -58,6 +58,17 @@ graph LR
 
 ## Work Log
 
+### 02/16/2026
+**Main Task:** Changes to monitor page, how signals are handled
+
+**Notes:**
+- By porting over the project to a new laptop, I realized there are some better ways to do thing
+- First and most importantly, previously I'd written in a hook into nemo-ce to send a Django signal to Redis and trigger my chain of messages
+  - Now, I am using the existing signal that is used to create usage events, which means less modifications to nemo-ce which we love
+  - Also, the mqtt monitor I was doing was a bit crazy. It was confusing that nemo had to also have its own broker and listen in to what it what publishing which is just confusing
+  - Now, it looks at the Redis stream, which is a bit upstream of MQTT, but if it makes it to redis it'll make it to MQTT
+- I think I need to re-do some of the tests, like the TLS and such. I've learned a lot since I first wrote this. 
+
 ### 10/24/2025
 **Main Task:** Config page cleanup and testing fixes
 

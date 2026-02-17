@@ -29,7 +29,6 @@ tags:
 ### Must Do:
 - ~~Radiator and cooling system~~
 - Window trims and weather stripping
-- Comprehensive flat kit
 - Flushing the brake lines
 - Inspecting rear brakes and bearings
 - change plugs, measure compression, deduce compression ratio
@@ -54,22 +53,23 @@ tags:
 - Spare alternator fused wire
 
 ## Up Next:
-- Testing the IVR, seeing if grounding the sensors gets us 100 percent values
+- ~~Testing the IVR, seeing if grounding the sensors gets us 100 percent values~~
 - Adding shunt resistor to the alternator cable, wiring to the guage
 - Vented gas cap, the old fashioned way
+- Adding 3d printed door card-reinforcers to the door cards so it can clip to the door properly
+- Adding the arm rest back
 
-
-### Spares Box:
-- Ignition coil
-- Fuel pump (mechanical or electrical, whatever we're running at the time)
-- Cap and rotor
-- Few plug wires
-- Keep a few old plugs
-- Fusible link
-- Fuses
 
 
 ## Work Log
+
+### 02/1/2026
+**Main Task:** Heater Hose Failure
+
+**Notes:**
+- I was just driving around and the temp started going up and up, pulled into target and it was just blowing steam out of a crack in the heater hose soft line
+- I was able to just trim and inch off of the heater hose and clamp it on again, seemed to work just fine
+- Refilled the coolant system with as much water and coolant as I could find. 
 
 ### 1/21/2026
 **Main Task:** Cup holder V3
