@@ -52,11 +52,22 @@ graph LR
 ## Up Next:
 - Is there auto reconnect if the NEMO MQTT disconects or Mosquitto dies?
 - Connecting to a truly seperate MQTT broker
+- What does it look like if nemo wants to talk straight to an ESP32?
 - Testing SSL/TLS
-- Making the monitor format easier to read by humans instead of a dense JSON object
+- ~~Making the monitor format easier to read by humans instead of a dense JSON object~~
 
 
 ## Work Log
+
+### 02/18/2026
+**Main Task:** Refactoring, getting it going on VM
+
+**Notes:**
+- Made the plugin resemble the other nemo plugins
+- Tried to get it going on the VM. Made a lot of progress but learned that firewall rules were blocking the port.
+- Made changes to the set up script so it kills all the mosquitto instances and makes sure ports are available before starting the new one.
+- Also added UFW rules on the vm to allow ports to be accessed
+- Still can't reach it from my machine though, no ports are open so I asked IT for help opening them up.
 
 ### 02/16/2026
 **Main Task:** Changes to monitor page, how signals are handled

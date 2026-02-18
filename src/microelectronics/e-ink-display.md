@@ -73,6 +73,18 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 ## Work Log:
 
+### 02/17/2026
+**Task:** PCB V2 ordered!
+
+**Notes:**
+- made my final revisions to the PCB and ordered it. Now the long wait. 
+- List of changes off the top of my head:
+  - making the battery connection holes larger
+  - moved the ESP32 to the other side of the board and farther away from the pins so it doesn't clash with the e-ink display pins
+  - moved the battery connection holes farther apart so they are easier to solder
+  - made the ESP32 pads smaller, thye just didn't need to be that big
+  - Changed my silk screen, no more "dreams and gasoline", now it's "Designed with love in Redwood City"
+
 ### 02/11/2026
 **Task:** Adding OTA URLs to the Raspberry Pi, Code, PCB
 

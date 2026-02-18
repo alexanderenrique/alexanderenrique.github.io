@@ -77,13 +77,26 @@ graph LR
 
 ## Work Log
 
-### 02/16/2025
+### 02/18/2026
+**Main Task:**  PCB Design
+
+**Notes:**
+- Started desining the PCB, it's really a super simple board onve you know what you're doing, the hardware is not complex
+- Adding a couple capacitors just for the joy of it, yay more soldering!
+- Checking and double checking all of my dimensions. The footprints are never quite right, i spend more time in the footprint editor than anything
+- Before I ship:
+  - Double check ALL critical dimensions
+  - Double check capacitor foot prints
+
+
+### 02/16/2026
 **Main Task:**  ESP32 Pinout
 
 **Notes:**
 - back at it, after my other adventures I learned how to really design a PCB and how to get the pin out to work smoothly
 - Worked first time! Also added hardware.h and config.h to my src to keep it more universal across platforms
   - That is, no config in the .pio which gets rebuilt and destroyed contstantly
+- Also got a real basic touch script working, so I verified the touch pinout that I used is going to work
 
 ### 10/14/2025
 **Main Task:** Plugin and display integration fixes
