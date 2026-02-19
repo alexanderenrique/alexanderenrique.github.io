@@ -74,6 +74,17 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 ## Work Log:
 
 ### 02/17/2026
+**Task:** Shitting Pants
+
+**Notes:**
+- I went to assemble another one of my three boards, and I broke off the battery ground pad trying to re-work that tricky solder joint!
+- So I was like whatever, I'll just attach it to the board, no battery and attach a screen for testing
+- I tried testing and it just would not display right, like half displaying the red text on one display, and not displaying anything on the other display
+- So I was like well heck, I've only ever used on display, are these broken? Is my ESP32 damaged? I tried a bunch of things, but nothing worked
+- So back to the fundamentals, I got a new ESP32, recreated the pin out on the bread board. Uploaded it, and what do oyu know it works perfect. I think the ESP32 was broken in some insidious way with the ground pad sheared off
+- Both screens are working now, definitely came down to the ESP
+
+### 02/17/2026
 **Task:** PCB V2 ordered!
 
 **Notes:**

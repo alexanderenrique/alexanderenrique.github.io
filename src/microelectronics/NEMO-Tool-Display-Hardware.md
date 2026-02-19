@@ -84,9 +84,10 @@ graph LR
 - Started desining the PCB, it's really a super simple board onve you know what you're doing, the hardware is not complex
 - Adding a couple capacitors just for the joy of it, yay more soldering!
 - Checking and double checking all of my dimensions. The footprints are never quite right, i spend more time in the footprint editor than anything
-- Before I ship:
-  - Double check ALL critical dimensions
-  - Double check capacitor foot prints
+- ~~Before I ship:~~
+  - ~~Double check ALL critical dimensions~~
+  - ~~Double check capacitor foot prints~~
+- Ok double, triple checked things and sent it! Super keen, currently have two PCBs out, I love this stuff
 
 
 ### 02/16/2026
