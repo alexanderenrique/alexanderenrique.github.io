@@ -16,43 +16,29 @@ tags:
 ---
 
 ## Project Overview
-Creating battery-powered ESP32 e-ink displays for storage cabinets. These displays will show information about who owns each cabinet, updating wirelessly and running on battery power for extended periods. The goal is to have a low-maintenance system that helps organize and track storage locations.
+Creating battery-powered ESP32 e-ink displays for lots of things! So far I've created four different apps that can run on the display. The first and maybe most useful being local temperature and humidity sensing, with the ability to push data to NEMO. Secondly, it can inegrate with nemo to display shelf information from the recurring charges. A couple fun applications include a "Fun" API that displays random earthquake and cat facts. The last app is a "Messages" app that allows you to send messages to the display from a web interface. 
 
-## V1.0:
 ### Hardware:
-- ~~Designing the PCB, SMD and Through hole components~~
-- ~~Designing the enclosure~~
-  - Design enclosure V2
-- ~~Receive and solder it together~~
 - Testing power consumption in various sleep modes
-- Hardware V2 revisions:
-  - moving the location of the battery throughole pads
-  - making the battery connection holes larger
-  - moving the ESP32 farther away so it doesn't clash with the port for the tags
-  - Shrinking the pads for the ESP32, it doesn't need to be that big
-  - Flipping it so the ESP is on the opposite side? Doesn't make that much sense to put the ESP on the same side. I've learned.
-
+- Soldering PCB V2.0
+- Designing enclosure V2.0
 
 ### Firmware:
 - Finish OTA updates
   - Adding CA, locking it down
   - Creating a manifest.json to store the latest version
 - Adding an API so that I can send messages to other displays
-- ~~Displaying "battery low" message before it goes to sleep~~
-- ~~Adding web based .bin uploader~~
+
 
 ### Per App Breakdown:
 #### Sensor Mode:
-- ~~Adding a second field JSON to the sensor ID field, since temp and humidity each need their own sensor ID.~~
 - Making sure the nemo sensor actually pushes
 
 #### Shelf Label:
 - Start working on pinging the NEMO API to get the shelf info
 - Writing a script for the VM to share the shelf info
-- Generally testing, is it even useful
-
-#### Fun Mode:
-- Adding more APIs?
+- Generally testing, is it even useful?
+- This will heavily depend on battery life and how compact I can make the enclosure.
 
 #### Message Mode:
 - Testing
@@ -63,7 +49,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 - Have a proper PCB that people can buy and use
 - Have an SOP written on how to solder and assemble the display
 - Proper website with documentation and support
-- .bin uploader on web working
+- ~~.bin uploader on web working~~
 - Sensor and Shelf modes working
 - Testing power consumption
 - OSHWA certification(?)
@@ -73,7 +59,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 ## Work Log:
 
-### 02/17/2026
+### 02/18/2026
 **Task:** Shitting Pants
 
 **Notes:**
@@ -81,7 +67,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 - So I was like whatever, I'll just attach it to the board, no battery and attach a screen for testing
 - I tried testing and it just would not display right, like half displaying the red text on one display, and not displaying anything on the other display
 - So I was like well heck, I've only ever used on display, are these broken? Is my ESP32 damaged? I tried a bunch of things, but nothing worked
-- So back to the fundamentals, I got a new ESP32, recreated the pin out on the bread board. Uploaded it, and what do oyu know it works perfect. I think the ESP32 was broken in some insidious way with the ground pad sheared off
+- So back to the fundamentals, I got a new ESP32, recreated the pin out on the bread board. Uploaded it, and what do you know it works perfect. I think the ESP32 was broken in some insidious way with the ground pad sheared off
 - Both screens are working now, definitely came down to the ESP
 
 ### 02/17/2026
@@ -93,8 +79,17 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
   - making the battery connection holes larger
   - moved the ESP32 to the other side of the board and farther away from the pins so it doesn't clash with the e-ink display pins
   - moved the battery connection holes farther apart so they are easier to solder
-  - made the ESP32 pads smaller, thye just didn't need to be that big
+  - made the ESP32 pads smaller, they just didn't need to be that big
   - Changed my silk screen, no more "dreams and gasoline", now it's "Designed with love in Redwood City"
+
+### 02/17/2026
+**Task:** Meeting With OTL
+
+**Notes:**
+- the take away is that there are two criterea to meet if Stanford has rights to the invention:
+- First: more than incidental use of Stanford resources. Laptop and internet usage is considered incidental use. I also barely worked on it at work, which means I didn't us Stanford Time.
+- Second: Commercialization. Since I'm not trying to commercialize it, Stanford is kind of live and let live. if I want to make a buck, that's a different story.
+- There is an open source office that can help with ope source questions, I'll be reaching out to them for more information for sure. 
 
 ### 02/11/2026
 **Task:** Adding OTA URLs to the Raspberry Pi, Code, PCB
@@ -128,7 +123,6 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 **Notes:**
 - Received my PCBs back, they worked!! all the connections were correct, holy cow
-- 
 
 ### 02/06/2025
 **Task:** Adding battery message
@@ -136,6 +130,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 **Notes:**
 - Added a message to display when battery <5%
 - Wakes up when charge is >10%, waking up every 5 minutes to check the battery level
+- This is all configurable in hardware.h, but not configurable via the web interface. End users don't need to know how to configure everything everything
 
 ### 02/05/2025
 **Task:** Firmware from the browser
@@ -143,8 +138,8 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 **Notes:**
 - Added a page on the website for firmware updates, it needs a few different binaries to work
 - It installed first try actually, but the partitions weren't correct so it was stuck in an infinite loop of boots
-- 
-
+- Once I set the partitions correctly, it installed fine and worked great.
+  
 ### 02/03/2025
 **Task:** Adding BLE Mode
 
@@ -166,7 +161,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 **Task:** Printing the enclosure, thinking
 
 **Notes:**
-- V1 was surprisingly close! I don;t have the PCB yet so I'm not sure about the total depth, but I was a bit gerenous with it. I may be able to make it flatter, also battery dependent.
+- V1 was surprisingly close! I don;t have the PCB yet so I'm not sure about the total depth, but I was a bit generous with it. I may be able to make it flatter, also battery dependent.
 - Realized if you want it to be desk mounted, you might want little feet to prop it up and point it at you. But for a shelf it's lovely.
 - Oh yeah and I'll need to add a port for the USB-C port.
 - I was thinking a huge part of this is lab oriented, I'm thinking I should start putting some emphasis on the lab portion of the display
@@ -186,7 +181,7 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 
 **Notes:**
 - Designed an enclosure for the battery and display. 
-- Only part I;m not 100% on is how the back attaches, I opted for a four tounge and groove set up with a hole in it so It's easy to pull out. I guess we'll see how it works.
+- Only part I'm not 100% on is how the back attaches, I opted for a four tongue and groove set up with a hole in it so It's easy to pull out. I guess we'll see how it works.
 - I know I should be working on V1, but I'm thinking about how to add a button and an LED to V1
 - I think I can repurpose my ADC pin that is currently doing the battery measurement
 -I'll need to do a super high resistivity pull up resistor on the pin, and then use the button to take it to ground
@@ -266,13 +261,29 @@ Creating battery-powered ESP32 e-ink displays for storage cabinets. These displa
 - The e-ink is the obvious choice as it only uses power when it writes, and ESP32-C3 are ultra low power.
 - The only thing is that the e-ink displays are kinda pricey at $10 each, but if the whole project comes out to $15/unit, that really isn't bad at all. I have to remember we are dealing with adult money here.
 
-## Open Questions:
-- What's the target battery life?
-- How often do displays need to update?
-- What information should be displayed on each display?
-- Do we need a central server/management system?
-- What's the range/coverage needed for wireless updates?
+## Done:
+- ~~Shitting Pants~~
+- ~~PCB V2 ordered!~~
+- ~~Adding OTA URLs to the Raspberry Pi, Code, PCB~~
+- ~~Fixing Messages Mode, Many Case re-designs~~
+- ~~Soldering PCB~~
+- ~~Adding battery message~~
+- ~~Firmware from the browser~~
+- ~~Adding BLE Mode~~
+- ~~Setting up OTA Pipeline~~
+- ~~Re-configuring code, adding OTA updates~~
 
-## To-Do/Don't Forget:
-- [ ] [Task item]
-- [ ] [Task item]
+## V1.0:
+### Hardware:
+- ~~Designing the PCB, SMD and Through hole components~~
+- ~~Designing the enclosure~~
+  - Design enclosure V2
+- ~~Receive and solder it together~~
+- Hardware V2 revisions:
+  - ~~moving the location of the battery through hole pads~~
+  - ~~making the battery connection holes larger~~
+  - ~~moving the ESP32 farther away so it doesn't clash with the port for the tags~~
+  - ~~Shrinking the pads for the ESP32, it doesn't need to be that big~~
+  - ~~Flipping it so the ESP is on the opposite side? Doesn't make that much sense to put the ESP on the same side. I've learned.~~
+- ~~Displaying "battery low" message before it goes to sleep~~
+- ~~Adding web based .bin uploader~~
