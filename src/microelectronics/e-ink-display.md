@@ -16,17 +16,78 @@ tags:
 ---
 
 ## Project Overview
-Creating battery-powered ESP32 e-ink displays for lots of things! So far I've created four different apps that can run on the display. The first and maybe most useful being local temperature and humidity sensing, with the ability to push data to NEMO. Secondly, it can inegrate with nemo to display shelf information from the recurring charges. A couple fun applications include a "Fun" API that displays random earthquake and cat facts. The last app is a "Messages" app that allows you to send messages to the display from a web interface. 
+Creating battery-powered ESP32 e-ink displays for lots of things! So far I've created four different apps that can run on the display. The first and maybe most useful being local temperature and humidity sensing, with the ability to push data to NEMO. Secondly, it can inegrate with nemo to display shelf information from the recurring charges. 
 
+
+A couple fun applications include a "Fun" API that displays random earthquake and cat facts. The last app is a "Messages" app that allows you to send messages to the display from a web interface.
+
+## Design Goals
+1.) Easy to solder and assemble. No special parts, throughole soldering only
+2.) Useful to lots of people! No dependency on one particular eco system like NEMO. Can be used online or offline
+3.) Easy to download firmware, easy to configure via BLE
+4.) Long battery life, especially for the e-ink tags
+
+## BOM
+- **ESP32 Microcontroller** (Qty: 1)  
+  - Core MCU, WiFi & BLE
+
+- **2.9" E-Ink Display** (Qty: 1)  
+  - Through-hole-friendly, 8 pin display
+
+- **SHT31 Temperature/Humidity Sensor** (Qty: 1)  
+  - I2C
+
+- **MicroSD Card Slot** (Qty: 1)  
+  - For local storage, SPI interface
+
+- **RTC Module** (Qty: 1, Optional)  
+  - For real-time clock
+  - https://www.digikey.com/en/products/detail/microchip-technology/MCP7940N-I-P/3872279?gclsrc=aw.ds&gad_source=1&gad_campaignid=17922795960&gbraid=0AAAAADrbLljBBLAPDLGrOcWV9D5G-cRVd&gclid=Cj0KCQiAtfXMBhDzARIsAJ0jp3CeS4a5XUpKX6GWXCJhTEc0JhPttD2ueHCihOw7rZeTVQdE23iBzQAaAnvvEALw_wcB
+
+- **32.768 kHz Quartz Crystal** (Qty: 1, Optional)  
+  - For RTC time keeping
+  - https://www.we-online.com/components/products/datasheet/830002996B.pdf
+
+- **Battery Holder (for 1220 battery)** (Qty: 1, Optional)  
+  - For real-time clock support
+  - Possibly: https://www.digikey.com/en/products/detail/adam-tech/BH-98-1/13537711
+
+- **Power Switch** (Qty: 1)  
+  - Gating power for peripherals
+
+- **Resistors** (Various, e.g., 10kΩ for pull-ups, Qty: 3-5)  
+  - Voltage divider for battery reading
+  - I2C Pull ups if not also using the SHT31 which has built in pull ups
+
+- **Capacitors** (Various, e.g., 0.1µF, 10µF, Qty: 3-5)  
+  - Decoupling, power stabilization
+
+- **Pin Headers** (As needed)  
+  - For modular connections
+
+- **PCB** (Qty: 1)  
+  - Custom-designed PCB
+
+- **Slim LiPo Pouch** (Qty: 1, Optional)  
+  -(https://ydlbattery.com/products/100pcs-3-7v-2500mah-752886-lithium-polymer-battery?currency=USD&variant=42876338536601&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5847882d354&gad_source=1&gad_campaignid=17496818825&gbraid=0AAAAABXU5XH3nzE99pihgoGWsu1IDgRS2&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjHVr8qqPRKopABoXvQi7TpJ-4ebMKgPajILG_M-NFhyyNqTFBlq4FwaAoCzEALw_wcB)
+
+**All components selected for through-hole soldering where possible for ease of assembly.**
+
+## Up Next
 ### Hardware:
 - Testing power consumption in various sleep modes
 - Soldering PCB V2.0
 - Designing enclosure V2.0
+- PCB V3:
+  - Gating power on all non-ESP32 devices for minimum power consumption
+  - Forking for RTC/ non RTC? Is there a way to do it all on one board, and just not use un-needed peripherals?
+  - Figuring out RTC, adding micro SD card reader
 
 ### Firmware:
 - Finish OTA updates
   - Adding CA, locking it down
   - Creating a manifest.json to store the latest version
+- Creating wifi vs non wifi sensing, selecting if users want to send data to nemo, and or record locally on micro SD
 - Adding an API so that I can send messages to other displays
 
 
@@ -46,7 +107,8 @@ Creating battery-powered ESP32 e-ink displays for lots of things! So far I've cr
 
 
 ## Before UGIM:
-- Have a proper PCB that people can buy and use
+- Have designed and implemented a single PCB design with:
+  - Display, SHT31, ESP32, MicroSD card slot, battery reading, gated power rail, RTC
 - Have an SOP written on how to solder and assemble the display
 - Proper website with documentation and support
 - ~~.bin uploader on web working~~
@@ -58,6 +120,14 @@ Creating battery-powered ESP32 e-ink displays for lots of things! So far I've cr
 
 
 ## Work Log:
+
+### 02/22/2026
+**Task:** Thinking more
+
+**Notes:**
+- Had some thoughts about battery life and where i want this project to go
+- Thinking up a V2 that has more features, like RTC and microSD for data logging
+- It's tough because I want one board to do it all, and I don't want to have a bunch of seperate boards for different tasks. Especially the core business functionality
 
 ### 02/18/2026
 **Task:** Shitting Pants

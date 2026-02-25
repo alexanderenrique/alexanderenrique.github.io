@@ -59,6 +59,15 @@ graph LR
 
 ## Work Log
 
+### 02/24/2026
+**Task:** VM working on the collector, away from TLS and towards HMAC and Passwords
+
+**Notes:**
+- Absolutely massive day, got basic MQTT going to the collector!! So exciting, cleaned a lot of stuff up
+- There were duplicate inbound and outbound messages, so now it's just one out and one in
+- Battled with TLS for a while, it's just not worth it for what I'm doing
+- After a little research I switched to HMAC signed messages, and locking down the MQTT with username and password
+
 ### 02/18/2026
 **Main Task:** Refactoring, getting it going on VM
 
