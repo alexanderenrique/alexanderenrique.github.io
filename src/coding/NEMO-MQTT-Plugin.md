@@ -59,6 +59,49 @@ graph LR
 
 ## Work Log
 
+### 02/28/2026
+**Task:** Cleanup, uploading to PyPi
+
+**Notes:**
+- Even more cleanup, it looks like a real package now!
+- Made sure it passed all the tests
+- Would you believe someone else already wrote a NEMO-mqtt plugin? but they used it to enable interlocks, man I should've just used that. Hasn't been updated since 2023 though. 
+- I created new repos for the the hardware and the plugin under my account, just felt more right
+- Beefed up the security after learning that I pushed a bunch of secrets from my config.h to github. Whoops.
+
+### 02/27/2026
+**Task:** It works!!
+
+**Notes:**
+- Big day, I wired up the screen on the bread board again, set up the wifi and credentials, and it connected and worked first time.
+- I'm just like totally smitten, and honestly a bit scared because it's time to take it to the next level
+- Gotta get it out there, make it a proper package, and try it on nemo-dev
+- Spent time cleaning it up, removing the test scripts, reformatting from flat structure to having a proper src/
+- Ran into a funny issue where the nemo-ce I've been testing with was way out of date, so when I tried to install a different plugin to test how that works, it just wouldn't go
+- So I updated my nemo-ce and refactored a few things
+
+### 02/26/2026
+**Task:** Moving back to the collector
+
+**Notes:**
+- Ok with all my latest changes with HMAC, I'm ready to move things back to the collector
+- It works, hell yeah. Password mis-match in NEMO does lead to an error which is great
+- Same for the HMAC key, if you change it it doesn't work, so I know this baby is locked down
+- Went through every line in the customization page to make sure it worked, and that I really understand what it does
+- Made the monitor work much better. It now shows the important things just like the terminal
+- Cleaned it up, removed the good old vibe coding emojis
+- Also did some cleanup and reconcilliation of the ESP32 code. That's the last major untested part, the connection between the ESP32 and the broker
+
+### 02/25/2026
+**Task:** Sorting HMAC, refreshing credentials, MQTT Password
+
+**Notes:**
+- I thought I had cracked the HMAC yesterday, but that's never how it works
+- First, NEMO wasn't refreshing it's credentials correctly on configuraion changes, leading to some tail chasing when it would work and then not work
+- Once that was sorted, the way that the broker and NEMO were hashing the messages was different
+  - Basically the broker was parsing the message and then hashing that a certain way, which didn't line up with the way NEMO was hashing it
+- I also learned that though you have SHA256 encryption, you can actually set the hash string to be whatever you want. Like it can be a word or anything, no fixed length. Some math happening in there!
+
 ### 02/24/2026
 **Task:** VM working on the collector, away from TLS and towards HMAC and Passwords
 

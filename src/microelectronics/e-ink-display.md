@@ -70,6 +70,7 @@ A couple fun applications include a "Fun" API that displays random earthquake an
 
 - **Slim LiPo Pouch** (Qty: 1, Optional)  
   -(https://ydlbattery.com/products/100pcs-3-7v-2500mah-752886-lithium-polymer-battery?currency=USD&variant=42876338536601&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5847882d354&gad_source=1&gad_campaignid=17496818825&gbraid=0AAAAABXU5XH3nzE99pihgoGWsu1IDgRS2&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjHVr8qqPRKopABoXvQi7TpJ-4ebMKgPajILG_M-NFhyyNqTFBlq4FwaAoCzEALw_wcB)
+  https://ydlbattery.com/products/50pcs-3-7v-1000mah-803040-lithium-polymer-battery?currency=USD&variant=42800935927961&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5847882d354&gad_source=1&gad_campaignid=17496818825&gbraid=0AAAAABXU5XGcbmlkPJWnFb6YbaUSF7AAJ&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC2rMaIKKNsyrSXq5shL6VynmzdD03RakRy25tC_DtfOgoWRmKwe-xBoCWV4QAvD_BwE
 
 **All components selected for through-hole soldering where possible for ease of assembly.**
 
@@ -120,6 +121,29 @@ A couple fun applications include a "Fun" API that displays random earthquake an
 
 
 ## Work Log:
+
+### 02/27/2026
+**Task:** Got V2 boards back!
+
+**Notes:**
+- Got the board back, the soldering went smoothly much better spacing on things
+- Went for a ceramic cap instead of electrolytic monster because I think the electrolytic doesn't stay charged as well
+- Re-configured the pin out in hardware.h and the screen worked after that
+- Stoked on it, a lot of work for V3, trying to figure out which direction to go with it
+  - Might make a basic V3 that just gates the other sensors for better battery life
+  - The V4 can have the RTC and SD card and everything
+  - I also think a basic mini e-ink tag board wouldn't be a bad idea either, it's simple and would be good to get it started
+
+### 02/25/2026
+**Task:** The man can't stop thinking
+
+**Notes:**
+- Thought long and hard about battery optimization and such for the display tags
+- I still think they are a sweet idea, the trouble is getting them thin and low power enough
+- My first thought was a coin cell, the only problem with those is that they aren't re-chargeable, and they can't do power bursts like the LiPo pouch can
+- It seems to me like I will need to fork my PCBs. 
+  - One dead simple and tiny for the tag display, targeting 10mm thickness
+  - One much more complicated with the RTC, MicroSD, and other peripherals for the nemo sensor
 
 ### 02/22/2026
 **Task:** Thinking more

@@ -77,6 +77,16 @@ graph LR
 
 ## Work Log
 
+### 02/27/2026
+**Main Task:**  Names and formatting
+
+**Notes:**
+- Small UI changes on the display, instead of always displaying "last user" it now displays "current user" when in use
+- Did some numbers on the distribution of name lenghts
+  - This is percent of lab members, and the number of characters in their name:
+  - 50% ≤ 12, 75% ≤ 15, 95% ≤ 20, 99% ≤ 24; max is 36.
+- I'm thinking about maybe changing my layout to be more friendly to long names, right now 13 characters is my max but as you can see, that only accomodates half of people
+
 ### 02/18/2026
 **Main Task:**  PCB Design
 

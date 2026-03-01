@@ -27,6 +27,22 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 02/28/2026
+**Category:** Ranger, mini bike
+
+**Task:** plugs, shocks, timing, idle, carb clean on bike
+- New plugs, the old ones weren't that bad really, but the plug wires were pretty rusty and rotten
+- Couple of the connectors had bad crimps and broke off. I did my best to fix it but they need new leads
+- and Mark shocked the shit out of himself on the coil which had an exposed part, I felt kinda bad
+- Mysteriously the high idle valve on the air box is like stuck on, so the idle was sky rocketing. After a chat with chat, it's possivle the ECT sensor (not the guage sensor) isn't reading right and the engine thinks it's much colder than it is
+- There are just so many mystery wires floating around, it's wild
+- Tried to figure out the ignition timing, it reads 10 degrees BTDC which is good, then you give it a rev and the idle like hangs as the timining jumps to 20. There's this SPOUT thing that controls igintion timing that you have to disable to read the base timing, but I haven't figured that one out yet
+- On the Mini bike, we pulled apart the carb that was just totally clogged with the degraded air filter, cleaned the plug, and it was ripping again
+- Mark had a new airfilter, totally the wrong size but he tightened it down until it held on
+- I rode it to the top of the hill, it actually pulled me up in second no problem, I even rode it on the street I was very very impressed
+
+**Notes:**
+
 ### 02/11/2026
 **Category:** CB350
 

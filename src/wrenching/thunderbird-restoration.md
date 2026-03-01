@@ -63,6 +63,31 @@ tags:
 
 ## Work Log
 
+### 02/27/2026
+**Main Task:** Temp guage, trunk lighting pt.2
+
+**Notes:**
+- Ok I got yet another guage, boiled this one and the resistance was like 26 ohms when boiling, so that is a fair bit lower than the other ones. The guage will probably show like 1/3 hot, but better than the 1/5 now
+- Installed it, changed the termination to a ring type, used a nut. Looks nicer. 
+- Messed with the trunk switch, got some micro switches but they were simply too micro. Brittle plastic, M3 holes that don't fit an m3 bolt and shatters if you try and drill it out
+- I'll need to order something else for that
+
+### 02/26/2026
+**Main Task:** Temp guage, trunk lighting
+
+**Notes:**
+- Pulled the temp sensor and compared it to the new one I bought. Sure enough, they have the same resistance values!
+- Damn!
+- Worked on the trunk lighting, I was feeling good, it looks sweet, an then I realized that the power is actually always hot, and the light grounds through the trunk (??) and that's what closes the circuit
+- So kind of dead in the water, I'm going to install a proper limit switch
+
+### 02/16/2026
+**Main Task:** Door Cards
+
+**Notes:**
+- Worked on the door cards. The probelm is that they are profoundly warped and will just never sit flush which makes the job of the clips impossible.
+- I used the angle grinder to make a bunch of relief cuts in the door card so it's pretty much swiss cheese but it does sit flat enough to clip to the door
+
 ### 02/1/2026
 **Main Task:** Heater Hose Failure
 
