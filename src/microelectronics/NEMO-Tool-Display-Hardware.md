@@ -75,7 +75,39 @@ graph LR
 
 - Say I don't enable the tool, but I do change the tool status from functioning to non-functioning, will that cause the MQTT message to send?
 
+## For Alex K:
+
+- Security I've implemented:
+  - HMAC message authentication
+  - Time stamp validation for replay attacks, not like that matters really
+  - MQTT ports are PW protected, both on LAN and on Stanford net
+  - This data is already publicly available, so it isn't the worst if it's intercepted
+
+- Further to-dos:
+  - Broker should only allow nemo's IP address
+  - Getting access to nemo-dev SSH
+
+HW:
+- Send Alex K github and PyPi links
+- Socializing this with the NEMO community
+
+Notes:
+  MQTT cating on in OT
+  Once it's up and running I can take it to Alex K for a pen test and review
+  security clinets every week, usually on a Monday
+  Joey Holtzman leads the group
+  SSH into the machine, put the pubkey on my machine (do we need to open a port)
+  Long run: replacing the linux machine in the closet with a mini PC
+
 ## Work Log
+
+### 02/28/2026
+**Main Task:**  More UI changes
+
+**Notes:**
+- With the longer names, I've gone to a border system where the border of the display shows the tool status color.
+- Looks good, ready for the Alex K demo.
+- Alex K demo went well, I learned a bunch. I sent it off to Mathieu I hope he approves. 
 
 ### 02/27/2026
 **Main Task:**  Names and formatting
@@ -85,7 +117,7 @@ graph LR
 - Did some numbers on the distribution of name lenghts
   - This is percent of lab members, and the number of characters in their name:
   - 50% ≤ 12, 75% ≤ 15, 95% ≤ 20, 99% ≤ 24; max is 36.
-- I'm thinking about maybe changing my layout to be more friendly to long names, right now 13 characters is my max but as you can see, that only accomodates half of people
+- I'm thinking about maybe changing my layout to be more friendly to long names, right now 13 characters is my max but as you can see, that only accomodates less than half of people
 
 ### 02/18/2026
 **Main Task:**  PCB Design

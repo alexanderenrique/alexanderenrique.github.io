@@ -59,6 +59,22 @@ graph LR
 
 ## Work Log
 
+### 03/04/2026
+**Task:** Renaming Pt.2
+
+**Notes:**
+- in INSTALLED_APPS, since that other guy already had nemo_mqtt, I once again totally renamed my project
+- I went with NEMO-MQTT-Bridge
+
+### 03/03/2026
+**Task:** Mathieu feedback
+
+**Notes:**
+- I presented the hardware and security of this project to Alex K yesterday and he was stoked on it which felt good, and then I shared the code with Mathieu
+- He had a few suggestions, luckily nothing really structural. Some stylistic things like capitalization, but he also brough it to my attention that I was saving the config on the server and that in prod gitlab has the real settings and it will overwrite the server. So doesn't hurt anything, but not the most efficient
+- Also suggested other features like conveying tool status. I do think that is cool and useful, but for now I feel like just the enable and disable is huge
+- I do wonder though if people will get the wrong idea with the red and green, it may actually be helpful if there's 
+
 ### 02/28/2026
 **Task:** Cleanup, uploading to PyPi
 

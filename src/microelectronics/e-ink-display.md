@@ -72,16 +72,34 @@ A couple fun applications include a "Fun" API that displays random earthquake an
   -(https://ydlbattery.com/products/100pcs-3-7v-2500mah-752886-lithium-polymer-battery?currency=USD&variant=42876338536601&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5847882d354&gad_source=1&gad_campaignid=17496818825&gbraid=0AAAAABXU5XH3nzE99pihgoGWsu1IDgRS2&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjHVr8qqPRKopABoXvQi7TpJ-4ebMKgPajILG_M-NFhyyNqTFBlq4FwaAoCzEALw_wcB)
   https://ydlbattery.com/products/50pcs-3-7v-1000mah-803040-lithium-polymer-battery?currency=USD&variant=42800935927961&utm_source=google&utm_medium=cpc&utm_campaign=Google%20Shopping&stkn=a5847882d354&gad_source=1&gad_campaignid=17496818825&gbraid=0AAAAABXU5XGcbmlkPJWnFb6YbaUSF7AAJ&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC2rMaIKKNsyrSXq5shL6VynmzdD03RakRy25tC_DtfOgoWRmKwe-xBoCWV4QAvD_BwE
 
+ESP32c6:
+https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Tape-Reel-p-6565.html
+
+Digikey purchase list:
+- RTC module
+- Crystal
+- Crystal
+- For crystal load 6 pF, use 8.2 pF caps
+
+- PPK2
+- battery holder (which size?
+- 
+- 
+- 18 pF to 22 pF capacitors (start with 22 pF))
+
+
 **All components selected for through-hole soldering where possible for ease of assembly.**
 
 ## Up Next
 ### Hardware:
 - Testing power consumption in various sleep modes
-- Soldering PCB V2.0
+- ~~Soldering PCB V2.0~~
 - Designing enclosure V2.0
 - PCB V3:
   - Gating power on all non-ESP32 devices for minimum power consumption
-  - Forking for RTC/ non RTC? Is there a way to do it all on one board, and just not use un-needed peripherals?
+- PCB V4
+  - Including RTC and SD card "non-wifi" option
+  - Maybe making it all on one board
   - Figuring out RTC, adding micro SD card reader
 
 ### Firmware:
@@ -94,17 +112,23 @@ A couple fun applications include a "Fun" API that displays random earthquake an
 
 ### Per App Breakdown:
 #### Sensor Mode:
-- Making sure the nemo sensor actually pushes
+- ~~Making sure the nemo sensor actually pushes~~
 
 #### Shelf Label:
-- Start working on pinging the NEMO API to get the shelf info
-- Writing a script for the VM to share the shelf info
-- Generally testing, is it even useful?
-- This will heavily depend on battery life and how compact I can make the enclosure.
+- Purchasing lower power ESP32
+- When you implement this, also store:
+  - Last Wi-Fi channel
+  - BSSID (router MAC)
+  - Static IP
+- Then reconnect like this: **skip scan → connect directly → skip DHCP**
+- Wake time drops from ~1–2 seconds → ~150–300 ms. Massive energy savings.
 
-#### Message Mode:
-- Testing
+#### Architecture
 
+Tag wakes  
+→ Calls simple REST API  
+→ Server decides next wake time  
+→ Tag deep sleeps
 
 
 ## Before UGIM:
@@ -121,6 +145,16 @@ A couple fun applications include a "Fun" API that displays random earthquake an
 
 
 ## Work Log:
+
+### 02/27/2026
+**Task:** Nemo pushes working, e-ink thinking
+
+**Notes:**
+- Got the NEMO pushes working, NEMO expects a time stamp with every piece of data which is why it wasn't working before
+- Started thinking about the e-ink tags, kind of finding my niche. 
+- The TLDR is that I can make a wifi tag that is a bit more expensive than of the shelf options, but it will be stupid easy to put things on the display
+- The ESP32 C6 seems to be the way, cheap as the other one with super low current draw
+https://www.seeedstudio.com/Seeed-Studio-XIAO-ESP32C6-Tape-Reel-p-6565.html
 
 ### 02/27/2026
 **Task:** Got V2 boards back!

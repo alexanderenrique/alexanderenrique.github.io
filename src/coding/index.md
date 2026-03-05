@@ -37,7 +37,7 @@ tags: [programming, automation, tools, software]
     <div class="card">
         <h3 class="card__title">NEMO MQTT Plugin</h3>
         <p class="card__description">Real-time tool status updates via MQTT. Enables live monitoring and notifications for lab equipment.</p>
-        <a href="{{ '/coding/NEMO-MQTT-Plugin/' | url }}" class="section__link">View Project →</a>
+        <a href="{{ '/coding/NEMO-MQTT-Bridge/' | url }}" class="section__link">View Project →</a>
         <div class="card-tags">
             <span class="tag">NEMO</span>
             <span class="tag">MQTT</span>
