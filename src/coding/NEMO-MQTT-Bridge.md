@@ -38,26 +38,58 @@ graph LR
 {% endmermaid %}
 
 ### Key Components
-- Django signals for event handling
-- Redis pub/sub for message queueing 
-- MQTT service for converting from JSON to MQTT message
-- Plugin MQTT broker for distributing messages to subscribed clients
-- SSL/TLS security for MQTT messages to VM broker
-- MQTT monitor page for displaying messages in a user friendly way
+
 
 ### Configuration
-- Broker connection settings
-- SSL/TLS certificates
+
 
 ## Up Next:
-- Is there auto reconnect if the NEMO MQTT disconects or Mosquitto dies?
-- Connecting to a truly seperate MQTT broker
-- What does it look like if nemo wants to talk straight to an ESP32?
-- Testing SSL/TLS
-- ~~Making the monitor format easier to read by humans instead of a dense JSON object~~
+- Incorporating the shut downs and tasks into the displays
+- Finalizing the dimensions of the box
 
 
 ## Work Log
+
+### 03/16/2026
+**Task:** Cleaning Up the MQTT API for security, adding hella MQTT messages
+
+**Notes:**
+- I didn't like that there was now a super easy to ping API that had all the tool enable and disables, just no need for that.
+- All I really need to know is connection status
+- Removed some of the backend stuff in detailed admin that we don't need right now
+- Pushed 2.1.2
+- I just decided to send it and go crazy. 
+  - I added an MQTT message for tool operational vs non-operational status
+  - Added a tasks message so that I can get the problem description
+
+### 03/14/2026
+**Task:** Installing on NEMO-Dev Day 2
+
+**Notes:**
+- Switched over tot he PostgreSQL late yesterday afternoon
+- Spent this morning switch over to postrgress in my local instance
+  - Had to recreate the DBs with the tools and accounts and projects and whatever
+- Once I got that going and tested I moved back over to nemo-dev
+- only to realize Mosquitto is ALSO a whole binary deal
+- Luckily there is an embedded MQTT that worked pretty much right away
+- The install into dev finally worked, they're connected and talking!!!
+- I AM SO EXCITED
+- We're on version 2.1.0 now, with the postgres as the db and embedded MQTT
+- It was at least 12 hours of work to get it going on nemo-dev
+- Looked into the URL paths deeply, it does import automatically, but not at the path you'd expect, it ends up as /monitor not mqtt/monitor, the URLs are automatically imported which is nice
+  - But now the paths for the URLs aren't right so the monitor is looking in the wrong place for the API to get the tool info from
+- Tested the MQTT secure connection to the broker, it does infact break when you have the wrong credentials so that's good
+  
+
+### 03/13/2026
+**Task:** Installing on NEMO-Dev
+
+**Notes:**
+- an absolute mission to install on NEMO-dev
+- On the first try, I didn;t realize I was running a version of Redis that was system wide, so I had to find another way
+- I tried redislite for a while but that wouldn't start up smoothly
+- I tried to add the binary as part of the start_nemo.sh that installs stuff everytime the container fires up, but that was also unreliable
+- After about 8 hours of work I'm moving to using the native db and PostgreSQL which has a way of instantly writing to the db and notifying the bridge something was entered. Should only add milliseconds of latency, and it uses the native db which is smoother and sexier
 
 ### 03/04/2026
 **Task:** Renaming Pt.2

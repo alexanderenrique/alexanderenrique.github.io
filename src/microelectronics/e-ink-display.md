@@ -82,10 +82,7 @@ Digikey purchase list:
 - For crystal load 6 pF, use 8.2 pF caps
 
 - PPK2
-- battery holder (which size?
-- 
-- 
-- 18 pF to 22 pF capacitors (start with 22 pF))
+
 
 
 **All components selected for through-hole soldering where possible for ease of assembly.**
@@ -112,7 +109,10 @@ Digikey purchase list:
 
 ### Per App Breakdown:
 #### Sensor Mode:
-- ~~Making sure the nemo sensor actually pushes~~
+- Adding so that is also sends the battery percentage to NEMO
+- Adding the time and having it display time last measured
+- Only sending battery update once a day
+- More intelligent wifi connection
 
 #### Shelf Label:
 - Purchasing lower power ESP32
@@ -145,6 +145,36 @@ Tag wakes
 
 
 ## Work Log:
+
+### 03/16/2026
+**Task:** New PCB Solder
+
+**Notes:**
+- Version 3.0 lets go!
+- Soldered the new board together, the SOT 223-4 was pretty easy to work with actually, not bad at all
+- The soldering went smooth
+- Only glitch, and it's a pretty small one, is that it seems like the MOSFETs are causing some kind of bouncing around or weird inrush that when first plugged in cause the ESP32 to brown out or not boot right.
+  - If I hold down the reset, plug it in, and then let go of the reset, it works perfect
+- Kind of annoying, but if you only change the batteries once every six months that aint so bad. 
+- I feel compelled to redesign one that the hardware works more smoothly, though not sure what it'll take. Some kind of RC filter?
+- And I haven't tested it with batteries yet, and that current path is different. It's designed around the batteries so it may actually work when things like the pull ups across the MOSFETs are working as they should.
+- All kinds of weird behavior to trouble shoot, like at one point the SHT31 wasn't reading. And then it wasn't sending data to NEMO, coupled with a flaky connection at my desk, just a kind of funky and frustrating day. When stuff that used to work no longer works and you have to redo it, that always annoys me.
+- I also added a time component so it pings an NTP server, then does math on UTC and shows the current time and date
+- Kinda flaky, weirdly unreliable. More testing needed on that. 
+- Added a drop down menu to select time on the website.
+
+### 03/10/2026
+**Task:** Basic Sensor re-design
+
+**Notes:**
+- Decided to move away from the fricking massively oversized P-MOSFET meant for many amps, and found an SMD that I think should be hand solderable
+- Learned all about different SMD packaging, I think SOT 223-4 is a reasonable package.
+- It'd funny my SMD components will get here weeks before the PCB so I won't know for a while!
+- I never want to say it's final, but I think this is the last revision for a while for the basic sensor/app version
+- With the new MOSFETs, I'm now gating both the e-ink display and the SHT sensor. 
+  - The sensor I've read only draws about 1uA at idle, which is like 2% of the power draw of the ESP, but hey, every little bit counts
+  - And who knows how much the e-ink display draws. Surely not much, but even 10uA is significant
+- With the V2 version, I am seeing about 1% drop on the display/day, refreshing and sending data every 30 minutes, no wifi tricks, only the ADC gated
 
 ### 02/27/2026
 **Task:** Nemo pushes working, e-ink thinking

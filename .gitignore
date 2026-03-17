@@ -7,6 +7,7 @@ algo/
 work/
 .cursor/
 src/general/birth-of-the-works.md
+src/general/weekly-updates.md
 
 # Keep these local only (not tracked in git)
 src/general/Way-Backburner.md

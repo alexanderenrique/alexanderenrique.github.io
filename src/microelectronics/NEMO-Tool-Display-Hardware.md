@@ -61,17 +61,23 @@ graph LR
 ## Technical Details
 ### Required hardware:
 - ESP32 30 pin
-- 4" SPI TFT display, touch is not used in this project. Don't wan't people touching things in the cleanroom I don't think
+- 4" SPI TFT display
 - 5V 1A power supply for the ESP32 and display. The display will get power through the VIN pin of the ESP32
 - The custom PCB, to make things nicer to solder together
 - 3D printed enclosure
 
 
 ### Up Next/To figure out:
-- Getting SSL to work between NEMO and the VM
-- Moving the code to the collector
-- adding another tool to my NEMO test
-- making sure it is only listening to the correct tool
+- Verifying that things will break if you change the admin and HMAC and such
+- Finish designing the enclosure
+- Sending more boards out for manufacture, tighter clearances
+- Double checking my touch works before sending out for another round
+
+### Bonus features:
+- Displaying when the tool is marked as inactive, or if there is a problem
+  - Not sure if this should be via the API or through the plugin
+
+
 
 - Say I don't enable the tool, but I do change the tool status from functioning to non-functioning, will that cause the MQTT message to send?
 
@@ -100,6 +106,14 @@ Notes:
   Long run: replacing the linux machine in the closet with a mini PC
 
 ## Work Log
+
+### 03/15/2026
+**Main Task:**  Case Design
+
+**Notes:**
+- Been flat out on the code lately, haven't been working on the hardware side.
+- Spent some time redesigning the case, tightening the tolerances, making it so that there are detents so that the screen can't be pushed back whenever we start doing touch things.
+- Up next, I'll need to redesign the PCB so that it doesn't hang over the edge of the display board as much.
 
 ### 02/28/2026
 **Main Task:**  More UI changes

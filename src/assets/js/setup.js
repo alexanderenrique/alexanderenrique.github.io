@@ -246,6 +246,10 @@ class EInkSetup {
                 // Sensor mode - NEMO API configuration
                 config.nemoApiEndpoint = data.nemoApiEndpoint;
                 config.nemoToken = data.nemoToken;
+                if (data.timeZone) {
+                    config.timeZone = data.timeZone;
+                    console.log('[Setup]   Time zone:', config.timeZone);
+                }
                 config.temperatureSensorId = data.temperatureSensorId;
                 config.humiditySensorId = data.humiditySensorId;
                 config.sensorLocation = data.sensorLocation;
