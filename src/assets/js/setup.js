@@ -252,6 +252,7 @@ class EInkSetup {
                 }
                 config.temperatureSensorId = data.temperatureSensorId;
                 config.humiditySensorId = data.humiditySensorId;
+                config.batterySensorId = data.batterySensorId;
                 config.sensorLocation = data.sensorLocation;
                 config.refreshInterval = parseInt(data.refreshInterval);
                 config.temperatureUnit = data.temperatureUnit || 'C';
@@ -259,6 +260,7 @@ class EInkSetup {
                     endpoint: data.nemoApiEndpoint,
                     temperatureSensorId: data.temperatureSensorId,
                     humiditySensorId: data.humiditySensorId,
+                    batterySensorId: data.batterySensorId,
                     location: data.sensorLocation,
                     refreshInterval: config.refreshInterval,
                     temperatureUnit: config.temperatureUnit

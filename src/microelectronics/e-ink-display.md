@@ -146,6 +146,20 @@ Tag wakes
 
 ## Work Log:
 
+### 03/23/2026
+**Task:** Case re-design, send battery percentage, deployment!
+
+**Notes:**
+- re-designed the case, I decided that with as infrequently as you need to change the batteries, why even expose the charging port
+- Now the case is slotted all the way through and it looks sick
+- Added a couple code changes
+  - Now it akes five temp and rh measurements and averages them. There were some weird spikes in old data, but that could be the result of the single reads
+  - Sends battery info to NEMO daily, I'll set up an alert in nemo for when the battery drops too low, that way it's totally automatic
+- Deployed to the gowning room and the ASML litho area!!
+  - I realized when I deployed it that using my all encompasing API token was probably a bad choice, so I created the token sensor user that can only write data, so that's good
+- Feeling really accomplished, I have the PCBs to make 5 more, the displays for four, but only the ESP for 2 more which is a bummer
+- They are on a gnarly back order everywhere now
+
 ### 03/16/2026
 **Task:** New PCB Solder
 

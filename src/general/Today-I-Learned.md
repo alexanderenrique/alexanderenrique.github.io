@@ -19,9 +19,126 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 03/18/2026
+- Range-extender DHCP/subnet mistakes are a crash course in real LAN behavior; microcontrollers feel simple by comparison once the path is fixed
+- Range extenders can run their own DHCP and strand IoT on a subnet; "Auto" can flip behavior between runs
+- If the extender uplinks on 5 GHz guest Wi-Fi, clients can get an address in a different range that never reaches the collector on LAN
+- Different SSIDs for main vs extended Wi-Fi trades seamless roaming for more deterministic device behavior
+- Non-standard SSH plus a broken SSH setup cost hours to recover
+- Same UI can work at home but misbehave in the lab until environment-specific tuning
+
+
+### 03/16/2026
+- Stripping the MQTT monitor API down to connection status reduces unnecessary exposure
+- E-ink V3: SOT-223-4 P-FETs are workable to hand solder; MOSFET inrush can brown out an ESP32 until reset after power-up
+- NTP time sync on battery tags can be flaky and needs more validation
+- BLE payloads cap around 512 bytes — long messages need chunking or another channel
+- Motorcycle oil massively overfilled can fill the airbox and weep everywhere; a small drain can restore correct level
+
+
+### 03/14/2026
+- On NEMO-Dev, embedded MQTT can win when system Mosquitto/Redis installs fight you for hours
+- Moving to PostgreSQL with instant DB notifications can replace a separate Redis hop with only milliseconds added
+- Django auto-imported plugin URLs may resolve to `/monitor` instead of `/mqtt/monitor`, so frontend API paths must match reality
+- Wrong MQTT credentials actually break the secure broker link — useful confirmation that auth is enforced
+
+### 03/13/2026
+- Dev Redis options (system Redis, redislite, install-on-start binaries) were all brittle until leaning on the native DB path
+
+### 03/12/2026
+- Husqvarna front wheel: a transmission jack can lift the bike; axle is large 12 mm Allen plus four clamps; front caliper must clear to drop the wheel
+
+### 03/11/2026
+- A wheel marketed tubeless that leaks at the valve stem may still have a tube inside
+
+### 03/10/2026
+- SOT-223-4 is a practical hand-solder SMD package for power switching vs oversized through-hole FETs
+- Gating both e-ink and SHT31 from supply cuts idle leakage; V2 tag used roughly 1% battery per day at 30 min refresh with ADC path gated
+
+### 03/04/2026
+- PyPI name collision led to renaming the plugin project to NEMO-MQTT-Bridge
+
+### 03/03/2026
+- Server-saved Django config can be overwritten when production settings come from GitLab — know the real source of truth
+- Green/red for enable alone can mislead; conveying broken vs idle operational state matters
+
+### 02/28/2026
+- NEMO tool display: coloring the full border by tool status scales better than truncating long tool names
+- MQTT plugin packaging: another `nemo-mqtt` existed for interlocks; secrets pushed in `config.h` mean rotating keys and tightening hygiene
+- Thunderbird coolant senders can disagree a lot at the same temperature — always verify resistance vs gauge readout
+- Ford Ranger / mini bike: stuck high idle can track a bad ECT reading; base timing on Fords needs SPOUT disconnected to read true base
+- E-ink roadmap: coin cells cannot surge like LiPo; splitting "tag" vs full-feature boards is probably necessary
+
+### 02/27/2026
+- NEMO display: "current user" vs "last user" fits in-use state; lab name length distribution (median ≤12 chars, 95% ≤20) drives layout choices
+- End-to-end MQTT + TFT worked first try on the bench — packaging and NEMO-Dev are the next cliff
+- Thunderbird trunk dome light: circuit may be always-hot with ground through the shell — a real limit switch beats expecting the trunk to complete ground
+
+### 02/26/2026
+- HMAC: broker and publisher must hash the exact same bytes — parsing JSON before signing easily desynchronizes verification
+- SHA-256 HMAC keys are just shared secrets; they are not fixed-length "password shapes"
+- NEMO config must reload credentials cleanly after changes or you chase phantom auth failures
+- Thunderbird door cards: heavy warp needs relief cuts (or reinforcement) before clips can hold
+
+### 02/25/2026
+- For this lab MQTT path, username/password plus HMAC beat fighting TLS on the collector for the same threat model
+- E-ink: thinking hard about battery chemistry (coin vs pouch) and PCB forks for tags vs logger boards
+
+### 02/24/2026
+- Duplicate MQTT publish/subscribe paths are worth collapsing to one in and one out
+- Firewall rules on the collector VM were the real blocker for external reach, not just Mosquitto
+
+### 02/18/2026
+- NEMO MQTT: hooking the existing usage-event signal reduces core NEMO patches vs a custom hook
+- Redis stream is upstream of MQTT — if it hits Redis it should reach MQTT; the monitor can follow Redis instead of snooping its own broker
+- KiCad: footprint time dominates simple boards; always re-verify critical mechanical dimensions before fab
+- Pump monitor: cheap 5 V RS-485 ICs often want 5 V logic, not 3.3 V — MAX3485-class 3.3 V parts exist in quantity for low cost
+
+### 02/17/2026
+- Stanford OTL: rights hinge on more-than-incidental Stanford resources and on commercialization intent; laptop-only use skews incidental; non-commercial hobby path is simpler
+- E-ink PCB V2: ceramic bulk cap can beat a huge electrolytic for hold-up; re-pinning in `hardware.h` fixed a silent display after a lifted battery ground taught "bad ESP" vs "bad screen"
+
+### 02/16/2026
+- `hardware.h` / `config.h` in firmware beats stuffing config in `.pio` that gets wiped on rebuild
+- Verified touch pinout with a minimal script before locking the PCB
+- NEMO display: Redis DB1 vs DB0 mismatch silently broke the bridge until the consumer pointed at the same DB
+- Startup script that stops "all Mosquitto" can kill the ESP32's LAN broker on 1883 — reopen or protect that listener on NEMO start
+
+### 02/11/2026
+- OTA hosting: folder layout on the Pi plus a small upload script keeps manifests and firmware paths consistent
+- Firmware/config version mismatch detection saves bricked loops
+- CB350: carb #1 low power with fuel present can be a stuck needle — verify float/needle before chasing jets again
+
+### 02/10/2026
+- E-ink messages: word spacing is a render-pixel issue, not "more spaces" in the string
+- Enclosure USB-C alignment takes more printed iterations than expected
+
+### 02/07/2026
+- Isuzu exhaust donut: wrong nuts on studs can cross-thread new studs — match thread and torque carefully
+- Ranger in-tank pump install can fight straps and tank alignment; crusty fuel relay contacts mimic pump death; tilt sensor cut-out can cause instant stalls
+- 1988 Ranger key removal uses a white button on the column — rotate only after pressing it
+
+### 02/01/2026
+- Thunderbird: cracked heater hose soft line can be shortened and re-clamped in a parking lot as a field fix
+- Volvo charge light: loose alternator belt masquerades as exciter problems
+- Ranger: low ATF (1.5 qt down) caused full slip; refilled and it shifted normally
+- Ranger fuel pump prime is ~2 s then off until engine run — probe timing wrong and you think the pump is dead
+
+### 01/30/2026
+- NEMO merger: departments vs disciplines — disciplines may not flow through to billing reports the way departments do
+
 ### 01/27/2026
 - Robot control systems require enabling servo motors before homing commands
 - Pressure gauge communication systems use Rx/TX boxes for signal transmission
+- Porsche active exhaust rattle is often a broken butterfly spring — tip comes off with T30 + three 11 mm bolts on the servo
+
+### 01/24/2026
+- FZ1 carbs: a single clogged pilot jet can kill running with no obvious smoking gun after rebuild
+- Honda CRV re-key: third replacement (glovebox) finished the full lock set
+
+### 01/21/2026
+- Most ESP32 GPIOs can be remapped with care — breadboard validation before locking a dense PCB pinout
+- Pump monitor SD on VSPI alongside display/touch worked when HSPI path refused to cooperate
 
 ### 01/20/2026
 - Ellipsometry: Psi and delta represent phase change and amplitude ratio from material interaction
@@ -33,6 +150,26 @@ I'm learning just all the time and I think it's cool to look back and see what y
 - Kramers-Kronig relationship ties real and imaginary parts of dielectric function - material can't respond until light interacts
 - B-Spline layers use basis functions to model dielectric constants across photon energies
 - Metals show flat data at 50-100nm thickness because they absorb everywhere, preventing interference features
+
+### 01/18/2026
+- Honda immobilizer: RFID antenna ring around the barrel must move with the new lock hardware; new metal + old transponder chip can satisfy the immo
+- Riveted ignition collars often need a die grinder cutoff wheel and patience
+
+### 01/17/2026
+- CRV starter: bench test solenoid click with weak spin means replace, not more hammering
+
+### 01/16/2026
+- Breadboard SD wiring can be perfect yet fail until mechanical contact is sorted — flaky SPI is often physical
+
+### 01/15/2026
+- Sharing VSPI between TFT, touch, and SD is viable when a second SPI peripheral fights you
+
+### 01/14/2026
+- RTC coin cell: CR2025 is thinner than CR2032 but often fits electrically; battery rail is often regulated separately from main VIN
+- Flashing ESP32-C3: disconnect UART link to a second MCU or flashing can fail mysteriously
+
+### 01/13/2026
+- RS-485 needs bias resistors (pull-up/down) and termination (~120 Ω) — plan for three resistors minimum on a segment
 
 ### 01/12/2026
 - OSHWA certification for open source hardware
@@ -51,10 +188,94 @@ I'm learning just all the time and I think it's cool to look back and see what y
 - Loss aversion: pain from loss greater than joy from gain, affects bonus-based incentives
 - Intrinsic motivation requires autonomy, mastery, relatedness, and purpose
 - Removing pain points motivates better than adding new features
+- UART to a remote head over long cable is an EMI problem for resale: fast edges matter more than baud; differential RS-485 tames radiated noise compared to single-ended UART
+
+### 01/10/2026
+- Parasitic draw near 0.16 A can kill a battery in about a week — do the math, not gut feel
+- Surface-charged "good" 12 V spare can crank once then rest at 12.2 V — still useful if amps are there
+
+### 01/09/2026
+- Inter-ESP SPI vs a shared bus: MISO wiring can silence a display — pin conflicts are subtle
+- Bit-banged SPI works but wire count adds up; half-duplex UART simplified a two-node link dramatically
+
+### 01/08/2026
+- CRV intake removal for starter access: throttle body coolant bypass hose will weep — expect a small coolant loss
 
 ### 01/07/2026
 - NEMO API requires complete rate data to generate billing reports
 - Filed invention disclosure with OTL for ESP32 e-ink module, navigating Stanford IP requirements
+- Seeed XIAO ESP32-C3 is not pin-for-pin a drop-in for a generic ESP32-C3 module — check every net
+- Paying a few dollars for an external antenna module can save days of Wi-Fi grief on C3-class boards
+- Sharing HSPI with a second MCU on certain MISO pins can brick an SPI TFT until you move chip selects and MISO routing
+
+### 01/06/2026
+- ATtiny savings shrink vs ESP32-C3 once you count programming hassle and SMD assembly — dual-footprint boards can offer cheap-or-connected SKUs
+- MCP6022 exists in DIP — through-hole op amps keep pump module kits hand-buildable
+
+### 01/05/2026
+- Houses shift striker plates and jambs; routers and die grinders are fair tools for re-hanging stubborn doors
+
+### 01/03/2026
+- Cheap sound-trigger modules fire on sharp transients (clap, door slam) more than sustained shop noise like an angle grinder — tune sensitivity and expectations
+
+### 01/02/2026
+- Repeated no-crank with good battery often means starter replacement, not more jump starts
+- Garage noise-relay board: relay coil can pull ~50 mA — too much for a GPIO; energize the coil through low-side N-FET switching instead of sourcing from the pin
+
+### 12/31/2025
+- NEMO merger go-live: consumables visible, interlocks activated, final Badger qualifications uploaded into NEMO
+
+### 12/29/2025
+- ATtiny 402 bring-up: bit masks and configuring peripherals directly in C feels different from Arduino-style abstraction
+
+### 12/18/2025
+- Thunderbird: 195 °F thermostat still ran cool at the housing — thick gasket may let coolant bypass; gauge resistance curve may not match sender
+- Pump monitor: CT V-RMS reads higher on bench supply than on a laptop USB feed — bias/reference sag matters; Squareline Studio free tier licensing takes a minute to parse
+
+### 12/15/2025
+- Splitting a remote pump head from a wall-mounted ESP32+TFT via RJ45 keeps vibration off the expensive half and standardizes cabling
+
+### 12/14/2025
+- Sampling rate vs kSPS, aliasing (high frequency folding down), and why piezo vibration sensing is mechanically picky
+
+### 12/11/2025
+- High-impedance resistor dividers sag badly under ADC load — a dual op amp can hold a stiff mid-rail bias and amplify small CT signals
+
+### 12/9/2025
+- Steinhart–Hart with two parameters can beat a bad three-parameter fit for NTCs when C is junk
+- CT front-end: undersized coupling cap acts like a high-pass and kills low-frequency content you care about
+
+### 12/8/2025
+- CT clamps need a single conductor through the core — whole cord cancellation gives near-zero signal
+- 2.2 Ω vs 2.2 kΩ in a divider is an expensive typo — math on expected node voltage finds it fast
+
+### 12/7/2025
+- Rapid pump-monitor prototype: CT on a split fan cord sanity-checks mV/A scaling
+
+### 11/30/2025
+- Smart T-Bird: ADC1 vs ADC2 on ESP32 — voltage divider + O2 on the wrong ADC path misbehaved; ADC offset/calibration is not "just ratio math"
+- P-type dimming transistor rework beat the old PNP approach for backlight control
+
+### 11/29/2025
+- Classic ammeter: original design ran alternator output through the gauge; high-output alternator needs a shunt, not full current through the dial
+- Instrument voltage regulator (IVR) output is pulsed — DMM average lies; grounding the sender wire still proves gauge sweep
+- Started writing Modbus/RS-485 code by hand instead of only vibe-coding — sticks better
+
+### 11/21/2025
+- CAN stack size and MCU support pushed the car project to RS-485 modules that work on any ESP32 variant
+- Learned about the RS-485 protocol, and how to use it to communicate with the ESP32s.
+- Learned about how LEDs operate on a fundamental level. The whole current not scaling linearly with voltage is a trip.
+- Learned about constant current dimming and how to use it to dim LEDs
+- Learned about RSENSE and how to use the external resistor to guide how much current the IC will push
+  - It isn't safe to set it to a high value and forget about it! You need to set it according to your current needs
+- Learned about inductors on constant current boards, and the internal frequency clock type deals. They all play together, so interesting.
+
+### 11/13/2025
+- NEMO-to-Drive: billing row count ≠ usage-event count because consumables generate billing lines too
+- Yearly CSV bug from only refreshing 40 days of data; duplicate `item_id` rows were script artifacts — NEMO enforces uniqueness server-side
+
+### 11/8/2025
+- LED tail-light bulbs may fail as both running and sequential turn signals — low draw + low running voltage vs incandescent expectations
 
 ### 10/06/2025
 - Woollam lamp alignment: mirror held by one bolt and double-sided tape, UV beam focuses to tiny spot
@@ -67,16 +288,8 @@ I'm learning just all the time and I think it's cool to look back and see what y
 ### 11/25/2025
 - More about RS-485, it's the physical layer with the modbus protocol on top.
 
-### 11/21/2025
-- Learned about the RS-485 protocol, and how to use it to communicate with the ESP32s.
-- Learned about how LEDs operate on a fundamental level. The whole current not scaling linearly with voltage is a trip.
-- Learned about constant current dimming and how to use it to dim LEDs
-- Learned about RSENSE and how to use the external resistor to guide how much current the IC will push
-  - It isn't safe to set it to a high value and forget about it! You need to set it according to your current needs
-- Learned about inductors on constant current boards, and the internal frequency clock type deals. They all play together, so interesting.
-
 ### 11/07/2025
--Learned that Web Socket Http, ModbusTCP and ProXr are all communications protocols, which I half knew, but I was able to decipher which protocol was being used by the standard port used on the SNSF interlocks. Probably. They can have differeent ports of course. 
+- Learned that Web Socket Http, ModbusTCP and ProXr are all communications protocols, which I half knew, but I was able to decipher which protocol was being used by the standard port used on the SNSF interlocks. Probably. They can have differeent ports of course. 
 
 ### 11/3/2025
 - Converting from OBJ to GLB, and how to use them in model-viewer

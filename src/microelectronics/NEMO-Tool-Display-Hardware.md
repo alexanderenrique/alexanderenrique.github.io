@@ -91,7 +91,6 @@ graph LR
 
 - Further to-dos:
   - Broker should only allow nemo's IP address
-  - Getting access to nemo-dev SSH
 
 HW:
 - Send Alex K github and PyPi links
@@ -106,6 +105,28 @@ Notes:
   Long run: replacing the linux machine in the closet with a mini PC
 
 ## Work Log
+
+### 03/18/2026
+**Main Task:**  Network Issues, VM Issues, UI Issues
+
+**Notes:**
+- Added a range extender to the LAN,but there were a couple problems. It was annoying but I did learn a lot.
+  - First, it was trying to do its own DCHP which would lead to sub nets and my IoT couldnt get to the collector. Well it was on Auto DCHP so sometimes it would and sometimes it wouldn't assign.
+  - Second, I had also added the 5 GHz SNF Guest to the extender thinking that would be a nice thing, but when my ESP connected to the extender, for some reason the extender talked to the 5 GHz net instead and got an IP in a totatlly different public range and assigned that to the ESP which definitely will never work
+  - Finally, I named the extended net a different SSID that the normal net, and connected the ESP to the different name
+    - In my mind I'm like seamless transition, ESP connect wherever you want. But in reality, you want these things to be as deterministic as possible.
+- Then I battled setting up SSH on the collector for a long time, I just totally broke it and I'm not sure why but I got it eventually, just a shitty hour or two.
+  - Especially because I'm using a non standard SSH port
+- Then for some reason the UI wasn't working as it should so I had to fine tune and make some tweaks. I really don't know why it worked at home but not at the lab. Either way I got it now. 
+
+
+### 03/17/2026
+**Main Task:**  UI
+
+**Notes:**
+- with the plugin now pushing the tasks and shut downs, I needed a UI to match!
+- It's just a slow iterative process of making small changes, but I got it in the end
+- The logic is really sound, and it can handle multiple tasks, and it looks sweet. Very very happy with it. 
 
 ### 03/15/2026
 **Main Task:**  Case Design
