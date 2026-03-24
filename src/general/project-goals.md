@@ -51,10 +51,12 @@
 
 ### Focus for the Week
 - Deploying as many E-ink tags as I can (4?)  
-  - Finish soldering
-  - Printing enclosures
-  - Adding to nemo
+  - ~~Finish soldering~~
+  - ~~Printing enclosures~~
+  - ~~Adding to nemo~~
+- Testing power draw of e-ink tag (battery seems to be draining faster than I'd expect)
 - Clean un install and re-install of MQTT on nemo-dev
+- Finalizing enclosure for MQTT display
 
 ## Week [11] Ending 03/22
 

@@ -130,20 +130,6 @@ Tag wakes
 → Server decides next wake time  
 → Tag deep sleeps
 
-
-## Before UGIM:
-- Have designed and implemented a single PCB design with:
-  - Display, SHT31, ESP32, MicroSD card slot, battery reading, gated power rail, RTC
-- Have an SOP written on how to solder and assemble the display
-- Proper website with documentation and support
-- ~~.bin uploader on web working~~
-- Sensor and Shelf modes working
-- Testing power consumption
-- OSHWA certification(?)
-- Stanford OTL Blessing
-
-
-
 ## Work Log:
 
 ### 03/23/2026
