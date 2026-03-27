@@ -23,6 +23,32 @@ description: One curious engineer's journey through wrenching, coding, and micro
         </div>
     </section>
 
+    <section class="section section--nemo-mqtt">
+        <div class="section__content">
+            <div class="section__text">
+                <h2 class="section__title">NEMO MQTT &amp; Tool Display</h2>
+                <p class="section__description">Real-time tool status from NEMO to wall-mounted ESP32 displays over MQTT: Django plugin, bridge service, and firmware. Read the <a href="{{ '/nemo-mqtt/' | url }}">project overview</a> for architecture and links to the bridge package and hardware notes.</p>
+                <a href="{{ '/nemo-mqtt/' | url }}" class="section__link">NEMO MQTT →</a>
+            </div>
+            <div class="section__image">
+                <div class="placeholder-image">📡</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--smart-scale">
+        <div class="section__content">
+            <div class="section__text">
+                <h2 class="section__title">Smart Scale</h2>
+                <p class="section__description">Hot-plate safety using a load cell, temperature sensing, and a finite-state machine—status on a touchscreen, minimal manual taring. Start with the <a href="{{ '/smart-scale/' | url }}">overview</a>, then dive into the full notes and work log.</p>
+                <a href="{{ '/smart-scale/' | url }}" class="section__link">Smart Scale →</a>
+            </div>
+            <div class="section__image">
+                <div class="placeholder-image">⚖️</div>
+            </div>
+        </div>
+    </section>
+
     <section class="section section--blog">
         <div class="section__content">
             <div class="section__text">
