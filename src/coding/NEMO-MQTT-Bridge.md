@@ -37,18 +37,32 @@ graph LR
     G["MQTT customization page"] --> E
 {% endmermaid %}
 
-### Key Components
 
-
-### Configuration
-
-
-## Up Next:
-- Incorporating the shut downs and tasks into the displays
-- Finalizing the dimensions of the box
-
+## Parking on a downhill:
+- Setting main.py to be a systemd so main.py is absolutely always running
+- Do we still use the .env? I don't think so
 
 ## Work Log
+
+### 03/24/2026
+**Task:** clean uninstall and re-install
+
+**Notes:**
+- In INSTALLED_APPS:
+  -  "NEMO_mqtt_bridge",
+        "NEMO_mqtt_bridge.urls",
+- In start_nemo.sh:
+  - nemo-mqtt-bridge==2.1.2 \
+- Notes for future Alex installing in prod:
+  - Must also manually run migrations the first time!!
+  - docker compose exec nemo django-admin migrate NEMO_mqtt_bridge
+- The reinstall actually went really smoothly, just have to remember to run migrations
+- And for some reason, NEMO is connecting to the broker right away and so is the ESP, but I'm not seeing messages
+  - I think this is God's way of saying that I need to clean up my code base
+- Ok so I am changing the IP address to something totally wrong, and yet when I look at the NEMO logs, it doesn't relfect the new address I changed it to!!
+- It says connected, as I guess it should be, but something still seems suspicious
+- Ok made a change to the plugin and now it is working, the bridge was working and connecting, but things were not being consumed!
+  - Now it's more robust and it checks every 2 seconds to try and process the request
 
 ### 03/16/2026
 **Task:** Cleaning Up the MQTT API for security, adding hella MQTT messages

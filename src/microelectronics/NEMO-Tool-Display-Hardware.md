@@ -67,19 +67,6 @@ graph LR
 - 3D printed enclosure
 
 
-### Up Next/To figure out:
-- Verifying that things will break if you change the admin and HMAC and such
-- Finish designing the enclosure
-- Sending more boards out for manufacture, tighter clearances
-- Double checking my touch works before sending out for another round
-
-### Bonus features:
-- Displaying when the tool is marked as inactive, or if there is a problem
-  - Not sure if this should be via the API or through the plugin
-
-
-
-- Say I don't enable the tool, but I do change the tool status from functioning to non-functioning, will that cause the MQTT message to send?
 
 ## For Alex K:
 
@@ -104,7 +91,29 @@ Notes:
   SSH into the machine, put the pubkey on my machine (do we need to open a port)
   Long run: replacing the linux machine in the closet with a mini PC
 
+
+## Parking on a downhill:
+- Adding the last state to NVS in the event of a power outage (maybe a good idea, not sure)
+
 ## Work Log
+
+### 03/25/2026
+**Main Task:**  VM issues
+
+**Notes:**
+- Even more battling, I connected the screen on a whim, and the VM was dropping messages
+- After a fair bit of digging, I learned that mosquitto had its own systemd thing going, and my nemo-mosquitto was competing with is and was losing and getting shut down and rebooting on this like five second loop
+- Killed the mosquitto binary and am now only running my nemo-mosquitto
+- That cleared things up
+
+### 03/25/2026
+**Main Task:**  VM issues
+
+**Notes:**
+- More battling with SSH but I got it this time, learned all about ssh and sshd, added the port 8883 to SSH into the collector via that port becasue it's the only open one
+- Implemented Mosquitto and main.py as systemd components (is that the right way to say that?) and so they start automatically on boot
+- Had lots of permissions issues with the systemd so it runs as root
+- Did get it working eventually, it does feel a little slow like two seconds but not bad at all on the scale of things
 
 ### 03/18/2026
 **Main Task:**  Network Issues, VM Issues, UI Issues
