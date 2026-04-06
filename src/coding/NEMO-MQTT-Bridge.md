@@ -7,7 +7,6 @@ tags:
   - mqtt
   - plugin
   - django
-  - redis
   - broker
   - iot
   - real-time
@@ -17,32 +16,29 @@ tags:
 ---
 
 ## Project Overview
-A plugin for NEMO that enables real-time tool status updates via MQTT messaging. Uses Redis as a message queue intermediary between NEMO and MQTT broker. Originally I wanted to use MQTT directly in the code, but that created additional dependencies and the developer thought it better to use the existing system of signals in Django. So I used Redis as a message queue intermediary, and that then creates an MQTT message.
-
-### Notes for tomorrow:
-- it's not actually connecting to port 1884 when I change the config, I think that's becasue of hard coded development setting
-- On the config page, nothing is actually happening in the MQTT logs or event filters not sure why
-- It WAS working on port 1883 but I think that's becasue it's hard coded in the plugin
-- but when I change the borker port, the monitor DOES keep working so that is good
+A plugin for NEMO that enables real-time tool status updates via MQTT messaging. Uses the native PostgreSQL db as a message queue intermediary between NEMO and MQTT broker.
   
 ### High Level Architecture
 {% mermaid %}
 graph LR
     A@{shape: rounded, label: "Tool enabled/disabled by labmember"}
     A --> B(("NEMO Django Signal"))
-    B --> C[("Redis Message Queue")]
+    B --> C[("Postgres Listen/Notify")]
     C --> D(("JSON to MQTT Service"))
     D --> E(("MQTT Broker"))
     E --> F["NEMO Tool Display Hardware"]
     G["MQTT customization page"] --> E
 {% endmermaid %}
 
-
-## Parking on a downhill:
-- Setting main.py to be a systemd so main.py is absolutely always running
-- Do we still use the .env? I don't think so
-
 ## Work Log
+
+### 04/06/2026
+**Task:** clean uninstall and re-install again
+
+**Notes:**
+- Clean uninstall and reinstall. It went pretty well after I figured out some migration cleanup.
+- Reached out to Matthew. I branched NEMO Proud and installed it there. We'll see how that goes if we get his approval.
+- It was interesting. I restarted the container and then I ran the migration, and then the MQTT was super slow, like the events were getting picked up by the cleanup script x number of seconds later. After restarting the container again after the migrations, it was much faster, the way it should be.
 
 ### 03/24/2026
 **Task:** clean uninstall and re-install
@@ -52,7 +48,7 @@ graph LR
   -  "NEMO_mqtt_bridge",
         "NEMO_mqtt_bridge.urls",
 - In start_nemo.sh:
-  - nemo-mqtt-bridge==2.1.2 \
+  - nemo-mqtt-bridge==2.1.3 \
 - Notes for future Alex installing in prod:
   - Must also manually run migrations the first time!!
   - docker compose exec nemo django-admin migrate NEMO_mqtt_bridge
@@ -327,67 +323,3 @@ graph LR
 - Per Mathieu's request, I'm changing to a django signals method so that I don't have MQTT dependencies directly in the code. It's more modular and easier to maintain.
 - I'll need to add a bare minimum django.signal, to then trigger the MQTT plugin message.
 - Clobbered my old work and started with the signals, the initial work always goes quickly and then it's testing it and getting what you want that takes a lot of fine tuning. 
-
-
-### Detailed Architecture
-#### Django
-
-{% mermaid %}
-graph LR
-    A@{ shape: event, label: "User Starts Using Tool" } --> B@{ shape: cyl, label: "Django Saves UsageEvent to DB<br><small><i>(DB CALL)</i></small>" }
-    B --> C@{ shape: rounded, label: "Signal Handler Receives UsageEvent Instance" }
-    C --> D@{ shape: rect, label: "Signal Handler Creates object with user, tool, start, end, etc.<br><small><i>(JSON)</i></small>" }
-    D --> E@{ shape: cyl, label: "JSON Goes to Redis" }
-{% endmermaid %}
-
-#### JSON to MQTT Service
-{% mermaid %}
-graph LR
-    F@{ shape: cyl, label: "Redis has its own db to store the message<br><small><i>(JSON Event, stored in Redis DB1)</i></small>" }
-    F --> G@{ shape: rect, label: "JSON to MQTT Service consumes message" }
-    G --> H@{ shape: rect, label: "JSON to MQTT Service converts to MQTT<br><small><i>(MQTT Message)</i></small>" }
-    H --> I@{ shape: cyl, label: "MQTT Broker distributes message to subscribed clients<br><small><i>(MQTT Message)</i></small>" }
-    I --> J@{ shape: rect, label: "MQTTWebMonitor" }
-    I --> K@{ shape: cyl, label: "Second external broker that lives on VM<br><small><i>(MQTT Message)</i></small>" }
-{% endmermaid %}
-
-#### MQTT Monitor Logic
-{% mermaid %}
-graph TD
-    A@{ shape: rect, label: "MQTTWebMonitor subscribes to all<br>NEMO topics from the broker<br><small><i>(MQTT message)</i></small>" } --> B@{ shape: rounded, label: "MQTTWebMonitor recieves message<br><small><i>(MQTT message)</i></small>" }
-    B --> C@{ shape: rect, label: "MQTTWebMonitor converts to python dictionary<br><small><i>(Python Dictionary)</i></small>" }
-    C --> D@{ shape: win-pane, label: "MQTTWebMonitor stores in Memory<br><small><i>(Python Array)</i></small>" }
-    D --> E@{ shape: event, label: "Web page loads /mqtt/monitor/" }
-    E --> F@{ shape: rect, label: "Frontend JavaScript makes an<br>HTTP GET request to /mqtt/monitor/api/" }
-    F --> G@{ shape: rounded, label: "Django view mqtt_monitor_api receives the request" }
-    G --> H@{ shape: win-pane, label: "View accesses monitor.messages<br><small><i>(in-memory Python array)</i></small>" }
-    H --> I@{ shape: rect, label: "View filters for MQTT messages only" }
-    I --> J@{ shape: doc, label: "View returns JSON response<br><small><i>(JSON string)</i></small>" }
-    J --> K@{ shape: rect, label: "JavaScript receives JSON response<br><small><i>(JSON string)</i></small>" }
-    K --> L@{ shape: rect, label: "JavaScript parses JSON into JavaScript objects<br><small><i>(JavaScript objects)</i></small>" }
-    L --> M@{ shape: rect, label: "JavaScript processes and formats the data" }
-    M --> N@{ shape: display, label: "JavaScript updates HTML DOM to display messages<br><small><i>(HTML elements)</i></small>" }
-{% endmermaid %}
-
-
-### Django Plugin Startup Process
-{% mermaid %}
-graph TD
-    A@{ shape: event, label: "Django Startup" } --> B@{ shape: rounded, label: "AppConfig.ready()" }
-    B --> C@{ shape: diam, label: "Already Initialized?" }
-    C -->|Yes| D@{ shape: rect, label: "Skip Initialization" }
-    C -->|No| E@{ shape: rect, label: "Migration Check" }
-    E --> F@{ shape: diam, label: "Migration Command?" }
-    F -->|Yes| G@{ shape: rect, label: "Skip MQTT Init" }
-    F -->|No| H@{ shape: rect, label: "Import Signal Handlers" }
-    H --> I@{ shape: rect, label: "Import Customization" }
-    I --> J@{ shape: rect, label: "Mark as Initialized" }
-    J --> K@{ shape: cyl, label: "Initialize Redis Publisher" }
-    K --> L@{ shape: rect, label: "Get MQTT Configuration" }
-    L --> M@{ shape: diam, label: "Config Enabled?" }
-    M -->|Yes| N@{ shape: rect, label: "Start JSON to MQTT Service" }
-    M -->|No| O@{ shape: rect, label: "Start Service Anyway for Dev" }
-    N --> P@{ shape: rect, label: "Auto MQTT Service Start" }
-    O --> P
-    P --> Q@{ shape: rounded, label: "Service Running" }
-{% endmermaid %}

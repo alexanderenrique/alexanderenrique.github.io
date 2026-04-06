@@ -36,12 +36,12 @@ description: One curious engineer's journey through wrenching, coding, and micro
         </div>
     </section>
 
-    <section class="section section--smart-scale">
+    <section class="section section--smart-hotplate">
         <div class="section__content">
             <div class="section__text">
-                <h2 class="section__title">Smart Scale</h2>
-                <p class="section__description">Hot-plate safety using a load cell, temperature sensing, and a finite-state machine—status on a touchscreen, minimal manual taring. Start with the <a href="{{ '/smart-scale/' | url }}">overview</a>, then dive into the full notes and work log.</p>
-                <a href="{{ '/smart-scale/' | url }}" class="section__link">Smart Scale →</a>
+                <h2 class="section__title">Smart Hotplate</h2>
+                <p class="section__description">Hot-plate safety using a load cell, temperature sensing, and a finite-state machine—status on a touchscreen, minimal manual taring. Start with the <a href="{{ '/smart-hotplate/' | url }}">overview</a>, then dive into the full notes and work log.</p>
+                <a href="{{ '/smart-hotplate/' | url }}" class="section__link">Smart Hotplate →</a>
             </div>
             <div class="section__image">
                 <div class="placeholder-image">⚖️</div>

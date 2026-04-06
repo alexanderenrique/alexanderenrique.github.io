@@ -47,6 +47,20 @@
 
 # Weekly Goals
 
+## Week [14] Ending 04/12
+
+### Focus for the Week
+- Wrap up deploying the sensor project, I just wanna be done with these!
+  - 3 boards left, finish soldering and deploying all but one
+  - Getting the intern sensors correctly depoloyed
+- MQTT:
+  - Clean uninstall and re-install again
+  - Add to git lab
+  - Order more PCBs
+  - Place order for more Displays, long USB cables, ESP32s, etc
+
+## Week [13] (I crashed my motorcycle and my body hurts and I was in a bad mood for a week)
+
 ## Week [12] Ending 03/29
 
 ### Focus for the Week
@@ -55,7 +69,7 @@
   - ~~Printing enclosures~~
   - ~~Adding to nemo~~
 - Testing power draw of e-ink tag (battery seems to be draining faster than I'd expect)
-- Clean un install and re-install of MQTT on nemo-dev
+- ~~Clean un install and re-install of MQTT on nemo-dev~~
 - Finalizing enclosure for MQTT display
 
 ## Week [11] Ending 03/22

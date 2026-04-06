@@ -55,8 +55,7 @@ Security is optional and configurable. MQTT ports are protected by username and 
 
 2. **NEMO-CE**  
    _Must be configured to use PostgreSQL._  
-   > **Note:** Some NEMO installs use SQLite, but this plugin requires PostgreSQL due to its use of the `LISTEN/NOTIFY` feature.  
-   [Insert NEMO-CE link here]
+   > **Note:** Some NEMO installs use SQLite, but this plugin requires PostgreSQL due to its use of the `LISTEN/NOTIFY` feature.
 
 3. **MQTT Broker**  
    - The broker can be run on the same machine as NEMO in small setups.

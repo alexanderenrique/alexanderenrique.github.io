@@ -4,10 +4,54 @@
 - Clean chain, general once over
 - Flushing brake fluid
 - Checking coolant, other fluids
+- New Tires lol
 - ~~Plugging front tire?~~
 - Figuring out left side panel
-- Checking charging system
-- Faded polarizer on LCD readout?
+- ~~Checking charging system~~
+- ~~Faded polarizer on LCD readout?~~
+
+## 04/06/2026
+**Task:** Crash Recovery: Neutral and fuel light battle
+
+**Notes:**
+- I swear I dream about this stuff
+- More using my brain and probing around, really weird voltage behavior
+- I found the 3.3v regulator, and it was doing its job perfectly, 12v in, 3.3v out. 
+- As soon as I started probing the power rail's path, I saw weird voltage drops at most every step. Like across the very first MOSFET it dropped from 3.3v to 3v. I also followed the LED rail back, and I found where the broken trace must be. 
+- The multimeter reads zero ohms between these this one resistor via and a MOSFET, but the voltage drops by 2V between them!
+- I learned multimeteres only produce like 1 mA when measuring continuity, and load can cause these very fragile/broken connections to sag
+- I back powered the LEDs and they work beautifully
+- So I think I figured out what I need to jumper to bypass the broken trace. 
+
+## 04/05/2026
+**Task:** Crash Recovery: Fender, Battery, headlight, Neutral and fuel light battle
+
+**Notes:**
+- Installed the new "universal" fender, that was easy enough, just needed a little trimming in the rear so it wouldn't hit the frame
+- Installed new battery, it fired right up with the new battery
+- Re-pinned the headlight so that it would work with the Husky wiring, now high beam works and indicates as it should
+- The REAL battle was neutral and fuel lights, iut really bugs me that those don't work. So naturally I went full crazy on it.
+  - The neutral light is not a simple ground, instead it is a gear position indicator with different resistance correcponding to different gears. Mine Ohmed out fine, neutral was 330 ohm
+  - Same on the low fuel light, I found a manual and it was reading pretty much what it should. With the tank tilted all crazy it was reading 1.3 kOhm, which should be empty
+  - I probled the wires between the ECU and the head unit, all had continuity
+  - It send a digital signal to the head unit, so it's not so easy to probe
+  - I went full crazy and sawed the case in half with the dremel cut off wheel
+  - Some green nasty stuff in there. 
+  - I verified that the LEDs do work by carefully putting some voltage across them, and finding the vias that correspond to either side
+  - It is low side switched, makes sense 
+
+## 03/31/2026
+**Task:** Crash Recovery
+
+**Notes:**
+- I binned it decently hard on Sunday, damage report isn't too bad:
+  - Shattered headlight and front fender
+  - Initially thought the bars were bent, but I think the fork had just twisted
+  - Display holder pretty messed up. Maybe reusable, maybe design a new one
+- I removed the broken plastics and headlight and everything
+- Loosened the fork bolts and triple clamp nut
+  - After some finagling I think I straightened everything out, one fork leg might be higher than the other by like a mm, but you get that
+- Waiting on the new headlight and fender to come in, next week. Bought a universal front fender so some drilling required.
 
 ## 03/16/2026
 **Task:** Overfilled oil
