@@ -47,10 +47,23 @@
 
 # Weekly Goals
 
+## Week [15] Ending 04/19
+
+### Focus for the week
+- E-ink:
+  - Actually finish soldering say 4 more
+- MQTT:
+  - Publish the latest version to nemo-dev
+- Chat bot:
+  - Finish SAML
+- Tableau:
+  - Start experimenting with the Tableu bridge to the dev server
+
 ## Week [14] Ending 04/12
 
 ### Focus for the Week
-- Wrap up deploying the sensor project, I just wanna be done with these!
+- E-ink
+  - Wrap up deploying the sensor project, I just wanna be done with these!
   - 3 boards left, finish soldering and deploying all but one
   - Getting the intern sensors correctly depoloyed
 - MQTT:
@@ -58,6 +71,20 @@
   - Add to git lab
   - Order more PCBs
   - Place order for more Displays, long USB cables, ESP32s, etc
+
+### Result:
+- E-ink:
+  - Did zero work
+- MQTT:
+  - Launched plugin in prod, had a straight up bad time
+  - figured out some major shit. The bridge was launchin inside django and it was being constantly created and destroyed by workers
+  - 
+  - feeling better about it now, how much testing is too much testing?
+  - Worked on VM and display code a little
+- Chat Bot:
+  - Worked hard on SAML took a fair bit of time and energy. Still not there
+- Tableau:
+  - Got the blessing from IT and dev that the db replication is a good idea
 
 ## Week [13] (I crashed my motorcycle and my body hurts and I was in a bad mood for a week)
 

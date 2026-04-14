@@ -97,6 +97,17 @@ Notes:
 
 ## Work Log
 
+### 04/10/2026
+**Main Task:**  VM issues
+
+**Notes:**
+- I spent a lot of time reconfiguring the VM after I clobbered the directory because I was having Git pull issues. I was impatient, and I paid for it.
+- Make a master shell script that would be path agnostic to fire up the system services, but that didn't work at all.
+- Spent like two hours on it and ended up going back to the original one where you have to manually configure the paths, but that actually worked really nicely.
+- The general clean up of the workspace, standardized capitalization, that kind of thing.
+- I think I fixed the issue where the screen would reconnect to the server, the broker, and get a cached message that the tool has shut down.
+  - The giveaway that it was a bug is that any other shutdown must have a task or name associated with it, whereas when it was showing on the display, it was just a shutdown without a comment. 
+
 ### 03/25/2026
 **Main Task:**  VM issues
 

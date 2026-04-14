@@ -28,6 +28,23 @@ This is just a general log of work that isn't really related to any one project.
 ## Work Log
 
 ### 02/28/2026
+**Category:** Volvo
+
+**Task:** High Idle
+
+**Notes:**
+- Mark came over to the house. The smog techs wouldn't test his car because the idle was way too high.
+- We very quickly found that it's because the IAC was being commanded open by the ECU at all times
+- We checked for vacuum leaks with the IAC power plug disconnected. We were easily able to lower the idle to 750 in park.
+- Played with the throttle position sensor. The TPS is a really simple switch that just detects when it is at the throttle stop and not at the throttle stop. It was adjusted pretty much perfectly already.
+- Spent time connecting the rat's chewed wires through.
+  - One of them was a test pin for the ECU that is supposed to ground the IAC circuit; however, even once connected, it didn't work.
+- Tested both the gauge coolant sensor and the ECU coolant sensor. Both seem to be responding within normal values.
+- Also shoved a 220 ohm resistor in the ECU sensor, and the ECU does respond to the different temperatures and lower the idle.
+- The thing I don't know is if the IAC is a stepper or just a simple on/off one. It seems like a simple on/off, but the way that the ECU was able to control the idle, maybe it was doing it using ignition timing and not air?
+- We didn't figure it out, but I guess we got closer and figured out what it is not.
+
+### 02/28/2026
 **Category:** Ranger, mini bike
 
 **Task:** plugs, shocks, timing, idle, carb clean on bike

@@ -10,6 +10,25 @@
 - ~~Checking charging system~~
 - ~~Faded polarizer on LCD readout?~~
 
+
+## 04/12/2026
+**Task:** Turn Signal wiring
+
+**Notes:**
+- added bullet connectors to the turn signal wiring, it's about to look a lot better with the new non-rusty and non-flush mount turn signals
+- Removed the whole rear plastic thing. It'd look a ton better with a taily tidy, but I'll get there eventually
+- Hot glued the dash back together, it's a little janky but could be worse. My hope is that it doesn't ever get too wet. 
+- Just had a real nice meditative time in the garage
+
+## 04/06/2026
+**Task:** Crash Recovery: Neutral and fuel light battle
+
+**Notes:**
+- I believe I have won the Dash Lite battle. I soldered a jumper between a pin on a MOSFET and a resistor, and that has fixed my neutral and light issues.
+- I learned that you can't really solder to vias very easily. These aren't even tented. 
+- 
+
+
 ## 04/06/2026
 **Task:** Crash Recovery: Neutral and fuel light battle
 

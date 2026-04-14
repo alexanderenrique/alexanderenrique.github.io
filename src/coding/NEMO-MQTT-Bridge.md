@@ -32,6 +32,50 @@ graph LR
 
 ## Work Log
 
+
+### 04/14/26
+
+**Task:** testing
+
+**Notes:**
+ - Spent the alst couple days testing how robust my sub process is
+ - I killed the child and the supervisor in dev, and sure enough they seem to come back with new PIDs! That was pretty cool
+ - The config reloads are also way more robust, it now picks up new configs in a couple seconds at worst
+   - It's worse going from disconnected to connected, I think there is som kind of blocking in the retry loop. 
+   - Where as when it's connected it's non blocking and as soon as you change the config it picks it up right away
+ - Changed the UI, removed the monitoring from the 
+
+### 04/10/26
+**Task:** testing
+
+**Notes:**
+- Up to version 2.3.1, starting to get really proud of it. The MQTT configuration is now in a different tab; it's separate from the customization.
+- Made sure the status page actually worked, cursor did some sneaky things and hard coded values lol
+- 
+
+
+
+### 04/08/2026 and 04/09/2026
+**Task:** Improved debug on config page, faster refreshes everywhere, serious re-architecture changes
+
+**Notes:**
+- **UI: Bridge status updates are now highly responsive.** The MQTT customization/monitor UI instantly reflects changes in bridge connectivity, including quick status updates when saving configuration triggers a reconnect.
+- **Instant connection attempt on config change:** If the bridge is waiting in a reconnect backoff, saving new MQTT config will interrupt the wait and trigger an immediate reconnect attempt, then resume normal backoff if needed.
+- Added way more robust logging
+- Made it so that ou can change which messages you get, you get all the messages!
+
+### 04/07/2026
+**Task:** Moving to Prod, FUCK
+
+**Notes:**
+- I added it to the Git lab. Matthew accepted my merge request, and we went live in NEMO!
+- Didn't crash anything, but the connection and retry logic just is not good on first launch. It is just not robust.
+- The annoying part is that it kind of half worked.
+- It seemed to say that it connected to the broker, but it wasn't really trying. It's hard to describe the connection between Dev and the broker was way more robust.
+- Nemo prod only connected after like two hours and just totally randomly, so I'm not sure why that was.
+- Nemo prod did also send some enable and disable messages, but they came batched, seemingly hourly, at 4:00 PM and 5:00 PM. No idea what triggered that.
+- Working to improve the retry logic so that even when there is no configuration, it finally picks up when there is a config and starts to work.
+
 ### 04/06/2026
 **Task:** clean uninstall and re-install again
 
