@@ -37,12 +37,20 @@
                 </button>
                 <ul class="nav__menu">
                     <li><a href="{{ '/' | url }}" class="nav__link">Home</a></li>
-                    <li><a href="{{ '/e-ink/' | url }}" class="nav__link">E-Ink Display</a></li>
-                    <li><a href="{{ '/nemo-mqtt/' | url }}" class="nav__link">NEMO MQTT</a></li>
-                    <li><a href="{{ '/smart-hotplate/' | url }}" class="nav__link">Smart Hotplate</a></li>
                     <li class="nav__dropdown">
-                        <a href="{{ '/coding/' | url }}" class="nav__link">Blog</a>
+                        <a href="{{ '/projects/' | url }}" class="nav__link">Projects</a>
                         <ul class="nav__submenu">
+                            <li><a href="{{ '/projects/' | url }}">All projects</a></li>
+                            <li><a href="{{ '/projects/e-ink-display/' | url }}">E-Ink Display</a></li>
+                            <li><a href="{{ '/projects/nemo-mqtt/' | url }}">NEMO MQTT</a></li>
+                            <li><a href="{{ '/smart-hotplate/' | url }}">Smart Hotplate</a></li>
+                            <li><a href="{{ '/e-ink/' | url }}">E-Ink portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav__dropdown">
+                        <a href="{{ '/work-logs/' | url }}" class="nav__link">Work logs</a>
+                        <ul class="nav__submenu">
+                            <li><a href="{{ '/work-logs/' | url }}">All work logs</a></li>
                             <li><a href="{{ '/coding/' | url }}">Coding</a></li>
                             <li><a href="{{ '/wrenching/' | url }}">Wrenching</a></li>
                             <li><a href="{{ '/microelectronics/' | url }}">Microelectronics</a></li>

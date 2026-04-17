@@ -10,19 +10,19 @@ module.exports = function(eleventyConfig) {
 
   // Add collections
   eleventyConfig.addCollection("coding", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/coding/**/*.md");
+    return collectionApi.getFilteredByGlob("src/work_logs/coding/**/*.md");
   });
 
   eleventyConfig.addCollection("wrenching", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/wrenching/**/*.md");
+    return collectionApi.getFilteredByGlob("src/work_logs/wrenching/**/*.md");
   });
 
   eleventyConfig.addCollection("microelectronics", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/microelectronics/**/*.md");
+    return collectionApi.getFilteredByGlob("src/work_logs/microelectronics/**/*.md");
   });
 
   eleventyConfig.addCollection("general", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/general/**/*.md");
+    return collectionApi.getFilteredByGlob("src/work_logs/general/**/*.md");
   });
 
   // Add filters

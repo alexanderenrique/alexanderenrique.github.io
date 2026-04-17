@@ -2,16 +2,22 @@
 node_modules/
 _site/
 
-# Local / scratch
+# Local scratch & workspace-only notes (not for the public site)
 algo/
 work/
 .cursor/
+
+# Personal / local-only pages (paths updated for src/work_logs layout)
+src/system/
+src/work_logs/general/birth-of-the-works.md
+src/work_logs/general/Way-Backburner.md
+src/work_logs/coding/useful-bash.md
+
+# Same files if an older directory layout is still present on disk
 src/general/birth-of-the-works.md
 src/general/weekly-updates.md
-src/coding/useful-bash.md
-
-# Keep these local only (not tracked in git)
 src/general/Way-Backburner.md
+src/coding/useful-bash.md
 src/microelectronics/500mA-LED-Driver.md
 
 # OS & editor
@@ -19,7 +25,14 @@ src/microelectronics/500mA-LED-Driver.md
 **/.DS_Store
 *.obj
 
-# Env / secrets (if you add any later)
+# Environment variables
 .env
 .env.*
 !.env.example
+
+# Private keys & cert stores (never commit)
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519

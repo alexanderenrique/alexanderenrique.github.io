@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const TIL_PATH = path.join(__dirname, "..", "general", "Today-I-Learned.md");
+const TIL_PATH = path.join(__dirname, "..", "work_logs", "general", "Today-I-Learned.md");
 const HEADING = /^#{3,4}\s+(\d{2})\/(\d{2})\/(\d{4})\s*$/gm;
 
 function stripFrontMatter(raw) {
@@ -50,7 +50,7 @@ module.exports = () => {
   return {
     title: "Today I Learned",
     generated: new Date().toISOString(),
-    source: "general/Today-I-Learned.md",
+    source: "work_logs/general/Today-I-Learned.md",
     items: parseLearnings(content),
   };
 };

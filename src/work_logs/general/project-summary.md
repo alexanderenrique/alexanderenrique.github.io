@@ -1,7 +1,7 @@
 # Project Summary — High-Level Overview
 
 ## 1. MQTT Project (NEMO Tool Status)
-*Source: [[NEMO-MQTT-Bridge]], [[NEMO-Tool-Display-Hardware]]*
+*Source: [NEMO MQTT Plugin]({{ '/coding/NEMO-MQTT-Bridge/' | url }}), [NEMO Tool Display Hardware]({{ '/microelectronics/NEMO-Tool-Display-Hardware/' | url }})*
 
 ### Problem Statement
 Lab members need real-time visibility into tool status (enabled/disabled) without polling the NEMO API, which is too slow for instant feedback. The NEMO API takes ~2 minutes per call, making it unsuitable for time-sensitive status updates when someone enables or disables a tool.
@@ -27,7 +27,7 @@ Lab members need real-time visibility into tool status (enabled/disabled) withou
 ---
 
 ## 2. E-Ink Display
-*Source: [[e-ink-display]]*
+*Source: [E-Ink Display]({{ '/microelectronics/e-ink-display/' | url }})*
 
 ### Problem Statement
 Need low-power, battery-operated displays for lab environments, inventory/shelf labels, and environmental sensing. E-ink only draws power when updating, enabling long battery life.
@@ -56,7 +56,7 @@ Need low-power, battery-operated displays for lab environments, inventory/shelf 
 ---
 
 ## 3. Pump Monitor Module
-*Source: [[pump_monitor_module]]*
+*Source: [Pump Monitor Module]({{ '/microelectronics/pump_monitor_module/' | url }})*
 
 ### Problem Statement
 Vacuum pumps need preventive monitoring and maintenance. Manual checks are unreliable; continuous monitoring of temperature, current, and vibration can improve uptime and reduce failures.

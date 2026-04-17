@@ -38,7 +38,7 @@ A work log tracking the evolution of this website from simple Markdown to a full
 - Configured my Github to work with the DNS which is a learning experience in itself.
 
 ### 10/01/2025
-- Migrated from basic Markdown/GitHub Pages to [[11ty]]
+- Migrated from basic Markdown/GitHub Pages to [11ty](https://www.11ty.dev/)
 - Implemented base template and layout system
 - Added Mermaid.js for diagram support
 - Created initial navigation structure

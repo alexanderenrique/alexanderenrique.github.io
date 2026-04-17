@@ -27,4 +27,4 @@ Connect your ESP32-C3 device via USB and click the button below to install the f
   src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js">
 </script>
 
-For more information about this project, see the [[e-ink-display]] project page.
+For more information about this project, see the [E-Ink Display]({{ '/projects/e-ink-display/' | url }}) project page.
