@@ -2,7 +2,7 @@
 layout: page
 title: "Smart Hot-Plate"
 description: "Hot-plate safety using load cell mass, temperature, and a finite-state machine"
-permalink: /smart-hotplate/
+permalink: /guides/smart-hotplate/
 ---
 
 ## What this is
@@ -50,3 +50,4 @@ For **BOM, parking-lot tasks, and day-by-day work log**, see the deep-dive noteb
 **[Smart Hotplate — full project notes]({{ '/microelectronics/smart-hotplate/' | url }})**
 
 This page is the short overview; that page is the running lab book.
+

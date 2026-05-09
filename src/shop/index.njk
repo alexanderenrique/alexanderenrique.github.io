@@ -1,0 +1,82 @@
+---
+layout: page
+title: "Shop"
+permalink: /shop/
+pcbs:
+  - title: "E‑Ink Display PCB"
+    description: "Just the PCB (board only) for the battery‑powered ESP32 e‑ink display platform."
+    emoji: "🧾"
+    shopifyKey: "eInkDisplayPcb"
+    projectUrl: "/projects/e-ink-display/"
+  - title: '30 Pin ESP32 Dev Board with 4.2" touch screen TFT display'
+    description: |-
+      The easiest way to put these pieces of hardware together. You will have to use the specific pinout seen <a href="https://github.com/alexanderenrique/NEMO-Tool-Display/blob/main/display-firmware/src/hardware.h" target="_blank" rel="noopener noreferrer">here</a>.
+    emoji: "📡"
+    shopifyKey: "30 Pin ESP32 to TFT Display"
+    projectUrl: "/projects/nemo-mqtt/"
+githubGoGetters:
+  - title: "E‑Ink Display"
+    links:
+      - label: "Repo"
+        url: "https://github.com/alexanderenrique/e-ink-display"
+      - label: "Firmware"
+        url: "https://github.com/alexanderenrique/e-ink-display/tree/main/e-ink_code"
+      - label: "PCBs"
+        url: "https://github.com/alexanderenrique/e-ink-display/tree/main/e-ink-PCBs"
+  - title: "NEMO Tool Display"
+    links:
+      - label: "Repo"
+        url: "https://github.com/alexanderenrique/NEMO-Tool-Display"
+      - label: "Display firmware"
+        url: "https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/display-firmware"
+      - label: "Tool display PCB"
+        url: "https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/tool-display-pcb"
+      - label: "Broker / VM server"
+        url: "https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/vm-server"
+---
+
+<h2>PCBs</h2>
+
+<div class="product-list" role="list">
+{% for product in pcbs %}
+  <article class="product-row" role="listitem">
+    <div class="product-row__media" aria-hidden="true">
+      <div class="product-row__placeholder">{{ product.emoji }}</div>
+    </div>
+    <div class="product-row__body">
+      <h3 class="product-row__title">{{ product.title }}</h3>
+      <p class="product-row__description">{{ product.description | safe }}</p>
+      <div class="product-row__links">
+        <a href="{{ shopify.products[product.shopifyKey] }}" class="product-row__link">Buy →</a>
+        <a href="{{ product.projectUrl | url }}" class="product-row__link">Project →</a>
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<h2>For the Ambitious Types</h2>
+
+<p class="shop-github-intro">Prefer GitHub to Shopify? Everything on this page is open source. Always has been, always will be.</p>
+
+<div class="product-list" role="list">
+{% for block in githubGoGetters %}
+  <article class="product-row" role="listitem">
+    <div class="product-row__media" aria-hidden="true">
+      <div class="product-row__placeholder">{{ block.emoji }}</div>
+    </div>
+    <div class="product-row__body">
+      <h3 class="product-row__title">{{ block.title }}</h3>
+      <p class="product-row__description">{{ block.description }}</p>
+      <div class="product-row__links">
+        {% for link in block.links %}
+          <a href="{{ link.url }}" class="product-row__link" target="_blank" rel="noopener noreferrer">{{ link.label }} →</a>
+        {% endfor %}
+      </div>
+    </div>
+  </article>
+{% endfor %}
+</div>
+
+<p class="shop-footnote"><strong>Why don't I sell already assembled boards?</strong> Because assembling boards turns them into "intentional radiators", which would require FCC emissions compliance for an emitting device. Maybe someday though...</p>
+

@@ -41,7 +41,7 @@ graph LR
  - Spent the last couple days testing how robust my sub process is
  - I killed the child and the supervisor in dev, and sure enough they seem to come back with new PIDs! That was pretty cool
  - The config reloads are also way more robust, it now picks up new configs in a couple seconds at worst
-   - It's worse going from disconnected to connected, I think there is som kind of blocking in the retry loop. 
+   - It's worse going from disconnected to connected, I think there is some kind of blocking in the retry loop. 
    - Where as when it's connected it's non blocking and as soon as you change the config it picks it up right away
  - Changed the UI, removed the monitoring from the config page and made it a simple JSON formatted end point
  - I learned Django uses UTC for somethings, so my monitor end point is all in UTC

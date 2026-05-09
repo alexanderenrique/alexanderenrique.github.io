@@ -65,16 +65,8 @@ graph LR
 - 5V 1A power supply for the ESP32 and display. The display will get power through the VIN pin of the ESP32
 - The custom PCB, to make things nicer to solder together
 - 3D printed enclosure
+- Optional: Micro USB break out board, incase you want to add another connector at a 90 degree angle to the other port. 
 
-
-
-## For Alex K:
-
-- Security I've implemented:
-  - HMAC message authentication
-  - Time stamp validation for replay attacks, not like that matters really
-  - MQTT ports are PW protected, both on LAN and on Stanford net
-  - This data is already publicly available, so it isn't the worst if it's intercepted
 
 - Further to-dos:
   - Broker should only allow nemo's IP address
@@ -93,9 +85,88 @@ Notes:
 
 
 ## Parking on a downhill:
-- Adding the last state to NVS in the event of a power outage (maybe a good idea, not sure)
+- Finish designing case
 
 ## Work Log
+
+### 05/05/2026
+**Main Task:**  Tiny Display UI change
+
+**Notes:**
+- Added a comma to the date on reservation screen
+
+### 05/04/2026
+**Main Task:**  Reservation push to prod, style
+
+**Notes:**
+- Updated the VM with the latests API code, working pretty well
+- There is weirdly a square between the start and end time, not sure what would've caused that. Figuring out if it's from the VM or how the ESP is parsing the data
+- Also the Next User date just isn't correct, not sure what is causing that
+
+### 04/30/2026
+**Main Task:**  Reservation UI changes, updating the VM
+
+**Notes:**
+- Trying to standardize the UI, now the enabled/diable border is around the whole thing
+- Updated the VM. Had to redo a lot of the configuration I'd done previously.
+- I renamed the directory to VM-server from VM_server, so I had to re-do the config.
+- And then, of course, they were port complex, as they always are, but it rebooted and started working pretty easily, actually.
+
+### 04/29/2026
+**Main Task:**  Adding Reservation
+
+**Notes:**
+- While I wait for the PCBs, might as well add another feature!
+- Adding the next reservation screen, so that people can pan over and see who has the tool next
+- The reservstions API fought me for a while
+  - Turns out you need to set the page to 500 entries per page and then pull about five pages
+  - I learned that at anytime, there are about 2,000 future reservations in NEMO which is bonkers
+  - So by pulling 2,500, you pull all the future and the into the past reservations just a little
+- Made some UI changes to make it more standard
+
+### 04/25/2026
+**Main Task:**  Shipping PCB for manufacture
+
+**Notes:**
+- Sent the boards out to manufacture!
+- No one send out a new board without a little fear in their butt-hole
+
+### 04/23/2026
+**Main Task:**  Conflicting Broker IDs
+
+**Notes:**
+- There is always something to learn when you put stuff into production!
+- I previously wasn't changing the MQTT ID of each device, so they would disconnect from MQTT randomly
+- I changed the code so that the tool ID is now part of the NEMO ID with the hopes that there will not be MQTT confilcts
+
+### 04/22/2026
+**Main Task:**  Case redesign, PCB improvements
+
+**Notes:**
+- Started making the PCB more compact with the hope of picking up more mounting holes
+- Added t third component to the case print, a press on locating ring that should stop the screen from being pushed backwards. And there is always hot glue...
+- Excitingly, I placed the order for about 12 displays, complimenting the 3 displays that I've already made. Just need to finish up and order the PCB, that'll be the long pole for sure
+- More work on the PCB design, just being really really picky, gotta be perfect if I'm gonna order like 12 of these with not my money and it takes forever
+
+### 04/21/2026
+**Main Task:**  Case redesign, PCB improvements
+
+**Notes:**
+- Started re-designing the case, the port for the USB is definitely not in the right place, and I'm not super happy with the clips to secure the display
+- In redesigning the case I had a few thoughts about how to make the PCB better. 
+  - I think I need to shorten the PCB vertically, like the hole spacing is min 2" so targting a PCB around 1.8"
+- Not sure how to super securely mount the screen, I want it to be just a couple prints that snap together but the mounting holes on the displays themselves are just not consistent
+- Maybe like a snap ring that presses on the locating pin and locks with them or something
+  - Or hell there may be hot glue involved, who cares
+- Added some locating tabs in the top of the box, more
+
+### 04/20/2026
+**Main Task:**  PCB improvements
+
+**Notes:**
+- I've mainly focused on the plugin code that's been broken for a while, but I finally got it fixed with some major changes.
+- The demo boards have been working on my desk for over four days now, which is awesome. It's going great and I'm ready to send out for a larger batch of PCBs
+- I realized it might be nice to get a power to the board via the side, not necessarily straight at the bottom, so I added a 5-pin micro USB breakout to the PCB.
 
 ### 04/10/2026
 **Main Task:**  VM issues
@@ -263,15 +334,26 @@ Notes:
 - And that's just pinging the API, who knows how long it takes nemo to take the enable command, then make a data base entry, then put it on the API
 - For this reason, I'm going to try and write my own MQTT hook into the backend of NEMO. A brave new world.
 
-## Next Steps
-- Order components
-- Test basic display functionality
-- Set up MQTT client code
-- Design UI layout
-- Create prototype enclosure
-
-## DONE:
-- Set up ESP32 with TFT display
-- Implement basic MQTT client functionality
-- Design simple UI layout for tool status
-- Test communication with MQTT broker
+# Top tools by usage:
+| Rank | Usage  | Tool            |
+|------|--------|-----------------|
+| 1    | 9,505  | woollam         |
+| 2    | 7,939  | heidelberg      |
+| 3    | 7,744  | samco           |
+| 4    | 5,434  | headway2        |
+| 5    | 4,351  | heidelberg2     |
+| 6    | 3,886  | aja-evap        |
+| 7    | 3,799  | wbflexsolv-1    |
+| 8    | 3,449  | svgcoat2        |
+| 9    | 2,905  | yes             |
+|10    | 2,783  | svgdev2         |
+|11    | 2,762  | headway3        |
+|12    | 2,337  | aja2-evap       |
+|13    | 2,317  | svgdev          |
+|14    | 2,300  | PT-Ox           |
+|15    | 2,094  | keyence         |
+|16    | 2,020  | wbflexcorr-2    |
+|17    | 1,974  | PT-MTL          |
+|18    | 1,951  | lesker-sputter  |
+|19    | 1,951  | svgcoat         |
+|20    | 1,731  | PT-DSE          |

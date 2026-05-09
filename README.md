@@ -66,6 +66,27 @@ The site builds to the `_site` directory. You can deploy this to any static host
 - Vercel
 - AWS S3
 
+## 🛒 Selling products (Shopify checkout)
+
+This site is static (Eleventy + GitHub Pages). Product pages include **Buy** links that point to Shopify product pages.
+
+### Configure product URLs
+
+Edit:
+
+- `src/_data/shopify.js`
+
+Set `products.eInkDisplay` (and any future product URLs) to your public Shopify product URLs, for example:
+
+- `https://<your-shop>.myshopify.com/products/e-ink-display`
+
+### Add a new product later (e.g. MQTT PCBs)
+
+1. Create the product in Shopify and copy its public product URL.
+2. Add (or update) a page under `src/projects/` describing the product.
+3. Add the product URL to `src/_data/shopify.js` (for example `products.nemoMqttPcb`).
+4. Add a **Buy** CTA link on the relevant page(s) and on `src/projects/index.md` (and optionally `src/index.md`).
+
 ## 📄 License
 
 MIT License - see LICENSE file for details.

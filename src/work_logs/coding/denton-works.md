@@ -21,6 +21,13 @@ A work log tracking the evolution of this website from simple Markdown to a full
 ## Work Log
 
 ### 11/2/2025
+**Main Task:** Making this a shopping site
+
+**Notes:**
+- Started changing the flavor of the website to be less text heavy and more emphasis on high level
+- Ways to purchase and more logical build guides
+
+### 11/2/2025
 **Main Task:** Formatting work logs
 
 **Notes:**

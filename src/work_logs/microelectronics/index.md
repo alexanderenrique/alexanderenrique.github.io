@@ -15,33 +15,18 @@ tags: [electronics, embedded-systems, microcontrollers]
     <div class="card">
         <h3 class="card__title">Smart Thunderbird Electronics</h3>
         <p class="card__description">Modern electronics integration for classic cars. Bringing smart features to the 1968 Thunderbird restoration project.</p>
-        <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}" class="section__link">View Project →</a>
-        <div class="card-tags">
-            <span class="tag">embedded systems</span>
-            <span class="tag">classic car</span>
-            <span class="tag">electronics</span>
-        </div>
+        <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}" class="section__link">View Work Log →</a>
     </div>
 
     <div class="card">
         <h3 class="card__title">NEMO Tool Display Hardware</h3>
         <p class="card__description">Hardware for NEMO tool display system. Custom electronics for lab equipment monitoring and status display.</p>
-        <a href="{{ '/microelectronics/NEMO-Tool-Display-Hardware/' | url }}" class="section__link">View Project →</a>
-        <div class="card-tags">
-            <span class="tag">hardware</span>
-            <span class="tag">NEMO</span>
-            <span class="tag">display</span>
-        </div>
+        <a href="{{ '/microelectronics/NEMO-Tool-Display-Hardware/' | url }}" class="section__link">View Work Log →</a>
     </div>
 
     <div class="card">
         <h3 class="card__title">Vacuum Pump Monitor Module</h3>
         <p class="card__description">Preventive monitoring system for vacuum pumps using temperature sensors, IMU, and current sensing to holistically monitor pump health and performance.</p>
-        <a href="{{ '/microelectronics/pump_monitor_module/' | url }}" class="section__link">View Project →</a>
-        <div class="card-tags">
-            <span class="tag">monitoring</span>
-            <span class="tag">NEMO</span>
-            <span class="tag">sensors</span>
-        </div>
+        <a href="{{ '/microelectronics/pump_monitor_module/' | url }}" class="section__link">View Work Log →</a>
     </div>
 </div>

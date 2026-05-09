@@ -2,7 +2,7 @@
 layout: page
 title: "NEMO MQTT & Tool Display"
 description: "Real-time tool status from NEMO to wall-mounted displays over MQTT"
-permalink: /nemo-mqtt/
+permalink: /guides/nemo-mqtt/
 ---
 
 ## What this is
@@ -80,23 +80,23 @@ Follow these steps to set up the NEMO MQTT tool display from end to end:
 
 - Install the plugin from [PyPI](https://pypi.org/project/nemo-mqtt-bridge/) in your NEMO instance.
 - In your `INSTALLED_APPS` (e.g., in your Django settings):
-    ```python
-    "NEMO_mqtt_bridge",
-    "NEMO_mqtt_bridge.urls",
-    ```
+   ```python
+   "NEMO_mqtt_bridge",
+   "NEMO_mqtt_bridge.urls",
+   ```
 - Update your `start_nemo.sh` or requirements list to include:
-    ```
-    nemo-mqtt-bridge==2.1.2
-    ```
+   ```
+   nemo-mqtt-bridge==2.1.2
+   ```
 
 ---
 
 ## 2. Apply Database Migrations
 
 - Run the following to create the required tables in PostgreSQL:
-    ```
-    python manage.py migrate NEMO_mqtt_bridge
-    ```
+   ```
+   python manage.py migrate NEMO_mqtt_bridge
+   ```
 - If you are using Docker, use the equivalent Docker command _(provide specific command as applicable)_.
 
 ---
@@ -118,13 +118,13 @@ Follow these steps to set up the NEMO MQTT tool display from end to end:
 - This server code uses a heavy mosquitto binary that isn't suitable to be installed or run inside the docker container. You can run it inside a VM of course, just keep it seperate from the NEMO-CE Docker.
 
 - Run:
-    ```
-    ./setup.sh
-    ```
-    - This installs dependencies and prompts you for:
-      - MQTT ports
-      - Username and password
-      - HMAC key
+   ```
+   ./setup.sh
+   ```
+   - This installs dependencies and prompts you for:
+     - MQTT ports
+     - Username and password
+     - HMAC key
 - (Optional) To run the bridge at startup, use the provided systemd script.
 
 ---
@@ -146,3 +146,18 @@ Follow these steps to set up the NEMO MQTT tool display from end to end:
 ---
 
 You're ready to display live tool state from NEMO on your ESP32 display!
+
+# Architecture Choices and the real nitty gritty list of my mistakes:
+
+- First, I changed NEMO Community Edition main branch, and that was frowned upon by the developer,which makes sense. The plugin should be an opt-in.
+- Trying to have a local instance of NEMO connect to a local broker connecting to a remote hardware device is really challenging whenever you do everything on the same computer, because Mosquitto MQTT wants to spin up lots of publishing instances, and you have to be constantly killing different instances.
+- Initially, I had NEMO going to a Redis database, but it turns out that the Redis binary does not package nicely for Docker installs, at least that I could get working.
+- Instead of Redis, I pivoted to Listen/Notify in Postgres which NEMO can use natively that barely adds any latency over Redis.
+- Similarly, I was using your Mosquitto binary for MQTT, which didn't package nicely into the Docker container.
+- I then switched to Mosquitto Lite, which is more of a Python package, and was able to work inside the container.
+- After the first install into Live NEMO, I realized that the bridge was actually being spawned and destroyed constantly inside of the Django app by Django workers.
+  - At any given time, five Django workers would launch the MQTT bridge, and then they would be destroyed a few seconds later,and then restart again instantly.
+  - This technically worked somehow, but it was just not very elegant.
+- At this point, I pivoted to having my Python package launch a subprocess inside of the Docker container and have all the workers launching it check to see if the process is running or not.
+- To make it more robus, I also added a supervisor to this process.
+

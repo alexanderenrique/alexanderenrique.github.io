@@ -19,6 +19,10 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 04/22/2026
+- today I learned and really understood different gas flow regimes, like molecular vs viscous flow. In the context of He leak detectors and how adding a purge gas can decrease the signal making it to the detector
+- I also learned He in the atmosphere can be detected by He leak detectors. Obviously you can sniff for leaks, but you can also use background He which is about 5ppm.
+
 ### 03/18/2026
 - Range-extender DHCP/subnet mistakes are a crash course in real LAN behavior; microcontrollers feel simple by comparison once the path is fixed
 - Range extenders can run their own DHCP and strand IoT on a subnet; "Auto" can flip behavior between runs

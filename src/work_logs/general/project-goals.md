@@ -47,6 +47,18 @@
 
 # Weekly Goals
 
+## Week [16] Ending 04/26
+- E-ink
+  - Soldering, cmon soldering is fun
+- MQTT
+  - Getting more (12?) Boards out for manufacture
+  - Solid conceptual case, will need to modify exact dimensions later as the PCB moves
+  - Placing order for Displays, USB cables, etc
+- Tableau
+  - ??? See what stanford IT can help with
+
+### Focus for the week
+
 ## Week [15] Ending 04/19
 
 ### Focus for the week
@@ -58,6 +70,13 @@
   - Finish SAML
 - Tableau:
   - Start experimenting with the Tableu bridge to the dev server
+
+
+### Result:
+- Got MQTT implemented in 2.3.3, it works!
+- Got SAML working thank god
+- Did not do any soldering on the e-ink
+- No work on Tableau
 
 ## Week [14] Ending 04/12
 
