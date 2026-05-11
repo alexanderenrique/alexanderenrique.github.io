@@ -1,34 +1,29 @@
 ---
 layout: page
-title: "NEMO MQTT"
-description: "Real-time tool status from NEMO to wall-mounted ESP32 displays over MQTT"
 permalink: /projects/nemo-mqtt/
 tags: [nemo, mqtt, django, postgres, iot]
 ---
 
 <div class="hero">
   <h2 class="hero__title">NEMO → MQTT → Edge displays</h2>
-  <p class="hero__subtitle">Near real-time tool state from NEMO to wall-mounted displays without slow REST polling.</p>
+  <p class="hero__subtitle">Near real-time tool state from NEMO to tool-mounted displays without slow REST polling.</p>
 
   <div class="btn-row">
     <a class="btn btn--primary" href="{{ shopify.products.nemoMqttPcb }}">Buy PCB →</a>
-    <a class="btn btn--secondary" href="{{ '/guides/nemo-mqtt/' | url }}">Setup guide →</a>
+    <a class="btn btn--secondary" href="{{ '/guides/nemo-mqtt/' | url }}">Build guide →</a>
     <a class="btn btn--secondary" href="{{ '/coding/NEMO-MQTT-Bridge/' | url }}">Work log →</a>
   </div>
 </div>
 
+
 <div class="grid grid--3">
   <div class="card">
-    <h3 class="card__title">&lt;2s updates</h3>
-    <p class="card__description">Tool on/off changes show up quickly where they matter—on the lab floor.</p>
+    <h3 class="card__title">Near Instant Updates</h3>
+    <p class="card__description">Tool status changes show up quickly where they matter in the lab.</p>
   </div>
   <div class="card">
     <h3 class="card__title">Postgres LISTEN/NOTIFY</h3>
-    <p class="card__description">Avoids multi-minute polling loops and stays aligned with NEMO’s DB-centric model.</p>
-  </div>
-  <div class="card">
-    <h3 class="card__title">MQTT fan-out</h3>
-    <p class="card__description">Publish once; many subscribers (displays/dashboards/alerts) update in parallel.</p>
+    <p class="card__description">Avoids multi-minute REST polling and stays aligned with NEMO’s Postgres model.</p>
   </div>
   <div class="card">
     <h3 class="card__title">Edge-friendly payloads</h3>
@@ -36,11 +31,7 @@ tags: [nemo, mqtt, django, postgres, iot]
   </div>
   <div class="card">
     <h3 class="card__title">Configurable security</h3>
-    <p class="card__description">Broker auth + optional HMAC verification where configured.</p>
-  </div>
-  <div class="card">
-    <h3 class="card__title">Flexible topology</h3>
-    <p class="card__description">Works when MCUs must stay off the public network (broker/bridge host in between).</p>
+    <p class="card__description">Broker auth + optional HMAC verification.</p>
   </div>
 </div>
 
@@ -57,11 +48,23 @@ tags: [nemo, mqtt, django, postgres, iot]
   </div>
 </div>
 
-## What it is
+## Why is this important
 
-This project pushes tool status out of **NEMO** in near real-time so you can drive wall-mounted displays, dashboards, or lightweight notifications without waiting on slow polling intervals.
+- For many labs, tool "enable/disable" is central to billing, utilization data, understanding up time, etc. 
+- Though the status of a tool is readily visible in the NEMO software, lab processing can be stressful and frantic and chaotic, and lab members often forget to enable tools
+  - This leads to process failures (you have to enable the tool for it to run!), wasted time, and often lack of accountability when using tools like wet benches that are hard to interlock
+- The tool status has previously been displayed using a small (and I do mean small) red/green LED placed somewhere on the tool
+  - This is tied to the tool interlock box and is easy to miss, even for experienced lab members
+  - It is much hard to miss a 4" TFT display with your name on it, or possibly someone elses name on it!
 
-At a high level: NEMO events land in Postgres, a bridge service publishes updates to an MQTT broker, and edge devices subscribe to the topics they care about.
+## Additional Feautures
+
+- The display shows current "enabled" lab member, but it also shows who used the tool last
+  - This is designed to foster accountability. If you left the tool in a state of disrepair, the next user will konw immediately who did it!
+- The display also shows "tasks" (the yellow wrench icon on NEMO) as well as shut downs
+  - A seperate page displays the message associated with the task or the shut down, so that lab members can easily be informed of problems with the tool that need to be taken into consideration
+- The NEMO API is used for slower refreshing data, such as "next reservation" which is also displayed on a seperate screen
+
 
 ## What you can buy
 
@@ -71,47 +74,9 @@ At a high level: NEMO events land in Postgres, a bridge service publishes update
   <a class="section__link" href="{{ shopify.products.nemoMqttPcb }}">Buy PCB (Shopify) →</a>
 </div>
 
-## Getting started
-
-1. Confirm your NEMO install uses **PostgreSQL** (SQLite won’t work for LISTEN/NOTIFY).
-2. Install the NEMO bridge plugin/package.
-3. Configure broker host/auth and optional HMAC key in NEMO.
-4. Run the bridge/broker host in your preferred topology.
-5. Flash/configure the display firmware and subscribe to the right tool topics.
 
 **Start here:** [NEMO MQTT & Tool Display — setup guide]({{ '/guides/nemo-mqtt/' | url }})
 
-## Why MQTT (vs polling REST)
-
-For a satisfying user experience, the “tool just turned on/off” signal needs to arrive quickly (instantly, not minutes). MQTT is a clean fit for low-latency fan-out to many small subscribers, while REST endpoints can still serve slower-moving data (configuration, next reservation, etc.) on a relaxed schedule.
-
-## Architecture (high level)
-
-<div class="card">
-  <h3 class="card__title">Architecture at a glance</h3>
-  <p class="card__description">NEMO emits events → Postgres persists → bridge publishes → broker fans out → ESP32 renders.</p>
-</div>
-
-{% mermaid %}
-flowchart LR
-  subgraph nemo [NEMO server]
-    UI[Tool on/off in UI]
-    SIG[Django signals]
-    PG[(PostgreSQL)]
-  end
-  subgraph bridge [Bridge & broker]
-    BR[Bridge to MQTT]
-    BK[MQTT broker]
-  end
-  subgraph edge [Lab floor]
-    ESP[ESP32 display]
-  end
-  UI --> SIG
-  SIG --> PG
-  PG --> BR
-  BR --> BK
-  BK --> ESP
-{% endmermaid %}
 
 ## Documentation & support
 

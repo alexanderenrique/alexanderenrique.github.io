@@ -6,7 +6,7 @@ tags: [esp32, e-ink, ble, iot, low-power]
 
 <div class="hero">
   <h2 class="hero__title">Battery-powered ESP32 E‑Ink Display</h2>
-
+A small ESP32 + e‑ink display platform with 8+ month battery life
 
   <div class="btn-row">
     <a class="btn btn--primary" href="{{ shopify.products.eInkDisplay }}">Buy PCB →</a>
@@ -17,7 +17,7 @@ tags: [esp32, e-ink, ble, iot, low-power]
 <div class="grid grid--3">
   <div class="card">
     <h3 class="card__title">Through-hole friendly design</h3>
-    <p class="card__description">All components are through-hole for easy, beginner-friendly soldering and inspection—no tiny SMD parts.</p>
+    <p class="card__description">All components are through-hole for easy, beginner-friendly soldering. No tiny SMD parts.</p>
   </div>
   <div class="card">
     <h3 class="card__title">Web flashing</h3>
@@ -25,11 +25,11 @@ tags: [esp32, e-ink, ble, iot, low-power]
   </div>
   <div class="card">
     <h3 class="card__title">BLE configuration</h3>
-    <p class="card__description">Pair over Bluetooth Low Energy to set Wi‑Fi, refresh intervals, and settings.</p>
+    <p class="card__description">Pair over Bluetooth to set Wi‑Fi, refresh intervals, and settings.</p>
   </div>
   <div class="card">
     <h3 class="card__title">Multiple firmware “apps”</h3>
-    <p class="card__description">Sensor readouts, shelf labels, messages, and lightweight fun data pulls.</p>
+    <p class="card__description">Sensor readouts, messages, and lightweight fun data pulls.</p>
   </div>
   </div>
 <div class="grid grid--2">
@@ -45,9 +45,21 @@ tags: [esp32, e-ink, ble, iot, low-power]
   </div>
 </div>
 
-## What it is
 
-A small, battery-powered ESP32 + e‑ink display platform that can run different firmware modes depending on what you want it to do: sensor readouts, shelf labels, messages, or fun data pulls.
+## Why I Built it and Why it Matters
+
+I built it to monitor environmental conditions (temperature and humidity) at the point of experiment. Environmental factors are often under monitored and can lead to phantom process problems, especially for very environmentally sensitive processes such as wet chemistry and photolithography.
+It has been my experiece that even in "climate controlled" spaces such as cleanrooms, temperature and humidity are not always as uniform as building HVAC systems would lead you to believe. 
+
+I wanted the environmental data to not only be displayed, but collected and sent to the lab management software for long term tracking. This is accomplished using the "sensor" app.
+With this platform, I realized I could also have it display a variety of different information such as pre programmed messages (via the "messages" app) or retrieve information from various APIs (via the "fun" app).
+
+## Key Specs:
+- Battery life: 8-12 month using 2 3300 mAh 18650 batteries an 30 minute refresh interval
+  - Battery life heavily dependent on refresh interval
+- Display size: 2.9"
+- Approximate unit cost: $25
+- **Anything else??**
 
 ## Build guide
 

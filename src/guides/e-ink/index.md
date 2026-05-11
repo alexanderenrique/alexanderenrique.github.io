@@ -5,52 +5,49 @@ description: "Step-by-step: parts, assembly, firmware, and configuration for the
 permalink: /guides/e-ink/
 ---
 
-Your one stop shop for building, flashing, and configuring the ESP32 e‑ink display.
-
 ## Build Flow
 
 Use this path to go from bare parts to a configured display.
 
-### 1. Order the hardware
+### 1. Obtiain the hardware
 
-- **PCB** — (revision, fab house, which zip/gerbers to upload)
-- **Passive components** — resistors, capacitors, etc. (reference BOM)
-- **MCU** — ESP32 module or dev board as used in your revision
-- **E-ink display** — panel matching the PCB (size, connector, partial refresh support if relevant)
+- **PCB** — Buy one freom me *here* or have your own manufactured by uploading the .zip file
+  - Also feel free to modify, that's what makes this fun
+- **Passive components** — resistors, capacitors, MOSFETs, you can find the Bill Of Materials (BOM) *here*
 
-### 2. Solder the board
+### 2. Start Printing the enclosure
+- For maximum efficiency you'll want to start printing the enclosure first. You can find the STL *here*
+- The print will require support for the charging port hole, unless you have some very swanky 3D printer
+- PLA works fine, though you could print it from something else if you felt like it
+- The print takes roughly 40 minutes on a Creality K1, you speed will vary of course
 
-- Assembly order that avoids hard-to-reach joints (e.g. low profile parts first, if applicable)
-- **Tips** — flux, temperature, common cold-joint checks, how to seat the display connector without stressing the flex, ESD notes, anything specific to this PCB
 
-### 3. Choose a firmware mode
+### 3. Solder the board
+
+- Order of the components doesn't really matter, though I prefer to start with all the passives like resistors and capacitors
+- I would suggests first adding the pins to the ESP32 Dev board, then applying a small amount of solder to the battery pads, and then soldering battery wires to the pads
+- Once the ESP32 Assembly is complete with header pins and battery wires, then it can be carefully inserted onto the PCB
+- The only slightly challenging component to solder is the P-Type MOSFET which is in the SOT-223 packaging. I would suggest tinning one pad on the PCB, then placing the MOSFET on the boart and then reflowing the solder to capture the MOSFET
+
+### 3. Flash the Firmware
+
+- Connect your ESP32 to your computer, selecting "allow accessory to connect" if prompted
+- Pull up the e-ink portal *here* and select which firmware you would like to flash
+- Follow the prompts on the flashing page
 
 - **Sensor** — show temperature, humidity, or other sensor readouts
 - **Shelf label** — display static or slowly changing label content
 - **Messages** — show text updates or short messages
 - **Fun app** — display lightweight fun facts or interactive content
 
-### 4. Connect to a computer and open the firmware page
-
-- USB cable / driver notes if needed
-- In the browser, go to the right **install firmware** page for the app you want from the portal below
-
-### 5. Install firmware
-
-- Put the device in bootloader / flash mode per your board (button sequence or auto)
-- Run the web installer through completion; confirm no errors
-
-### 6. Reboot and pair over Bluetooth
-
-- Power-cycle or reset after flashing
-- Device should advertise for **Bluetooth Low Energy (BLE) pairing** so you can reach it from the config UI
 
 ### 7. Set configuration in the browser
 
 - Open the matching **configuration** page for your firmware mode from the portal below
-- Pair when prompted, then set Wi-Fi, intervals, labels, MQTT, or other options as your app requires
-- Save / apply and confirm the display behaves as expected
-- Iterate on update intervals, labels/messages, and any integration settings
+- Press the reset button on the ESP32, at which point the ESP should display "Bluetooth Pairing Mode"
+- The display is now available for pairing, select you device and push the "send configuration" button on the configuration page
+- Upon receiving the configuration, the display will exit Bluetooth mode and start displaying the App content chosen
+
 
 ## E‑Ink Portal
 
