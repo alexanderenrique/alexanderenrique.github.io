@@ -19,6 +19,12 @@ tags: [programming, automation, tools, software]
     </div>
 
     <div class="card">
+        <h3 class="card__title">NEMO Tool Monitor</h3>
+        <p class="card__description">Work log for the NEMO tool monitor.</p>
+        <a href="{{ '/coding/NEMO-tool-monitor/' | url }}" class="section__link">View Work Log →</a>
+    </div>
+
+    <div class="card">
         <h3 class="card__title">Denton Works Website</h3>
         <p class="card__description">Evolution of this website from Markdown to static site. Built with Eleventy and modern web technologies.</p>
         <a href="{{ '/coding/denton-works/' | url }}" class="section__link">View Work Log →</a>

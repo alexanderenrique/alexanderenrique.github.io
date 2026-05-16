@@ -29,7 +29,7 @@ A small ESP32 + e‑ink display platform with 8+ month battery life
   </div>
   <div class="card">
     <h3 class="card__title">Multiple firmware “apps”</h3>
-    <p class="card__description">Sensor readouts, messages, and lightweight fun data pulls.</p>
+    <p class="card__description">Sensor readouts and lightweight fun API content.</p>
   </div>
   </div>
 <div class="grid grid--2">
@@ -52,7 +52,7 @@ I built it to monitor environmental conditions (temperature and humidity) at the
 It has been my experiece that even in "climate controlled" spaces such as cleanrooms, temperature and humidity are not always as uniform as building HVAC systems would lead you to believe. 
 
 I wanted the environmental data to not only be displayed, but collected and sent to the lab management software for long term tracking. This is accomplished using the "sensor" app.
-With this platform, I realized I could also have it display a variety of different information such as pre programmed messages (via the "messages" app) or retrieve information from various APIs (via the "fun" app).
+With this platform, I realized I could also have it retrieve information from various APIs (via the "fun" app).
 
 ## Key Specs:
 - Battery life: 8-12 month using 2 3300 mAh 18650 batteries an 30 minute refresh interval

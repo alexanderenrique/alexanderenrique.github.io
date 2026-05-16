@@ -44,19 +44,6 @@ graph LR
   - This is to say if you want to add non time sensitive information from the API, this is the place to do it.
   - You can ping the API for next reservation, requested configuration, etc.
 
-## Current Tasks
-- Making sure the SSL is working properly. The not secure one is working.
-- Testing end to end, going from NEMO to ESP32 to display
-- Cleaning up the NEMO plugin so that its something that can be used by other people
-
-
-## Components Needed
-- ESP32 development board
-- TFT display (ILI9341 or similar)
-- Power supply
-- Enclosure/mounting hardware
-- **Link to custom PCB**
-- **Link to 3D printed enclosure**
 
 ## Technical Details
 ### Required hardware:
@@ -88,6 +75,36 @@ Notes:
 - Finish designing case
 
 ## Work Log
+
+### 05/13/2026
+**Main Task:** More soldering, re-designing the back of the case
+
+**Notes:**
+- Started soldering the screens onto the pre-assembled ESP units, they all work so far!
+- Hot glued them into the case, I think it's a pretty good solution, feels solid too
+- Re-designed the back of the case, it occured to me that it would be swanky if it could appear to be cordless and have the USB come out the back
+- V1 didn't really work out for the back of the case, the cable fits through the back but there is no way to plug it in once the connector is through, and you can't slid the lid on first and then connect it either
+
+### 05/11/2026
+**Main Task:** Case printing, mucho soldering
+
+**Notes:**
+- After flashing the ESP32s, I know that they at least work
+- I am weirdly hung up on which screens will the the 90 degree adapter. for as cheap and easy as they are, I should really just add one to every board for the flexibility
+- I have 2 of the new PCBs left, so ten of those plus 2 of the old ones will be pressed into service
+- Not sure if the capacitors are really necessary, I kind just winged it on the capacitance, one larger one and one smaller one. 
+
+### 05/09/2026
+**Main Task:**  Received the new PCBs!
+
+**Notes:**
+- Got the v 2.0 PCBs in the mail, super stoked on those
+- Had to take one home and solder it together
+- The only big change was the size, made the whole thing smaller so I could access the mounting pins for the display
+  - Also added the 90 degree micro USB option
+- Re-designed the case to accomodate the 90 degree USB, currently printing
+- I started the bulk flashing of devices 
+- Started printing lots of cases.
 
 ### 05/05/2026
 **Main Task:**  Tiny Display UI change
@@ -335,25 +352,25 @@ Notes:
 - For this reason, I'm going to try and write my own MQTT hook into the backend of NEMO. A brave new world.
 
 # Top tools by usage:
-| Rank | Usage  | Tool            |
-|------|--------|-----------------|
-| 1    | 9,505  | woollam         |
-| 2    | 7,939  | heidelberg      |
-| 3    | 7,744  | samco           |
-| 4    | 5,434  | headway2        |
-| 5    | 4,351  | heidelberg2     |
-| 6    | 3,886  | aja-evap        |
-| 7    | 3,799  | wbflexsolv-1    |
-| 8    | 3,449  | svgcoat2        |
-| 9    | 2,905  | yes             |
-|10    | 2,783  | svgdev2         |
-|11    | 2,762  | headway3        |
-|12    | 2,337  | aja2-evap       |
-|13    | 2,317  | svgdev          |
-|14    | 2,300  | PT-Ox           |
-|15    | 2,094  | keyence         |
-|16    | 2,020  | wbflexcorr-2    |
-|17    | 1,974  | PT-MTL          |
-|18    | 1,951  | lesker-sputter  |
-|19    | 1,951  | svgcoat         |
-|20    | 1,731  | PT-DSE          |
+| Rank |   Usage   |  ID  |     Tool        |
+|------|----------:|-----:|----------------|
+|   1  |  10,176   | 161  | woollam        |
+|   2  |   8,429   | 157  | heidelberg     |
+|   3  |   8,302   |  68  | samco          |
+|   4  |   5,782   |  30  | headway2       |
+|   5  |   4,568   | 124  | heidelberg2    |
+|   6  |   4,091   | 175  | aja-evap       |
+|   7  |   4,086   |  84  | wbflexsolv-1   |
+|   8  |   3,591   |  34  | svgcoat2       |
+|   9  |   3,081   |  49  | yes            |
+|  10  |   2,927   | 127  | headway3       |
+|  11  |   2,913   |  45  | svgdev2        |
+|  12  |   2,602   | 113  | aja2-evap      |
+|  13  |   2,434   |  65  | PT-Ox          |
+|  14  |   2,416   |  44  | svgdev         |
+|  15  |   2,236   | 135  | keyence        |
+|  16  |   2,114   |  80  | wbflexcorr-2   |
+|  17  |   2,085   |  33  | svgcoat        |
+|  18  |   2,081   | 146  | lesker-sputter |
+|  19  |   2,054   |  66  | PT-MTL         |
+|  20  |   1,790   |  67  | PT-DSE         |

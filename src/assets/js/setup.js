@@ -32,15 +32,9 @@ class EInkSetup {
         } else if (path.includes('/config-sensor')) {
             console.log('[Setup] Mode detected: sensor');
             return 'sensor';
-        } else if (path.includes('/config-messages')) {
-            console.log('[Setup] Mode detected: messages');
-            return 'messages';
-        } else if (path.includes('/config-label')) {
-            console.log('[Setup] Mode detected: label');
-            return 'label';
         } else {
-            console.log('[Setup] Mode detected: shelf (default)');
-            return 'sensor'; // Default to sensor mode (legacy)
+            console.log('[Setup] Mode defaulting to sensor (unrecognized config path)');
+            return 'sensor';
         }
     }
 
@@ -200,10 +194,16 @@ class EInkSetup {
                 timestamp: Date.now()
             };
 
-            // Add WiFi configuration (common to all modes)
-            if (data.wifiSsid) {
-                config.wifiSsid = data.wifiSsid;
-                console.log('[Setup]   Added WiFi SSID:', data.wifiSsid);
+            // Add WiFi configuration (common to all modes; fun firmware uses wifiSSID)
+            const wifiNetwork = data.wifiSSID ?? data.wifiSsid;
+            if (wifiNetwork) {
+                if (this.mode === 'fun') {
+                    config.wifiSSID = wifiNetwork;
+                    console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
+                } else {
+                    config.wifiSsid = wifiNetwork;
+                    console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
+                }
             }
             if (data.wifiPassword) {
                 config.wifiPassword = data.wifiPassword;
@@ -211,29 +211,13 @@ class EInkSetup {
             }
 
             // Add mode-specific configuration
-            if (this.mode === 'shelf' || this.mode === 'label') {
-                console.log('[Setup] Processing shelf/label mode configuration');
-                // Shelf label mode - simple text label
-                if (data.labelText) {
-                    config.labelText = data.labelText;
-                    console.log('[Setup]   Added labelText:', data.labelText);
-                }
-                // Legacy shelf mode with NEMO config
-                if (data.nemoApiEndpoint) {
-                    config.nemoApiEndpoint = data.nemoApiEndpoint;
-                    config.nemoToken = data.nemoToken;
-                    config.nemoSensorId = data.nemoSensorId;
-                    config.sensorLocation = data.sensorLocation;
-                    console.log('[Setup]   Added NEMO config:', {
-                        endpoint: data.nemoApiEndpoint,
-                        sensorId: data.nemoSensorId,
-                        location: data.sensorLocation
-                    });
-                }
-                config.refreshInterval = parseInt(data.refreshInterval);
-                console.log('[Setup]   Refresh interval:', config.refreshInterval);
-            } else if (this.mode === 'fun') {
+            if (this.mode === 'fun') {
                 console.log('[Setup] Processing fun mode configuration');
+                const displayName = typeof data.displayName === 'string' ? data.displayName.trim() : '';
+                if (displayName) {
+                    config.displayName = displayName;
+                    console.log('[Setup]   Display name:', displayName);
+                }
                 config.refreshInterval = parseInt(data.refreshInterval);
                 console.log('[Setup]   Refresh interval:', config.refreshInterval);
                 // Add API endpoints configuration
@@ -264,24 +248,6 @@ class EInkSetup {
                     location: data.sensorLocation,
                     refreshInterval: config.refreshInterval,
                     temperatureUnit: config.temperatureUnit
-                });
-            } else if (this.mode === 'messages') {
-                console.log('[Setup] Processing messages mode configuration');
-                config.refreshInterval = parseInt(data.refreshInterval) || 10;
-                const messages = [];
-                for (let i = 1; i <= 10; i++) {
-                    const key = `message${i}`;
-                    const value = (data[key] && data[key].trim()) ? data[key].trim() : '';
-                    config[key] = value;
-                    messages.push(value);
-                }
-                config.messages = messages;
-                const nonEmptyCount = messages.filter(m => m.length > 0).length;
-                console.log('[Setup]   Messages config:', {
-                    refreshInterval: config.refreshInterval,
-                    messageCount: messages.length,
-                    nonEmptyMessages: nonEmptyCount,
-                    messages: messages
                 });
             }
 

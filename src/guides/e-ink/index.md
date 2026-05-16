@@ -36,8 +36,6 @@ Use this path to go from bare parts to a configured display.
 - Follow the prompts on the flashing page
 
 - **Sensor** — show temperature, humidity, or other sensor readouts
-- **Shelf label** — display static or slowly changing label content
-- **Messages** — show text updates or short messages
 - **Fun app** — display lightweight fun facts or interactive content
 
 
@@ -57,19 +55,15 @@ Use this path to go from bare parts to a configured display.
   <div class="e-ink-modes">
     <div class="mode-card">
       <h3>Firmware installation (browser)</h3>
-      <p>Install firmware directly from your browser. Choose from Sensor Mode, Shelf Label, Messages, or Fun App firmware.</p>
+      <p>Install firmware directly from your browser. Choose Sensor or Fun App firmware.</p>
       <a href="{{ '/install-firmware/sensors/' | url }}" class="btn">Install Sensor Firmware</a>
-      <a href="{{ '/install-firmware/shelf-labels/' | url }}" class="btn">Install Shelf Label Firmware</a>
-      <a href="{{ '/install-firmware/messages/' | url }}" class="btn">Install Messages Firmware</a>
       <a href="{{ '/install-firmware/fun/' | url }}" class="btn">Install Fun App Firmware</a>
     </div>
 
     <div class="mode-card">
       <h3>Configuration (BLE)</h3>
-      <p>Configure your displays wirelessly via Bluetooth Low Energy (BLE). Set up sensor monitoring, shelf labels, messages, or fun interactive content.</p>
+      <p>Configure your displays wirelessly via Bluetooth Low Energy (BLE). Set up sensor monitoring or fun interactive content.</p>
       <a href="{{ '/e-ink/config-sensor/' | url }}" class="btn">Configure Sensor</a>
-      <a href="{{ '/e-ink/config-label/' | url }}" class="btn">Configure Shelf Label</a>
-      <a href="{{ '/e-ink/config-messages/' | url }}" class="btn">Configure Messages</a>
       <a href="{{ '/e-ink/config-fun/' | url }}" class="btn">Configure Fun</a>
     </div>
   </div>

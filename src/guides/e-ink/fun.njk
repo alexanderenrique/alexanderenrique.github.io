@@ -33,44 +33,57 @@ permalink: /e-ink/config-fun/
                 <h2>Fun Mode Configuration</h2>
                 <form id="config-form" class="config-form">
                     <div class="form-group">
+                        <label for="display-name">Display Name</label>
+                        <input type="text" id="display-name" name="displayName" placeholder='e.g. Living room e-ink' autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-ssid">WiFi SSID</label>
+                        <input type="text" id="wifi-ssid" name="wifiSSID" placeholder="Enter WiFi network name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-password">WiFi Password</label>
+                        <input type="password" id="wifi-password" name="wifiPassword" placeholder="Enter WiFi password" required>
+                    </div>
+
+                    <div class="form-group">
                         <label for="refresh-interval">Refresh Interval (minutes)</label>
                         <input type="number" id="refresh-interval" name="refreshInterval" min="1" value="60" required>
                     </div>
 
                     <div class="form-group">
-                        <label>API Endpoints</label>
+                        <label>Facts</label>
                         <div class="checkbox-group">
                             <label class="checkbox-label">
                                 <input type="checkbox" name="apis.room_data" value="true" checked>
                                 <span>Room Data</span>
                             </label>
                             <label class="checkbox-label">
-                                <input type="checkbox" name="apis.cat_facts" value="true" checked>
-                                <span>Cat Facts</span>
-                            </label>
-                            <label class="checkbox-label">
                                 <input type="checkbox" name="apis.earthquake" value="true" checked>
                                 <span>Earthquake</span>
                             </label>
                             <label class="checkbox-label">
+                                <input type="checkbox" name="apis.cat_facts" value="true" checked>
+                                <span>Cat Facts</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="apis.all_new_facts" value="true" checked>
+                                <span>All New Facts</span>
+                            </label>
+                            <label class="checkbox-label">
                                 <input type="checkbox" name="apis.iss" value="true" checked>
-                                <span>ISS</span>
+                                <span>ISS location</span>
                             </label>
                             <label class="checkbox-label">
                                 <input type="checkbox" name="apis.useless_facts" value="true" checked>
                                 <span>Useless Facts</span>
                             </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="apis.special_messages" value="true" checked>
+                                <span>Special Messages</span>
+                            </label>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="wifi-ssid">WiFi SSID</label>
-                        <input type="text" id="wifi-ssid" name="wifiSsid" placeholder="Enter WiFi network name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="wifi-password">WiFi Password</label>
-                        <input type="password" id="wifi-password" name="wifiPassword" placeholder="Enter WiFi password" required>
                     </div>
 
                     <div class="form-group">

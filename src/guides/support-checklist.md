@@ -43,7 +43,7 @@ permalink: /guides/support-checklist/
 - Battery guidance (supported cells, expected life ranges)
 - BLE pairing/config flow (including failure modes)
 - Portal usage guide (`/guides/e-ink/` flow)
-- Firmware mode docs: sensor / label / messages / fun
+- Firmware mode docs: sensor / fun
 - Power/refresh behavior notes (expected refresh cadence, battery impact)
 
 ## NEMO MQTT specifics
