@@ -76,6 +76,37 @@ Notes:
 
 ## Work Log
 
+### 05/20/2026
+**Main Task:** Making it an interlock?!
+
+**Notes:**
+- Grant reached out to me about adding these to the Spilker labs, especially adding them to the wet benches. He mentioned that the tools are hard to interlock and my wireless display would really help.
+- It'd be very possivle to add a relay to these, there is a ton of unused IO, I'm just not sure if it's worth it with all of the other projects I have on the go right now. 
+- It'd be maybe ten hours of work, you just need a couple resistors, a MOSFET, and a diode. 
+
+### 05/18/2026
+**Main Task:** Deployment continues
+
+**Notes:**
+- I think the wet benches are a high priority, especially the "last user" feature to hold people accountable. 
+- Kept printing more cases, I ran out of the micro USB adapters so I ordered more, the soldering continues
+
+### 05/16/2026
+**Main Task:** Deployment for real for real!
+
+**Notes:**
+- Added displays to Fiji1, Fiji2, s-neox, woollam, heidelberg and heidelberg2!
+- Went really smooth deploying they wasn't as bad as I thought. My worry was a lack of power outlets, but it turns out there are a ton of available outlets
+- I did drill a couple holes in the Fiji2, Emma Casey was there to help me tape and install them and vaccuum shavings. I didn't drill into anyone else's tools.
+- I kind of flashed them as I installed them
+- Everything seems to be working, except on heidelberg 1 and 2 it didn't show the next reseration. Could just be that the API hadn't run yet. And those tools definielty had a next reservation
+  - But it weird to me that on the Fijis for example after flashing it got the message for the next reservation no problem
+  - I have some uncertainty on how the MQTT works from the server to the ESP32s
+  - I thought that the ESP32 would only receive it if the event like just occured and it was just pushed by the broker
+  - Oh fuck I just remembered, there is an allowed list for sending out the next reservation
+  - I am now SSHing into the collector on the caltrain.
+  - Got it fixed on the caltrain on the way to Bay to Breakers
+
 ### 05/13/2026
 **Main Task:** More soldering, re-designing the back of the case
 

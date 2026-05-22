@@ -63,6 +63,19 @@ tags:
 
 ## Work Log
 
+### 05/17/2026
+**Main Task:** ATF leak (from somewhere), changing thermostat
+
+**Notes:**
+- much to my chagrin, the leak doesn't appear to be coming from my jank transmission cooler lines, those actually seem bone dry. All the ATF is on the driver side of the engine, and I know the power steering pump is leaking like crazy so I wonder if that is what is doing the coating
+- There was also a drip coming from the selector shaft. The kick down lever passes through the selector shaft and that doesn't seem very well sealed
+- I never use the kickdown so I put an extra couple o rings on it and removed the very primitize linkage. I'll have to see if it wants to shift into second more or anything, that would be a really dumb reason to torch a transmission
+- I also investigated the mushy brake feel and I was surprised as hell that there was absolutely no brake fluid in the front reservoir, thank god for dual circuit master cylinders
+- I filled it up,following the lines it appears the front circuit is for the rear brakes but that seems really really weird
+- I'll double check this and have to investigage. 
+- Also swapped the thermostat from the 195 to a 180 that I had previously removed. Now that the guage is reading correctly, and it loves pinging its head off, I think I'm good with the 180. 
+
+
 ### 02/27/2026
 **Main Task:** Temp guage, trunk lighting pt.2
 

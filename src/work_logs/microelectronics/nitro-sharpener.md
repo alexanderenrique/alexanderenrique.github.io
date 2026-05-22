@@ -31,6 +31,11 @@
 - ~~Design a test stand fo the engine~~
 - ~~Get the flywheel working/printed up~~
 
+### 05/15/2026
+**Task:** Received flywheels
+- The flywheels are exactly what I wantedm haven't had time to start the endinge yet becasue I first need to hack off the snout on the 80T gear
+- Playing with the ratios and high torque motors, I think I'll control the big 895 motor with like 50% duty, that seems to spin the engine plenty fast
+- I do wonder if there is a thing as too fast. I remmeber when I would jump a motorcycle with a car and the starter could have all the amperage it wanted, and it absolutely cranked like hell. It never actually started any fast cranking at mach jesus...
 
 ### 05/05/2026
 **Task:** More purchasing, thinking, and eye drops

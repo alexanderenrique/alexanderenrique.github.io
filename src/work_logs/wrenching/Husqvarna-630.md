@@ -10,6 +10,17 @@
 - ~~Checking charging system~~
 - ~~Faded polarizer on LCD readout?~~
 
+## 05/17/2026
+**Task:** Fairings, tank plumming, tire changing, rear turn signal wiring and connectors
+
+**Notes:**
+- spent almost an hour trying to re-connect the fuel tank corss over hose the way it was originally routed, but I ended up just making a new line from silicone. 
+  - Which after a little review seems to be a pretty bad idea, I'll swap it out with something else
+- Also added the fairings back
+- Raghavan and I spent a couple hours changing tires, the front wasn't too bad and was almost perfectly balanced right away
+- Rear tire was rock hard, and the inner tube was in bad shape so I ordered a new one and we decided to call it of the evening
+- I also terminated the old turn signals and license plate light, I'm missing the couple of bolts that attach that so I wansn't able to put it on. 
+
 
 ## 04/12/2026
 **Task:** Turn Signal wiring

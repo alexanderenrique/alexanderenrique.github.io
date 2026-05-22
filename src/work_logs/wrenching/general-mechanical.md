@@ -27,6 +27,18 @@ This is just a general log of work that isn't really related to any one project.
 
 ## Work Log
 
+### 05/16/2026
+**Category:** Porsche Macan
+
+**Task:** Oil Change
+
+**Notes:**
+- Changed the oil it was pretty easy, the plastic skid pan/ bellt pan has this interesting felt texture to it like I've never seen
+- It was already missing a couple bolts that hold it on, it wasn't me
+- I'm glad I watched a video before doing it, because I almost dumped the trans fluid. The trans has a normal looking plug, but the actual oil plug is this funky plastic half turn fastener that kind of cams in. They engineered the hell out of it, I did it. Doesn't leak, can't over tighten it. Just different and a little scary
+- Also changed the oil filer. I tell you what it was definitely over filled, It had almost 7qts in it, my 7 quart pan was so damn full. Any yes I did spill it on the bricks. I feel bad.
+
+
 ### 02/28/2026
 **Category:** Volvo
 

@@ -132,6 +132,17 @@ Tag wakes
 
 ## Work Log:
 
+### 05/16/2026
+**Task:** Making a case for friends, creating a server for facts, adding messaging out
+
+
+**Notes:**
+- Haven't worked on it much lately, but I make one for Mom and Tom and they had some good feedback for the "FactBox" as they call it, some stuff I knew but wasn't motivated enough to implement
+- I created my own fact aggregator service on the raspi which then caches the facts in a json and uses FastAPI (well really SlowAPI) to then serve them
+- Now that I have my own server, I had to connect it using a cloudflared tunnel it lives at fun-api.denton.works
+- And also now thatt's a public endpoint I went for HTTPS headers for security, so there is a token to be able to push and one to be able to get facts from the endpoint. Seems pretty secury to me, I don't think anyone is going to crack the 32bit code
+- Also added a way for me to push facts to the API with headers and body, and I can select the UUID I want to send it to. Not sure stoked on that part yet, it;s hard to keep track of who has which device
+
 ### 03/23/2026
 **Task:** Case re-design, send battery percentage, deployment!
 

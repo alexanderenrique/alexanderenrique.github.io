@@ -194,8 +194,13 @@ class EInkSetup {
                 timestamp: Date.now()
             };
 
-            // Add WiFi configuration (common to all modes; fun firmware uses wifiSSID)
-            const wifiNetwork = data.wifiSSID ?? data.wifiSsid;
+            // Add WiFi configuration (fun firmware expects wifiSSID; sensor uses wifiSsid)
+            const wifiSsidInput = document.getElementById('wifi-ssid');
+            const wifiNetwork = (
+                (typeof data.wifiSSID === 'string' ? data.wifiSSID : '') ||
+                (typeof data.wifiSsid === 'string' ? data.wifiSsid : '') ||
+                (wifiSsidInput?.value ?? '')
+            ).trim();
             if (wifiNetwork) {
                 if (this.mode === 'fun') {
                     config.wifiSSID = wifiNetwork;
@@ -204,6 +209,8 @@ class EInkSetup {
                     config.wifiSsid = wifiNetwork;
                     console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
                 }
+            } else if (data.wifiPassword) {
+                console.warn('[Setup] WiFi password set but SSID is missing');
             }
             if (data.wifiPassword) {
                 config.wifiPassword = data.wifiPassword;
