@@ -7,11 +7,11 @@ permalink: /guides/nemo-mqtt/
 
 ## What this is
 
-This project connects [NEMO](https://gitlab.com/nemo-community/nemo-ce) lab management to small ESP32 + TFT displays mounted near tools. When someone enables, disables, shuts down or puts a task a tool in NEMO, the display updates almost immediately—without polling a slow HTTP API.
+This project connects [NEMO](https://gitlab.com/nemo-community/nemo-ce) lab management to small ESP32 + TFT displays mounted near tools. When someone enables, disables, shuts down, or adds a task to a tool in NEMO, the display updates almost immediately—without polling a slow HTTP API.
 
 ## Why MQTT instead of REST
 
-For the most up to date and satisfying user experience, tool enables and disable messages need to arrive to the display quickly (<2 seconds). MQTT is a massive increase over the rate at which data leaves NEMO. Polling the HTTP API for latest usage events can take five minutes, which is un-usably long for a display. The plugin reacts to Django signals, events land in NEMO's native PostgreSQL, and the bridge picks them up and publishes then to an external broker. Non-urgent data (next reservation, configuration text, etc.) can still come from the REST API on a relaxed schedule.
+For the most up-to-date and satisfying user experience, tool enable and disable messages need to arrive at the display quickly (<2 seconds). MQTT is a massive increase over the rate at which data leaves NEMO. Polling the HTTP API for latest usage events can take five minutes, which is unusably long for a display. The plugin reacts to Django signals, events land in NEMO's native PostgreSQL, and the bridge picks them up and publishes them to an external broker. Non-urgent data (next reservation, configuration text, etc.) can still come from the REST API on a relaxed schedule.
 
 ## Architecture (high level)
 
@@ -36,13 +36,13 @@ flowchart LR
   BK --> ESP
 {% endmermaid %}
 
-- **NEMO side:** A plugin (`NEMO_mqtt_bridge`) hooks the same kinds of events NEMO already uses for usage logging. Work is persisted in PostgreSQL installs reuse NEMO's database and operations stay simpler.
+- **NEMO side:** A plugin (`NEMO_mqtt_bridge`) hooks the same kinds of events NEMO already uses for usage logging. Work is persisted in PostgreSQL; installs reuse NEMO's database and operations stay simpler.
 - **Infrastructure:** A bridge process consumes new rows / notifications from Postgres and publishes to **MQTT**. The broker can be embedded (e.g. during development) or Mosquitto in production, with optional username/password and **HMAC-signed** payloads where configured.
 - **Edge:** Each display is an ESP32 subscribed to the right topics, rendering tool state, user, and timing on a TFT. Message size stays small because the MCU only needs a few fields per update.
 
 ## Security notes
 
-Security is optional and configurable. MQTT ports are protected by username and PW. Messages use HMAC to verify that the message did infact come from NEMO. Timestamp checks limit trivial replay. The messages are sent across the net unencrypted, but this is an acceptable risk. The data displayed mirrors data that is already visible in NEMO.
+Security is optional and configurable. MQTT ports are protected by username and password. Messages use HMAC to verify that the message did in fact come from NEMO. Timestamp checks limit trivial replay. The messages are sent across the net unencrypted, but this is an acceptable risk. The data displayed mirrors data that is already visible in NEMO.
 
 ## Implementing NEMO MQTT tool display end to end
 
@@ -115,7 +115,7 @@ Follow these steps to set up the NEMO MQTT tool display from end to end:
 ## 4. Set Up the Bridge (VM) Code
 
 - Download & install the [VM code for the bridge process](https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/vm_server).
-- This server code uses a heavy mosquitto binary that isn't suitable to be installed or run inside the docker container. You can run it inside a VM of course, just keep it seperate from the NEMO-CE Docker.
+- This server code uses a heavy Mosquitto binary that isn't suitable to be installed or run inside the Docker container. You can run it inside a VM, of course; just keep it separate from the NEMO-CE Docker.
 
 - Run:
    ```
@@ -134,7 +134,7 @@ Follow these steps to set up the NEMO MQTT tool display from end to end:
 - Flash the ESP32 with the provided firmware.
 - Be sure to **set the Tool ID and name** in the firmware so the ESP32 subscribes to the correct MQTT topic.
 - [PCB design is available here](https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/Tool-Display-PCB).  
-  - Recommended: OshPark or any PCB manufacturer.They will need the Display-PCB.zip which includes all the files they need.
+  - Recommended: OshPark or any PCB manufacturer. They will need the Display-PCB.zip, which includes all the files they need.
   - Note: Two capacitors are optional, but can help with stability.
 
 ---
@@ -149,15 +149,15 @@ You're ready to display live tool state from NEMO on your ESP32 display!
 
 # Architecture Choices and the real nitty gritty list of my mistakes:
 
-- First, I changed NEMO Community Edition main branch, and that was frowned upon by the developer,which makes sense. The plugin should be an opt-in.
+- First, I changed NEMO Community Edition main branch, and that was frowned upon by the developer, which makes sense. The plugin should be an opt-in.
 - Trying to have a local instance of NEMO connect to a local broker connecting to a remote hardware device is really challenging whenever you do everything on the same computer, because Mosquitto MQTT wants to spin up lots of publishing instances, and you have to be constantly killing different instances.
 - Initially, I had NEMO going to a Redis database, but it turns out that the Redis binary does not package nicely for Docker installs, at least that I could get working.
 - Instead of Redis, I pivoted to Listen/Notify in Postgres which NEMO can use natively that barely adds any latency over Redis.
-- Similarly, I was using your Mosquitto binary for MQTT, which didn't package nicely into the Docker container.
+- Similarly, I was using a Mosquitto binary for MQTT, which didn't package nicely into the Docker container.
 - I then switched to Mosquitto Lite, which is more of a Python package, and was able to work inside the container.
 - After the first install into Live NEMO, I realized that the bridge was actually being spawned and destroyed constantly inside of the Django app by Django workers.
-  - At any given time, five Django workers would launch the MQTT bridge, and then they would be destroyed a few seconds later,and then restart again instantly.
+  - At any given time, five Django workers would launch the MQTT bridge, and then they would be destroyed a few seconds later, and then restart again instantly.
   - This technically worked somehow, but it was just not very elegant.
 - At this point, I pivoted to having my Python package launch a subprocess inside of the Docker container and have all the workers launching it check to see if the process is running or not.
-- To make it more robus, I also added a supervisor to this process.
+- To make it more robust, I also added a supervisor to this process.
 

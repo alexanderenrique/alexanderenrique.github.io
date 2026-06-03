@@ -15,11 +15,11 @@ description: One curious engineer's journey through wrenching, coding, and micro
             <div class="section__text">
                 <h2 class="section__title">E-Ink Display</h2>
                 <p class="section__description">Configure and install firmware for ESP32 battery-powered e-ink displays. Use the <a href="{{ '/guides/e-ink/#e-ink-portal' | url }}">e-ink display portal</a> to set up your displays wirelessly via Bluetooth Low Energy (BLE), or install firmware directly from your browser.</p>
-                <a href="{{ shopify.products.eInkDisplay }}" class="section__link">Buy E-Ink Display →</a>
+                <a href="{{ sources.eInkDisplay.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
                 <a href="{{ '/guides/e-ink/#e-ink-portal' | url }}" class="section__link">E-Ink Display portal →</a>
             </div>
             <div class="section__image">
-                <div class="placeholder-image">📱</div>
+                <img src="{{ '/images/IMG_9717.jpeg' | url }}" alt="E-Ink Display">
             </div>
         </div>
     </section>
@@ -29,24 +29,11 @@ description: One curious engineer's journey through wrenching, coding, and micro
             <div class="section__text">
                 <h2 class="section__title">NEMO MQTT &amp; Tool Display</h2>
                 <p class="section__description">Real-time tool status from NEMO to wall-mounted ESP32 displays over MQTT: Django plugin, bridge service, and firmware. Read the <a href="{{ '/guides/nemo-mqtt/' | url }}">project overview</a> for architecture and links to the bridge package and hardware notes.</p>
-                <a href="{{ shopify.products.nemoMqttPcb }}" class="section__link">Buy NEMO MQTT PCB →</a>
+                <a href="{{ sources.nemoMqtt.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
                 <a href="{{ '/guides/nemo-mqtt/' | url }}" class="section__link">NEMO MQTT →</a>
             </div>
             <div class="section__image">
-                <div class="placeholder-image">📡</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section--smart-hotplate">
-        <div class="section__content">
-            <div class="section__text">
-                <h2 class="section__title">Smart Hotplate</h2>
-                <p class="section__description">Hot-plate safety using a load cell, temperature sensing, and a finite-state machine—status on a touchscreen, minimal manual taring. Start with the <a href="{{ '/guides/smart-hotplate/' | url }}">overview</a>, then dive into the full notes and work log.</p>
-                <a href="{{ '/guides/smart-hotplate/' | url }}" class="section__link">Smart Hotplate →</a>
-            </div>
-            <div class="section__image">
-                <div class="placeholder-image">⚖️</div>
+                <img src="{{ '/images/IMG_0030.jpeg' | url }}" alt="NEMO MQTT tool display">
             </div>
         </div>
     </section>

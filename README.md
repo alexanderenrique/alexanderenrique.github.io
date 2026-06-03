@@ -66,26 +66,18 @@ The site builds to the `_site` directory. You can deploy this to any static host
 - Vercel
 - AWS S3
 
-## 🛒 Selling products (Shopify checkout)
+## 📦 Open-source hardware & software
 
-This site is static (Eleventy + GitHub Pages). Product pages include **Buy** links that point to Shopify product pages.
+Hardware project pages link to GitHub repos, firmware, and PCB files. Source URLs live in one place:
 
-### Configure product URLs
+- `src/_data/sources.js`
 
-Edit:
+### Add a new project
 
-- `src/_data/shopify.js`
-
-Set `products.eInkDisplay` (and any future product URLs) to your public Shopify product URLs, for example:
-
-- `https://<your-shop>.myshopify.com/products/e-ink-display`
-
-### Add a new product later (e.g. MQTT PCBs)
-
-1. Create the product in Shopify and copy its public product URL.
-2. Add (or update) a page under `src/projects/` describing the product.
-3. Add the product URL to `src/_data/shopify.js` (for example `products.nemoMqttPcb`).
-4. Add a **Buy** CTA link on the relevant page(s) and on `src/projects/index.md` (and optionally `src/index.md`).
+1. Add repo, PCB, and firmware URLs to `src/_data/sources.js`.
+2. Add (or update) a page under `src/projects/` describing the project.
+3. Add links on the relevant page(s), on `src/projects/index.md`, and on `src/source/index.njk`.
+4. Optionally add a CTA on `src/index.md`.
 
 ## 📄 License
 

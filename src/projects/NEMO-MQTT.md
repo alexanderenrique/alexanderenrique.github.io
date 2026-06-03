@@ -9,7 +9,7 @@ tags: [nemo, mqtt, django, postgres, iot]
   <p class="hero__subtitle">Near real-time tool state from NEMO to tool-mounted displays without slow REST polling.</p>
 
   <div class="btn-row">
-    <a class="btn btn--primary" href="{{ shopify.products.nemoMqttPcb }}">Buy PCB →</a>
+    <a class="btn btn--primary" href="{{ sources.nemoMqtt.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
     <a class="btn btn--secondary" href="{{ '/guides/nemo-mqtt/' | url }}">Build guide →</a>
     <a class="btn btn--secondary" href="{{ '/coding/NEMO-MQTT-Bridge/' | url }}">Work log →</a>
   </div>
@@ -35,43 +35,41 @@ tags: [nemo, mqtt, django, postgres, iot]
   </div>
 </div>
 
-<div class="grid grid--2">
-  <div class="card">
-    <h3 class="card__title">Demo video (placeholder)</h3>
-    <p class="card__description">Add a quick clip showing NEMO enable/disable → display update.</p>
-    <div class="placeholder-image">🎥</div>
-  </div>
-  <div class="card">
-    <h3 class="card__title">In-lab photos (placeholder)</h3>
-    <p class="card__description">Add photos: mounted display, PCB, and the full system layout.</p>
-    <div class="placeholder-image">🧰</div>
+<div class="card card--gallery">
+  <h3 class="card__title">Gallery</h3>
+  <div class="photo-gallery">
+    <figure class="photo-gallery__item">
+      <img src="{{ '/images/nemo-display-states.png' | url }}" alt="Four tool display states: disabled, enabled, enabled with shutdown, and unusable">
+      <figcaption class="photo-gallery__caption">Clockwise from top left: tool disabled, tool enabled, tool enabled but with problem tool shut down, unusable</figcaption>
+    </figure>
   </div>
 </div>
 
 ## Why is this important
 
-- For many labs, tool "enable/disable" is central to billing, utilization data, understanding up time, etc. 
-- Though the status of a tool is readily visible in the NEMO software, lab processing can be stressful and frantic and chaotic, and lab members often forget to enable tools
+- For many labs, tool "enable/disable" is central to billing, utilization data, understanding uptime, etc.
+- Though the status of a tool is readily visible in the NEMO software, lab processing can be stressful, frantic, and chaotic, and lab members often forget to enable tools
   - This leads to process failures (you have to enable the tool for it to run!), wasted time, and often lack of accountability when using tools like wet benches that are hard to interlock
 - The tool status has previously been displayed using a small (and I do mean small) red/green LED placed somewhere on the tool
   - This is tied to the tool interlock box and is easy to miss, even for experienced lab members
-  - It is much hard to miss a 4" TFT display with your name on it, or possibly someone elses name on it!
+  - It is much harder to miss a 4" TFT display with your name on it, or possibly someone else's name on it!
 
-## Additional Feautures
+## Additional Features
 
 - The display shows current "enabled" lab member, but it also shows who used the tool last
-  - This is designed to foster accountability. If you left the tool in a state of disrepair, the next user will konw immediately who did it!
-- The display also shows "tasks" (the yellow wrench icon on NEMO) as well as shut downs
-  - A seperate page displays the message associated with the task or the shut down, so that lab members can easily be informed of problems with the tool that need to be taken into consideration
-- The NEMO API is used for slower refreshing data, such as "next reservation" which is also displayed on a seperate screen
+  - This is designed to foster accountability. If you left the tool in a state of disrepair, the next user will know immediately who did it!
+- The display also shows "tasks" (the yellow wrench icon on NEMO) as well as shutdowns
+  - A separate page displays the message associated with the task or the shutdown, so that lab members can easily be informed of problems with the tool that need to be taken into consideration
+- The NEMO API is used for slower refreshing data, such as "next reservation" which is also displayed on a separate screen
 
 
-## What you can buy
+## Source files
 
 <div class="card">
-  <h3 class="card__title">PCB</h3>
-  <p class="card__description">Hardware for the display-side setup. (Add exact rev + compatibility notes here.)</p>
-  <a class="section__link" href="{{ shopify.products.nemoMqttPcb }}">Buy PCB (Shopify) →</a>
+  <h3 class="card__title">PCB &amp; firmware</h3>
+  <p class="card__description">Hardware for the display-side setup. Gerbers, schematics, and firmware are on GitHub. (Add exact rev + compatibility notes here.)</p>
+  <a class="section__link" href="{{ sources.nemoMqtt.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
+  <a class="section__link" href="{{ sources.nemoMqtt.firmware }}" target="_blank" rel="noopener noreferrer">Firmware →</a>
 </div>
 
 
@@ -102,7 +100,7 @@ tags: [nemo, mqtt, django, postgres, iot]
   </div>
 </div>
 
-**Sell & support docs checklist:** [Selling & support checklist (hardware)]({{ '/guides/support-checklist/' | url }})
+**Build & support docs checklist:** [Build & support checklist (hardware)]({{ '/guides/support-checklist/' | url }})
 
 ## Quick links
 

@@ -1,16 +1,16 @@
 ---
 layout: page
-title: "Selling & support checklist (hardware)"
-description: "A practical doc checklist for selling and supporting PCBs and assembled builds"
+title: "Build & support checklist (hardware)"
+description: "A practical doc checklist for building and supporting PCBs and assembled builds"
 permalink: /guides/support-checklist/
 ---
 
-## Core docs (every hardware product)
+## Core docs (every hardware project)
 
-- **Product page**: what it is, who it’s for, what’s included, buy CTAs
+- **Project page**: what it is, who it's for, what's included, links to source files
 - **Quickstart**: first power-on → first success
-- **What’s in the box**: parts / BOM checklist (with photos)
-- **Assembly guide** (when customers source parts separately):
+- **Parts checklist**: BOM with photos
+- **Assembly guide**:
   - soldering order
   - inspection checklist
   - common mistakes
@@ -25,7 +25,7 @@ permalink: /guides/support-checklist/
   - symptom → cause → fix
   - status LEDs / on-screen indicators
 - **FAQ**:
-  - compatibility, safety, lead times
+  - compatibility, safety, sourcing parts
 - **Revision + compatibility matrix**:
   - PCB revision identifiers (silkscreen)
   - firmware version compatibility
@@ -35,7 +35,6 @@ permalink: /guides/support-checklist/
 - **Support policy**:
   - where to get help
   - what info to include (photos, versions, logs)
-- **Returns/warranty** (on Shopify or mirrored here)
 
 ## E‑Ink Display specifics
 

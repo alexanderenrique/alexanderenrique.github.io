@@ -317,7 +317,40 @@ img {
     gap: var(--spacing-md);
 }
 
-/* Shop product rows (Adafruit-style list) */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.photo-gallery__item {
+    margin: 0;
+}
+
+.photo-gallery__item img {
+    margin: 0 0 var(--spacing-sm);
+    width: 100%;
+}
+
+.photo-gallery__caption {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    text-align: center;
+    font-style: italic;
+}
+
+.card--video .project-video {
+    display: block;
+    width: 25%;
+    max-width: 100%;
+    min-width: 160px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Product rows (Adafruit-style list) */
 .product-list {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius-lg);
@@ -349,13 +382,6 @@ img {
     border: 1px solid var(--color-border);
     border-radius: var(--border-radius);
     background: var(--color-bg-alt);
-}
-
-.product-row__placeholder {
-    font-size: 2.5rem;
-    line-height: 1;
-    opacity: 0.65;
-    filter: grayscale(100%);
 }
 
 .product-row__body {
@@ -392,86 +418,22 @@ img {
     text-decoration: none;
 }
 
-/* Shop page footnote */
-.shop-footnote {
-    margin-top: calc(var(--spacing-xl) * 1.25);
-    font-size: 0.95rem;
-    color: var(--color-text-light);
-}
-
-.shop-footnote strong {
-    color: var(--color-text);
-    font-weight: 600;
-}
-
-/* Shop — GitHub / DIY links */
-.shop-github-intro {
+/* Source page intro & footnote */
+.source-intro {
     margin: 0 0 var(--spacing-lg) 0;
     max-width: 52rem;
     color: var(--color-text-light);
 }
 
-.shop-github-grid {
-    display: grid;
-    gap: var(--spacing-lg);
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    margin-bottom: var(--spacing-xl);
-}
-
-.shop-github-card {
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius-lg);
-    padding: var(--spacing-lg);
-    background: var(--color-bg-alt);
-    box-shadow: var(--shadow);
-}
-
-.shop-github-card__header {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-sm);
-}
-
-.shop-github-card__emoji {
-    font-size: 1.5rem;
-    line-height: 1;
-    opacity: 0.85;
-}
-
-.shop-github-card__title {
-    margin: 0;
-    font-size: 1.125rem;
-    font-weight: 700;
-}
-
-.shop-github-card__description {
-    margin: 0 0 var(--spacing-md) 0;
+.source-footnote {
+    margin-top: calc(var(--spacing-xl) * 1.25);
     font-size: 0.95rem;
     color: var(--color-text-light);
-    line-height: 1.55;
 }
 
-.shop-github-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-}
-
-.shop-github-links__a {
-    font-weight: 600;
-    text-decoration: none;
+.source-footnote strong {
     color: var(--color-text);
-    border-bottom: 2px solid currentColor;
-    padding-bottom: 2px;
-    display: inline-block;
-}
-
-.shop-github-links__a:hover {
-    transform: translateX(4px);
+    font-weight: 600;
 }
 
 /* Grid */
@@ -505,6 +467,12 @@ img {
     display: flex;
     align-items: center;
     padding: var(--spacing-2xl) 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.section + .section {
+    border-top: 1px solid var(--color-border);
 }
 
 @media (max-width: 768px) {
@@ -566,50 +534,18 @@ img {
 }
 
 .placeholder-image {
-    font-size: 8rem;
-    opacity: 0.3;
-    filter: grayscale(100%);
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--border-radius-lg);
+    background: var(--color-bg-alt);
+    border: 1px dashed var(--color-border);
 }
 
-/* Section-specific colors */
-.section--wrenching {
-    background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-    color: white;
-}
-
-.section--coding {
-    background: linear-gradient(135deg, #4ecdc4, #6dd5ed);
-    color: white;
-}
-
-.section--microelectronics {
-    background: linear-gradient(135deg, #45b7d1, #96c7ed);
-    color: white;
-}
-
-.section--general {
-    background: linear-gradient(135deg, #f9ca24, #f0932b);
-    color: white;
-}
-
-.section--eink {
-    background: linear-gradient(135deg, #8b5cf6, #a78bfa);
-    color: white;
-}
-
-.section--nemo-mqtt {
-    background: linear-gradient(135deg, #0ea5e9, #6366f1);
-    color: white;
-}
-
-.section--smart-hotplate {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    color: white;
-}
-
-.section--blog {
-    background: linear-gradient(135deg, #10b981, #34d399);
-    color: white;
+.card .placeholder-image {
+    max-width: none;
+    background: var(--color-bg-alt);
+    border-color: var(--color-border);
 }
 
 /* Responsive design */
@@ -623,10 +559,6 @@ img {
         font-size: 2.5rem;
     }
     
-    .placeholder-image {
-        font-size: 6rem;
-    }
-
     .product-row {
         gap: var(--spacing-md);
         padding: var(--spacing-md);

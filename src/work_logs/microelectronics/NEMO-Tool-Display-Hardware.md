@@ -70,8 +70,27 @@ Notes:
   SSH into the machine, put the pubkey on my machine (do we need to open a port)
   Long run: replacing the linux machine in the closet with a mini PC
 
+Grant:
+- 006 and 131 Spilker
+- 9 on wet benches, 4 upstairs, 5 upstairs
+- option 1: Same set up
+- stanford doesn't support public static IP addresses
+- UIT is supporting fixed IP addresses for some IoT devices
+- Has a seperate Wifi SSID: SUtilities
+- short term could deploy two APs and two brokers
+- Remove the dependency on us deploying our own Wifi
+- Is there a way to make the broker, smaller, cheaper, more reliable
+- If we have to go localized:
+  - Have central super cloud server
+  - then have little brokers at the APs
+- Alex K: feasability of UIT supporting us on their network
+- DDWRT or open WRT
+  - but a spefic AP, flash the firmware to run an opensource OS
+  - AP has to support what i want to run
+  - Low cost, open source, simple deployment framework
+- Some of these APs already have linux on them, could use the AP as both the broker and the AP
 
-## Parking on a downhill:
+## Parking on a downhill: 
 - Finish designing case
 
 ## Work Log
@@ -81,7 +100,7 @@ Notes:
 
 **Notes:**
 - Grant reached out to me about adding these to the Spilker labs, especially adding them to the wet benches. He mentioned that the tools are hard to interlock and my wireless display would really help.
-- It'd be very possivle to add a relay to these, there is a ton of unused IO, I'm just not sure if it's worth it with all of the other projects I have on the go right now. 
+- It'd be very possible to add a relay to these, there is a ton of unused IO, I'm just not sure if it's worth it with all of the other projects I have on the go right now. 
 - It'd be maybe ten hours of work, you just need a couple resistors, a MOSFET, and a diode. 
 
 ### 05/18/2026

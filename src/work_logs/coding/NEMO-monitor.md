@@ -12,7 +12,17 @@ tags:
 ## Project Overview
 Work log for the NEMO tool monitor. Currently, the lab uses a million different spreadsheets in a million different places and it's just ugly. My goal is to have a centralized place for this. We can also monitor gas weights and 
 
+## Future Improvements
+- 
+
 ## Work Log
+
+### 05/22/2026
+**Main Task:** We're in production baby
+
+**Notes:**
+- Added NEMO-monitors to the nemo and nemo-dev git lab, with Mathieu's blessing I restarted both instances and it is working! How good is that
+- I've started building out my ALD monitors, to show people what is possible
 
 ### 05/22/2026
 **Main Task:** Pushing PyPi and NEMO-Dev

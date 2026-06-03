@@ -3,12 +3,32 @@
 ## To-Do:
 - Clean chain, general once over
 - Flushing brake fluid
-- Checking coolant, other fluids
-- New Tires lol
+- ~~Checking coolant, other fluids~~
+- ~~New Tires lol~~
 - ~~Plugging front tire?~~
 - Figuring out left side panel
 - ~~Checking charging system~~
 - ~~Faded polarizer on LCD readout?~~
+
+## 05/28/2026
+**Task:** Kickstand back on, header clean up
+
+**Notes:**
+- Re-attached the kick stand, it had this weird double spring set up with a spring inside the spring, not sure why so I removed the smaller spring that didn't seem to be doing anything
+- The dirty headers had been bugging me, so I took a little red scotchbrite to them. This really helped to I think I'm in for a few hours of header polishing
+- Also scrubbed the chain a bit more, it's just a bit dirty
+- Lower the tire pressure, it was at 50 PSI from when we mounted the tires and seated the beads
+
+
+## 05/26/2026
+**Task:** Rear turn signals, kick stand fix
+
+**Notes:**
+- I found the missing bolts to attach the rear turn signal/ tail light assembly. That went on without too much trouble, added a couple zip ties to keep the wires out of the way
+- I decided that the best way to fix the kick stand issue was to weld up a little stop to prevent the kickstand from going all the way forward, almost hyper extending
+- I used the flux core to add a fair bit of material, and then I ground it down. It looks pretty nice actually, I am proud of how it turned out. It only cost me some of the skin on the back of my finger, angle grinder bit me
+- Cleaned the chain a bit
+- Once I put the kickstand back on, I think it's ready to ride. Not sure if I can say the same thing about myself...
 
 ## 05/17/2026
 **Task:** Fairings, tank plumming, tire changing, rear turn signal wiring and connectors

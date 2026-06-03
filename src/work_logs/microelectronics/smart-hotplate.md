@@ -61,6 +61,23 @@ There are two basic events that will trigger a hot plate shut off:
 
 ## Work Log
 
+### 05/28/2026
+**Main Task:** Bench testing with real hotplate
+
+**Notes:**
+- Moved to a better system for signal processing. 
+- Used a fast and slow EMA, and took the delta between them to calculate if the mass was decreasing or increasing, it seemed to work pretty consistently actually, better than the smoothed dM/dt
+
+### 05/27/2026
+**Main Task:** Bench testing with real hotplate
+
+**Notes:**
+- got it hooked up to Jim's franken 3D printed hot plate, with a TC for the FSM mounted really near the heating element
+- It works decently, this will just be an exercise in smoothing and signals
+- Detecting what is happening when is challenging, and things seem to want to drift around a bit. It's definitely sensitive, and kinda noisy. I'm not super sure how to deal with this to dial in the states. 
+- Like maybe the mass updates pretty often, but the delta has some massive smoothing or SMA smoothing or something
+- It is this weird combination of noisy and also slow changing, but I do think it has potential
+
 ### 03/30/2026
 **Main Task:** Assembly, starting testing, adding TC
 

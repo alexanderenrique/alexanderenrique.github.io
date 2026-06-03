@@ -31,6 +31,18 @@
 - ~~Design a test stand fo the engine~~
 - ~~Get the flywheel working/printed up~~
 
+### 05/26/2026
+**Task:** "Trimming" the crank pulley, firing it up again
+
+**Notes:**
+- man I have never been scared of a project before, but this one is just fucking scary
+- I trimmed the snout off the 80T pulley for the crank shaft with a grinder, it turned out fine. I'm tired of waiting for the lathe to be fixed
+- Bolted things together, used the 4.25" flywheel I think
+- I also connected the exuast line properly to the fuel tank to pressurize it, funny to see the fuel tank fill with smoke from the exhause
+- The DC motor was having a weirdly hard time starting the engine, not sure why. I was using pretty aggressive gearing like 60:80t or something because it's what I could get onto the shaft of the DC motor now that I welded an 8mm sleeve on it.
+- I got it going without too much fuss, it's loud and acrid and scary and I'm not sure it really can be tamed. I'm putting this project in a box for now. I may come back to it, but right now I just don't want to work on it. I do think I'll want to come back to it, but the safety factor just it's quite there yet.
+
+
 ### 05/15/2026
 **Task:** Received flywheels
 - The flywheels are exactly what I wantedm haven't had time to start the endinge yet becasue I first need to hack off the snout on the 80T gear

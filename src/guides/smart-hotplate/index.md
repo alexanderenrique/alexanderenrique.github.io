@@ -7,11 +7,11 @@ permalink: /guides/smart-hotplate/
 
 ## What this is
 
-The smart hotplate is a lab safety concept aimed at making hotplates safer. Hotplates are very commmon lab equipment that are used to heat solvents, acids, bases, photoresist developers and more. It is easy for lab members to start heating a liquid on a hot plate and leave it unattended. This leads to fire risks, potentially broken glassware, dangerously hot acids, etc.
+The smart hotplate is a lab safety concept aimed at making hotplates safer. Hotplates are very common lab equipment used to heat solvents, acids, bases, photoresist developers, and more. It is easy for lab members to start heating a liquid on a hotplate and leave it unattended. This leads to fire risks, potentially broken glassware, dangerously hot acids, etc.
 
-By combining mass (load cell + HX711), hot plate temperature (K-type thermocouple and amplifier), and possible a current sensor, we can create a finite-state machine on an ESP32. We can use these sensors to infer whether the setup is in a normal run, evaporating safely, or drifting into dangerous cases (empty hot plate, dry-down, boil-off, etc.).
+By combining mass (load cell + HX711), hotplate temperature (K-type thermocouple and amplifier), and possibly a current sensor, we can create a finite-state machine on an ESP32. We can use these sensors to infer whether the setup is in a normal run, evaporating safely, or drifting into dangerous cases (empty hotplate, dry-down, boil-off, etc.).
 
-Users get status on a small touchscreen; resets go through the UI. The goal is a beaker size and solution agnostic set up with no constant tare rituals; while still catching risky situations that are easy to miss in a busy lab.
+Users get status on a small touchscreen; resets go through the UI. The goal is a beaker-size and solution-agnostic setup with no constant tare rituals, while still catching risky situations that are easy to miss in a busy lab.
 
 ## Approach
 
@@ -28,7 +28,7 @@ Users get status on a small touchscreen; resets go through the UI. The goal is a
   - Possibly CT sensor with op amps
   - ATTiny 3216 MCU
   - RS-485 chip to communicate with the head unit
-  - Passives like capacitors, resistos, op amps, RJ45 connector, etc
+  - Passives like capacitors, resistors, op amps, RJ45 connector, etc.
 
 
 - **Head Unit**
@@ -39,9 +39,9 @@ Users get status on a small touchscreen; resets go through the UI. The goal is a
   - Passives
 
 - **Architecture**
--   - The ATTiny takes in the data from the thermocouple, as well as the DT and CLK duties from the HX711
-  - The Attiny does minimal data buffering and telemetry, it does not decide the state
-- This information is passed to the ESP32, which decides, the states, controls the interlock, etc
+  - The ATtiny takes in data from the thermocouple, as well as the DT and CLK duties from the HX711
+  - The ATtiny does minimal data buffering and telemetry; it does not decide the state
+  - This information is passed to the ESP32, which decides the states, controls the interlock, etc.
 
 ## Using this documentation
 

@@ -1,0 +1,41 @@
+---
+layout: page
+title: "Source"
+description: "Open-source repos, firmware, and PCB files for Denton Works hardware projects"
+permalink: /source/
+---
+
+<p class="source-intro">Everything here is open source. Clone the repos, order PCBs from the Gerber files, or fork and modify to suit your lab.</p>
+
+<div class="product-list" role="list">
+  <article class="product-row" role="listitem">
+    <div class="product-row__media" aria-hidden="true"></div>
+    <div class="product-row__body">
+      <h3 class="product-row__title">E‑Ink Display</h3>
+      <p class="product-row__description">Battery-powered ESP32 e-ink display platform with BLE configuration and multiple firmware apps.</p>
+      <div class="product-row__links">
+        <a href="{{ sources.eInkDisplay.repo }}" class="product-row__link" target="_blank" rel="noopener noreferrer">Repo →</a>
+        <a href="{{ sources.eInkDisplay.pcbs }}" class="product-row__link" target="_blank" rel="noopener noreferrer">PCBs →</a>
+        <a href="{{ sources.eInkDisplay.firmware }}" class="product-row__link" target="_blank" rel="noopener noreferrer">Firmware →</a>
+        <a href="{{ '/projects/e-ink-display/' | url }}" class="product-row__link">Project →</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="product-row" role="listitem">
+    <div class="product-row__media" aria-hidden="true"></div>
+    <div class="product-row__body">
+      <h3 class="product-row__title">NEMO Tool Display</h3>
+      <p class="product-row__description">Real-time tool status from NEMO to wall-mounted ESP32 displays over MQTT. Use the pinout in <a href="https://github.com/alexanderenrique/NEMO-Tool-Display/blob/main/display-firmware/src/hardware.h" target="_blank" rel="noopener noreferrer">hardware.h</a> when wiring a 30-pin ESP32 dev board to a 4.2″ TFT.</p>
+      <div class="product-row__links">
+        <a href="{{ sources.nemoMqtt.repo }}" class="product-row__link" target="_blank" rel="noopener noreferrer">Repo →</a>
+        <a href="{{ sources.nemoMqtt.pcbs }}" class="product-row__link" target="_blank" rel="noopener noreferrer">PCBs →</a>
+        <a href="{{ sources.nemoMqtt.firmware }}" class="product-row__link" target="_blank" rel="noopener noreferrer">Firmware →</a>
+        <a href="{{ sources.nemoMqtt.bridge }}" class="product-row__link" target="_blank" rel="noopener noreferrer">Broker / VM →</a>
+        <a href="{{ '/projects/nemo-mqtt/' | url }}" class="product-row__link">Project →</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+<p class="source-footnote"><strong>Want a pre-assembled board?</strong> I'm not selling yet — assembling boards turns them into intentional radiators, which would require FCC emissions compliance. For now, the Gerbers and firmware are yours to build from.</p>
