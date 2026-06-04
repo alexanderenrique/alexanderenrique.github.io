@@ -76,7 +76,7 @@ Hardware project pages link to GitHub repos, firmware, and PCB files. Source URL
 
 1. Add repo, PCB, and firmware URLs to `src/_data/sources.js`.
 2. Add (or update) a page under `src/projects/` describing the project.
-3. Add links on the relevant page(s), on `src/projects/index.md`, and on `src/source/index.njk`.
+3. Add links on the relevant page(s) and on `src/source/index.njk`.
 4. Optionally add a CTA on `src/index.md`.
 
 ## 📄 License
