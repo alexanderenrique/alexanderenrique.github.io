@@ -13,9 +13,9 @@ tags: [automotive, restoration, mechanical]
 
 <div class="grid grid--2">
     <div class="card">
-        <h3 class="card__title">1968 Thunderbird Restoration</h3>
+        <h3 class="card__title">1968 Thunderbird Restomod</h3>
         <p class="card__description">Restoration and modification of a 1968 Thunderbird. Follow along as I bring this classic back to life with modern touches.</p>
-        <a href="{{ '/wrenching/thunderbird-restoration/' | url }}" class="section__link">View Work Log →</a>
+        <a href="{{ '/wrenching/thunderbird-restomod/' | url }}" class="section__link">View Work Log →</a>
     </div>
 
     <div class="card">

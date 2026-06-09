@@ -40,18 +40,18 @@
 - Bolted things together, used the 4.25" flywheel I think
 - I also connected the exuast line properly to the fuel tank to pressurize it, funny to see the fuel tank fill with smoke from the exhause
 - The DC motor was having a weirdly hard time starting the engine, not sure why. I was using pretty aggressive gearing like 60:80t or something because it's what I could get onto the shaft of the DC motor now that I welded an 8mm sleeve on it.
-- I got it going without too much fuss, it's loud and acrid and scary and I'm not sure it really can be tamed. I'm putting this project in a box for now. I may come back to it, but right now I just don't want to work on it. I do think I'll want to come back to it, but the safety factor just it's quite there yet.
+- I got it going without too much fuss, it's loud and acrid and scary and I'm not sure it really can be tamed. I'm putting this project in a box for now. I may come back to it, but right now I just don't want to work on it. I do think I'll want to come back to it, but the safety factor just isn't there
 
 
 ### 05/15/2026
 **Task:** Received flywheels
-- The flywheels are exactly what I wantedm haven't had time to start the endinge yet becasue I first need to hack off the snout on the 80T gear
+- The flywheels are exactly what I wanted haven't had time to start the engine yet because I first need to hack off the snout on the 80T gear
 - Playing with the ratios and high torque motors, I think I'll control the big 895 motor with like 50% duty, that seems to spin the engine plenty fast
-- I do wonder if there is a thing as too fast. I remmeber when I would jump a motorcycle with a car and the starter could have all the amperage it wanted, and it absolutely cranked like hell. It never actually started any fast cranking at mach jesus...
+- I do wonder if there is a thing as too fast. I remember when I would jump a motorcycle with a car and the starter could have all the amperage it wanted, and it absolutely cranked like hell. It never actually started any fast cranking at mach jesus...
 
 ### 05/05/2026
 **Task:** More purchasing, thinking, and eye drops
-- I received the linear actuator, that's an interesing mechanism, fun tp play with, I'll need an H bridge to control it
+- I received the linear actuator, that's an interesting mechanism, fun to play with, I'll need an H bridge to control it
 - Also received the 80T pulley, that thing is the truth. I'll need to take to snout off of that to fit a flywheel of any thickness but we'll get there
 - The 895 with a 30T cranked it over no problem.
 - I'm still thinking some kind of hybrid tension and one way bearing set up, the one way bearing as a safety against driving the motor hard in reverse. 

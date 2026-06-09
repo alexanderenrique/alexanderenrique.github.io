@@ -24,27 +24,31 @@ tags:
 ## Project Overview
 - I bought this T-Bird from a guy in Watsonville, CA. Fired right up, had basically straight pipes with glasspack (cherry bomb) mufflers and it was loud as heck. Should have been a giveaway that something was really wrong when he told me it didn't have reverse. This lead to a whole transmission rebuild. Other accomplishements and improvements can be seen at the bottom of the page.
 
-## Before the Christmas Road Trip!
+## Before Molly and Jivo's wedding!
 
 ### Must Do:
 - ~~Radiator and cooling system~~
+- Leaking power steering hose
 - Window trims and weather stripping
-- Flushing the brake lines
+- Finding Brake Leak
+- Wrapping the car
 - Inspecting rear brakes and bearings
 - change plugs, measure compression, deduce compression ratio
 
-### Massive but not critical:
-- Wrapping the car
+### Nice but not critical:
 - New starter motor
 - Windshield washer bottle
+- Fan controller, does it ever turn on??
+- Automatic headlights
 
 ### Nice to Have Smaller Tasks:
-- Verify temperature gauge is accurate
+- ~~Verify temperature gauge is accurate~~
 - Fuel level reading accurately
+- Alternator belt squeal??
 - Automatic parking brake release
 - Passenger side blank off plate
 - Driver side sun shade so it doesn't rattle
-- Window switches
+- ~~Window switches~~
 - Oil leak from front of engine
 - "knee breeze" cable
 - Switching between defrost and forward vent
@@ -52,16 +56,29 @@ tags:
 - Finish the front seatbelts
 - Spare alternator fused wire
 
-## Up Next:
-- ~~Testing the IVR, seeing if grounding the sensors gets us 100 percent values~~
-- Adding shunt resistor to the alternator cable, wiring to the guage
-- Vented gas cap, the old fashioned way
-- Adding 3d printed door card-reinforcers to the door cards so it can clip to the door properly
-- Adding the arm rest back
-
 
 
 ## Work Log
+
+### 06/09/2026
+**Main Task:** Loose Fan wiring, alternator scheming
+
+**Notes:**
+- I tested the alternaotor fan before going for a drive to the city last night, and hen I grounded it, it didn't turn on! I quickly checked for voltage but didn't see any
+- This morning when I went to work on it, I did see voltage at the pin, but it looked like the ground pin in the connector was a little loose. So I finished pushing that into the connector and it's magically fixed which is kinda annoying.
+- I'm still not sure if the temp switch works but at least I know the fan is still good.
+- Scheming about the alternator, I am suspecting more and more that the v belts just can't handle the load right at start up, because it takes basically no effort to spin over by hand, so I can't imagine that causes the slip on start up
+- Doing some math, the worst case is that 14V X 140 Amps = 1960 W, which if you throw in some alternator inefficieny can be up to 2500 W, 2500/735 W/Hp= 3 ish horsepower trying to transmit through these shitty V belts
+- I bet money that if I disconnected the ASI plug it wouldn't squeal, and some kind of soft start device would get rid of it. 
+
+### 06/06/2026
+**Main Task:** Trunk switch, attaching arm rest
+
+**Notes:**
+- Added a switch for the trunk light, it was pretty easy I ended up using VHB tape. I hope it holds. It only has stress on it when the trunk is open so I have high hopes. I also designed it so that if the switch falls off or fails I can manually connect the light to power using bullet connectors
+- Made a bracket to attach the arm rest, I'm pretty dang happy with how it turned out. Took forever but that's brackets baby. 
+- Very unclear on the path forward to attached the metal trim piece
+- I also figured out where the power steering line I bought is supposed to go. There's two parts to the pressure line
 
 ### 05/17/2026
 **Main Task:** ATF leak (from somewhere), changing thermostat
@@ -529,7 +546,6 @@ Custom 3D printed parts designed for this project:
 - Dash lights
 - Rebuild trans
 - Clock
-- Ammeter
 - Electric fan conversion
 - Adding switched power post to engine bay
 - Check ignition timing
@@ -549,3 +565,42 @@ Custom 3D printed parts designed for this project:
 - New Wheels and Tires
 - Adding speakers to the back
 - leaking trans (New fittings, hoses, trans pan)
+
+
+The things I mostly want are:
+- EFI
+- Serpentine belt
+- AC
+
+Easist way to get EFI is to do the Holley, easiest way to get a serpentine belt is a 460
+
+
+Comparison between big block options:
+
+Option 1: Holley EFI
+Holley Cost: $1500 All up
+Turbo Parts: $500
+Exhaust and Cats: $300
+
+You get: 
+- EFI
+- Cats
+- Boost
+
+
+Option 2: Straight 460 swap
+- Engine: $500
+- Microsquirt: Already have it
+- Serpentine belt all figured out
+- Bolts right up to C6
+
+Would have to figure out:
+- Throttle linkage
+- Throttle body adapter
+- Power steering hoses
+
+You would get:
+- EFI
+- Lower but not terrible compression
+- Port injection
+- More control, more "Alex" feel

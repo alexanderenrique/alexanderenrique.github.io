@@ -61,6 +61,12 @@ There are two basic events that will trigger a hot plate shut off:
 
 ## Work Log
 
+### 05/29/2026
+**Main Task:** A simpler FSM, longer periods generally
+
+**Notes:**
+- It's cool to see the mass change in near real time, but I'm not sure this is stricly necessary for my FSM
+
 ### 05/28/2026
 **Main Task:** Bench testing with real hotplate
 
