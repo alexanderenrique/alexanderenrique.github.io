@@ -38,6 +38,20 @@ description: One curious engineer's journey through wrenching, coding, and micro
         </div>
     </section>
 
+    <section class="section section--alternator-555">
+        <div class="section__content">
+            <div class="section__text">
+                <h2 class="section__title">Alternator 555 Timer</h2>
+                <p class="section__description">A compact analog delay board for classic cars with upgraded alternators. Holds the field off for ~10 seconds after start so V-belts get traction before the load hits, no microcontroller, no firmware. Built for my <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a>.</p>
+                <a href="{{ sources.alternator555Timer.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+                <a href="{{ '/projects/alternator-555-timer/' | url }}" class="section__link">Project page →</a>
+            </div>
+            <div class="section__image">
+                <img src="{{ '/images/555_pcb.png' | url }}" alt="Alternator 555 Timer PCB layout">
+            </div>
+        </div>
+    </section>
+
     <section class="section section--blog">
         <div class="section__content">
             <div class="section__text">

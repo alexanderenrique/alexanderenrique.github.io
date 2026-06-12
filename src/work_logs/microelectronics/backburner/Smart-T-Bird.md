@@ -23,14 +23,74 @@ tags:
 
 ## Project Overview
 - I love me some data, micro electronics, and old cars so let's put them all together. 
-- My dream is to have temperature data, PWM control of fans, and a cool hidden display where I can see all the readouts and what everything is doing, and also manually override sensors if say I want to put a fan on full blast or whatever else
+- My dream is to have temperature data, PWM control of fans, voltage and all these other cool things
+
+## 
+## Box I/O
+- Input (6 pins)
+  - 12V
+  - GND
+  - 2 pin RTC (Coolant)
+  - 2 pin RTC (Oil)
+
+- Output (6)
+  - Connection fan ground
+  - Connection I line
+  - RS-485 connection
+
+Hardware:
+- 12v to 5V buck converter
+- ESP32 C3, god's gift to MCUs
+- RS 485 
+- Heaps of resistors and MOSFETs and transistors
 
 
-## Current Tasks
-- Minimum Viable Product for the roadtrip:
-- O2 and voltage sensor connected directly to the screen
-- On/Off switch for the screen, or better yet enabling touchscreen functionality, tap on and tap off
+## Notes:
+- RST pin when pulled low forces the output low, so that is why it is held high
 - 
+
+
+## Work Log (Smart Alex edition)
+
+### 06/11/2026
+**Main Task:** Schematic, light PCB design, breadboard
+
+**Notes:**
+- I dreamed about this last night, so weird
+- I had a couple ideas, first to add LEDs so it's really easy to see what is going on. A green one for the device has power, and a red one for then the alternator should be excited. Easy enough to add
+- The second was using a rheostat to tune the delay, but I decided this was unnecessary. I just don't care that much and if I shoot for 10 seconds, 8-12 is a perfectly fine range
+- Ok bread board took most of the morning, I'm not even sure what I was doing wrong the first time, my schematic worked which is cool
+- I feel like you don't really get it until you build it and have it fail a few times. Now i could build it off the top of my head
+- I got it working with the parts at work, 3 second delay works perfectly, I'm sure changing the capacitor values will have the right effect. 
+- Started chipping away at the PCB, mounting holes, holes for cables, etc. It's tight and looking nice
+
+### 06/10/2026
+**Main Task:** 555 timer, KISS edition
+
+**Notes:**
+- Ok so as much as I want to over complicate everything and make some crazy comprehensive box that would takes months to prototype and design, I think I want to get this working more. 
+- I decided on a 555 timer, which means I get to avoid the buck converter, no code, no flashing, just a "fail proof" analog circuit
+- Input will be really simple, I in, I out and ground.
+- I spent time understanding the 555 timer and what each pin does, at once simple and complicated? Analog logic is a different kind of thinking
+- I made it as far as starting to lay out the PCB, I think I got the schematic right and made mose of the right choices
+- I learned that the classic 555 timer that uses BJTs or whatever isn't truly rail to rail, so it only swings up to about 1.5V under the rail. this is right at the voltage threshold that just barely starts turning the P type mosfet off
+  - This is particularly bad becasue when when mosfet is mostly but not totally off the resistance is quite high and it generates a ton of heat, like a lot of heat
+  - Like the max Vgs to turn the mosfter off is like -2V, so the -1.5V drop is pushing it
+  - Luckily i learned that there is a CMOS version that is truly rail to rail and should allow the MOSZFET to totally turn off effectively
+- I also learned about different SMD packaging sizes, I want to do something a bit different with this PCB and make it as small as possible, I think it could be really tiny like 2 in sq or something.
+- I also learned a ton about capacitors, electrolytics have high capacitance but terrible tolerances and they degrade with heat
+
+### 06/9/2026
+**Main Task:** Re-imagination, reconception
+
+**Notes:**
+- Man that previous guy was such a schmuck. Now that I can design PCBs I look at the guy who used perfboard with a true sense of disgust. The loops, the bad soldering, ugh!
+- So today I leared I need a timer to start my alternator after the engine starts, and sure you could use a 555 timer or something, but I ESP32, that's what I do. 
+- Man I love microelectronics
+- I want it to PWM the fan, and 
+
+
+-----------------------------------
 
 ## Work Log
 

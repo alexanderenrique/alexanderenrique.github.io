@@ -61,11 +61,51 @@ There are two basic events that will trigger a hot plate shut off:
 
 ## Work Log
 
+### 06/08/2026
+**Main Task:** A simpler FSM, longer periods generally
+
+**Notes:**
+
+1. Mass-loss shutdown — less sensitive
+You asked to make shutdown more conservative on a heavy hotplate. We tightened the sudden-loss path so it needs ~2 seconds of clearly large loss before tripping:
+
+Higher EMA gap thresholds (35% of load)
+Faster drop rate threshold (−3000 counts/s, later made relative)
+Fast-drop confirmation over 2 seconds (not instant)
+Longer empty-plate debounce (4 s)
+2. Touch reset behavior
+Touch was setting a flag but mostly only affected FAULT. We wired it so any screen touch (or serial ack):
+
+Forces IDLE for 3 seconds (TOUCH_SETTLE_MS)
+Clears shutdown reason and resets FSM hysteresis timers
+Suppresses safety shutdowns during settle
+Shows “Stabilizing after touch...” on the display
+3. EMA gap tuning
+You wanted a wider fast/slow separation and more intuitive sign:
+
+Slow EMA alpha: 0.03 → 0.01 (~17 s → ~50 s time constant)
+ema_gap: now fast − slow (negative = mass falling)
+Sudden-loss checks updated for the new sign
+UI label changed to (fast-slow)
+4. Why sample removal didn’t trigger shutdown
+You shared a log where raw counts crashed after removing the sample, but nothing shut down. We traced it:
+
+Detection is EMA-based, not raw delta
+The old −100k absolute gap gate blocked small loads
+FSM went HEATING_MONITORING → IDLE (relay off) before safety paths could fire
+5. Relative thresholds (main refactor)
+You asked to replace magic count constants so small beakers work. We audited and converted 11 absolute HX711 thresholds to fractions of reference load (baseline when known, else cal scale), with optional absolute noise floors:
+
+Mass presence, near-zero rate, spike reject, sudden loss, fast drop, boil oscillation, evap band, etc.
+Added referenceLoadCounts(), countsThreshold(), and related helpers
+Fixed the sudden-loss bug where absolute AND relative gates both had to pass
+
 ### 05/29/2026
 **Main Task:** A simpler FSM, longer periods generally
 
 **Notes:**
-- It's cool to see the mass change in near real time, but I'm not sure this is stricly necessary for my FSM
+- It's cool to see the mass change in near real time, but I'm not sure this is strictly necessary for my FSM
+- Moved to a fast and slow moving average set up, didn't really test it too much
 
 ### 05/28/2026
 **Main Task:** Bench testing with real hotplate

@@ -61,6 +61,15 @@ tags:
 ## Work Log
 
 ### 06/09/2026
+**Main Task:** Fucking cracked the alternator
+
+**Notes:**
+- This alternator has been pissing me off for two years, and today I cracked it
+- It was squealing becasue the excited field is hitting the belts too hard, like I explaibed below
+- I disconnected the yellow I wire from the alternator and behold, no squeal, no sign of a squeal, nothing
+- I'm just so sure that is it, I'm going to make a soft start controller
+
+### 06/09/2026
 **Main Task:** Loose Fan wiring, alternator scheming
 
 **Notes:**
