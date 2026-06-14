@@ -29,4 +29,10 @@ tags: [electronics, embedded-systems, microcontrollers]
         <p class="card__description">Preventive monitoring system for vacuum pumps using temperature sensors, IMU, and current sensing to holistically monitor pump health and performance.</p>
         <a href="{{ '/microelectronics/pump_monitor_module/' | url }}" class="section__link">View Work Log →</a>
     </div>
+
+    <div class="card">
+        <h3 class="card__title">Desktop Chime</h3>
+        <p class="card__description">ESP32-based hourly chime with aluminum tone bars, solenoid strikers, and RTC timekeeping — no internet required.</p>
+        <a href="{{ '/microelectronics/desktop-chime/' | url }}" class="section__link">View Work Log →</a>
+    </div>
 </div>
