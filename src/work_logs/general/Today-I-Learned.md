@@ -19,9 +19,111 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 06/23/2026
+- Some buck regulators actually want a little ESR on input/output — electrolytics may be intentional, not a lazy default
+- DIY flat aluminum chime bars without undercut profiling can sound dead or out of tune — a commercial xylophone is a fine pivot
+
+### 06/22/2026
+- Cheap 8-channel MOSFET driver ICs are a practical way to drive multiple solenoid strikers
+- Pull-type 12 V solenoids: ~0.5 A inrush, ~0.2 A hold — size the supply for peak current, not holding current alone
+
+### 06/20/2026
+- Fixed-output buck converters need only inductor + cap — fewer feedback parts, but max input voltage still picks the IC class
+- Switching frequency and inductor size trade off — higher f → smaller inductor
+- Opto-triac driving a triac is the AC switch pattern; a snubber across the triac tames inductive kick even on resistive-looking loads
+- Parallel low-ESR ceramics can beat one large electrolytic for the same effective capacitance
+- MOV varistors on AC inputs catch line transients that would otherwise find your silicon
+- Check buck IC stock before locking the schematic — swapping converters mid-layout is painful
+
+### 06/18/2026
+- Vinyl wrap prep: paint stripper, wire wheels, and flap discs gouge and choke — 100 grit on an orbital is faster on rust
+- Paint under vinyl needs a final ~400 grit pass or texture telegraphs through the wrap
+
+### 06/16/2026
+- 8-position rotary DIP switch (3 GPIO) beats a resistor-ladder knob — digital modes, smaller BOM, no ADC weirdness
+- Two-wire 24 VAC transformer secondary is floating — schematic line/neutral are labels, not earth-referenced rails
+- KiCad AC net classes are their own headache; TRIAC gate drive is easy to get wrong on paper alone
+
+### 06/15/2026
+- AC + MCU projects (optocouplers, triacs, rectified bucks) are a different headspace than DC-only boards
+- Custom tone-bar lengths: cut ~2% long — filing sharp is easier than recovering a bar that came up short
+
+### 06/14/2026
+- Chime and tone bars mount at vibration nodes ~22.4% in from each end — support elsewhere kills resonance
+
+### 06/13/2026
+- Nanofab knowledge graph: deterministic table ingest plus AI enrichment over cached SOP bundles, with append-only provenance edges in Postgres
+- Audit enrichment coverage before a full API run — SNF's first crawl cached ~2,300 pages with deep Google Doc nesting off the equipment table
+
+### 06/12/2026
+- Dense 1206 SMD timer PCB can land near 1.5 sq in when you commit to small-footprint parts
+
+### 06/11/2026
+- 555 monostable delay: breadboard failures teach what the schematic cannot — cap and resistor values behave once the wiring is right
+
+### 06/10/2026
+- Classic BJT 555 output swings only to ~Vcc − 1.5 V — borderline for fully offing a P-channel MOSFET; partial on means heat
+- CMOS 555 is rail-to-rail — better gate drive when a timer output switches a MOSFET
+- Electrolytics: huge capacitance, loose tolerance, and they age faster in heat
+
+### 06/09/2026
+- Thunderbird alternator squeal at crank: field excitation loads V-belts before they bite — disconnecting the exciter wire proves it instantly
+- Full alternator load is ~3 hp equivalent through V-belts — a soft-start delay on excitation is the practical fix
+
+### 06/08/2026
+- Smart hotplate HX711: relative thresholds (% of reference load) beat magic absolute counts for small beakers
+- Fast − slow EMA gap (negative = mass falling) catches sample removal better than watching raw count crashes
+- Touch reset on the display needs a settle window before safety shutdown logic re-arms
+
+### 05/28/2026
+- Fast/slow EMA delta on a load cell tracks mass trends more consistently than heavily smoothed dM/dt on a real hotplate
+
+### 05/26/2026
+- Husqvarna kickstand: weld a forward stop to prevent hyper-extension instead of fighting the stock geometry
+
+### 05/17/2026
+- Dual-circuit master cylinder can show an empty front reservoir while the rear circuit still holds fluid
+- C4 kickdown shaft through the selector can leak ATF — extra O-rings help if you delete the linkage
+- Silicone hose is a bad permanent choice for a motorcycle fuel crossover line
+
+### 05/16/2026
+- NEMO tool displays: duplicate MQTT client IDs across devices cause random broker disconnects — bake tool/NEMO ID into each client ID
+- Next-reservation MQTT push only reaches tools on the server allow list — missing Heidelberg reservation was config, not a dead ESP
+- E-ink lab tags: scoped write-only NEMO API token per deployment beats reusing a personal god token
+
+### 04/30/2026
+- 3D-printed flywheel at nitro RPM can grenade — laser-cut steel flywheels and safety glasses are non-negotiable for high-speed spinners
+- GT2 belt may have enough grip for a nitro starter drive without jumping to expensive HTD pulleys
+
+### 04/29/2026
+- NEMO reservations API holds ~2,000 future rows — paginate at 500/page across several pages to capture the full future set
+
+### 04/23/2026
+- Production MQTT lesson: identical client IDs across deployed devices fight on the broker — unique ID per tool is mandatory
+
 ### 04/22/2026
 - today I learned and really understood different gas flow regimes, like molecular vs viscous flow. In the context of He leak detectors and how adding a purge gas can decrease the signal making it to the detector
 - I also learned He in the atmosphere can be detected by He leak detectors. Obviously you can sniff for leaks, but you can also use background He which is about 5ppm.
+
+### 04/10/2026
+- NEMO display reconnect can replay a cached MQTT shutdown with no user or task attached — that empty shutdown is the tell for a stale broker message, not a real event
+
+### 04/06/2026
+- Dash PCB debug: continuity at ~1 mA can read fine on a cracked trace that sags under load — voltage drop across the segment is the tell
+- Soldering to untented vias on a motorcycle dash PCB is basically not a viable repair path
+
+### 04/05/2026
+- Husqvarna neutral indicator is resistance-coded per gear (~330 Ω in neutral), not a simple ground switch
+- Low-fuel sender reads ~1.3 kΩ at empty when the tank is tilted — bench tests need realistic tank attitude
+
+### 03/30/2026
+- Hotplate FSM: slow negative drift (evaporation) vs flat mass (empty hotplate timeout) is a narrow line — heater current sense may be required to separate them
+
+### 03/26/2026
+- Some cheap SPI TFT panels need RGB vs BGR swapped in the driver — wrong colors is often byte order, not wiring
+
+### 03/23/2026
+- E-ink tag deploy: average several temp/RH reads to kill single-sample spikes; scoped write-only API token beats one god token in the field
 
 ### 03/18/2026
 - Range-extender DHCP/subnet mistakes are a crash course in real LAN behavior; microcontrollers feel simple by comparison once the path is fixed
@@ -112,6 +214,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 - OTA hosting: folder layout on the Pi plus a small upload script keeps manifests and firmware paths consistent
 - Firmware/config version mismatch detection saves bricked loops
 - CB350: carb #1 low power with fuel present can be a stuck needle — verify float/needle before chasing jets again
+- Chime tone bars: mount at vibration nodes ~22.4% from each end; longer rectangular aluminum can substitute for undercut glockenspiel bars
 
 ### 02/10/2026
 - E-ink messages: word spacing is a render-pixel issue, not "more spaces" in the string

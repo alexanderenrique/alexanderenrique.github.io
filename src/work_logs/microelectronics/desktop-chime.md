@@ -24,26 +24,22 @@ The plan is an ESP32-based desktop chime that uses aluminum striker bars with sm
 3. Compact-ish desktop form factor (I want it to be smaller but physics is dogmatic about tone and length)
 4. Self-contained: set time once, runs indefinitely on wall power
 
-## Tone Bar Specs
-
-### Melody Bars (4)
+## Melody Bars (4)
 
 | Property | Value |
 |----------|-------|
 | Material | 6061 Aluminum |
 | Thickness | 0.080" |
 | Width | 1" |
-| Lengths | 
-| D3 11"|
-| G3 9.5"
-| A3 9" |
-| B3 8.3"|
+| Lengths | D3 11", G3 9.5", A3 9",  B3 8.3" |
 
 ## Bar Physics & Mounting
 
 Real glockenspiels use undercut bars to get better tones, but that adds machining challenges, I'll compromise and make longer bars without undercuts.
 
-Mounting of the bars is super important, and not something you really look at unless you're building your own musical instrument. Looks like nylon cord suspension works well, and the mounting holes need to be **22.4% from the end of the bar** — that's where the nodes are, so that's where it'll be stationary and you can actually support it without killing the resonance.
+Mounting of the bars is super important, and not something you really look at unless you're building your own musical instrument. The mounting holes need to be **22.4% from the end of the bar**, that's where the nodes are, so that's where it'll be stationary and you can actually support it without killing the resonance.
+
+Some fancy people use like nylon string to support it but that sounds hard so I might just use some small O-rings, or experiment with plastic washers, I worry the O-ring will dampen vibration but you never know.
 
 ## Architecture
 
@@ -78,6 +74,9 @@ Four bars, 1" wide
 - Solenoid placement: aligned to strike bar just off of center
 
 ## Up Next
+- Play with striker, does it sounds the same when hit from the back? (haha)
+- Start loosely designing circuit
+- Can I get the aluminum bars to work? It might be cool to have the whole octave notes anyways...
 
 - ~~Designing the bars~~
 - ~~Having them cut, or cutting them myself~~
@@ -86,6 +85,32 @@ Four bars, 1" wide
 - Designing tips for the solenoids so they strike nicely
 
 ## Work Log
+
+### 06/23/2026
+**Task:** Receiving parts, thinking
+
+**Notes:**
+- Suspended the D3 bar with string, which I think is the longest/lowest, and tried striking it. Didn't sound very good. It did ring but all kinds of out of tune
+- I'm abandoning making the tone bars for now, pivoting to using the kids xylophone
+
+### 06/22/2026
+**Task:** Receiving parts, thinking
+
+**Notes:**
+- Receive the laser-cut chime bars.
+  - I haven't pictured them properly for this tone yet, but some of them just sound really flat and bad.
+  - I did notice that some had a curvature to them, maybe like 0.050" which I imagine doesn't help the resonant frequency.
+- Look into 8 channel MOSFET drivers, they do exist, and they're pretty cheap. I think they'll be a good solution
+- I also receive the solenoids. The one that I like works only at 12 V and pulls over half an A when it's first energizing, and then the holding current is about 0.2 A.
+- I'm not sure what to do about the chime bars. I would like to have my own tones, but it might not be worth it
+
+### 06/15/2026
+**Task:** Ordering the tone bars
+
+**Notes:**
+- Went for notes in the 3rd octave, D3, G3, A3, B3.
+- Using 0.080" aluminum the length for d3 was 11". Technically a bit shorter, but I left them 2% long. You can always file some off to make it sharper, but if they are all 2% off I think it'll sound good.
+
 
 ### 06/14/2026
 **Task:** Moving off the backburner

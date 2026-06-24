@@ -10,7 +10,7 @@ tags: [automotive, analog, 555-timer, thunderbird, alternator]
 
   <div class="btn-row">
     <a class="btn btn--primary" href="{{ sources.alternator555Timer.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
-    <a class="btn btn--secondary" href="{{ '/microelectronics/Smart-T-Bird/' | url }}">Work log →</a>
+    <a class="btn btn--secondary" href="{{ '/microelectronics/alternator_555_timer/' | url }}">Work log →</a>
   </div>
 </div>
 
@@ -101,5 +101,6 @@ The classic bipolar 555 doesn't swing fully to the positive rail, output tops ou
 
 ## Quick links
 
-- **Work log / lab notebook:** [Smart Thunderbird Electronics, work log]({{ '/microelectronics/Smart-T-Bird/' | url }})
+- **Work log / lab notebook:** [Alternator 555 Timer, work log]({{ '/microelectronics/alternator_555_timer/' | url }})
+- **T-Bird electronics hub:** [All Thunderbird electronics work logs]({{ '/microelectronics/T-bird_electronics/' | url }})
 - **Related wrenching notes:** [Thunderbird restomod, work log]({{ '/wrenching/thunderbird-restomod/' | url }})

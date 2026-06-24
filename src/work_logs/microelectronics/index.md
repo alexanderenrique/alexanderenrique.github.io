@@ -13,9 +13,9 @@ tags: [electronics, embedded-systems, microcontrollers]
 
 <div class="grid grid--2">
     <div class="card">
-        <h3 class="card__title">Smart Thunderbird Electronics</h3>
-        <p class="card__description">Modern electronics integration for classic cars. Bringing smart features to the 1968 Thunderbird restoration project.</p>
-        <a href="{{ '/microelectronics/Smart-T-Bird/' | url }}" class="section__link">View Work Log →</a>
+        <h3 class="card__title">T-Bird Electronics</h3>
+        <p class="card__description">Modern electronics integration for the 1968 Thunderbird restomod — alternator delay, display node, engine sensing, and methanol injection.</p>
+        <a href="{{ '/microelectronics/T-bird_electronics/' | url }}" class="section__link">Browse T-Bird electronics →</a>
     </div>
 
     <div class="card">

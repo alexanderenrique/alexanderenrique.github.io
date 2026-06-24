@@ -60,12 +60,21 @@ tags:
 
 ## Work Log
 
+### 06/18/2026
+**Main Task:** Sanding, grinding, inhaling dust
+
+**Notes:**
+- Been sanding my cojones off trying to get the car ready for wrapping
+- I learned that paint stripper is not the way, neither are wire wheels or flap discs. They just take forever, make a lot of dust, and gouge stuff
+- 100 grit on a detail orbital snader is the truth, it is aggressive enough to quickly-ish smooth out the rust, and courase enough to not clog
+- I did most all of the front clip usign various methods and gave it a light coat of paint. I learned that you also have to sand the final paint with 400 grit or so to make sure it's really really smooth to the touch otherwise you'll see defects and texture through the vinyl
+
 ### 06/09/2026
-**Main Task:** Fucking cracked the alternator
+**Main Task:** Fucking solved the alternator squeal
 
 **Notes:**
 - This alternator has been pissing me off for two years, and today I cracked it
-- It was squealing becasue the excited field is hitting the belts too hard, like I explaibed below
+- It was squealing becasue the excited field is hitting the belts too hard, like I explained below
 - I disconnected the yellow I wire from the alternator and behold, no squeal, no sign of a squeal, nothing
 - I'm just so sure that is it, I'm going to make a soft start controller
 
@@ -518,7 +527,7 @@ tags:
 - New wheels and tires
 - Speakers in the back
 - Wiring in Wideband O2 Sensor
-- Arduino project, adding sensors - see Smart-T-Bird for details
+- Arduino project, adding sensors — see [T-Bird electronics]({{ '/microelectronics/T-bird_electronics/' | url }}) for details
 
 ## 3D Models & STL Files
 
