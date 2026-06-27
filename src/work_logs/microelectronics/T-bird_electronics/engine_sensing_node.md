@@ -15,6 +15,9 @@ tags:
 
 A sensor node designed to collect engine operating data (temperatures, voltages, sensors, etc) in the Thunderbird. Focus on reliability, automotive-hardening, and ease of install. Intended for RS-485 data bus communication with robust PCB and enclosure.
 
+**Repo:** [smart_tbird/temp_fan_node](https://github.com/alexanderenrique/smart_tbird/tree/platformIO/temp_fan_node)  
+**T-Bird hub:** [denton.works/microelectronics/T-bird_electronics/](https://denton.works/microelectronics/T-bird_electronics/)
+
 ## Notes:
 - Sensors:
   - 10k NTC thermistors: Oil temp, coolant temp, trans temp, underhood/intake temp, PCB board temp

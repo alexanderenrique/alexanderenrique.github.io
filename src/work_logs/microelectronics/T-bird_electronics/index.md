@@ -8,7 +8,7 @@ tags: [electronics, classic-car, thunderbird, esp32, automotive]
 <div class="hero">
     <h1 class="hero__title">T-Bird Electronics</h1>
     <p class="hero__subtitle">Modern electronics integration for the 1968 Thunderbird restomod — sensors, displays, power management, and more.</p>
-    <p class="hero__subtitle">Part of the <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a> project.</p>
+    <p class="hero__subtitle">Part of the <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a> project. Source code: <a href="{{ sources.smartTbird.repo }}" target="_blank" rel="noopener noreferrer">GitHub (smart_tbird)</a>.</p>
 </div>
 
 <div class="grid grid--2">

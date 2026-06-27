@@ -15,7 +15,8 @@ tags:
 
 A simple delay circuit for alternator field excitation using a 555 timer in monostable mode. Designed to power up the alternator and provide a start-up delay using robust analog electronics. No code, no microcontroller required. The project aims for a compact, reliable PCB solution for automotive use.
 
-**Repo:** `/Users/adenton/Desktop/smart_tbird/alternator_555_timer/`
+**Repo:** [smart_tbird/alternator_555_timer](https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer)  
+**Project page:** [denton.works/projects/alternator-555-timer/](https://denton.works/projects/alternator-555-timer/)
 
 
 ## Notes:

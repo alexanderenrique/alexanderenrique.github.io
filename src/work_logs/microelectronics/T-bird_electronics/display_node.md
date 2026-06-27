@@ -15,6 +15,9 @@ tags:
 
 A display/control node for the Smart Thunderbird project. Intended to show real-time engine and sensor data (temp, voltage, RPM, etc) in the car using a robust, automotive-ready display driven by an ESP32. Focus on reliability, visibility, and integration with RS-485/CAN bus for future expansion.
 
+**Repo:** [smart_tbird/display](https://github.com/alexanderenrique/smart_tbird/tree/platformIO/display)  
+**T-Bird hub:** [denton.works/microelectronics/T-bird_electronics/](https://denton.works/microelectronics/T-bird_electronics/)
+
 -----------------------------------
 
 ## Things to display

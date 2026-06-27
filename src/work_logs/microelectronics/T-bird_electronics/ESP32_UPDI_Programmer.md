@@ -18,7 +18,8 @@ A toolchain-agnostic ATtiny programming rig for the Smart Thunderbird project. A
 
 Primary target MCU: **ATtiny3216** (engine sensing node and other T-Bird sensor boards).
 
-**Repo:** `/Users/adenton/Desktop/smart_tbird/ESP32_UPDI_Programmer/`
+**Repo:** [smart_tbird/ESP32_UDPI_Programmer](https://github.com/alexanderenrique/smart_tbird/tree/platformIO/ESP32_UDPI_Programmer)  
+**Work log:** [denton.works/microelectronics/ESP32_UPDI_Programmer/](https://denton.works/microelectronics/ESP32_UPDI_Programmer/)
 
 ```
 [ Any Build System ] --> firmware.hex --> attiny-uploader (CLI) --USB Serial--> ESP32 --UPDI--> ATtiny3216
