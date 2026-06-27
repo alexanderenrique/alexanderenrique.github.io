@@ -46,14 +46,9 @@ A display/control node for the Smart Thunderbird project. Intended to show real-
 
 ## Work Log
 
-### [Date]
-**Main Task:** [Brief summary of what you did]
+### 06/23/26
+**Main Task:**  Scheming, spending money
 
 **Notes:**
-- [Quick bullet points of challenges, what you learned, decisions made, or next steps]
-
-### [Date]
-**Main Task:** [Next entry]
-
-**Notes:**
--
+- The little ESP32 30 pin dev board *can* run the 4" display, but if I want graphics and real sexyy things I'll need more horsepower
+- SEEED makes an S3 dev board, but I opted for a Hoysond one coming in at $5 a board, dual core processor, DMA, lots of good stuff

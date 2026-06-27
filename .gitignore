@@ -36,3 +36,5 @@ src/microelectronics/500mA-LED-Driver.md
 *.pfx
 id_rsa
 id_ed25519
+
+src/work_logs/microelectronics/parts_bin/

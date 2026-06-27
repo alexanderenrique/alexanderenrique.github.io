@@ -15,6 +15,8 @@ tags:
 
 A simple delay circuit for alternator field excitation using a 555 timer in monostable mode. Designed to power up the alternator and provide a start-up delay using robust analog electronics. No code, no microcontroller required. The project aims for a compact, reliable PCB solution for automotive use.
 
+**Repo:** `/Users/adenton/Desktop/smart_tbird/alternator_555_timer/`
+
 
 ## Notes:
 - Quick 555 Timer Pinout (Monostable Mode):
@@ -29,15 +31,53 @@ A simple delay circuit for alternator field excitation using a 555 timer in mono
 
 - In monostable mode, a pulse to TRIG (Pin 2) starts a single timing interval. The period is set by an external resistor and capacitor between VCC, DISCH (Pin 7), and ground.
 
+## To Do
+REV B Changes:
+- ~~Change the footprint of the diameter of the capacitor to be smaller.~~
+- The in and out holes for the wires are way too big.
+- ~~increase capacitor on Trig circuit to 1uF, I got 1.1uF to work on the bench~~
+- ~~Standardize SMD sizing, 1206 is a nice not challenging middle ground.~~
+- larger mounting holes, like 0.1"
+- make it tall enough, board plus fuse is 0.8"
+- Make bolt tabe more chamfered maybe 50 thou and farther out from body
+
+
 ## Work Log (Smart Alex edition)
+
+### 06/26/2026
+**Main Task:** PCB Redesign
+
+**Notes:**
+- Started the Rev B work, most of it was pretty simple
+- I have no idea why I opted for 0805 caps in the first version
+- Finished soldering the protoboard, I learned all about mosfets and getting their direction backwards *face palm* the diode icon in the MOSFET did exactly as promised and it conducted current all day long
+- My LED wouldn't turn off even when all 3 pins were high. Damn it.
+- That'll teach me to throw together a board, we are in the "getting humbled" stage of hardware
+
+### 06/25/2026
+**Main Task:** PCB RECEIVED!! Much debugging :(
+
+**Notes:**
+- Got the PCBs!! Wow so small so sexy, the pads for the SMD stuff looks bigger that I thought, even the 0805
+- Spent time organizing
+- 0805 parts are where I draw the line, those are too damn small and don't even save that much space over 1206
+- Here's everything I learned from my debugging session:
+  - Ok So chat gas lit me into thinking my RC circuit on the trigger pin was backwards, but it wasn't
+  - I learned I need a better testing set up for power and ground and probes and stuff, my current set up involves too many fingers and it slows me down
+  - The fundamental problem is that my capacitor was too small on the trig circuit, so like power supply ramp or anything and it wouldn't trigger the trig pin would just go straight high
+
+
 
 ### 06/23/2026
 **Main Task:** Received Digikey order, designing case
 
 **Notes:**
-- Nice!
+- Nice! Gotta love an electronics haul. 
 - I didn't realize I'd bought clear LEDs that then illuminate a certain color but whatever
 - Started working on the case design, I gave it like 90 minutes in the morning, man CAD just always takes forever
+- Note to self, don't be stingy, make walls at least 100 thou thick. 
+- Probably spent 3 hours designing a case, pretty dang proud of it. 
+- I learned how to import PCB assemblies from Kicad into onshape which saved me a ton of time, I feel super legit now. Cool to see my PCB in OnShape
 
 
 ### 06/12/2026
