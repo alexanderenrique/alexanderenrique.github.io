@@ -60,6 +60,14 @@ tags:
 
 ## Work Log
 
+### 07/04/2026
+**Main Task:** Sanding, removing trim
+
+**Notes:**
+- Gosh, time flies. The trim gets here on Monday, and the car definitely isn't ready to receive it yet.
+- I spent a lot of yesterday sanding, removing trim, trying to get things smooth and ready.
+- All of the trim pieces have these kind of funky grommets on them for waterproofing, and I'm not sure if I'll be able to source the same ones or if I'll need to replace them with something else.
+
 ### 06/18/2026
 **Main Task:** Sanding, grinding, inhaling dust
 

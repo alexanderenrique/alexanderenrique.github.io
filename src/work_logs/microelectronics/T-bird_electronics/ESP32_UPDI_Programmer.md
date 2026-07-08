@@ -111,6 +111,39 @@ attiny-uploader --port /dev/ttyUSB0 --verify --reset .pio/build/<env>/firmware.h
 
 ## Work Log
 
+### 06/29/2026
+**Main Task:** Square waves!
+
+**Notes:**
+- I slept on it, and decided to take a step way, way way back. I wrote a blink LED sketch at 0.125 Hz, which is 4 seconds mind you
+- I learned to double check what directory you're uploading from in PIO. I uploaded from the wrong directory several times without noticing
+- Once I got big old square waves on the LED, I moved to basic 10ms signals which felt good
+- Then 0x55 repeating at 115200 baud, cool to see the bits at 8.4us and like be able to measure it
+- Once that worked I moved to the actual programmer, which just wasn't sending anything useful at all. Like nothing
+- It's weird/challenging because there is a pause orders of magnitude longer at the begginning then a bust of packets. And either it aint working or I haven't figured out how to capture it yet
+- I'm thinking this may go on the back burner for a bit, I should start with a known good programmer and go from there.
+
+### 06/28/2026
+**Main Task:** Got the Ocilliscope, how does this thing work?
+
+**Notes:**
+- Took me a hot second, first day I didn't get anything useful or sensical from it on the first day
+- I did learn how you're supposed to clip the leads though which was useful
+- Started learning the menu's and what everything does
+- Just got humbled, again. 
+
+
+### 06/26/2026
+**Main Task:** Actual first entry
+
+**Notes:**
+- I deceided that if there's an Arduino programmer out there, there had might as well be an ESP32 based one! How hard can it be (hahahah)
+- I threw together something on cursor, it didn't work at all and the hard part was that you don't get any feedback, like if the ATtiny doesn't talk, it doesn't talk and I have no idea why
+- I leared about tying the Rx and TX lines together to talk to the UPDI which makes sense if you think about it, just feels weird
+  - So the ESP32 always hears its own echo which is kinda a good thing for debugging
+- I got it to send and receive 0x55, which is good but nothing from the 3216
+- I deceided to buy and oscilliscope which arrives Sunday
+
 ### 06/26/2026
 **Main Task:** Document the ESP32 UPDI programmer project
 

@@ -55,6 +55,23 @@ Things I'm hoping to learn about in this project are:
 
 ### Work Log
 
+### 07/08/2026
+**Task:** PCB sent to fab!
+
+**Notes:**
+- My largest and most expensive board yet, I really hope it works. 
+- 3x3" was $43! Dang, but you get that
+
+### 07/06/2026
+**Task:** PCB and schematic re-visit
+
+**Notes:**
+- Started looking at this project again while I wait on other components for other projects
+- I've learned so much from my other adventures I thought to apply it here.
+- The 3.3 V LDO that I bought is different than the one I had indicated, so I swapped that out.
+- I had the AC fuse across the two phases, which doesn't make sense.
+
+
 ### 06/23/2026
 **Task:** PCB redesigned for fixed output buck
 

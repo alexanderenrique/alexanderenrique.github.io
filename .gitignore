@@ -38,3 +38,15 @@ id_rsa
 id_ed25519
 
 src/work_logs/microelectronics/parts_bin/
+
+# KiCad / PCB design (local backups and fab exports)
+.history/
+*-backups*/
+*.lck
+~*
+*.kicad_prl
+fp-info-cache
+*-cache
+*.gbr
+*.drl
+*.gbrjob

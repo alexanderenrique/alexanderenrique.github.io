@@ -47,6 +47,36 @@
 
 # Weekly Goals
 
+## Week [30] Starting 07/06
+- T bird electronics:
+  - Engine Node:
+    - Figure out the Attiny Programming
+  - Display Node:
+    - Learn Stone software, if they ever ship my order
+  - 555 Timer:
+    - Design larger enclosure, better fillet action
+    - ~~Solder together~~
+    - install it! It'd better frickin work
+- T Bird Wrap:
+  - Finished painting and sanding, ready for wrap!
+  - Have ordered rest of wrap supplies
+  - Have seriously thought about hitch
+
+## Week [29] Starting 06/29
+- T bird electronics:
+  - ~~Ordering the digikey(with UPDI programmer)~~
+  - Engine Node:
+    - ~~Send out board for v1~~
+  - Display node
+    - Have it bread boarded
+      - ~~Display Working~~
+      - ~~PWM~~
+      - LDR, verify analog inputs
+- T Bird Wrap
+  - ~~Have ordered wrap~~
+  - pulled dent
+  - ~~finished prepping front half~~
+
 ## Week [16] Ending 04/26
 - E-ink
   - Soldering, cmon soldering is fun

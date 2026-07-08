@@ -11,7 +11,7 @@ module.exports = {
     bridge: "https://github.com/alexanderenrique/NEMO-Tool-Display/tree/main/vm-server",
   },
   alternator555Timer: {
-    repo: "https://github.com/alexanderenrique/smart_tbird",
+    repo: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",
     pcbs: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",
   },
   smartTbird: {

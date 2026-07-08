@@ -35,15 +35,59 @@ A simple delay circuit for alternator field excitation using a 555 timer in mono
 ## To Do
 REV B Changes:
 - ~~Change the footprint of the diameter of the capacitor to be smaller.~~
-- The in and out holes for the wires are way too big.
+- ~~The in and out holes for the wires are way too big.~~
 - ~~increase capacitor on Trig circuit to 1uF, I got 1.1uF to work on the bench~~
 - ~~Standardize SMD sizing, 1206 is a nice not challenging middle ground.~~
-- larger mounting holes, like 0.1"
+- ~~larger mounting holes, like 0.1"~~
+- ~~Flip the MOSFET the right direction *facepalm*~~
 - make it tall enough, board plus fuse is 0.8"
 - Make bolt tabe more chamfered maybe 50 thou and farther out from body
 
 
 ## Work Log (Smart Alex edition)
+
+### 07/07/2026 (afternoon)
+**Main Task:** Redneck V3 soldering
+
+**Notes:**
+- I soldered a new version, swapped the 47uF electrolytic for 2x22uF, and upped the resistor from 220kOhm to a 330kOhm I had laying around
+- I also ditched the fuse, and went for some wires straight across
+- And wouldn't you know it my janky combination of caps and resistors worked, it's right at a 10 second delay and I got it super thin. Now the LEDs are the tallest part. The urge to go thinned haunts me. 
+
+### 07/07/2026 
+**Main Task:** Case re-design, Never stop never stopping
+
+**Notes:**
+- I redesigned the case in both taller and shorter versions
+- I'm not sure how necessary the fuse really is, the mofset is rated for almost 10A continuous, and like if it blows up it blows up
+- The traces will probably give up first, and I'll have a spare in the glove box. I just have to come up with a solid way to monitor the voltage
+- I also think I can make a hack of a super thin version
+  - Tack a couple caps in parallel instead of the electrolytic, and ditch the fuse holder for prayer
+- As I sit with it on my desk, I can't help but think about V3. 
+  - The electrolytic cap is just so big and ugly, and so is the fuse holder
+  - Not to mention I now have an unpopulated pad for the diode
+- I really want to run it back and do a max effort version with an SMD 555, SMD fuse, and SMD capacitors instead of the big electrolytic
+- I learned about how DC derates capacitors, and that for like the X7Rs they might be rated for 22uF at oV but as you start putting DC on them they can go down
+- Which would be why you opt for a cap with a higher voltage rating so that you get less of this effect and the capacitance stays true
+
+### 07/07/2026 (morning)
+**Main Task:** Soldering V2
+
+**Notes:**
+- It works!! Not without some debugging first though
+- My silkscreen was a bit confusing and I installed the Big capacitor backward which was fun troubleshooting. I saw the pin 6 and 7 never reached the 2/3 threshold. As soon as I swapped the cap it worked and I was so stoked. Gotta love little LEDs.
+- I also learned that Drain gate TVS is NOT the way to protect anything, and infact when I installed it my device stopped working. I think this was an overlooked artifact from when the MOSFET was the wrong way areound
+  - I learned the right way to do it is cathode to source, anode to gate
+  - I modified the schematic but not the PCB, I'll get there when I get there. If ever
+- The fuse holder bit is also super tall, which kinda makes me unhappy. i was thinking about maybe some fusible link instead or something like that
+
+### 06/28/2026
+**Main Task:** PCB shipping V2
+
+**Notes:**
+- I wasn't that far off the first time, I'm trying to give myself a little credit
+- But working is kinda boolean and it definitely didn't work the first time, but I made the changes and have shipped it again
+- Opted for fast turn around it was twice as much, all of $15
 
 ### 06/26/2026
 **Main Task:** PCB Redesign
