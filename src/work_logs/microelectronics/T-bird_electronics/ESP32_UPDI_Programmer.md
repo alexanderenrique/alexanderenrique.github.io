@@ -14,7 +14,7 @@ tags:
 
 ## Project Overview
 
-A toolchain-agnostic ATtiny programming rig for the Smart Thunderbird project. An ESP32 dev board acts as a UPDI bridge; a Python CLI (`attiny-uploader`) streams Intel HEX firmware over USB serial. The host never speaks UPDI and the ESP32 never parses HEX — that split keeps either side swappable and lets any build system (PlatformIO, Arduino IDE, Make, CI) plug in as long as it produces a `.hex` file.
+A toolchain-agnostic ATtiny programming rig for the Smart Thunderbird project. An ESP32 dev board acts as a UPDI bridge; a Python CLI (`attiny-uploader`) streams Intel HEX firmware over USB serial. The host never speaks UPDI and the ESP32 never parses HEX. That split keeps either side swappable and lets any build system (PlatformIO, Arduino IDE, Make, CI) plug in as long as it produces a `.hex` file.
 
 Primary target MCU: **ATtiny3216** (engine sensing node and other T-Bird sensor boards).
 
@@ -63,7 +63,7 @@ ESP32_UPDI_Programmer/
 | `erase` | Chip erase |
 | `reset` | Pulse target reset |
 | `serial-monitor` | Bridge USB ↔ target UART (GPIO 25/26) |
-| `test-run` | Stub — returns `NOT IMPLEMENTED` |
+| `test-run` | Stub that returns `NOT IMPLEMENTED` |
 
 Global flags: `--port` (required), `--baud`, `--verbose`, `--json` (for CI).
 
@@ -148,9 +148,9 @@ attiny-uploader --port /dev/ttyUSB0 --verify --reset .pio/build/<env>/firmware.h
 **Main Task:** Document the ESP32 UPDI programmer project
 
 **Notes:**
-- Project is at v1.0 — ESP32 firmware prints `READY ESP32-UPDI v1.0` on boot
+- Project is at v1.0. ESP32 firmware prints `READY ESP32-UPDI v1.0` on boot
 - Python CLI is installable via `pip install -e .` from `cli/`; pytest coverage for HEX parsing and protocol handshake
 - Firmware UPDI stack: `UpdiPhy` → `UpdiLink` → `UpdiNvm`, with `StreamReceiver` handling chunked program writes and `CommandParser` dispatching ASCII commands
-- Optional extras baked in: target reset, power gating, UART bridge — useful for bring-up without rewiring
+- Optional extras baked in: target reset, power gating, UART bridge. Useful for bring-up without rewiring.
 - `test_attiny3216/` has blink (PB1 LED) and serial (PA1 TX → ESP32 GPIO25) smoke tests for validating the pipeline
 - Solves the "how do I program the ATtiny3216" blocker called out on the engine sensing node work log

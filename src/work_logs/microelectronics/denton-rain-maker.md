@@ -10,6 +10,9 @@ tags:
 
 ## Project Overview
 
+**Repo:** [alexanderenrique/denton-rain-maker](https://github.com/alexanderenrique/denton-rain-maker)  
+**Project page:** [denton.works/projects/denton-rainmaker/](https://denton.works/projects/denton-rainmaker/)
+
 So I was troubleshooting my sprinkler system over the weekend and looking at the PCB, and man, it just looks so simple. Luckily for me, two of the 24VAC drivers are actually broken in this controller, so I can either rewire a new board in or, way more excitingly, just design my own from scratch.
 
 Things I'm hoping to learn about in this project are:
@@ -30,11 +33,12 @@ Things I'm hoping to learn about in this project are:
 
 ## Architecture
 
-- **MCU:** ESP32, the brains
+- **MCU:** ESP32 S3, the brains
 - **Power** 24 VAC in from the wall
   - Goes directly to the triacs that power the relays
   - 24 VAC is also rectified and then converted down for ESP32 use
-- **Selector** 8 position rotarty switch
+  - Opto triacs are used to separate the GPIOs from the ESP32 and the EC power.
+- **Selector** 8 position rotary switch
 
 ### BOM-ish
 

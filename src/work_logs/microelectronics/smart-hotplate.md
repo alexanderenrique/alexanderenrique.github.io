@@ -66,7 +66,7 @@ There are two basic events that will trigger a hot plate shut off:
 
 **Notes:**
 
-1. Mass-loss shutdown — less sensitive
+1. Mass-loss shutdown: less sensitive
 You asked to make shutdown more conservative on a heavy hotplate. We tightened the sudden-loss path so it needs ~2 seconds of clearly large loss before tripping:
 
 Higher EMA gap thresholds (35% of load)

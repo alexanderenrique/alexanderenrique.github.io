@@ -22,28 +22,28 @@ Ground-effect proximity lighting for the Smart Thunderbird. Uses an Infineon BGT
 
 ## Node features
 
-- Infineon BGT60 shield module — 60 GHz radar proximity detection (left and right sides)
+- Infineon BGT60 shield module: 60 GHz radar proximity detection (left and right sides)
 - PWM LED strips mounted underneath the car for ground-effect lighting
 - ATtiny 402 MCU
 - High-side or low-side LED switching (TBD)
-- Input voltage monitoring — fade LEDs out slowly on rising input voltage (engine start / alternator coming online)
-- Battery health watchdog — periodic checks; do not illuminate or drain the battery when input is at 12.35 V or lower
+- Input voltage monitoring: fade LEDs out slowly on rising input voltage (engine start / alternator coming online)
+- Battery health watchdog: periodic checks; do not illuminate or drain the battery when input is at 12.35 V or lower
 
 ## Design notes
 
 - **MCU:** ATtiny 402
-- **Proximity:** BGT60TR13C radar shield — detect approach from either side
+- **Proximity:** BGT60TR13C radar shield to detect approach from either side
 - **LED control:** PWM dimming for smooth ramp-in as proximity increases; slow fade-out on voltage rise
-- **Switching topology:** High-side vs low-side TBD — depends on LED wiring and common rail
-- **Battery cutoff:** 12.35 V threshold — watchdog runs periodically, not continuously
+- **Switching topology:** High-side vs low-side TBD, depending on LED wiring and common rail
+- **Battery cutoff:** 12.35 V threshold. Watchdog runs periodically, not continuously.
 
 ## Open questions
 
 - High-side or low-side switching for the LED strings?
 - One node per side, or one MCU driving both sides?
-- How does radar range map to PWM duty cycle — linear, stepped, or curved?
-- Power source — always-on from car battery, or switched ignition feed?
-- Enclosure and mounting under the car — weatherproofing, vibration
+- How does radar range map to PWM duty cycle: linear, stepped, or curved?
+- Power source: always-on from car battery, or switched ignition feed?
+- Enclosure and mounting under the car: weatherproofing, vibration
 
 ## Up Next
 

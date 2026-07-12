@@ -50,11 +50,12 @@
 ## Week [30] Starting 07/06
 - T bird electronics:
   - Engine Node:
-    - Figure out the Attiny Programming
+    - ~~Figure out the Attiny Programming~~
   - Display Node:
     - Learn Stone software, if they ever ship my order
+    - Learn LVGL Pro, start making GUI
   - 555 Timer:
-    - Design larger enclosure, better fillet action
+    - ~~Design larger enclosure, better fillet action~~
     - ~~Solder together~~
     - install it! It'd better frickin work
 - T Bird Wrap:

@@ -7,21 +7,21 @@ tags: [electronics, classic-car, thunderbird, esp32, automotive]
 
 <div class="hero">
     <h1 class="hero__title">T-Bird Electronics</h1>
-    <p class="hero__subtitle">Modern electronics integration for the 1968 Thunderbird restomod — sensors, displays, power management, and more.</p>
+    <p class="hero__subtitle">Modern electronics integration for the 1968 Thunderbird restomod: sensors, displays, power management, and more.</p>
     <p class="hero__subtitle">Part of the <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a> project. Source code: <a href="{{ sources.smartTbird.repo }}" target="_blank" rel="noopener noreferrer">GitHub (smart_tbird)</a>.</p>
 </div>
 
 <div class="grid grid--2">
     <div class="card">
         <h3 class="card__title">Alternator Delay 555 Timer</h3>
-        <p class="card__description">Analog delay circuit for alternator field excitation. No MCU, no firmware — just a CMOS 555 and a MOSFET.</p>
+        <p class="card__description">Analog delay circuit for alternator field excitation. No MCU, no firmware, just a CMOS 555 and a MOSFET.</p>
         <a href="{{ '/microelectronics/alternator_555_timer/' | url }}" class="section__link">View Work Log →</a>
         <a href="{{ '/projects/alternator-555-timer/' | url }}" class="section__link">Project page →</a>
     </div>
 
     <div class="card">
         <h3 class="card__title">T-Bird Display Node</h3>
-        <p class="card__description">In-dash display and control node for real-time engine data — voltage, temps, O2, and future methanol monitoring.</p>
+        <p class="card__description">In-dash display and control node for real-time engine data: voltage, temps, O2, and future methanol monitoring.</p>
         <a href="{{ '/microelectronics/display_node/' | url }}" class="section__link">View Work Log →</a>
     </div>
 
@@ -38,4 +38,4 @@ tags: [electronics, classic-car, thunderbird, esp32, automotive]
     </div>
 </div>
 
-<p><a href="{{ '/microelectronics/Smart-T-Bird-archive/' | url }}">Historical combined work log (archive)</a> — notes from before this project was split into separate modules.</p>
+<p><a href="{{ '/microelectronics/Smart-T-Bird-archive/' | url }}">Historical combined work log (archive)</a>: notes from before this project was split into separate modules.</p>

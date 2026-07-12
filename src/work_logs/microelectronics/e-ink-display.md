@@ -121,7 +121,7 @@ Digikey purchase list:
   - BSSID (router MAC)
   - Static IP
 - Then reconnect like this: **skip scan → connect directly → skip DHCP**
-- Wake time drops from ~1–2 seconds → ~150–300 ms. Massive energy savings.
+- Wake time drops from ~1-2 seconds to ~150-300 ms. Massive energy savings.
 
 #### Architecture
 

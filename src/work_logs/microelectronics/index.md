@@ -14,7 +14,7 @@ tags: [electronics, embedded-systems, microcontrollers]
 <div class="grid grid--2">
     <div class="card">
         <h3 class="card__title">T-Bird Electronics</h3>
-        <p class="card__description">Modern electronics integration for the 1968 Thunderbird restomod — alternator delay, display node, engine sensing, and methanol injection.</p>
+        <p class="card__description">Modern electronics integration for the 1968 Thunderbird restomod: alternator delay, display node, engine sensing, and methanol injection.</p>
         <a href="{{ '/microelectronics/T-bird_electronics/' | url }}" class="section__link">Browse T-Bird electronics →</a>
     </div>
 
@@ -32,7 +32,14 @@ tags: [electronics, embedded-systems, microcontrollers]
 
     <div class="card">
         <h3 class="card__title">Desktop Chime</h3>
-        <p class="card__description">ESP32-based hourly chime with aluminum tone bars, solenoid strikers, and RTC timekeeping — no internet required.</p>
+        <p class="card__description">ATtiny3216 hourly chime with selectable songs, solenoid strikers, and RTC timekeeping — no internet required.</p>
         <a href="{{ '/microelectronics/desktop-chime/' | url }}" class="section__link">View Work Log →</a>
+    </div>
+
+    <div class="card">
+        <h3 class="card__title">Denton's Rainmaker</h3>
+        <p class="card__description">Four-channel 24 VAC sprinkler controller with ESP32, opto-triacs, BLE config, and a rotary mode switch, built because the stock board died and designing a replacement is more fun.</p>
+        <a href="{{ '/microelectronics/denton-rain-maker/' | url }}" class="section__link">View Work Log →</a>
+        <a href="{{ '/projects/denton-rainmaker/' | url }}" class="section__link">Project page →</a>
     </div>
 </div>

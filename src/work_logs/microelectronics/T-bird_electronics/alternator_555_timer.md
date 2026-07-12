@@ -28,7 +28,7 @@ A simple delay circuit for alternator field excitation using a 555 timer in mono
   - Pin 5 (CTRL): Control voltage (optional). Typically unused; connect a capacitor (~10nF) to ground for noise immunity.
   - Pin 6 (THRS): Threshold input. When voltage here exceeds 2/3 Vcc, the timing cycle ends and output goes low.
   - Pin 7 (DISCH): Discharge pin. Open collector, used to discharge the timing capacitor to ground at the end of cycle.
-  - Pin 8 (VCC): Supply voltage (typically 5–15V).
+  - Pin 8 (VCC): Supply voltage (typically 5-15V).
 
 - In monostable mode, a pulse to TRIG (Pin 2) starts a single timing interval. The period is set by an external resistor and capacitor between VCC, DISCH (Pin 7), and ground.
 
@@ -45,6 +45,18 @@ REV B Changes:
 
 
 ## Work Log (Smart Alex edition)
+
+### 07/11/2026 (afternoon)
+**Main Task:** Install! Case redesign
+
+**Notes:**
+- I got it half installed today. I drilled a hole for the well nuts and got it wired in.
+- I'm not happy with the case and where I left the opening for the positive-in wire.
+- I also saw that previously my alternator-exciter wire was hooked up to always hot, which seems crazy to me.I'm surprised that it didn't drain the battery at all.
+- So I wired it into Switched Hot and put the multimeter on it, and lo and behold, no squeal.
+- It was awesome to watch the voltage go up as the device turned on.
+- I also redesigned the case so that the I in wire enters in the right place.
+
 
 ### 07/07/2026 (afternoon)
 **Main Task:** Redneck V3 soldering

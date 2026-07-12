@@ -31,6 +31,9 @@ A display/control node for the Smart Thunderbird project. Intended to show real-
 | Coolant Temp   | 0         | 100       |
 | Trans temp     | 0         | 85        |
 | O2 Sensor      | 10        | 15        |
+| PCB temp
+| RPM
+| Ambient Air
 
 ### Future
 
@@ -49,27 +52,19 @@ A display/control node for the Smart Thunderbird project. Intended to show real-
 - INput voltage divider
 - NTC for board/ambient temp
 
-## How do I want the display to look?
-- Master display:
-  - Voltage
-  - O2
-  - Coolant temp
-  - Oil Temp
-  - Trans Temp
-- RPM display
-  - Numbers with some kind of bar graph? Or maybe the whole display "fills" as the revs build?
-- Extra
-  - PCB temps
-
-## When I get home:
-- ~~Remove MISO from display~~
-- ~~change touch MISO to pin 18~~
-- Start with LDR and PWM circuit
-- Test the RS-485 with the module
-- Designing more screens
-
-
 ## Work Log
+
+### 07/11/26
+**Main Task:**  PicoPixel!
+
+**Notes:**
+- I learned that LVGL Pro Editor is not the way to go about this. It's a good way to customize widgets, but not really like a drag-and-drop UI maker.
+- Gemini suggested PicoPixel, and that's what I ended up using. It was pretty dang easy to use. Not the most powerful, but it's a super good start.
+- I finally understood the architecture and who's responsible for what.
+  - The UI design software just creates a template, and then I have to go in and write the code that actually updates the values that I'm receiving, which makes sense.
+- Designed to screens: a main kind of dashboard with the most pertinent info, and then a smaller display that has kind of the sillier stuff like fan PWM, underhood temp, and PCB Mosfet temp
+- I mean cmon this looks pretty cool:
+![LVGL PicoPixel UI design snapshot](/images/picopixel-ui-design.png)
 
 ### 07/07/26
 **Main Task:**  Buying more displays

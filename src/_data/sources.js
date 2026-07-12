@@ -14,6 +14,10 @@ module.exports = {
     repo: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",
     pcbs: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",
   },
+  dentonRainmaker: {
+    repo: "https://github.com/alexanderenrique/denton-rain-maker",
+    pcbs: "https://github.com/alexanderenrique/denton-rain-maker",
+  },
   smartTbird: {
     repo: "https://github.com/alexanderenrique/smart_tbird",
     alternator: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",

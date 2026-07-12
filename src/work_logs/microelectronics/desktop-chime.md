@@ -4,7 +4,7 @@ title: "Desktop Chime"
 categories: [microelectronics]
 tags:
   - electronics
-  - esp32
+  - attiny
   - rtc
   - solenoids
   - musical-instruments
@@ -15,13 +15,13 @@ tags:
 
 This is just a fun one, because it's cool to build cool shit. I was walking around campus and I was like damn, I really love the sound of the chime on the hour. As Papi used to say, all you really need to know is the hour.
 
-The plan is an ESP32-based desktop chime that uses aluminum striker bars with small solenoids to strike the bars. It'd be super pretty to make it out of wood — surely there is some CNC way to do this precisely. Small solenoid strikers hit the bars really quickly. It'd be nice if it didn't need an internet connection, so I'll use an RTC to keep track of the time. Program it once and then it can run forever.
+The plan is an ATtiny3216-based desktop chime that strikes tone bars with small solenoids. Pick a song with a knob, hit play (or let it fire on the hour), and it plays from stored note arrays. It'd be super pretty to make it out of wood; surely there is some CNC way to do this precisely. Small solenoid strikers hit the bars really quickly. No internet — an RTC keeps time so you program it once and it can run forever.
 
 ## Design Goals
 
-1. Chime on the hour without WiFi or NTP — standalone RTC timekeeping
-2. Pleasant tone from simple rectangular aluminum bars (no undercut machining)
-3. Compact-ish desktop form factor (I want it to be smaller but physics is dogmatic about tone and length)
+1. Chime on the hour without WiFi or NTP, using standalone RTC timekeeping
+2. Selectable melodies (Westminster + a handful of tunes) via a front-panel knob
+3. Manual play and clock-sync buttons for demos and time correction
 4. Self-contained: set time once, runs indefinitely on wall power
 
 ## Melody Bars (4)
@@ -43,33 +43,54 @@ Some fancy people use like nylon string to support it but that sounds hard so I 
 
 ## Architecture
 
-- **MCU:** ESP32 — firmware, scheduling, solenoid drive logic
-- **Timekeeping:** External RTC module (no internet required)
-- **Actuation:** 4× solenoid strikers 
-- **Drive electronics:** MOSFET + flyback diode per solenoid (or shared drive with per-channel diodes — TBD)
-- **Enclosure:** Wood body, CNC or manual layout for bar mounting and solenoid placement
-- **Power:** Wall adapter, 5 V or 12 V depending on solenoid choice
+- **MCU:** ATtiny3216 — scheduling, song playback, button/knob input, LED drive
+- **Timekeeping:** External I2C RTC with battery backup (no internet required)
+- **Song select:** Rotary knob positions map to melodies (Off, Westminster, and a set of tunes); songs stored as note/delay arrays keyed to tempo
+- **Controls:** Play button (trigger selected song) and clock-sync button (nudge time if it drifts)
+- **Actuation:** Solenoid strikers on xylophone bars (~30 ms pulses, dithered for a more organic hit)
+- **Drive electronics:** 8-channel P-MOSFET DIP driver bank with flyback diodes
+- **Indication:** Per-note LEDs with diode + RC fade so strikes glow and slowly dim
+- **Enclosure:** Wood body; PLA solenoid holders and striker tips
+- **Power:** Wall adapter at 12 V for the solenoids; regulated rail for the ATtiny / RTC
 
 {% mermaid %}
 graph LR
-    A["RTC"] --> B["ESP32"]
-    B --> C["MOSFET<br>Driver Bank"]
-    C --> D["Solenoid<br>Strikers"]
-    D --> E["Aluminum<br>Tone Bars"]
+    RTC["I2C RTC<br>+ battery"] --> MCU["ATtiny3216"]
+    KNOB["Song<br>Select Knob"] --> MCU
+    PLAY["Play<br>Button"] --> MCU
+    SYNC["Clock Sync<br>Button"] --> MCU
+    MCU --> MOSFET["8-ch P-MOSFET<br>Driver Bank"]
+    MCU --> LED["LEDs<br>+ RC fade"]
+    MOSFET --> SOL["Solenoid<br>Strikers"]
+    SOL --> BARS["Xylophone<br>Tone Bars"]
 {% endmermaid %}
 
-## Electronics — Open Questions
+### Knob / song map
 
-- One MOSFET + diode per solenoid for independent chord playback, vs. shared driver with blocking diodes
-- Solenoid voltage and stroke — need to strike quickly without rattling the mount
-- Custom striker tips (rubber or delrin?) to get a clean attack without buzzing
-- RTC choice and battery backup for power-loss time retention
+| Position | Song |
+|----------|------|
+| Off | — |
+| 1 | Westminster |
+| 2 | Happy Birthday |
+| 3 | When the Saints Go Marching In |
+| 4 | La Cucaracha |
+| 5 | Hot Cross Buns |
+| 6 | Mary Had a Little Lamb |
+| 7 | Joy to the World |
+| 8 | Jingle Bells |
+| 9 | Twinkle Twinkle Little Star |
+
+## Electronics: Open Questions
+
+- Solenoid stroke and tip material (rubber vs Delrin) for a clean attack without buzzing the mount
+- Photoresistor for night quiet-mode — still on the fence
+- Final LED fade RC values and which notes get indicators
 
 ## Mechanical / Form Factor
 
 Four bars, 1" wide 
 
-- Bar sourcing: order pre-cut lengths vs. buy stock and cut to size — not sure how precise length needs to be yet
+- Bar sourcing: order pre-cut lengths vs. buy stock and cut to size. Not sure how precise length needs to be yet.
 - Mounting frame: wood base with node-point suspension holes
 - Solenoid placement: aligned to strike bar just off of center
 
@@ -85,6 +106,34 @@ Four bars, 1" wide
 - Designing tips for the solenoids so they strike nicely
 
 ## Work Log
+
+### 07/11/2026
+**Task:** PCB, CAD
+
+**Notes:**
+- Once I start a project, I have a hard time letting go. It's probably not what I should be doing.
+- Spend time designing the PCB and thinking about how I might want it to look. It's gonna be a decently big one, lots and lots of components.
+- That said, it's going to be pretty straightforward. I learned that I can skip some of the pull-up resistors, that the ATtiny has some built-in pull-ups.
+- A lot of the complexity comes from me wanting to have lights that slowly dim out. That means I have to have a diode and an RC circuit in addition to every LED, so that kind of doubles the component count.
+- Lots of extra stuff, really. The RTC, the knob that selects the song. 
+- I also decided there should be a play button as well as a clock sync button in case we gain or lose any minutes.
+- The logic flow will be: you select a song using the knob, and you hit the play button.
+- Also designed a single solenoid holder as well as a PLA solenoid tip.
+- I learned that the striker time should probably be about 30 ms, and that dithering the pulse time of the Solonadon would be the way to make it sound a bit more organic.
+- I also learned that we can store the songs as arrays where we have saved delays based on the tempo of different songs.
+
+
+### 07/09/2026
+**Task:** Thinking, starting the schematic
+
+**Notes:**
+- This has been the most slow burn project ever, I've been ordering like on piece at a time for it forever
+- Been schemeing about how to do the RTC and keeping the time accurate. 
+- My best thought right now is to have the external I2C RTC with battery back up, an Attiny, and the 8 p-type mosftet  DIP, I think that would look cool
+- Made a heap of progress on the design, I learned about how to make the KiCAD sexy and having sub sheets and stuff like that
+- Pretty much have the schematic thought out, there are just a few footprints to finish massaging and connecting
+- I should probably put more energy in to pressing t bird things, but this was a fun distraction for a day
+- I thought to include a photo resistor so it could tell when it's dark out, but I'm kinda on the fence about that one, could be cool
 
 ### 06/23/2026
 **Task:** Receiving parts, thinking
