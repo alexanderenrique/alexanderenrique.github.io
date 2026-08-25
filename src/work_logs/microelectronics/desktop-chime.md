@@ -86,18 +86,18 @@ graph LR
 - Photoresistor for night quiet-mode — still on the fence
 - Final LED fade RC values and which notes get indicators
 
-## Mechanical / Form Factor
-
-Four bars, 1" wide 
-
-- Bar sourcing: order pre-cut lengths vs. buy stock and cut to size. Not sure how precise length needs to be yet.
-- Mounting frame: wood base with node-point suspension holes
-- Solenoid placement: aligned to strike bar just off of center
+## Design specs
+- 1.025" bottom to top of bar
+- 1.366 bottom of solenoid to top of tip
+  - Plus 0.1" for the base
+  - so 1.466
+- Standoff 1.466 - 1.025 = 0.441
+- plus 0.2" for clearance
+- 0.641 stand off
 
 ## Up Next
 - Play with striker, does it sounds the same when hit from the back? (haha)
-- Start loosely designing circuit
-- Can I get the aluminum bars to work? It might be cool to have the whole octave notes anyways...
+
 
 - ~~Designing the bars~~
 - ~~Having them cut, or cutting them myself~~
@@ -106,6 +106,44 @@ Four bars, 1" wide
 - Designing tips for the solenoids so they strike nicely
 
 ## Work Log
+
+### 08/03/2026
+**Task:** Printing solenoid holder
+
+**Notes:**
+- It printed...
+
+### 08/02/2026
+**Task:** Designing the solenoid holder
+
+**Notes:**
+- received the boards and everything I need to assemble them
+- Motivated me to make the solenoid holder
+  - Took a couple stabs, kinda just figuring it out as I went, but I got there in the end
+
+### 07/14/2026
+**Task:** 3D printing
+
+**Notes:**
+- started 3D printing my striker tip and solenoid holder I designed the other day
+
+### 07/13/2026
+**Task:** PCB
+
+**Notes:**
+- Man I was dreaming about LEDs again, so weird
+- I finally came up with a design that makes me happy, few more hours on it and I shipped it out for fab
+- I'm been doing so much PCB stuff lately, I feel liek I need to touch some grass.
+- Haven't even been doing much programming, and when all my boards come in it'll be programming and soldering galore
+- Kinda just a big PCB phase, but I think I'm out of the thick of it
+- I guess I cranked out a PCB in 4 days, that's pretty good.
+
+### 07/12/2026
+**Task:** PCB, CAD
+
+**Notes:**
+- Sleeping on it, I wasn't too happy with my massive array of diodes and resistors, so I did what I always do and I asked AI.
+- Turns out they sell diode arrays and transistor and resistor arrays. That would save me a ton of space.
 
 ### 07/11/2026
 **Task:** PCB, CAD

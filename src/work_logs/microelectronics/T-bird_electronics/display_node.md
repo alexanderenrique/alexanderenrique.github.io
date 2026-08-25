@@ -54,6 +54,53 @@ A display/control node for the Smart Thunderbird project. Intended to show real-
 
 ## Work Log
 
+### 07/26/26
+**Main Task:**  Mounting in box
+
+**Notes:**
+- Drilled some holes in the existing box but that just didn't turn out quite the way I wanted it to 
+- I just used some VHB tape to get it in there, I am starting to get a bad case of the "doesn't have to be perfect, just has to work" 
+
+### 07/15/26
+**Main Task:**  Mounting design
+
+**Notes:**
+- Spent like an hour designing a bracket, I decided that using the existing cubby would be the best and easiest way to do it
+- If I mounted it vertically, I could save some space and still have a cubby, but for some reason I just can't bring myself to do that, it just isn't what I want even if it is the better engineering solution
+- Started 3D printing it, it fit perfect first try, that never happens
+
+### 07/14/26 (afternoon)
+**Main Task:**  RS-485 Troubleshooting, mounting
+
+**Notes:**
+- yeah that was it, swapped to RX/TX2 and it worked perfect. It be like that sometimes
+- I even did some faster rpm sweeps, and it looked really good. CPU utilization was up and the FPS was single digits, but whatever.
+- I was even able to translate the sketch over to the ATtiny3226, and that worked perfectly the first time.
+- I didn't realize it, but I'm using the non-standard RX and TX on the ATtiny3226. I'm using PA1 2 and 3 
+- I'm starting to think about how I'm going to mount this thing.
+- I think I'm going to reuse the old box because it's useful and then just incorporate a bracket screwed to the inside of it.
+
+### 07/14/26
+**Main Task:**  RS-485 Troubleshooting
+
+**Notes:**
+- Yeah so it was never going to work right away
+- The display side actually came good with a little troubleshooting, the modbus that I wrote wasn't really sending bits, but then I uploaded a test RS-485 sketch and that was sending actual bits at the right speed so that was good
+  - Thinking about it, not sure what language the RS-485 demo actually speaks, but at least the bit time matchess what I expect from the baud. 
+- Troubleshooting it I learned a bit more about how the RS-485 works and how the master can get away with not having an RE-DE
+- Update I think I actually cracked it after stepping away for a bit. 
+  - I had it wired, wrong, it was always me that was the problem...
+  - I was using GPIO 3/1 for RX and TX but this is the UART that talks to the serial monitor and is busy
+  - I should have wired it to 16/17 which is the RX2/TX2 which is free for RS-485
+
+### 07/13/26
+**Main Task:**  Display a day early!
+
+**Notes:**
+- The display came, and would you believe that it actually worked on the very first flash?
+- Did some light UI modifications through cursor. Things didn't translate 100% between the two, between PicoPixel and the display.
+- Man just going so fricking well, aint no way the RS-485 works out of the box, right? 
+
 ### 07/11/26
 **Main Task:**  PicoPixel!
 

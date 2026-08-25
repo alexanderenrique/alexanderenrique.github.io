@@ -32,6 +32,9 @@ class EInkSetup {
         } else if (path.includes('/config-sensor')) {
             console.log('[Setup] Mode detected: sensor');
             return 'sensor';
+        } else if (path.includes('/rainmaker/config')) {
+            console.log('[Setup] Mode detected: rainmaker');
+            return 'rainmaker';
         } else {
             console.log('[Setup] Mode defaulting to sensor (unrecognized config path)');
             return 'sensor';
@@ -188,74 +191,101 @@ class EInkSetup {
             // Prepare config object based on mode
             console.log('[Setup] Preparing configuration object...');
             console.log('[Setup] Current mode:', this.mode);
-            
-            const config = {
-                mode: this.mode,
-                timestamp: Date.now()
-            };
 
-            // Add WiFi configuration (fun firmware expects wifiSSID; sensor uses wifiSsid)
             const wifiSsidInput = document.getElementById('wifi-ssid');
             const wifiNetwork = (
                 (typeof data.wifiSSID === 'string' ? data.wifiSSID : '') ||
                 (typeof data.wifiSsid === 'string' ? data.wifiSsid : '') ||
                 (wifiSsidInput?.value ?? '')
             ).trim();
-            if (wifiNetwork) {
-                if (this.mode === 'fun') {
-                    config.wifiSSID = wifiNetwork;
-                    console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
-                } else {
-                    config.wifiSsid = wifiNetwork;
-                    console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
-                }
-            } else if (data.wifiPassword) {
-                console.warn('[Setup] WiFi password set but SSID is missing');
-            }
-            if (data.wifiPassword) {
-                config.wifiPassword = data.wifiPassword;
-                console.log('[Setup]   Added WiFi Password: [hidden]');
-            }
 
-            // Add mode-specific configuration
-            if (this.mode === 'fun') {
-                console.log('[Setup] Processing fun mode configuration');
-                const displayName = typeof data.displayName === 'string' ? data.displayName.trim() : '';
-                if (displayName) {
-                    config.displayName = displayName;
-                    console.log('[Setup]   Display name:', displayName);
+            let config;
+
+            if (this.mode === 'rainmaker') {
+                console.log('[Setup] Processing rainmaker configuration');
+                config = {
+                    wifiSSID: wifiNetwork,
+                    wifiPassword: data.wifiPassword || '',
+                    timezone: data.timezone,
+                    zones: [1, 2, 3, 4].map((zone) => {
+                        const zoneData = data.zones?.[zone] || {};
+                        const daysObj = zoneData.days || {};
+                        const days = Object.entries(daysObj)
+                            .filter(([, checked]) => checked)
+                            .map(([day]) => parseInt(day, 10))
+                            .sort((a, b) => a - b);
+                        return {
+                            zone,
+                            days,
+                            start: zoneData.start,
+                            durationMin: parseInt(zoneData.durationMin, 10)
+                        };
+                    }).filter((zone) => zone.days.length > 0)
+                };
+                console.log('[Setup]   Zones:', config.zones);
+            } else {
+                config = {
+                    mode: this.mode,
+                    timestamp: Date.now()
+                };
+
+                // Add WiFi configuration (fun firmware expects wifiSSID; sensor uses wifiSsid)
+                if (wifiNetwork) {
+                    if (this.mode === 'fun') {
+                        config.wifiSSID = wifiNetwork;
+                        console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
+                    } else {
+                        config.wifiSsid = wifiNetwork;
+                        console.log('[Setup]   Added WiFi SSID:', wifiNetwork);
+                    }
+                } else if (data.wifiPassword) {
+                    console.warn('[Setup] WiFi password set but SSID is missing');
                 }
-                config.refreshInterval = parseInt(data.refreshInterval);
-                console.log('[Setup]   Refresh interval:', config.refreshInterval);
-                // Add API endpoints configuration
-                if (data.apis) {
-                    config.apis = data.apis;
-                    console.log('[Setup]   Added APIs config:', data.apis);
+                if (data.wifiPassword) {
+                    config.wifiPassword = data.wifiPassword;
+                    console.log('[Setup]   Added WiFi Password: [hidden]');
                 }
-            } else if (this.mode === 'sensor') {
-                console.log('[Setup] Processing sensor mode configuration');
-                // Sensor mode - NEMO API configuration
-                config.nemoApiEndpoint = data.nemoApiEndpoint;
-                config.nemoToken = data.nemoToken;
-                if (data.timeZone) {
-                    config.timeZone = data.timeZone;
-                    console.log('[Setup]   Time zone:', config.timeZone);
+
+                // Add mode-specific configuration
+                if (this.mode === 'fun') {
+                    console.log('[Setup] Processing fun mode configuration');
+                    const displayName = typeof data.displayName === 'string' ? data.displayName.trim() : '';
+                    if (displayName) {
+                        config.displayName = displayName;
+                        console.log('[Setup]   Display name:', displayName);
+                    }
+                    config.refreshInterval = parseInt(data.refreshInterval);
+                    console.log('[Setup]   Refresh interval:', config.refreshInterval);
+                    // Add API endpoints configuration
+                    if (data.apis) {
+                        config.apis = data.apis;
+                        console.log('[Setup]   Added APIs config:', data.apis);
+                    }
+                } else if (this.mode === 'sensor') {
+                    console.log('[Setup] Processing sensor mode configuration');
+                    // Sensor mode - NEMO API configuration
+                    config.nemoApiEndpoint = data.nemoApiEndpoint;
+                    config.nemoToken = data.nemoToken;
+                    if (data.timeZone) {
+                        config.timeZone = data.timeZone;
+                        console.log('[Setup]   Time zone:', config.timeZone);
+                    }
+                    config.temperatureSensorId = data.temperatureSensorId;
+                    config.humiditySensorId = data.humiditySensorId;
+                    config.batterySensorId = data.batterySensorId;
+                    config.sensorLocation = data.sensorLocation;
+                    config.refreshInterval = parseInt(data.refreshInterval);
+                    config.temperatureUnit = data.temperatureUnit || 'C';
+                    console.log('[Setup]   NEMO config:', {
+                        endpoint: data.nemoApiEndpoint,
+                        temperatureSensorId: data.temperatureSensorId,
+                        humiditySensorId: data.humiditySensorId,
+                        batterySensorId: data.batterySensorId,
+                        location: data.sensorLocation,
+                        refreshInterval: config.refreshInterval,
+                        temperatureUnit: config.temperatureUnit
+                    });
                 }
-                config.temperatureSensorId = data.temperatureSensorId;
-                config.humiditySensorId = data.humiditySensorId;
-                config.batterySensorId = data.batterySensorId;
-                config.sensorLocation = data.sensorLocation;
-                config.refreshInterval = parseInt(data.refreshInterval);
-                config.temperatureUnit = data.temperatureUnit || 'C';
-                console.log('[Setup]   NEMO config:', {
-                    endpoint: data.nemoApiEndpoint,
-                    temperatureSensorId: data.temperatureSensorId,
-                    humiditySensorId: data.humiditySensorId,
-                    batterySensorId: data.batterySensorId,
-                    location: data.sensorLocation,
-                    refreshInterval: config.refreshInterval,
-                    temperatureUnit: config.temperatureUnit
-                });
             }
 
             console.log('[Setup] Final configuration object:', config);

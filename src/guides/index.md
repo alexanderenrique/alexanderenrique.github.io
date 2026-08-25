@@ -17,5 +17,11 @@ permalink: /guides/
     <p class="card__description">End-to-end setup and architecture notes for real-time tool status from NEMO to ESP32 displays over MQTT.</p>
     <a href="{{ '/guides/nemo-mqtt/' | url }}" class="section__link">Guide →</a>
   </div>
+
+  <div class="card">
+    <h3 class="card__title">Denton's Rainmaker</h3>
+    <p class="card__description">BLE configuration for Wi‑Fi and watering schedules on the four-zone ESP32 sprinkler controller.</p>
+    <a href="{{ '/rainmaker/config/' | url }}" class="section__link">Configure →</a>
+  </div>
 </div>
 

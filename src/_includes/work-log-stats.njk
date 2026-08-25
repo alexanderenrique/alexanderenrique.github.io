@@ -1,0 +1,79 @@
+<section class="work-log-stats work-log-stats--{{ mode }}" data-mode="{{ mode }}" data-url-prefix="{{ '/' | url }}">
+  <header class="work-log-stats__header">
+    {% if mode == 'compact' %}
+    <h3 class="work-log-stats__title">Work log activity</h3>
+    {% else %}
+    <h2 class="work-log-stats__title">Work log activity</h2>
+    {% endif %}
+    <p class="work-log-stats__subtitle">Parsed from dated headings across {{ workLogActivity.totals.logs }} active logs.</p>
+  </header>
+
+  <div class="work-log-stats__totals">
+    <div class="stat-card">
+      <span class="stat-card__value" data-stat="logDays">—</span>
+      <span class="stat-card__label">Log days</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value" data-stat="calendarDays">—</span>
+      <span class="stat-card__label">Calendar days</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value" data-stat="multiLogDays">—</span>
+      <span class="stat-card__label">Multi-log days</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-card__value" data-stat="logs">—</span>
+      <span class="stat-card__label">Active logs</span>
+    </div>
+  </div>
+
+  <div class="work-log-stats__layout work-log-stats__layout--{{ mode }}">
+    <div class="work-log-stats__panel">
+      <h3 class="work-log-stats__panel-title">Activity calendar</h3>
+      <div class="work-log-stats__heatmap" data-heatmap></div>
+    </div>
+
+    <div class="work-log-stats__panel work-log-stats__panel--wide">
+      <h3 class="work-log-stats__panel-title">Weekly updates</h3>
+      <div class="work-log-stats__chart-wrap work-log-stats__chart-wrap--tall">
+        <canvas data-chart="weekly" aria-label="Weekly work log updates by category"></canvas>
+      </div>
+    </div>
+
+    {% if mode == 'full' %}
+    <div class="work-log-stats__panel work-log-stats__panel--wide">
+      <h3 class="work-log-stats__panel-title">Busiest logs</h3>
+      <div class="work-log-stats__chart-wrap work-log-stats__chart-wrap--tall">
+        <canvas data-chart="busiest" aria-label="Top work logs by number of log days"></canvas>
+      </div>
+    </div>
+
+    <div class="work-log-stats__panel work-log-stats__panel--wide">
+      <h3 class="work-log-stats__panel-title">All logs</h3>
+      <div class="work-log-stats__table-wrap">
+        <table class="work-log-stats__table" data-table="logs">
+          <thead>
+            <tr>
+              <th>Log</th>
+              <th>Category</th>
+              <th>Days</th>
+              <th>Last entry</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  {% if mode == 'compact' %}
+  <p class="work-log-stats__footer">
+    <a href="{{ '/work-logs/' | url }}" class="section__link">Full activity dashboard →</a>
+  </p>
+  {% endif %}
+</section>
+
+<script type="application/json" id="work-log-stats-data">{{ workLogActivity | jsonify | safe }}</script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script src="{{ '/js/work-log-stats.js' | url }}"></script>

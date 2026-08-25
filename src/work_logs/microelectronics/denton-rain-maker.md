@@ -51,13 +51,14 @@ Things I'm hoping to learn about in this project are:
 - Heaps of LEDs
   - 1206 SMD LED https://www.digikey.com/en/products/detail/liteon/LTST-C150KGKT/365085
 
-### Up Next:
-- Breadboard the critical circuits
-- Finish adding footprints, quadruple check layout
-- Start writing the code
-
-
 ### Work Log
+
+### 07/19/2026
+**Task:** Code
+
+**Notes:**
+- Wrote the code, added it to denton-works as well
+- It's super easy and perfect when you can't test it! Boards should get here today, I'm eager to test my reflow hotplate and see how that works
 
 ### 07/08/2026
 **Task:** PCB sent to fab!

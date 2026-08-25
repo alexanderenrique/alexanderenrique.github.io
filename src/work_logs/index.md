@@ -31,3 +31,5 @@ permalink: /work-logs/
   </div>
 </div>
 
+{% set mode = "full" %}
+{% include "work-log-stats.njk" %}

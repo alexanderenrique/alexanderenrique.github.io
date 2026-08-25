@@ -1,0 +1,103 @@
+---
+layout: base.njk
+title: "Denton's Rainmaker Setup"
+permalink: /rainmaker/config/
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/setup.css' | url }}">
+
+<article class="container">
+    <header class="page-header">
+        <h1>Denton's Rainmaker Setup</h1>
+        <p class="page-description">Connect and configure watering schedules over Bluetooth</p>
+    </header>
+    
+    <div class="page-content">
+        <div class="setup-container">
+            <!-- Status Display -->
+            <div id="status-container" class="status-container">
+                <div id="status-message" class="status-message">Ready to connect</div>
+                <div id="status-indicator" class="status-indicator status-ready"></div>
+            </div>
+
+            <!-- Connection Section -->
+            <section class="setup-section">
+                <h2>Connection</h2>
+                <div class="form-group">
+                    <button id="scan-connect-btn" class="btn btn-primary">Scan and Connect</button>
+                </div>
+            </section>
+
+            <!-- Configuration Form -->
+            <section class="setup-section">
+                <h2>Schedule Configuration</h2>
+                <form id="config-form" class="config-form">
+                    <div class="form-group">
+                        <label for="wifi-ssid">WiFi SSID</label>
+                        <input type="text" id="wifi-ssid" name="wifiSSID" placeholder="Enter WiFi network name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="wifi-password">WiFi Password</label>
+                        <input type="password" id="wifi-password" name="wifiPassword" placeholder="Enter WiFi password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="timezone">Timezone</label>
+                        <select id="timezone" name="timezone" required>
+                            <option value="PST8PDT,M3.2.0,M11.1.0" selected>Pacific</option>
+                            <option value="MST7MDT,M3.2.0,M11.1.0">Mountain</option>
+                            <option value="MST7">Arizona</option>
+                            <option value="CST6CDT,M3.2.0,M11.1.0">Central</option>
+                            <option value="EST5EDT,M3.2.0,M11.1.0">Eastern</option>
+                            <option value="UTC0">UTC</option>
+                        </select>
+                    </div>
+
+                    {% for zone in [1, 2, 3, 4] %}
+                    <fieldset class="zone-config">
+                        <legend>Zone {{ zone }}</legend>
+
+                        <div class="form-group">
+                            <label>Day of the week</label>
+                            <div class="checkbox-group checkbox-group--days">
+                                {% set days = [
+                                    { value: 0, label: "Sunday" },
+                                    { value: 1, label: "Monday" },
+                                    { value: 2, label: "Tuesday" },
+                                    { value: 3, label: "Wednesday" },
+                                    { value: 4, label: "Thursday" },
+                                    { value: 5, label: "Friday" },
+                                    { value: 6, label: "Saturday" }
+                                ] %}
+                                {% for day in days %}
+                                <label class="checkbox-label" for="zone-{{ zone }}-day-{{ day.value }}">
+                                    <input type="checkbox" id="zone-{{ zone }}-day-{{ day.value }}" name="zones.{{ zone }}.days.{{ day.value }}" value="{{ day.value }}">
+                                    <span>{{ day.label }}</span>
+                                </label>
+                                {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zone-{{ zone }}-start">Start time</label>
+                            <input type="time" id="zone-{{ zone }}-start" name="zones.{{ zone }}.start" value="06:00" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zone-{{ zone }}-duration">Duration (minutes)</label>
+                            <input type="number" id="zone-{{ zone }}-duration" name="zones.{{ zone }}.durationMin" min="1" max="180" value="15" required>
+                        </div>
+                    </fieldset>
+                    {% endfor %}
+
+                    <div class="form-group">
+                        <button type="submit" id="send-config-btn" class="btn btn-primary" disabled>Send Configuration</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</article>
+
+<script type="module" src="{{ '/assets/js/setup.js' | url }}"></script>

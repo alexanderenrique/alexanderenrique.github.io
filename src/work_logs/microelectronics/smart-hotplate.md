@@ -38,7 +38,7 @@ There are two basic events that will trigger a hot plate shut off:
 
 ## Components Needed
 - Load Cell
-- HX711 loadcell amplifier
+- Loadcell amplifier
 - ESP32 (not sure which dev board yet)
 - TFT display
 - Some kind of cable between display and load cell
@@ -60,6 +60,15 @@ There are two basic events that will trigger a hot plate shut off:
 
 
 ## Work Log
+
+### 07/19/2026
+**Main Task:** Re-thinking this is a way that makes me happy
+
+**Notes:**
+- I've never quite been happy with what I first built and I couldn't quite put my finger on it
+- I really want to revisit the homemade smart scale, and this is kinda an extension of that
+- I'm thinking a modular architecture where I could use the same board/load cell set up for both the hot plates and the gas weighing
+- This would mean actual brains underneath the scale, and then the head unit just displays
 
 ### 06/08/2026
 **Main Task:** A simpler FSM, longer periods generally

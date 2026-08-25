@@ -41,10 +41,39 @@ REV B Changes:
 - ~~larger mounting holes, like 0.1"~~
 - ~~Flip the MOSFET the right direction *facepalm*~~
 - make it tall enough, board plus fuse is 0.8"
-- Make bolt tabe more chamfered maybe 50 thou and farther out from body
+- Make bolt hole more chamfered maybe 50 thou and farther out from body
+
+Rev C Changes:
+- SOIC 555 CMOS timer
+- SMD LEDs
+- PCB fuse
+- Swap electrolytic for two smaller ceramics( 2x22uF, and larger 330kOhm resistor)
 
 
 ## Work Log (Smart Alex edition)
+
+### 07/23/2026 
+**Main Task:** More testing
+
+**Notes:**
+- With the 555 timer installed, the voltage fluctuates between 14.8-15.4V rythmically which is really weird and I don't like it
+- With the alternaotr connected straight to switched power, we get a rock solid 14.4V
+- I'm shelving this project for now, and am going to try the soft start that I bought. IDK what to say about this one, I don't know why it isn't working. It's just going through a MOSFET, shouldn't be anything weird there...
+
+### 07/20/2026 
+**Main Task:** Weird observation
+
+**Notes:**
+- So I went to move the car around with the 555 timer kind of loosely installed, and the intensity of the lights was doing this rhythmic pulsing when the mosfet was closed
+- I'm not sure why this is. Maybe it's the power source for the MOSFET, the switched power, or maybe it's something funky happening on the MOSFET itself? I'm not really sure what would cause this pulsing through the system. It's like it was charging and then not charging in a rhythmic on/off way.
+- I did also buy a soft start module for the back of the alternator that I'm going to install. It only has a 2.5-second soft start delay. I would really like both of them to work together.
+
+### 07/14/2026 
+**Main Task:** New case
+
+**Notes:**
+- Printed the new case
+
 
 ### 07/11/2026 (afternoon)
 **Main Task:** Install! Case redesign

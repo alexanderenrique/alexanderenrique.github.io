@@ -47,6 +47,38 @@
 
 # Weekly Goals
 
+## Week [33] Starting 08/3
+- T bird electronics:
+  - Engine Node:
+    - Hopefully receive board
+    - Mock the TC routing
+  - Display Node:
+    - Mounted, wired int
+  - 555 Timer:
+    - Testing with relay instead of mosfet
+- T Bird Wrap:
+  - Finished removing trim, painting and sanding done
+- T bird bumper:
+  - Finalized the mounting bracket, sent out to laser cutting
+
+## Week [31] Starting 07/13
+- T bird electronics:
+  - Engine Node:
+    - ~~Hopefully have received and start populating the PCB~~
+    - ~~Designing enclosure~~
+  - Display Node:
+    - ~~Have figured out the RS-485 between ESP32 and display as dummy test~~
+    - ~~Bonus points for doing this with an Attiny~~
+  - 555 Timer:
+    - Print better enclosure
+    - Water proof PCB
+    - Make a second thin board
+    - Install V2
+- T Bird Wrap:
+  - Finished painting and sanding, ready for wrap!
+  - ~~Have ordered rest of wrap supplies~~
+  - Have seriously thought about hitch
+
 ## Week [30] Starting 07/06
 - T bird electronics:
   - Engine Node:
@@ -57,11 +89,11 @@
   - 555 Timer:
     - ~~Design larger enclosure, better fillet action~~
     - ~~Solder together~~
-    - install it! It'd better frickin work
+    - ~~install it! It'd better frickin work~~
 - T Bird Wrap:
   - Finished painting and sanding, ready for wrap!
   - Have ordered rest of wrap supplies
-  - Have seriously thought about hitch
+  - ~~Have seriously thought about hitch~~
 
 ## Week [29] Starting 06/29
 - T bird electronics:

@@ -53,15 +53,14 @@ description: One curious engineer's journey through wrenching, coding, and micro
     </section>
 
     <section class="section section--blog">
-        <div class="section__content">
+        <div class="section__content section__content--stack">
             <div class="section__text">
                 <h2 class="section__title">Work logs</h2>
                 <p class="section__description">Work logs documenting projects across coding, wrenching, microelectronics, and general learnings. Explore <a href="{{ '/coding/' | url }}">coding projects</a> like NEMO lab management tools, <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a>, <a href="{{ '/microelectronics/T-bird_electronics/' | url }}">T-Bird electronics</a>, and <a href="{{ '/general/Today-I-Learned/' | url }}">daily discoveries</a>.</p>
-                <a href="{{ '/coding/' | url }}" class="section__link">Browse work logs →</a>
+                <a href="{{ '/work-logs/' | url }}" class="section__link">Browse work logs →</a>
             </div>
-            <div class="section__image">
-                <img src="{{ '/images/pandas3.png' | url }}" alt="Blog">
-            </div>
+            {% set mode = "compact" %}
+            {% include "work-log-stats.njk" %}
         </div>
     </section>
 </div>

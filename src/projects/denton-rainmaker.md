@@ -9,7 +9,8 @@ tags: [esp32, sprinkler, ac, triac, ble, irrigation]
   <p class="hero__subtitle">A four-channel 24 VAC sprinkler controller with ESP32 brains, opto-triac zone drivers, Wi‑Fi clock sync, and BLE configuration from a browser.</p>
 
   <div class="btn-row">
-    <a class="btn btn--primary" href="{{ sources.dentonRainmaker.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
+    <a class="btn btn--primary" href="{{ '/rainmaker/config/' | url }}">Configure →</a>
+    <a class="btn btn--secondary" href="{{ sources.dentonRainmaker.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
     <a class="btn btn--secondary" href="{{ '/microelectronics/denton-rain-maker/' | url }}">Work log →</a>
   </div>
 </div>
@@ -75,5 +76,6 @@ PCB has been sent to fab. Next up: breadboard the critical AC and buck circuits,
 
 ## Quick links
 
+- **BLE configuration:** [Configure Denton's Rainmaker]({{ '/rainmaker/config/' | url }})
 - **Work log / lab notebook:** [Denton's Rainmaker, work log]({{ '/microelectronics/denton-rain-maker/' | url }})
 - **GitHub:** [alexanderenrique/denton-rain-maker]({{ sources.dentonRainmaker.repo }})

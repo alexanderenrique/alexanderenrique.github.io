@@ -91,6 +91,21 @@
     gap: 0.5rem;
 }
 
+.zone-config {
+    margin: 0 0 1.5rem;
+    padding: 1.25rem 1.25rem 0.25rem;
+    border: 1px solid var(--border-color, #e5e7eb);
+    border-radius: 8px;
+    background: var(--bg-primary, #ffffff);
+}
+
+.zone-config legend {
+    padding: 0 0.5rem;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text-primary, #1f2937);
+}
+
 .form-group label {
     font-weight: 500;
     color: var(--text-primary, #1f2937);
@@ -267,6 +282,12 @@
     background: white;
     border: 1px solid var(--border-color, #e5e7eb);
     border-radius: 6px;
+}
+
+.checkbox-group--days {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
 }
 
 .checkbox-label {

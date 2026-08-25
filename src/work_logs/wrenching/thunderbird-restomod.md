@@ -18,7 +18,6 @@ tags:
   - project-car
   - #electronics
   - #3d-printing
-  - #can-bus
 ---
 
 ## Project Overview
@@ -28,12 +27,17 @@ tags:
 
 ### Must Do:
 - ~~Radiator and cooling system~~
-- Leaking power steering hose
-- Window trims and weather stripping
+- ~~Leaking power steering hose~~
+- ~~Window trims and weather stripping~~
 - Finding Brake Leak
 - Wrapping the car
 - Inspecting rear brakes and bearings
-- change plugs, measure compression, deduce compression ratio
+- ~~change plugs~~
+- Buying a trailer
+- Welding trailer hitch
+- Trailer wiring
+- tuning carb, ignition timing
+- 
 
 ### Nice but not critical:
 - New starter motor
@@ -56,15 +60,357 @@ tags:
 - Finish the front seatbelts
 - Spare alternator fused wire
 
-
+### August Weekend:
+- Buying hardware for reassembly
+- Welding hitch
+- Soldering and installing my control system!
+- Sanding and painting 
+- Trailer wiring
+- Finished wrap
+- Re-assembly of trim
 
 ## Work Log
+
+### 08/23/2026 
+**Main Task:** Wrap, window felt
+
+**Notes:**
+- Wrap:
+  - I pretty much finished the passenger door, stoked on it
+  - I was able to figure out how to re-attached the passenger handle and the bolts associated with the door mechanism. Took a couple hours but it feels good
+  - Started attaching the trim, did the long runner trims on both sides. The drivers side has never been on since I owned the car, hell yeah
+- Window felt:
+  - Of course the new felt didn't line up with the old trim, so I got out the die grinder and elongated the holes
+  - In the process of this my air compressor quick disconnect fitting broke, and that was a side quest getting that working again
+
+### 08/20/2026 
+**Main Task:** Ignition advance, wrap
+
+**Notes:**
+- Ignition Advance
+  - Got a cheap amazon kit with more advance springs, they are for a GM HEI distributor, but with a little stretching and opening they worked ok on my distributor
+  - I read the advance curve sheet and went for one light and one medium spring
+  - I'm kinda throwing the kitchen sink at my advance, with the vacuum advance modification and stiffer mechanical advance springs. But if i want to bump up the base timing, the rest of the timing will be reduced
+- Wrap
+  - Wrapping wrapping
+
+### 08/19/2026 
+**Main Task:** Ignition advance, wrap
+
+**Notes:**
+- Ignition advance
+  - I was thinking more about how the advnace to work. I was thinking that it's not enough to limit the total advance, by having the weaker spring in there, the advance will also come in really soon. It starts pinging its head off even at lower RPMs, so I shouldn't throw all the timing in the world at it down low
+  - So I fiddled with the springs, trying to get the stiffer spring to work, and I was thinking that the slack in the spring would naturally limit the range of timing. Like the slack would mean that we are half way through the mechanical advance as a baseline, and then the stiff spring would kick in and limit the rest
+  - This isn't that good of a solution because the timing can flail around at idle if there is no spring holding it locked in
+  - So I basically destroyed both my springs trying to dial it in and I felt sad
+  - Thinking about it even more in the afternoon, I was thinking that the t bird should really be able to handle the timing that I had given it, the 8 initial and 26 mechanical, 34 degrees isn't crazy
+  - So that got me thinking about the vacuum canister, like how much advance is that adding, because I'm not even at WOT and it starts pinging, so I'm thinking the vacuum advance is too eager, and it's adding a ton of timing even at like 1/2 throttle
+  - If base is 8, we're half way through the mechanical advance and adding 13 degrees (very possible at 2k RPMS), and then the vacuum is adding in another 15-20 degrees we're at 36-41 right there under max load which is a recipe for pinging especially on shitty gas
+  - First I tested the vacuum advance, and it absolutely starts to move at 5 inches of vacuum. So basically it's always on except for the most WOT. Even then who knows how much vacuum I have at WOT
+  - I don't know how much the vacuum advance adds
+  - I did figure out how to take the advance apart. It's super interesting
+    - There is a spring behind the diaphragm of course, then there is a steel tube inside that, presumably to limit the travel of the diaphragm and in turn advance
+    - There there was a stack of two thick washers to pre-load the spring
+    - I added two more thinner washers to this stack to increase the spring preload, with the hope that the advance now requires more vacuum to operate. 
+    - I do love this kind of manual/mechanical tuning, it's delightful if very archaic
+- Wrap
+  - I mostly finished wrapping the passenger door, turned out nice, getting fast and better at it.
+
+### 08/18/2026 
+**Main Task:** Wrap, disassembly
+
+**Notes:**
+- wrap
+  - Finalized the passenger bottom door
+  - Finalized the passenger far rear panel
+- Dissasembly
+  - figured out how to remove the door handles, that was pretty easy actually I was jazzed
+  - I started trying to get the emblem off the back of the car, and it is of course bolted on with three speed nuts
+  - One was easy, but there seems to be this inner metal skin that is preventing me from getting the other two
+  - This metal skin seems to support the headliner and I really don't want to mess with that
+  - of course I want to do. good job, and I'm very on the fence if I want to spend the energy to remove everything it would take to get at it. I may try, but later?
+  - Afer some investiation, removing that decal also incolves removing the whole rear window assembly
+
+### 08/17/2026 
+**Main Task:** Light sanding
+
+**Notes:**
+- I did technically sand the front bumper for about 5 minutes, just making an entry so I can see that I worked on it every day
+
+### 08/16/2026 
+**Main Task:** More wrap, will it ever end?
+
+**Notes:**
+- Wrap
+  - Ran out of knifeless tape
+  - Did the driver front lower quarter, passenger runner
+  - Removed the front bumper and gave it a solid sanding, some paint
+  - Received more knifeless tape
+  - Clayton came over, pretty much the whole lower passenger side is done! Starting to look like a real car, crazy to see the color change slowly before you eyes
+
+### 08/15/2026 
+**Main Task:** More wrap
+
+**Notes:**
+- Wrap
+  - Mostly sanding and preping because I didn't have it in me to wrap
+
+### 08/14/2026 
+**Main Task:** Finalizing Tow Bar
+
+**Notes:**
+- Tow Bar
+  - Finalized the CAD, reviewed everything one more time, I would hate to miss something with steel this thick, that would be a lot of milling/ die grinding
+  - Sent it off to Send Cut Send, used the old SuperFastMatt 15% coupon, brought me down to a cool $110. 
+  - $110 for laser cut stuff, $90 for the cross bar, $20 for the hitch itself makes this a pretty dang affordable project. Custom made tow bar for $220 plug Argon and a shit load of time a prototypes
+
+
+### 08/13/2026 
+**Main Task:** Wrapping prep, tow bar mock up
+
+**Notes:**
+- Wrapping prep
+  - I couldn't find the knifeless tape, so I ended up spending a whole afternoon just sanding and prepping
+  - Like pretty much there with all the prep, including the back sides of things
+  - My adhesion promoter went through the wash so that was kinda a bummer
+- Tow bar
+  - We have finalized the design believe it or not, really happy with how it turned out, looks sweet, seems to clear everything
+
+### 08/12/2026 
+**Main Task:** Wrapping
+
+**Notes:**
+- got most of the passenger front quarter done with Jeff's help
+- You can definitely see the seam, but only if you're like nit picking. Good to konw for future seams
+- Took the two of us the better part of 3 hours to wrap the front quarter, I am seriously starting to wonder if I'll be able to get this done in time...
+
+### 08/11/2026 
+**Main Task:** Hitch bracket V7? Trunk wrap, front bumper removal
+
+**Notes:**
+- Hitch bracket
+  - This one is money, really happy with how it turned out, I think the angle of the cross bar and everything is perfect
+  - I once again feel confident enough to print a full width version and bolt it on
+  - I learned my 6' bar is a bit too long, so I plan to cut it up and make a mock up that actually fits
+- Trunk wrap
+  - Finished the trunk, turned out better than the hood
+  - It's a bit fiddly but with the adhesion promoter and everything It seems really nicely secured
+- Wrap general
+  - I did more thinking and looked at how to do the front quarters and such. I think the front quarter will actually end up being 3 pieces, with a small seam just below the body line. This'll be way more manageable than trying to do one massive piece of vinyl
+- Front bumper removal
+  - Clayton came over and helped me remove the front bumper, the wrap will turn out much nicer because of it. however I worry that I'm still in the "taking it apart" phase and I need to be in the "get it back together" really soon!
+
+
+### 08/10/2026 
+**Main Task:** Hitch bracket V...6? A pillar and trunk wrap
+
+**Notes:**
+- Hitch bracket
+  - More measurements, actually getting close I think. Hopefully the angle of the hitch is correct. 
+  - More small adjustments after the test fit to get the angle of the hitch correct
+- Wrapping
+  - Did the little A pillars, those were super easy and straight forward
+  - Started working on the trunk lid, turning out about the same as the hood. Which is to say looks heaps better, but there are still some dirt and particle problems
+
+### 08/09/2026 
+**Main Task:** Starting to wrap, Rearview Mirror, hitch bracket
+
+**Notes:**
+- Starting to wrap:
+  - Spent another couple hours doing a final pass of clean, tape, paint, sand, and clean.
+  - Managed to get the hood done with Jeff! definitely a learning experience, super interesting to work with. Looks a million times better than it did before, but there are still some marks from the grinder, and my prep wasn't all that good. I pressure washed, but I should've also blown it off and cleaned it one more time
+- Rearview Mirror:
+  - First time didn't work because of course it didn't.
+  - Tried a second time which didn't work
+  - tried using VHB tape, but that came off as soon as it got warm out
+- Hitch bracket:
+  - Cut and ground out the relief for where the hitch bracket needs to sit
+  - Pretty easy actually
+  - Now that the bracket can sit flush, it's a lot more obvious which way the holes need to go. It also helps to have the full size print to mock things up
+  - I did receive the cross bar, super legit piece of steel, sparks joy
+
+### 08/08/2026 
+**Main Task:** Sensor Routing, Rearview Mirror
+
+**Notes:**
+- Sensor Routing
+  - Figured out the final placement for the sensor node
+  - Finalized how I want to route all the different temperature sensors and how to get the O2 sensor up to the node.
+    - I'm slightly worried that the O2 controller sits about six inches away from the header pipe without any heat shielding. I'm not sure if this will be a problem or not.
+- Tries gluing the rearview mirror on. It never works the first time. or even usually the second.
+
+### 08/07/2026 
+**Main Task:** Full scale hitch test
+
+**Notes:**
+- I think I'm close enough to where I can print a full scale hitch test, so I'm printing both sides at full thickness
+- I did more modelling last night, and it seems like I can really thin out the area behind the cross bar, meaning I can grind less of the current bumper mount, which we love
+- Also thinking about it, the adjustability in the cross bar angle can really come from the slots and camber bolts in the hitch mounting. It doesn't make as much sense to add clearance around the bar in the side plate so it can rotate. That just adds weld gap for me, and makes things shittier.
+
+### 08/06/2026 
+**Main Task:** Finishing Trans Lines, sanding behind the bumper trim
+
+**Notes:**
+- Trans lines:
+  - Made a quick and dirty bracket to keep the return line off the exhaust as promised
+  - Got it leak free, only had to re-tighten the return once
+- Sanding bumper trim
+  - more quality time with the wire wheel, got in there deep like
+  - Taped things off, ready for paint
+
+### 08/05/2026 
+**Main Task:** Hitch print 4, transmission cooler lines, fuel soft line, venting gas cap thoughts
+
+**Notes:**
+- Hitch Print
+  - Printed a full scale version with slightly larger slots, which is a luxury I think I can afford
+  - Also did the math so that the hitch has a couple degrees of rotation so that I can make it perfectly level
+  - Up next I think is removing the hitch, checking hole alignmenent one more time and then grinding the bumper bracket to fit the 3D print.
+  - Then re-installing everything, hopefully I get the cross bar steel soon, then I can mock that up and get things laser cut
+- Fuel Soft Line
+  - New fuel soft line from the hardline behind the front driver wheel, all the way up to the fuel pump
+  - The old one may have been ok, but it was definitely starting to crack
+  - I also got hosed with gas when I pulled the fuel line off, reminding me that the tank has that bad habit of pressurizing really hard
+  - I wonder if this has anything to do with the richness of the engine, like fuel is forced past the fuel pump. Either way I ordered a new cap
+- Transcooler Lines
+  - Just about finalized the trans cooler lines, with heat shielding. The 3/4" ID fits just perfect over the 3/8 line, which has an OD of 2/3" or something like that
+  - Still have to tighten a few things, and I want to make a bracket to keep the return line off of the exhaust
+  - In "panel beating" the tunnel to make room for the fitting I slightly dinged part of the sealing surface of the AN fitting, hopefully it still holds
+
+### 08/04/2026 
+**Main Task:** Hitch print 3
+
+**Notes:**
+- Somehow print 2 was even farther off than the first one, must've moved things the wrong way
+- Re measured, moved things back
+- My cross bar does actually look horizontal so that feels good
+- Once I'm like 99.99% sure of my design, I'll print full size full scale side mounts and actually suspend the cross bar
+
+### 08/03/2026 
+**Main Task:** Transmission cooler lines
+
+**Notes:**
+- I was never happy with how they were installed in the first place, and now that I'm an AN wizard, I thought to use my AN wizard skills
+- The inverted flare I bought was the correct guess so that felt great
+- Uber pain in the ass to unthread the rear return line, I had to cut the line, and I'd siliconed the old inverted flare out of spite for future Alex
+- I did end up getting the lines out, and I had to slightly beat the trans tunnel to fit the 90
+- Now that the hard lines are totally gone, I'll need better heat shielding and tube management to get the lines past the headers
+- Ordered more heat shielding tubing
+
+### 07/28/2026 
+**Main Task:** My first AN line...
+
+**Notes:**
+- ... was an absolute bitch and pain in the ass
+- I thought it'd be super straight forward but I made pretty much every mistake imagineable
+- I first had the sheath too far forward, like towards the cut end, and that made it so the fitting wouldn't engage the nut
+  - The nut wouldn't slide far enough forward
+- Then I slid the sheath too far back so the nut didn't have any compression on the fitting
+  - I feel like the location of the sheath shouldn't be a factor. It isn't on real swaglok fittings. Fuckin that's what I'll do next time get a 3/8 teflon line and do swaglok. 
+  - after breifly investigating this thought, I looked at 3/8 teflon line without the braided exterior and the burst rating is much lower, like a couple hundered PSI. which leads me to believe the braid is structural.
+- Then I figured that part out, but didn't tighten it enough, I did like 3 rounds of removing the hose and tightening it
+- Things I did well:
+  - My weld didn't leak!
+  - I got the right size inverted flare
+  - I didn't have too many stab wounds from fraying wire
+- If I had to do it again I could do it in less than ten minutes. This took me 70 minutes
+
+### 07/28/2026 
+**Main Task:** First of many hitch designs
+
+**Notes:**
+- receveived the receiver hitch
+- Designed the hitch mount and 3D printed it, designed it to the best of my abilities, there will certainly be a few revisions
+  - Also seems like I'm wasting a lot of material, but I guess that's the price of strength. Just large swaths with no features just metal.
+- re point above, started trimming metal in places where it didn't seem totally necessary
+- Went all out and started doing FEA on my design, so sick I learned so much
+  - The 3/16 square tube is like way way overkill. I modeled it with .120 (not 1/8th which I guess in an uncommon thickness) square tube and even that had a massive safety factor
+  - The hot spots are really the corners where the cross bar attaches to the mounting brackets. But with 1/4" thick, even those are good to almost 1000 lb 18" away from the receiver.
+  - I think I could very well carry a motorcycle with this, but that would put some crazy stresses elsewhere and I'm not trying to do that
+  - Bicycle rack and the hitch carrier will be no problem, nor would a 1,500lb trailer
+  - I also modeled it in the direction of braking, plenty strong in that way. I could put all 1500lb on it and there is still a safety margin.
+- I did the mock up and the first round of changes to my design. I learned a way to make the design a bit shorter and drop the cross bar lower.
+  - This has advantages in the leverage exerted on the moounting points, the cost of the plate and material used, and the amount of times I will kick the hitch when walking by.
+- I also learned about relative stiffness. It doesn't make sense to design the most overbuilt hitch receiver ever because things need to be able to flex relative to each other, and if the cross bar can't flex at all, the frame will just take the load and we'll be sad
+
+
+### 07/27/2026 afternoon
+**Main Task:** Distributor limiting, alternator soft start
+
+**Notes:**
+- had the epiphany to replace the heavy distributor spring with a piece of wire to limit the max advance.
+  - I don't think it'll come un bent, but if it does we'll get max advance real quick and it'll ping its head off, so I guess it'll be obvious
+- Re-assembled the distributor with the limited advace, I probably cut the total advance in half and left the soft spring in there so it comes up quick
+- Also installed the new soft start on the alternator, it's cool I pulled the old one out and it came with the brushes
+- I swapped the brushes over and installed the soft start, it wasn't too bad at all. Just a few torx bolts
+  - Didn't have to pull it or re-tension the belts or anything
+- Toom more measurements, design continues on the mounting bar. I expect there to be a few iterations on the 3D print before it gets laser cut.
+- Continued the 3D design, it's hard to get right when you're not sitting right at the car
+
+### 07/27/2026 
+**Main Task:** Designing the hitch for laser cutting
+
+**Notes:**
+- Started with the flat sandwich plate which is the easier part to design for sure
+- then did the tubes in about 2 seconds
+- Then I'll do the side brackets and figure out how to insert my scans into on shape. Yay CAD!
+- Actually used fastening and stuff, I feel like a real engineer.
+
+### 07/26/2026 
+**Main Task:** Bumper, power steering, "panel beating"
+
+**Notes:**
+- I have a TIG welder and a brain, I'm having a hell of a time finding the right adapter for the back of my pump, so I'm going to weld an AN adapter onto the old 90 degree fitting and hope that works
+- The fitment was actually really really nice I was super surprised, the OD of the inner line fits perfect in the ID of the adapter, and the OD of the adapter fits perfect in the ID of the fitting. Just beautiful I couldn't beleive it
+- Worked on the bumper. It just didn't look right to not have the bumper on the back
+- I'm afraid of how much work it'll be, but the move is to make a 2 in 1 bumper holder and cross bar mount. No doubt that it's the right thing
+- Tried taking a 3D scan of the big bracket, it kinda worked but I may end up doing it the old fashioned way (cardboard aided design)
+- Welded the -6 AN fitting onto the end of the power steering hose, I really think it'll work my weld turned out pretty dang nice
+  - I did bevel both sides to get more penetration, as Mac suggested/reminded me
+- Beat the shit out of the driver side panel until the trim piece would like kinda go on. Definitely still very far from perfect, but it will now snap on and look good from afar
+- I also finally ordered the stuff to make a new power steering line, god damn AN stuff is expensive. Everyone says it all the time, but seriously
+  - Feels good to have a plan though, figuring out the fittings was ruining my life.
+- I also wanted to revisit my jank transmission cooler set up now that I'm a bit more literate with the AN stuff
+
+### 07/25/2026 
+**Main Task:** Really getting stuck in
+
+**Notes:**
+- Removed the headlights and front grill, that rust around the headlights always really bugged me
+- Just really got stuck in, also removed the rear bumper, I feel the dream coming
+- I've just gotta have a deadline about when to wrap it, there is like an infinite amount of prep that could happen
+- I was hopeful I could keep the rear bumper, but I don't think I'll be able to keep it with a hitch attached
+
+### 07/24/2026 afternoon
+**Main Task:** More sanding, removing trim
+
+**Notes:**
+- Yeah that's pretty much it, sanding and trim
+- The rust encapsulator I bought is more like something that hardens up? super weird stuff I don't think I like it
+- 
+
+### 07/24/2026 morning
+**Main Task:** Distributor investigation, power steering
+
+**Notes:**
+- I want to run more initial timing to help lean out the idle, but I can't do that with as much mechanical advance as it has
+- I pulled the distributor apart, and it has 13l stamped on it, which means 26 degrees of crank timing.
+  - So if I'm at 8 initial plus 26 that 34 degrees at wide open, which is currently lightly pinging
+- If I want to put like 12-14 degrees initial, I can only afford about 16 additional degrees, so I'm going to remove the distributor and weld it down to about an 8l which will be I guess 8/13th of the current opening
+- I also removed the leaky hose, it just can't be ignored anymore it is so so leaky, like puddles coming out at idle
+- I verified the diameter is about 0.612" which means it's a 5/8 -18 fitting
+
+### 07/15/2026
+**Main Task:** Sanding, removing trim
+
+**Notes:**
+- How am I still sanding and painting, I started a month ago...
 
 ### 07/04/2026
 **Main Task:** Sanding, removing trim
 
 **Notes:**
-- Gosh, time flies. The trim gets here on Monday, and the car definitely isn't ready to receive it yet.
+- Gosh, time flies. The wrap gets here on Monday, and the car definitely isn't ready to receive it yet.
 - I spent a lot of yesterday sanding, removing trim, trying to get things smooth and ready.
 - All of the trim pieces have these kind of funky grommets on them for waterproofing, and I'm not sure if I'll be able to source the same ones or if I'll need to replace them with something else.
 
@@ -82,19 +428,20 @@ tags:
 
 **Notes:**
 - This alternator has been pissing me off for two years, and today I cracked it
-- It was squealing becasue the excited field is hitting the belts too hard, like I explained below
+- It was squealing because the excited field is hitting the belts too hard, like I explained below
 - I disconnected the yellow I wire from the alternator and behold, no squeal, no sign of a squeal, nothing
 - I'm just so sure that is it, I'm going to make a soft start controller
+- **update:** see alternator 555 timer, where I do exactly this and it works
 
 ### 06/09/2026
 **Main Task:** Loose Fan wiring, alternator scheming
 
 **Notes:**
-- I tested the alternaotor fan before going for a drive to the city last night, and hen I grounded it, it didn't turn on! I quickly checked for voltage but didn't see any
+- I tested the radiator fan before going for a drive to the city last night, and hen I grounded it, it didn't turn on! I quickly checked for voltage but didn't see any
 - This morning when I went to work on it, I did see voltage at the pin, but it looked like the ground pin in the connector was a little loose. So I finished pushing that into the connector and it's magically fixed which is kinda annoying.
 - I'm still not sure if the temp switch works but at least I know the fan is still good.
 - Scheming about the alternator, I am suspecting more and more that the v belts just can't handle the load right at start up, because it takes basically no effort to spin over by hand, so I can't imagine that causes the slip on start up
-- Doing some math, the worst case is that 14V X 140 Amps = 1960 W, which if you throw in some alternator inefficieny can be up to 2500 W, 2500/735 W/Hp= 3 ish horsepower trying to transmit through these shitty V belts
+- Doing some math, the worst case is that 14V X 140 Amps = 1960 W, which if you throw in some alternator inefficiency can be up to 2500 W, 2500/735 W/Hp= 3 ish horsepower trying to transmit through these shitty V belts
 - I bet money that if I disconnected the ASI plug it wouldn't squeal, and some kind of soft start device would get rid of it. 
 
 ### 06/06/2026

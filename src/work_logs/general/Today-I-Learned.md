@@ -19,6 +19,118 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 08/19/2026
+- Limiting total mechanical advance isn't enough: a weak spring also brings timing in too early, so it pings at part-throttle RPM
+- Slack in a stiff spring as a "halfway baseline" lets timing hunt at idle
+- 8° initial + 26° mechanical = 34° WOT isn't crazy; vacuum advance stacking on top at half throttle is the ping recipe
+- Vacuum advance that starts at ~5" Hg is basically always on except WOT — washer preload on the canister spring raises the threshold; a steel tube inside limits diaphragm travel
+
+### 08/18/2026
+- Thunderbird rear emblem: there are 3 speed nuts that hold the emblem on and at least two are hidden behind the rear window assembly, so if you want to really remove that emblem you have to remove the back seat, interior panels, remove the motor assembly, and then you can get at the emblem
+
+### 08/11/2026
+- Complex vinyl panels: three smaller pieces with a seam at the body line beat one giant wrap
+
+### 08/09/2026
+- Wrap prep: pressure washing isn't enough — blow off and reclean or dirt telegraphs through
+- Regular VHB tape on a rearview mirror fails as soon as it gets warm
+
+### 08/07/2026
+- Hitch angle adjustability belongs in slots/camber bolts, not extra clearance around the bar (that's just weld gap)
+
+### 08/05/2026
+- Thunderbird tank pressurizes hard, pulling a fuel line can hose you with gas. I imagine a bad cap may also force fuel past the pump
+- 3/4" ID heat-shield sleeve fits nicely over 3/8" rubber trans cooler line
+
+### 07/28/2026
+- AN hose: braid sheath position is structural. I fthe sheath is too far forward and the nut won't engage, too far back and no compression onto the nut
+- Unbraided 3/8" Teflon burst rating is only a couple hundred PSI; the braid is doing real work
+- Hitch FEA: 3/16" square tube is way overkill; hot spots are the corners where the cross bar meets the brackets
+- Relative stiffness: overbuilding the hitch just dumps load into the frame if the bar can't flex
+
+### 07/27/2026
+- Distributor 13L stamp = 26° crank mechanical; more initial timing means welding the slot down or you ping at WOT
+- A piece of wire can hard-limit max mechanical advance. If it unbends or comes off I imagine the ping is immediate
+
+### 07/24/2026
+- PWM a fan without a flyback diode: MOSFET hit 220°F in ~10 s at 5% duty — a diode across the motor dropped that to a couple degrees
+- PWM floor: very low duty just makes heat and doesn't move air
+- Rate-inhibited decay for a cooling fan can beat PID — no integral wind-down when ram air shows up
+- 1 kHz PWM on a fan is audibly noisy
+
+### 07/20/2026
+- RS-485 A/B swapped looks like a dead bus until you swap them
+- Alternator 555 path through a MOSFET can pulse system voltage ~14.8–15.4 V; straight switched power was a rock-solid 14.4 V
+
+### 07/17/2026
+- Leaded solder: ~310°C, not 380°C. Too hot burns off the flux, that's what causes the crystally peaks and things to stick. We're looking for nice shiny melty look
+
+### 07/15/2026
+- Comparator hysteresis: positive feedback is a weak pull-up, you still need a pulldown so the voltage can fall
+- More ignition-pickup turns improve SNR (signal grows faster than the noise floor)
+- ~10–22 nF high-pass on a tach input; too large oversmooths the pulses
+
+### 07/14/2026
+- ESP32 GPIO 3/1 is the serial-monitor UART — RS-485 belongs on RX2/TX2 (16/17)
+- RS-485 master can often skip RE-DE
+- Diode / transistor / resistor arrays beat a forest of discretes on a dense LED board
+- Solenoid striker ~30 ms; dither the pulse for a more organic hit
+- Songs are really just delay arrays keyed to tempo
+
+### 07/11/2026
+- LVGL Pro Editor customizes widgets; it is not a drag-and-drop UI — PicoPixel was the better start
+- UI tools emit a template; you still write the code that updates live values
+- ATtiny has built-in pull-ups which allow you to skip some of the external ones
+- Alternator exciter on always-hot surprisingly didn't drain the battery; switched-hot plus the 555 killed the squeal
+
+### 07/09/2026
+- KiCad hierarchical / sub sheets keep a big schematic readable
+
+### 07/07/2026
+- X7R ceramics DC-bias derate hard — 22 µF at 0 V can collapse under DC; a higher voltage rating keeps capacitance closer to the label
+- Drain-to-gate TVS is the wrong MOSFET protection (and can kill the circuit); cathode to source, anode to gate
+- Electrolytic in a 555 timing network backwards: pins 6/7 never reach 2/3 Vcc
+
+### 07/06/2026
+- Chain tension is the difference between a commute and a skipped chain after two miles
+- Mid-drive locking ring: really hammer it, then the Mickey Mouse bolts after the ring
+- AC fuse across both phases doesn't make sense on a two-wire transformer secondary
+- MPLAB SNAP + IPE + a hex file programmed ATtiny 3216/3226 after the HV programmer failed on fresh 3216s
+
+### 07/03/2026
+- Adafruit HV UPDI programmer blinked an ATtiny402 first try but three fresh 3216s never answered, even with the HV pulse on the scope
+- Arduino IDE now speaks UPDI directly — no more JTAG-to-UPDI hacks
+- ESP32 PSRAM doesn't save a SPI-bound TFT on a cheap breakout; tablet-as-dash boot time kills "instant on like a car"
+
+### 07/01/2026
+- High-side MOSFET PWM: the pull-up is what turns the gate off
+- ~40 kHz dimming looked capacitive and never quite right; ~1–5 kHz dimmed much better
+- Series base resistor on an NPN keeps the ESP 3.3 V rail from sagging
+- Dual-USB ESP boards: UART vs peripheral — program from the UART port
+
+### 06/30/2026
+- KiCad DRC catches sneaky unconnected grounds and fill-zone misses
+- Analog signals belong on analog-capable pins
+
+### 06/29/2026
+- Ignition-wire pickup is more antenna/capacitor than inductor; you still need both ends on the board for a potential difference
+- 5 turns around a plug wire can couple ~10 V; 3 turns was a more usable ~0.8 V+ pulse
+- Comparator: inverting vs non-inverting, plus ~80 mV of hysteresis from 100k positive feedback
+- PlatformIO: double-check which directory you're uploading from
+- ESP32 UPDI ties RX and TX together — the ESP hearing its own echo is a feature
+
+### 06/28/2026
+- Oscilloscope 101: clip the ground lead properly or nothing makes sense
+
+### 06/26/2026
+- MOSFET body diode conducts if you install it backwards — the diode icon means what it says
+- 0805 is where hand-soldering stops being worth the space vs 1206
+- 555 trigger cap too small: the trigger pin rides the supply ramp high and never fires
+
+### 06/25/2026
+- 0.1 µF decoupling right at every ADC pin
+- Breadboard debug needs a real power/ground/probe setup — too many fingers is a method
+
 ### 06/23/2026
 - Some buck regulators actually want a little ESR on input/output — electrolytics may be intentional, not a lazy default
 - DIY flat aluminum chime bars without undercut profiling can sound dead or out of tune — a commercial xylophone is a fine pivot
