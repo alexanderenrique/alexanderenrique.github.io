@@ -29,21 +29,28 @@ tags:
 - ~~Radiator and cooling system~~
 - ~~Leaking power steering hose~~
 - ~~Window trims and weather stripping~~
-- Finding Brake Leak
+- Load trailer, figure out weight balance
 - Wrapping the car
-- Inspecting rear brakes and bearings
 - ~~change plugs~~
-- Buying a trailer
+- ~~Buying a trailer~~
 - Welding trailer hitch
 - Trailer wiring
+- Trailer bearings
+- ~~Installing spare tire carrier on trailer~~
 - tuning carb, ignition timing
-- 
+- Testing second ignition module
+- Loading spares, testing things
+- Figuring out how to mount the boxes/ cargo
+- ~~Moving the motorcycle mounting position~~
+  
 
 ### Nice but not critical:
 - New starter motor
+- Finding Brake Leak
 - Windshield washer bottle
 - Fan controller, does it ever turn on??
 - Automatic headlights
+- - Inspecting rear brakes and bearings
 
 ### Nice to Have Smaller Tasks:
 - ~~Verify temperature gauge is accurate~~
@@ -56,20 +63,197 @@ tags:
 - Oil leak from front of engine
 - "knee breeze" cable
 - Switching between defrost and forward vent
-- Getting some fix a flat in a can in case of flat
 - Finish the front seatbelts
 - Spare alternator fused wire
 
-### August Weekend:
-- Buying hardware for reassembly
-- Welding hitch
-- Soldering and installing my control system!
-- Sanding and painting 
-- Trailer wiring
-- Finished wrap
-- Re-assembly of trim
+### Timeline, as best I can
+- Thursday 9/3:
+  - Driver door
+- Sunday 9/6:
+  - Both rear quarters
+  - ~~Front end back together~~
+- Wednesday 9/9:
+  - Front windshield wiper area
+  - Rear vent area
+- Thursday 9/10:
+  - Roof
+- Friday 9/11:
+  - Emblem area
+- Sunday 9/13:
+  - Trailer Wiring
+  - Trailer bearing grease
+  - Final putting things back together
+  - Packing
+  - Test drive
+
 
 ## Work Log
+
+### 09/02/2026 
+**Main Task:** Driver Door wrap and assembly, Headlights back in
+
+**Notes:** 
+- Driver Door
+  - Went smooth, I'm getting really quite good at wrapping
+  - Learned lessons from the passenger side about trimming the wrap around the handle
+  - I can't find the flange nuts that hold the handle on which is kinda annoying
+  - I was able to install the driver mirror and felt trim easily enough
+  - Got the window low limit and track bolted back together 
+- Headlights back in
+  - Hell yeah the car has a face again, feels so good
+  - Not sure why it need the two heavy duty springs pulling on the covers but whatever
+  - Did I mention the front end looks sweet?
+
+### 09/02/2026 
+**Main Task:** Wrapping the front, Mounting Front bumper and trim for real
+
+**Notes:** 
+- Wrapping the front
+  - I spent an hour doing the tricky front curves in the morning, but it's looking nice
+  - I also did a few little parts behind the bumper that might have been visible
+- Mounting Front bumper and trim for real
+  - There was this kind rubber guard that sits just behind the bumper and i'm not sure why it's there but I bolted it back on
+  - Also did a few trim peices, those went on pretty smoothly, thought it was tricky to get some of the nuts on
+
+### 09/01/2026 
+**Main Task:** Hitch Welding and painting, trailer thinking, wrapping driver rear
+
+**Notes:**
+- Hitch Welding and painting
+  - Finished welding the final cap onto the hitch, it's finished!
+  - Painted it with a couple coats of black paint I had laying around, turned out real nice I'm stoked on it
+  - While I was at it I wire wheeled down parts of the bumper and painted that had been flaking
+- Trailer Thinking
+  - I took some measurements on the wheel chock and the motorcycle
+  - The CoM is right around 41" back from the front tire
+  - With the hitch in the current position, this would put the CoM like a foot infront of the axle which I think would be too much tongue weight
+  - I'm going to add a second set of holes about six inches farther back and see what works better
+- Wrapping driver rear
+  - Finished the driver rear quarter that nick had started, now that the bumper was removed
+
+### 08/31/2026 
+**Main Task:** Hitch Welding
+
+**Notes:**
+- Hitch Welding
+  - Already had the hitch mounted and mocked up. I was going to move the fill TIG set up out there but that didn't seem like the best use of time
+  - So I hit it with a few small fluxcore tack welds. TIG welding over fluxcore is nasty business it never turns out right
+  - When I removed the bumper hitch assembly, I realized they were stuck together! Like there was no was=y to remove the hitch, so I had to make some more cuts on the bumper support
+  - I welded everything up on the bench, taking some care to balance the heat and make sure things didn't move. I also ground out the tack welds as much as possible before welding
+  - I also welded on the license plate mount, one plug weld to get it into position, and then I TIG-ed the sides. I don't think it'll fall off
+  - I also welded the end caps on to keep as much dirt out as possible, and drilled a small quarter inch hole in the bottom of both sides for drainage purposes. I'll fog it with rust preventitive eventually
+  - I'm one cap and paint away from being able to mount it for the final time, get stoked
+
+### 08/30/2026 
+**Main Task:** Front bumper wrap and re-install, final hitch placement, wrapping with Nick, License plate mounts, trailer wiring, Cutting out oil stained cloth in trunk
+
+**Notes:**
+- Front bumper wrap and re-install
+  - Finished wrapping the front bumper, it could definitely be better but I ran out of time and patience
+  - I bolted it back on to the front bumper, that was pretty easy now that I know how it goes together
+  - With Nick's help we lifted it in position and bolted it up. Still short a nut for the carriage bolt but I'll get it eventually
+- Final hitch placement
+  - Dropped the hitch so I could remove more material from where it was fouling on the driver side bumper mount
+  - Took a little grinding but I got the hitch mount to lay flat, and I think I'm ready for the final welding step
+- wrapping with Nick
+  - Nick did some wrapping, nuked a hole in one of the pieces of vinyl with a heat gun so I may end up re-doing it
+- License plate mount
+  - There's always something else to think of, in this case it's how to mount the license plate so that it's legal
+  - It is right at a foot off the ground, and I think I can wire in a white LED strip that sticks just above it
+  - I was going to drill and tap into my cross bar, but I do worry about anything weakening it. I'm going to do a couple of plug welds on some metal strips, and then bolt the plate in on top with nylock nuts
+- Trailer wiring
+  - Started thinking about how the wiring is going to work. I foind a pass through for the tail light that I can use for the trailer plug
+  - The trickier part will be the wiring itself and where I tap into 
+- Oil stained trunk
+  - Something spilled back there, not sure when or how but it looked like brown stained oil. The car may have come like that
+  - If I'm going to throw my bags and tools and stuff in there I can't have them all getting oil stained. I tried dabbing up the oil with a paper towel but that was futile, so I cut it out and started cleaning up the bare metal
+
+### 08/29/2026 
+**Main Task:** Mounting spare on trailer, Hitch welding and Mock up, moving wheel chock
+
+**Notes:**
+- Mounting spare tire
+  - Pretty easy to do once I got my head around how it should work, I did cut some bolts shorter, I couldn't figure why they went such long bolts but whatever
+  - I mounted it forward of the axle, IDK if I'll want to move it rearward for tongue weight purposes, it's feeling pretty heavy on the tongue already. It'll be 700lb all up or so, so maybe 70-80lb on the tongue
+- Hitch welding and mock up
+  - Finished welding the sandwich plate to the bottom of the bar, that turned out pretty nice. There were some tricky corners but I think I did pretty well
+  - Mocked it up with the side plates, super stoked on it it looks really good, I even rested the trailer on it to see and it didn't totally collapse the rear suspension which we love
+  - The driver side bumper support needed a little more massaging, so I wasn't able to weld anything up on the frame
+- Moving wheel chock
+  - After using my brain a bit, I saw that I could mount the front wheel chock with carriage bolts
+  - That worked perfectly and it's now nicely centered
+
+### 08/28/2026 
+**Main Task:** Hitch welding
+
+**Notes:**
+- Hitch welding,
+  - After mocking it up on the ground, I couldn't help myself and just started welding
+  - I did a couple serious tacks with the flux core, then moved it to the bench for TIG welding
+  - I was able to weld the receiver to the cross bar, took max power at times and there were some serious gaps to fill at times
+  - I learned/remembered all the things about biasing the torch toward the thicker metal, thinking about gravity and the weld pool to minimize undercut, where to dab and how much to also minimize undercut, just so much to remember and keep straight especially with such a large work piece
+  - Each weld took 3 passes pretty much, so 2.5" long x 4 sides x 2 bars x 3 passes = 60 inches of welding! Took a while
+
+### 08/27/2026 
+**Main Task:** Driver Door Disassembly, Trim cleaning, hitch mock up
+
+**Notes:**
+- Door Disassembly
+  - Taking apart the driver door wasn't too bad, I've done it so many times before
+  - Removing the mirror was kinda interesting, one of the nuts was rusted but luckily it was a stud so the stud just came out
+  - Sanded down the rust and got it ready for wrap
+- Trim cleaning
+  - Started slowly installing some of the trim back. It really isn't that hard, once you know how it goes together it aint that bad
+- Hitch Mock up
+  - I cut my long 51" bar in half to then weld it to the recevier
+  - I had to bevel some of the edges to hopefully get really good penetration
+  - This thing is going to have a mile of weld on it.
+  - My proposed welding order of operations is:
+    - Weld cross bars to hitch 360 degrees
+    - Weld the bottom sandwich plate
+      - With this full assembly welded, any warpage that happens won't strain the drop mounts.
+    - Mock up the drop mounts and fender on the car
+    - Tack weld extensively on the car, as much as possible, both sides
+    - Remove and finish welding on the bench
+
+### 08/26/2026 
+**Main Task:** Wrap, ignition timing, trans leak
+
+**Notes:**
+- Wrap:
+  - Started wrapping the front bumper. My goal is to have the front half of the car finished by the end of the weekend. Big dream. 
+  - In the afternoon I got most of the way to finishing the front bumper
+  - I also figured out how to remove the antenna, there is a retaining clip up top that retains the trim, then there is a single lower bolt that allows the lower anntenna sleeve/assembly to come down
+- Ignition Timing
+  - Played with the ignition timing a fair bit, learned some interesting things:
+    - My vacuum advance adds 10 degrees at idle as currently configured
+    - My mechanical advance only adds about 10 degrees as well with a pretty good drive way rev
+    - I advanced the base timing from 8 to 12 degrees and the engine didn't pick up any RPM which is suspicious
+      - I am wondering if it is so rich at idle that it is like bogging
+      - Idle did jump as expected when I introduced a vacuum leak, but Gemini wants me to think this indicates an overly rich condition and that the engine is enjoying a bit more air at idle. I feel this could be true, and I know I am super rich at idle, I'm thinking I should warm up the engine and try and lean it out a bit to see if that raises the idle
+    - When i gave it a big rev with vaccuum advance connected, the timing never went much above 25 degrees which is about 10 degrees shy of max advance
+    - But this kinda makes sense because the mechanical and vacuum are going opposite directions, the vacuum is going away and retarding and the mechanical is advancing as RPMs rise
+- Trans Leak
+  - As I was playing with the ignition timing, my transmission started leaking :( from the return line. I'm 90% sure it's just because I dinged the mating surface when I was hitting the tunnel with a hammer for clearance
+
+### 08/25/2026 
+**Main Task:** Bought a Trailer! Trim Install, Wrap Prep, Painting the rear vent
+
+**Notes:**
+- Trailer:
+  - Bought a 4x8 folding trailer from south san jose, stoked on it. 
+  - Even came with a spare and a front wheel chock
+  - The deck surface is a little whooped and it doesn't come with a way to fold it, pretty sure old mate removed the hinges as well as the wheels that it rolls on when standing vertically. but for $500 I couldn't be happier
+  - Towed it home just fine. I learned the holes in the isuzu bumper that are meant for safety chains don't play nicely with the clip style S hooks it came with
+  - I plan to grease the hubs and such and double check all the bolts, I'll figure out the deck folding and such if I have time before I leave
+    - I'd also like to add some unistrut reinforcement so that I can support the deck once it's in two pieces for folding purposes
+- Trim Install:
+  - Installed a couple pieces of trim to make myself feel better
+  - Cleaned the dirt out from some of the old pieces as well
+- Wrap Prep:
+  - Trying to remove the antenna, it's really in there!
+- Painting rear vent:
+  - Aint no way I'm wrapping that rear vent, so I decided to paint it white
 
 ### 08/23/2026 
 **Main Task:** Wrap, window felt

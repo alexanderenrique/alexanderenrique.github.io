@@ -263,7 +263,7 @@
             stacked: true,
             beginAtZero: true,
             ticks: { stepSize: 1 },
-            title: { display: true, text: "Log days per week" },
+            title: { display: true, text: "worklog entries/week" },
           },
         },
         plugins: {
