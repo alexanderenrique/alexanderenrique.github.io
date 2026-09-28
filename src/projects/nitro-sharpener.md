@@ -4,6 +4,11 @@ permalink: /projects/nitro-sharpener/
 tags: [nitro, engine, sharpener, safety]
 ---
 
+<figure class="lead-photo">
+  <img src="{{ '/images/nitro-motor.jpeg' | url }}" alt="Saito model airplane engine on a bench, with a red 3D-printed flywheel on the crank">
+  <figcaption class="lead-photo__caption">Saito engine with a PLA flywheel, before it exploded into my eye</figcaption>
+</figure>
+
 <div class="hero">
   <h2 class="hero__title">Nitromethane Pencil Sharpener</h2>
   <p class="hero__subtitle">A model airplane engine on the desk, turning a pencil sharpener. It ran. It was loud, acrid, and scary, and it does not belong indoors.</p>

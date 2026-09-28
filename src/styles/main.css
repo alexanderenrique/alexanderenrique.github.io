@@ -305,6 +305,27 @@ img {
     margin: var(--spacing-md) 0;
 }
 
+.lead-photo {
+    margin: 0 0 var(--spacing-lg);
+}
+
+.lead-photo img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: min(70vh, 36rem);
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.lead-photo__caption {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    text-align: center;
+    font-style: italic;
+    margin: var(--spacing-sm) auto 0;
+}
+
 /* Cards */
 .card {
     background: var(--color-bg);
