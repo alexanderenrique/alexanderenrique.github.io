@@ -32,8 +32,9 @@ tags: [electronics, embedded-systems, microcontrollers]
 
     <div class="card">
         <h3 class="card__title">Desktop Chime</h3>
-        <p class="card__description">ATtiny3216 hourly chime with selectable songs, solenoid strikers, and RTC timekeeping — no internet required.</p>
+        <p class="card__description">ATtiny3226 hourly chime with selectable songs, solenoid strikers, and RTC timekeeping — no internet required.</p>
         <a href="{{ '/microelectronics/desktop-chime/' | url }}" class="section__link">View Work Log →</a>
+        <a href="{{ '/projects/desktop-chime/' | url }}" class="section__link">Project page →</a>
     </div>
 
     <div class="card">

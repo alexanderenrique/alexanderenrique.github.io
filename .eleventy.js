@@ -7,6 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/install-firmware");
+  eleventyConfig.addPassthroughCopy("src/guides/desktop-chime/desktop-chime-bom.csv");
 
   // Add collections
   eleventyConfig.addCollection("coding", function(collectionApi) {

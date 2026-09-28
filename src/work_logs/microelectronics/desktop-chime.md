@@ -13,6 +13,10 @@ tags:
 
 ## Project Overview
 
+**Repo:** [alexanderenrique/desktop-chime](https://github.com/alexanderenrique/desktop-chime)  
+**Project page:** [Desktop Chime]({{ '/projects/desktop-chime/' | url }})  
+**Build guide:** [Desktop Chime guide]({{ '/guides/desktop-chime/' | url }})
+
 This is just a fun one, because it's cool to build cool shit. I was walking around campus and I was like damn, I really love the sound of the chime on the hour. As Papi used to say, all you really need to know is the hour.
 
 The plan is an ATtiny3216-based desktop chime that strikes tone bars with small solenoids. Pick a song with a knob, hit play (or let it fire on the hour), and it plays from stored note arrays. It'd be super pretty to make it out of wood; surely there is some CNC way to do this precisely. Small solenoid strikers hit the bars really quickly. No internet — an RTC keeps time so you program it once and it can run forever.
@@ -24,22 +28,6 @@ The plan is an ATtiny3216-based desktop chime that strikes tone bars with small 
 3. Manual play and clock-sync buttons for demos and time correction
 4. Self-contained: set time once, runs indefinitely on wall power
 
-## Melody Bars (4)
-
-| Property | Value |
-|----------|-------|
-| Material | 6061 Aluminum |
-| Thickness | 0.080" |
-| Width | 1" |
-| Lengths | D3 11", G3 9.5", A3 9",  B3 8.3" |
-
-## Bar Physics & Mounting
-
-Real glockenspiels use undercut bars to get better tones, but that adds machining challenges, I'll compromise and make longer bars without undercuts.
-
-Mounting of the bars is super important, and not something you really look at unless you're building your own musical instrument. The mounting holes need to be **22.4% from the end of the bar**, that's where the nodes are, so that's where it'll be stationary and you can actually support it without killing the resonance.
-
-Some fancy people use like nylon string to support it but that sounds hard so I might just use some small O-rings, or experiment with plastic washers, I worry the O-ring will dampen vibration but you never know.
 
 ## Architecture
 
@@ -69,22 +57,14 @@ graph LR
 
 | Position | Song |
 |----------|------|
-| Off | — |
-| 1 | Westminster |
-| 2 | Happy Birthday |
-| 3 | When the Saints Go Marching In |
-| 4 | La Cucaracha |
-| 5 | Hot Cross Buns |
-| 6 | Mary Had a Little Lamb |
-| 7 | Joy to the World |
-| 8 | Jingle Bells |
-| 9 | Twinkle Twinkle Little Star |
-
-## Electronics: Open Questions
-
-- Solenoid stroke and tip material (rubber vs Delrin) for a clean attack without buzzing the mount
-- Photoresistor for night quiet-mode — still on the fence
-- Final LED fade RC values and which notes get indicators
+| 0 | Off — playback cancelled |
+| 1 | Hour — Westminster + low-C strikes at `:00` |
+| 2 | Ode to Joy |
+| 3 | Mary Had a Little Lamb |
+| 4 | Hot Cross Buns |
+| 5 | Twinkle, Twinkle, Little Star |
+| 6 | Frère Jacques |
+| 7 | High–low scale — loops while selected |
 
 ## Design specs
 - 1.025" bottom to top of bar
@@ -95,17 +75,36 @@ graph LR
 - plus 0.2" for clearance
 - 0.641 stand off
 
-## Up Next
-- Play with striker, does it sounds the same when hit from the back? (haha)
+## Up Next:
+- designing a way for the board to be displayed and secured next to the xylaphone
+- figuring out the bug in the code
+- probing my high C low C dilemma
 
-
-- ~~Designing the bars~~
-- ~~Having them cut, or cutting them myself~~
-- Figure out mounting
-- ~~Ordering the striker solenoids~~
-- Designing tips for the solenoids so they strike nicely
 
 ## Work Log
+
+### 09/24/2026
+**Task:** Bugs in the code
+
+**Notes:**
+- Bugs in the code
+  - I can't get the scale to work when it first boots up. It wants to play both seeds at once, and I'm suspecting a hardware problem.
+  - The knob also doesn't seem to be registering correctly, which I also think might be a code issue because everything checks out fine with the multimeter.
+  - However, I won't be able to reflash anything anytime soom because I fried my programmer.
+
+### 09/23/2026
+**Task:** Assembly, Modifying the Xylaphone, 
+
+**Notes:**
+- Assembly
+  - Soldered it together, no challenges there I was able to do most of it on the hot plate
+  - I'm missing a few components, primarily the 7pF capacitor for the crystal oscillator
+  - I also wanted to use 22 kOhm resistors for the LED dimming RC circuit, but I used 10k instead and it looks fine
+  - I uploaded some test code, and I was able to pulse a solenoid and strike the bar, nice. 
+    - Interestingly the chime itself sounds pretty good, but it makes a bit of a clank when the solenoid retracts back on itself. maybe not a big deal
+- Modifying the Xylaphone
+  - I don't have a nice way to cut wood, so on one side I used my finger file and that kinda worked
+  - On the other side I used my grinder with a cut off wheel and somehow that worked better!
 
 ### 08/03/2026
 **Task:** Printing solenoid holder

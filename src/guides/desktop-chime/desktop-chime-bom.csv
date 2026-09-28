@@ -1,0 +1,29 @@
+Group,Qty,Refs,Value,Package,Role,Notes
+On board,1,U1,ATtiny3226,SOIC-20W,MCU,
+On board,1,U2,MCP7940N,DIP-8 socket,I2C RTC,
+On board,1,U3,AP63205WU,TSOT-23-6,"12 V to 5 V buck, 2 A",
+On board,1,U4,TBD62785APG,DIP-18,8-channel solenoid driver,
+On board,1,Y1,32.768 kHz crystal,"cylindrical, vertical",RTC crystal,"Schematic value is just Crystal. The MCP7940N X1/X2 pins and the 7 pF load caps are for a 32.768 kHz watch crystal."
+On board,1,BT1,Coin cell,holder BAT_3092,RTC backup,
+On board,1,S1,RDS7-8S-1065-73-D-67,rotary DIP,Song select,
+On board,2,"SW1, SW2",Tactile switch,6 mm THT,"Sync, Play",
+On board,1,J1,2-pin socket,,12 V input,
+On board,1,J2,1×9 pin socket,2.00 mm SMD,Solenoid harness,
+On board,1,L1,4.7 µH,1206,Buck inductor,
+On board,1,D5,Diode,SOIC-16,LED fade steering,"SOIC-16 diode in the schematic (value D), used in the LED fade paths. The KiCad export does not name a specific manufacturer part."
+On board,9,"D1–D4, D6–D10",LED,3 mm THT,Eight notes plus power,
+On board,1,R1,500 Ω,1206,Power LED,
+On board,8,R2–R9,22 kΩ,1206,LED fade,
+On board,2,"C2, C3",7 pF,1206,Crystal load,
+On board,2,"C1, C7",10 µF,1206,Decoupling,
+On board,1,C6,100 nF,1206,Buck bypass,
+On board,2,"C11, C18",0.1 µF,1206,Decoupling,
+On board,11,"C4, C5, C8, C10, C12–C17",22 µF,1206,Buck output and LED fade,
+On board,1,C9,100 µF,"radial, 6.3 mm",Bulk capacitor,
+On board,2,"TP1, TP2",Test point,2.5 mm pad,Bring-up,
+Not on the board,2,,"4.7 kΩ",,I2C pull-ups,"SDA and SCL to 5 V. The schematic does not include these. The MCU weak internal pull-ups are not enough at 100 kHz."
+Not on the board,8,,12 V solenoids,,Strikers,The ones I used pull about 0.5 A inrush and 0.2 A holding.
+Not on the board,1,,12 V wall adapter,,Solenoid rail,Logic is bucked down to 5 V.
+Not on the board,1,,Coin cell,,RTC backup,Fits the BAT_3092 holder on BT1.
+Not on the board,8,,Tone bars or a xylophone,,Struck notes,High C down to low C.
+Not on the board,1,,UPDI programmer,,Programming,"SerialUPDI, for example a USB-serial adapter."

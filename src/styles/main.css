@@ -217,6 +217,29 @@ h3 {
     margin-top: var(--spacing-xl);
 }
 
+.page-content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    margin: 0 0 var(--spacing-lg);
+}
+
+.page-content th,
+.page-content td {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.page-content th {
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
 h4 {
     font-size: 1.25rem;
     margin-top: var(--spacing-lg);
@@ -1550,6 +1573,63 @@ model-viewer[background-color] {
 .section--blog .work-log-stats {
     margin-top: 0;
     width: 100%;
+}
+
+.idea-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: var(--spacing-md);
+    width: 100%;
+}
+
+.idea-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    text-align: left;
+    text-decoration: none;
+    color: inherit;
+    background: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.idea-card:hover {
+    color: inherit;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.idea-card__title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--color-text);
+}
+
+.idea-card__description {
+    margin: 0;
+    color: var(--color-text-light);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.idea-card__cta {
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
+    font-weight: 600;
+    align-self: flex-start;
+    border-bottom: 2px solid currentColor;
+}
+
+@media (max-width: 768px) {
+    .idea-list {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 900px) {

@@ -18,6 +18,17 @@ module.exports = {
     repo: "https://github.com/alexanderenrique/denton-rain-maker",
     pcbs: "https://github.com/alexanderenrique/denton-rain-maker",
   },
+  desktopChime: {
+    repo: "https://github.com/alexanderenrique/desktop-chime",
+    pcbs: "https://github.com/alexanderenrique/desktop-chime/tree/main/desktop-chime-pcb",
+    firmware: "https://github.com/alexanderenrique/desktop-chime/tree/main/desktop-chime-code",
+  },
+  esp32UpdiProgrammer: {
+    repo: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/ESP32_UDPI_Programmer",
+  },
+  pageMap: {
+    repo: "https://github.com/alexanderenrique/PageMap",
+  },
   smartTbird: {
     repo: "https://github.com/alexanderenrique/smart_tbird",
     alternator: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/alternator_555_timer",

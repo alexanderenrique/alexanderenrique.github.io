@@ -33,7 +33,7 @@ tags:
 - Wrapping the car
 - ~~change plugs~~
 - ~~Buying a trailer~~
-- Welding trailer hitch
+- ~~Welding trailer hitch~~
 - Trailer wiring
 - Trailer bearings
 - ~~Installing spare tire carrier on trailer~~
@@ -68,13 +68,13 @@ tags:
 
 ### Timeline, as best I can
 - Thursday 9/3:
-  - Driver door
+  - ~~Driver door~~
 - Sunday 9/6:
-  - Both rear quarters
+  - ~~Both rear quarters~~
   - ~~Front end back together~~
 - Wednesday 9/9:
   - Front windshield wiper area
-  - Rear vent area
+  - ~~Rear vent area~~
 - Thursday 9/10:
   - Roof
 - Friday 9/11:
@@ -88,6 +88,72 @@ tags:
 
 
 ## Work Log
+
+### 09/24/2026 
+**Main Task:** Roadtrip Notes
+
+**Notes:** 
+- Overall, the car performed really, really well. No breakdowns, no funny business.
+- On the way out, there were definitely more hills and climbs, and I used second gear a lot more and slowed down, which I think was actually counterproductive to the engine heat soaking.
+- On the way back, I found that maintaining 60 to 65 actual mph really helped keep things cooler and shorten the duration of the hills.
+- I was worried about smoking the transmission, but the fluid shows no signs of overheating or darkening at all.
+- I added a small amount of transmission and power steering fluid on the way out, in the first 2 hours of driving, and didn't have to touch it after that.
+- I believe there to be maybe a small leak still from the power steering line that I made, and maybe a small leak from the rear transmission cooler line, but that's harder to tell.
+- It is actually kind of seriously leaking oil now. I have not worked on that at all. I suspect the oil pan gasket, which I can see a ton of RTV and other junk on.
+  - That said, I guess it wasn't that serious. I slightly overfilled it, maybe by half a quart, on the way out, and now, on the way back, the fill line is just under full. If that's all it leaks in 2,000 miles, that's pretty good.
+- I learned that while the speedometer is over by about 7% or 8%, the odometer actually only underreports by 5%, which changes my MPG math.
+- I averaged somewhere in the neighborhood of 12 to 14 mpg throughout the course of the trip, with my worst being around 11 mpg and my absolute best tank being about 16.5 mpg.
+- When I pulled the spark plugs in Bakersfield, they were definitely whiter than I would have liked. I enriched the mixture with the idle screws another half a turn, and then, going up in elevation, they looked perfect whenever I got to the Mojave.
+- The starter motor is starting to give me some fits. Sometimes it can be slow to turn over when hot. Not sure why that is.
+- I learned that the exhaust is pretty close to the transmission tunnel in the back, and I could definitely keep a pizza warm sitting on the trans tunnel infront of the back seats.
+
+### 09/11-14/2026 
+**Main Task:** Everything everywhere all at once
+
+**Notes:** 
+- Final bolt check, tightened a whole bunch of stuff, hitch
+- Put the interior back together, driver door, haven't gotten the rear 
+- Test drove the T bird for the first time in forever; white smoke show, burning oil like heck. I was so nervous, I was with Graham and it was a scary moment. It was also idling terribly, the idle screws were only 1/2 turn out.
+- I turned them out another half a turn, and we sent it down the highway for the old italian tune up. And it worked! When we got back
+
+### 09/10/2026 
+**Main Task:** Roof Wrap
+
+**Notes:** 
+- Roof Wrap
+  - Took like 2 hours to wrap the roof, still have 30 minutes or so of trimming, but it looks good
+  - My goal is to drive it on 9/11 and have finished the wrap
+
+### 09/09/2026 
+**Main Task:** Rear Trim, Mounting Bumper and tow bar for real
+
+**Notes:** 
+- Rear Trim
+  - Putting the trim back on is just the best, like wrapping it up feels great
+  - Re-attached the window bar, I finally understood how that snaps together. Trimmed the wrap of course
+- Mounting tow bar
+  - It went on pretty well, I realized there is a design flaw with my stacked method
+  - Now When you tighten the camber bolt that is farther rearward, there is a space between the bottom of the large camber washer and the nut on the back side of the frame, like 1/4" (or the thickenss of the bumper bar)
+  - So As I tighten that bolt, it's pulling that nut into the void, deforming my metal frame
+  - I learned this when the frame wouldn't quite go back on and I noticed there was a bulge
+  - I don't know how to fix this right now while preserving the float, so I think the emphasis on the bolting will be on the farher forward grade 8 bolts with the massive laser cut fender washer
+
+### 09/07/2026 
+**Main Task:** Long Weekend, Just everything
+
+**Notes:** 
+- Wrap:
+  - Did lots of wrapping, like the long sides, the rear vent area, etc
+  - All I have left is the roof and emblem area
+- Assembly:
+  - Put a bunch of the rear trim back on , starting to look really good
+  - Front turn signals inside the bumper bar back on, gave them a bit of paint before bolting them back on
+- Mechanical
+  - tightened the trans cooler lines and clamps a bit more
+  - Zip tied the trans cooler lines to the sway bar. I don't love it but whatever
+  - There is still like the tiniest bit of ATF trying to drip from places. I don't think there are any active leaks that I can see, but it's just that so much ATF has been sprayed everywhere for so long it is still very slowly dripping down
+  - Got the bolts and nuts to finish attaching the driver handle, the nuts for the front carriage bolts, bolts for the rear bumper
+
 
 ### 09/02/2026 
 **Main Task:** Driver Door wrap and assembly, Headlights back in

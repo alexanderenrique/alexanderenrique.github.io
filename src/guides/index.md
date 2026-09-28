@@ -19,6 +19,12 @@ permalink: /guides/
   </div>
 
   <div class="card">
+    <h3 class="card__title">Desktop Chime</h3>
+    <p class="card__description">Parts, assembly, UPDI firmware, and clock setup for the ATtiny3226 hourly chime.</p>
+    <a href="{{ '/guides/desktop-chime/' | url }}" class="section__link">Guide →</a>
+  </div>
+
+  <div class="card">
     <h3 class="card__title">Denton's Rainmaker</h3>
     <p class="card__description">BLE configuration for Wi‑Fi and watering schedules on the four-zone ESP32 sprinkler controller.</p>
     <a href="{{ '/rainmaker/config/' | url }}" class="section__link">Configure →</a>

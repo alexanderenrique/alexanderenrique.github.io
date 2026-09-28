@@ -45,6 +45,13 @@ permalink: /guides/support-checklist/
 - Firmware mode docs: sensor / fun
 - Power/refresh behavior notes (expected refresh cadence, battery impact)
 
+## Desktop Chime specifics
+
+- Board: ATtiny3226 + MCP7940N, 12 V in, AP63205 5 V rail, TBD62785APG solenoid drivers
+- Off-board parts the schematic does not include: ~4.7 kΩ I2C pull-ups, solenoids, tone bars, 12 V supply, coin cell
+- Firmware install is SerialUPDI (`set_clock` once, then `chime`), not the browser flasher
+- Clock-sync behavior: snap to the nearest hour only inside `:55`–`:05`
+
 ## NEMO MQTT specifics
 
 - System prerequisites:

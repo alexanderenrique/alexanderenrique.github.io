@@ -63,10 +63,68 @@ PB 4: RPM comparator in, high indicates pulse, so non inverting.
 ## To test:
 - ~~does the PWM work the way I think it should~~
 - ~~does RPM work, like at all~~
-- does O2 sensor work
+- ~~does O2 sensor work~~
 - Then we can design V2
 
 ## Work Log
+
+### 09/24/2026
+**Main Task:** Display install, engine bay mounting, making the loom, RS-485 woes, Fan troubles and fried programmers
+
+**Notes:**
+- Display install
+  - Installed the display in the glove box there, where I planned. I rigged up a relay that uses a trigger from the blower motor fan as my source of switched power.
+  - I did leave it so that the buck converter for charging phones is always on.
+  - This was pretty straightforward and went well.
+- Engine bay mounting
+  - There was already a perfectly sized hole right where I wanted to mount my board, so I just used that. I'll probably add a second, third, and fourth hole just to really securely mount it.
+- making the sensor loom
+  - Made a Loom with all four temperature sensors. It wasn't that hard. I just had to use my brain for a little bit.
+- Also added the RPM sensor. I learned that the way I have it set up is very sensitive, so just one turn of the bare wire on the ignition lead has enough signal. I may try the shielded wire and more turns.
+- RS-485 woes
+  - This is how I spent most of my day. I couldn't get my latest board communicating with the display, and I even tested the old unit that was previously communicating. There was something about the way that I set up the RPM indicator with the ISR: it was never entering to communicate in RS485 mode.
+  - It's like the ISR was somehow floating and blocking any orders from the ESP32 to send data.
+  - I reconfigured the code so that the ATtiny just sends data even without being asked, and removed the blocking from the RPM code.
+- Fan troubles and fried programmers
+  - Something was awry in the fan code, and there was no lower threshold for the logic of temperature-based rate changes. Whenever I turned it on, it was just commanded to 100% because the engine was getting warm, and it read that delta as "I need to command this to 100%," even though the temperature was actually just room temperature.
+  - Set it so that it has an automatic 5-second turn-on right when the engine starts.
+  - In an attempt to pull the output of the ATtiny high and check for functionality that way, I actually jumped the ATtiny with 12 V and completely fried the board.That's what happens when you work 12 hours straight.
+  - Then I went back to the bench and tried to test the rest of the circuit to see if the whole buck converter network was fine, and it was. In that process, I left my programmer plugged in and also fried that with 10 V, so now I feel sad.
+
+### 09/10/2026
+**Main Task:** Soldering flying leads, case redesign
+
+**Notes:**
+- Soldering flying leads
+  - so satistying to get the flying leads on there, the horizontal connections are the truth
+  - The 14-16 AWG connections are actually a bit larger which is kinda annoying, but I learned that they do go in the same hole with a bit of force
+  - It's like a bit of a press fit which is fine I guess
+- case redesign
+  - I should've remember the printer oversizes things by 10 thou, so the ID of the box was 20 thou too small and the OD was 20 thou too large so the lid just didn't like going on
+  - The second case turned out better. Snug but looking good
+
+### 09/09/2026
+**Main Task:** Soldering V2, Power testing, Flashing
+
+**Notes:**
+- Soldering V2
+  - Soldered most of the front side, the solder paste is pretty cool, saves a lot of time I think in conjunction with the hot plate
+  - I don't have an SMD 22k resistor I learned, so I guess I'll be doing some surface mount throughole trick
+  - Finished soldering the backside in the afternoon, went pretty well. Hand soldering is kinda a pain
+- Power testing
+  - Tested the small components with a multi meter before powering on, there were no solder bridges or anything
+  - Powered it up with 7 volts to test, and it worked! LED lit up, saw a perfect 3.307v at the pin
+- Flashing
+  - Took me a second to remember how to do it, but I was able to flash the board
+  - I had a brain fart on the UDPI connection on the breadboard, five seconds of multi meter probing showed me I wasn't right
+
+### 09/08/2026
+**Main Task:** Case redesign for larger board
+
+**Notes:**
+- Case redesign for larger board
+  - Well mid August came and went and wrapping and the mechanical stuff took priority but I just might have time to install this thing
+  - redeisgned the case for the larger size, as well as that now the wires come out horizontally and all the same direction
 
 ### 07/24/2026
 **Main Task:** Re-design, shipping the PCB

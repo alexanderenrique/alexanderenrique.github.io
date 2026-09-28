@@ -52,6 +52,46 @@ description: One curious engineer's journey through wrenching, coding, and micro
         </div>
     </section>
 
+    <section class="section section--desktop-chime">
+        <div class="section__content">
+            <div class="section__text">
+                <h2 class="section__title">Desktop Chime</h2>
+                <p class="section__description">An ATtiny3226 desktop chime that strikes eight notes on the hour. A battery-backed RTC keeps time with no Wi‑Fi, a knob picks the song, and solenoids hit the bars. Read the <a href="{{ '/guides/desktop-chime/' | url }}">build guide</a> for assembly, the BOM, and how to set the clock.</p>
+                <a href="{{ sources.desktopChime.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+                <a href="{{ '/projects/desktop-chime/' | url }}" class="section__link">Project page →</a>
+            </div>
+            <div class="section__image">
+                <div class="placeholder-image" aria-label="Desktop chime photos coming soon"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--ideas">
+        <div class="section__content section__content--stack">
+            <div class="section__text">
+                <h2 class="section__title">Not So Good Ideas</h2>
+                <p class="section__description">Things I thought were a good idea but weren't, and this is my attempt to broaden human knowledge. Because what doesn't work is almost as important as what does work.</p>
+            </div>
+            <div class="idea-list">
+                <a class="idea-card" href="{{ '/projects/nitro-sharpener/' | url }}">
+                    <h3 class="idea-card__title">Nitromethane Pencil Sharpener</h3>
+                    <p class="idea-card__description">A model-engine sharpener for the desk. Fast spinning parts, fumes you cannot tame, and fuel that evaporates.</p>
+                    <span class="idea-card__cta">Project page →</span>
+                </a>
+                <a class="idea-card" href="{{ '/projects/esp32-updi-programmer/' | url }}">
+                    <h3 class="idea-card__title">ESP32 UPDI Programmer</h3>
+                    <p class="idea-card__description">An ESP32 that was supposed to program ATtiny chips over UPDI. It mostly taught me to buy a real programmer.</p>
+                    <span class="idea-card__cta">Project page →</span>
+                </a>
+                <a class="idea-card" href="{{ '/projects/pagemap/' | url }}">
+                    <h3 class="idea-card__title">PageMap</h3>
+                    <p class="idea-card__description">A PDF reader that treats each page like a map, running on an ESP32-S3. The tiles worked. Reading did not.</p>
+                    <span class="idea-card__cta">Project page →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="section section--blog">
         <div class="section__content section__content--stack">
             <div class="section__text">
