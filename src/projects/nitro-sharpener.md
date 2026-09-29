@@ -39,7 +39,7 @@ I wanted a nitro engine on my desk, doing something silly. A pencil sharpener is
 
 ## What happened
 
-It did start. With a DC motor on the crank and exhaust pressure on the tank, it ran for a few seconds, then later for real. It was loud, I got messages from my neighbors. The exhaust filled the tank with smoke. The whole thing felt like it could not be tamed, and I boxed it.
+It did start. With a DC motor on the crank and exhaust pressure on the tank, it ran for a few seconds, then later for real. It was loud, I got messages from my neighbors. The whole thing felt like it could not be tamed, and I boxed it.
 
 Before that, a 3D-printed flywheel filled with BBs came apart while the engine was running. I was not wearing safety glasses. I spent the rest of the day in the emergency room. Three ophthalmologists and six weeks of eye drop later and I pretty much made a full recovery. The redesign after that was laser-cut steel, and no more printed parts at those speeds. The project still went in a box. The safety margin was never going to be there for a desk toy.
 
