@@ -71,6 +71,7 @@ The classic bipolar 555 doesn't swing fully to the positive rail, output tops ou
   <p class="card__description">Gerbers, schematic, and BOM on GitHub. Designed for through-hole and small SMD passives on a compact board that lives in the engine bay.</p>
   <a class="section__link" href="{{ sources.alternator555Timer.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
   <a class="section__link" href="{{ sources.alternator555Timer.repo }}" target="_blank" rel="noopener noreferrer">Repository →</a>
+  <a class="section__link" href="{{ '/projects/alternator-555-timer-bom.csv' | url }}" download="alternator-555-timer-bom.csv">BOM →</a>
 </div>
 
 ## Documentation & support
@@ -101,6 +102,7 @@ The classic bipolar 555 doesn't swing fully to the positive rail, output tops ou
 
 ## Quick links
 
+- **BOM:** <a href="{{ '/projects/alternator-555-timer-bom.csv' | url }}" download="alternator-555-timer-bom.csv">alternator-555-timer-bom.csv</a>
 - **Work log / lab notebook:** [Alternator 555 Timer, work log]({{ '/microelectronics/alternator_555_timer/' | url }})
 - **T-Bird electronics hub:** [All Thunderbird electronics work logs]({{ '/microelectronics/T-bird_electronics/' | url }})
 - **Related wrenching notes:** [Thunderbird restomod, work log]({{ '/wrenching/thunderbird-restomod/' | url }})

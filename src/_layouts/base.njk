@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}Denton Works</title>
-    <meta name="description" content="{{ description or 'My journey through wrenching, coding, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place.' }}">
+    <meta name="description" content="{{ description or 'My journey through wrenching, software, and microelectronics projects! This is where I document my adventures and share my work with the lofty goal of making the world a better place.' }}">
     {% if tags %}<meta name="tags" content="{{ tags | join(', ') }}">{% endif %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-D4VMNE2JPX"></script>
@@ -39,17 +39,11 @@
                     <li><a href="{{ '/' | url }}" class="nav__link">Home</a></li>
                     <li><a href="{{ '/source/' | url }}" class="nav__link">Source</a></li>
                     <li class="nav__dropdown">
-                        <a href="{{ '/projects/e-ink-display/' | url }}" class="nav__link">Projects</a>
+                        <a href="{{ '/projects/hardware/' | url }}" class="nav__link">Projects</a>
                         <ul class="nav__submenu">
-                            <li><a href="{{ '/projects/e-ink-display/' | url }}">E-Ink Display</a></li>
-                            <li><a href="{{ '/projects/nemo-mqtt/' | url }}">NEMO MQTT</a></li>
-                            <li><a href="{{ '/projects/alternator-555-timer/' | url }}">Alternator 555 Timer</a></li>
-                            <li><a href="{{ '/projects/denton-rainmaker/' | url }}">Denton's Rainmaker</a></li>
-                            <li><a href="{{ '/projects/desktop-chime/' | url }}">Desktop Chime</a></li>
-                            <li class="nav__submenu-divider" aria-hidden="true"></li>
-                            <li><a href="{{ '/projects/esp32-updi-programmer/' | url }}">ESP32 UPDI Programmer</a></li>
-                            <li><a href="{{ '/projects/pagemap/' | url }}">PageMap</a></li>
-                            <li><a href="{{ '/projects/nitro-sharpener/' | url }}">Nitromethane Pencil Sharpener</a></li>
+                            <li><a href="{{ '/projects/hardware/' | url }}">Hardware</a></li>
+                            <li><a href="{{ '/projects/software/' | url }}">Software</a></li>
+                            <li><a href="{{ '/projects/not-so-good-ideas/' | url }}">Not So Good Ideas</a></li>
                         </ul>
                     </li>
                     <li class="nav__dropdown">
@@ -64,7 +58,7 @@
                     <li class="nav__dropdown">
                         <a href="{{ '/work-logs/' | url }}" class="nav__link">Work logs</a>
                         <ul class="nav__submenu">
-                            <li><a href="{{ '/coding/' | url }}">Coding</a></li>
+                            <li><a href="{{ '/coding/' | url }}">Software</a></li>
                             <li><a href="{{ '/wrenching/' | url }}">Wrenching</a></li>
                             <li><a href="{{ '/microelectronics/' | url }}">Microelectronics</a></li>
                             <li><a href="{{ '/general/' | url }}">General</a></li>

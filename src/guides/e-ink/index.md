@@ -13,7 +13,7 @@ Use this path to go from bare parts to a configured display.
 
 - **PCB** — Download the Gerbers from [GitHub](https://github.com/alexanderenrique/e-ink-display/tree/main/e-ink-PCBs) and order from your preferred fab, or upload the `.zip` file directly
   - Also feel free to modify, that's what makes this fun
-- **Passive components** — resistors, capacitors, MOSFETs, you can find the Bill Of Materials (BOM) *here*
+- **Passive components** — resistors, capacitors, MOSFETs; download the <a href="{{ '/guides/e-ink/e-ink-bom.csv' | url }}" download="e-ink-bom.csv">Bill Of Materials (BOM)</a>
 
 ### 2. Start Printing the enclosure
 - For maximum efficiency you'll want to start printing the enclosure first. You can find the STL *here*

@@ -36,4 +36,16 @@ module.exports = {
     engineSensingNode: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/temp_fan_node",
     display: "https://github.com/alexanderenrique/smart_tbird/tree/platformIO/display",
   },
+  nemoMonitors: {
+    repo: "https://github.com/alexanderenrique/NEMO-tool-monitors",
+  },
+  nemoMqttPlugin: {
+    repo: "https://github.com/alexanderenrique/nemo-mqtt-plugin",
+  },
+  nemoBulkUpload: {
+    repo: "https://github.com/alexanderenrique/NEMO-bulk-upload",
+  },
+  nemoLookup: {
+    repo: "https://github.com/alexanderenrique/NEMO-lookup",
+  },
 };

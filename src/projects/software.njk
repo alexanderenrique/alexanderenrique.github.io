@@ -1,0 +1,44 @@
+---
+layout: page
+title: "Software Projects"
+description: "NEMO plugins for lab management: monitors, MQTT status, bulk upload, and data lookup."
+permalink: /projects/software/
+---
+
+<div class="idea-list">
+  <article class="idea-card idea-card--static">
+    <h3 class="idea-card__title">NEMO Monitors</h3>
+    <p class="idea-card__description">Plugin that attaches monitor data to tools: time-series readings, optional notes, charts, exports, and email alerts. Follows the same UI patterns as the NEMO Sensors plugin.</p>
+    <div class="idea-card__links">
+      <a class="section__link" href="{{ sources.nemoMonitors.repo }}" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      <a class="section__link" href="{{ '/coding/NEMO-monitor/' | url }}">Work log →</a>
+    </div>
+  </article>
+
+  <article class="idea-card idea-card--static">
+    <h3 class="idea-card__title">NEMO MQTT Plugin</h3>
+    <p class="idea-card__description">Django plugin that publishes NEMO tool usage events to MQTT via PostgreSQL LISTEN/NOTIFY and a standalone bridge process. Pairs with the wall-mounted tool displays.</p>
+    <div class="idea-card__links">
+      <a class="section__link" href="{{ sources.nemoMqttPlugin.repo }}" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      <a class="section__link" href="{{ '/projects/nemo-mqtt/' | url }}">Project page →</a>
+      <a class="section__link" href="{{ '/coding/NEMO-MQTT-Bridge/' | url }}">Work log →</a>
+    </div>
+  </article>
+
+  <article class="idea-card idea-card--static">
+    <h3 class="idea-card__title">NEMO Bulk Upload</h3>
+    <p class="idea-card__description">Bulk-create NEMO records from Excel or CSV using friendly names instead of IDs. Check for errors, fix anything red, then create records.</p>
+    <div class="idea-card__links">
+      <a class="section__link" href="{{ sources.nemoBulkUpload.repo }}" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      <a class="section__link" href="{{ '/coding/NEMO-Bulk-Upload/' | url }}">Work log →</a>
+    </div>
+  </article>
+
+  <article class="idea-card idea-card--static">
+    <h3 class="idea-card__title">NEMO Lookup</h3>
+    <p class="idea-card__description">Download facility data as Excel and answer common questions by picking lab members and tools by name. Queries use the Django ORM inside NEMO.</p>
+    <div class="idea-card__links">
+      <a class="section__link" href="{{ sources.nemoLookup.repo }}" target="_blank" rel="noopener noreferrer">GitHub →</a>
+    </div>
+  </article>
+</div>

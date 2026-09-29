@@ -7,9 +7,9 @@ permalink: /work-logs/
 
 <div class="grid grid--2">
   <div class="card">
-    <h3 class="card__title">Coding</h3>
+    <h3 class="card__title">Software</h3>
     <p class="card__description">Software tools, automation, and programming experiments.</p>
-    <a href="{{ '/coding/' | url }}" class="section__link">Browse coding logs →</a>
+    <a href="{{ '/coding/' | url }}" class="section__link">Browse software logs →</a>
   </div>
 
   <div class="card">

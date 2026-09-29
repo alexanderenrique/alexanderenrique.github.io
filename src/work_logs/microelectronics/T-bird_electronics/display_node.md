@@ -172,7 +172,7 @@ A display/control node for the Smart Thunderbird project. Intended to show real-
 - Now that I have the oscilliscope it's game on though, super keen on that
 
 ### 06/30/26
-**Main Task:**  Cursor coding
+**Main Task:**  Software
 
 **Notes:**
 - With the sensor node shipped out, I can start turning my attention to this little guy which I anticipate to be a fair bit easier

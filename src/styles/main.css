@@ -171,14 +171,6 @@ body {
     color: var(--color-primary);
 }
 
-.nav__submenu-divider {
-    height: 1px;
-    background-color: var(--color-border);
-    margin: var(--spacing-xs) 0;
-    padding: 0;
-    list-style: none;
-}
-
 /* Main content */
 .main {
     min-height: calc(100vh - 8rem);
@@ -313,7 +305,7 @@ img {
     display: block;
     width: auto;
     max-width: 100%;
-    max-height: min(70vh, 36rem);
+    max-height: 9rem;
     margin: 0 auto;
     object-fit: contain;
 }
@@ -571,6 +563,15 @@ img {
     line-height: 1.1;
 }
 
+.section__title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.section__title a:hover {
+    text-decoration: underline;
+}
+
 .section__description {
     font-size: 1.25rem;
     line-height: 1.6;
@@ -595,8 +596,53 @@ img {
 
 .section__image {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: var(--spacing-sm);
+    margin: 0;
+}
+
+.section__image img {
+    margin: 0;
+    width: 100%;
+}
+
+/* Landscape crop of the monitors chart. Drops the blank header and keeps the axes. */
+.section__crop {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1174 / 829;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.section__crop img {
+    position: absolute;
+    width: 100%;
+    max-width: none;
+    height: auto;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Portrait photos: keep height in line with landscape section images */
+.section__image--portrait img {
+    width: auto;
+    max-width: 100%;
+    max-height: 26rem;
+}
+
+.section__caption {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: var(--color-text-light);
+    text-align: center;
 }
 
 .placeholder-image {
@@ -635,6 +681,25 @@ img {
         height: 140px;
         flex-basis: 140px;
     }
+}
+
+/* Home page banner */
+.main:has(.home-banner) {
+    padding-top: 0;
+}
+
+.home-banner {
+    width: 66.67%;
+    margin: 0 auto var(--spacing-xl);
+}
+
+.home-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 /* Hero section */
@@ -1623,6 +1688,19 @@ model-viewer[background-color] {
     text-decoration: none;
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
+}
+
+.idea-card--static:hover {
+    transform: none;
+    box-shadow: var(--shadow);
+}
+
+.idea-card__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: auto;
+    padding-top: var(--spacing-sm);
 }
 
 .idea-card__title {

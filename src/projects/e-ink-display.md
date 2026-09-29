@@ -11,6 +11,7 @@ tags: [esp32, e-ink, ble, iot, low-power]
   <div class="btn-row">
     <a class="btn btn--primary" href="{{ sources.eInkDisplay.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
     <a class="btn btn--secondary" href="{{ '/guides/e-ink/' | url }}">Build guide →</a>
+    <a class="btn btn--secondary" href="{{ '/guides/e-ink/e-ink-bom.csv' | url }}" download="e-ink-bom.csv">BOM →</a>
   </div>
 </div>
 
@@ -93,6 +94,8 @@ Once the platform was in place, it became clear that the same hardware could ser
 ## Build guide
 
 For assembly order, firmware flashing, BLE setup, and configuration links, start with the [E‑Ink Display build guide]({{ '/guides/e-ink/' | url }}).
+
+**BOM:** <a href="{{ '/guides/e-ink/e-ink-bom.csv' | url }}" download="e-ink-bom.csv">e-ink-bom.csv</a> — through-hole basic display parts with suggested MPNs and rough unit costs.
 
 ## Documentation & support
 

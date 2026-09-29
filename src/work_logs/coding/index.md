@@ -1,13 +1,13 @@
 ---
 layout: page
-title: "Coding Projects"
+title: "Software Projects"
 categories: [coding]
 tags: [programming, automation, tools, software]
 ---
 
 <div class="hero">
     <img src="{{ '/images/pandas3.png' | url }}" alt="Pandas" style="max-width: 200px; margin: 0 auto var(--spacing-md); display: block;">
-    <h1 class="hero__title">Coding Projects</h1>
+    <h1 class="hero__title">Software Projects</h1>
     <p class="hero__subtitle">Software tools, automation, and programming adventures</p>
 </div>
 

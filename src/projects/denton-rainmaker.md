@@ -69,13 +69,15 @@ PCB has been sent to fab. Next up: breadboard the critical AC and buck circuits,
 
 <div class="card">
   <h3 class="card__title">PCB &amp; schematic</h3>
-  <p class="card__description">KiCad project on GitHub — schematic, board layout, and BOM CSV. Firmware will land here once bring-up starts.</p>
+  <p class="card__description">KiCad project on GitHub — schematic, board layout, and BOM CSV. Firmware will land here once bring-up starts. The BOM below is the KiCad export; a few lines are still generic symbols (LED, Fuse, MOV) rather than orderable part numbers.</p>
   <a class="section__link" href="{{ sources.dentonRainmaker.pcbs }}" target="_blank" rel="noopener noreferrer">PCB files →</a>
   <a class="section__link" href="{{ sources.dentonRainmaker.repo }}" target="_blank" rel="noopener noreferrer">Repository →</a>
+  <a class="section__link" href="{{ '/guides/rainmaker/denton-rainmaker-bom.csv' | url }}" download="denton-rainmaker-bom.csv">BOM →</a>
 </div>
 
 ## Quick links
 
 - **BLE configuration:** [Configure Denton's Rainmaker]({{ '/rainmaker/config/' | url }})
+- **BOM:** <a href="{{ '/guides/rainmaker/denton-rainmaker-bom.csv' | url }}" download="denton-rainmaker-bom.csv">denton-rainmaker-bom.csv</a>
 - **Work log / lab notebook:** [Denton's Rainmaker, work log]({{ '/microelectronics/denton-rain-maker/' | url }})
 - **GitHub:** [alexanderenrique/denton-rain-maker]({{ sources.dentonRainmaker.repo }})

@@ -1,0 +1,98 @@
+---
+layout: page
+title: "Hardware Projects"
+description: "PCBs, firmware, and shop builds. From wall-mounted lab displays to classic-car electronics."
+permalink: /projects/hardware/
+---
+
+<div class="sections">
+  <section class="section section--eink">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">E-Ink Display</h2>
+        <p class="section__description">Configure and install firmware for ESP32 battery-powered e-ink displays. Use the <a href="{{ '/guides/e-ink/#e-ink-portal' | url }}">e-ink display portal</a> to set up your displays wirelessly via Bluetooth Low Energy (BLE), or install firmware directly from your browser.</p>
+        <a href="{{ sources.eInkDisplay.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+        <a href="{{ '/projects/e-ink-display/' | url }}" class="section__link">Project page →</a>
+        <a href="{{ '/guides/e-ink/#e-ink-portal' | url }}" class="section__link">E-Ink Display portal →</a>
+        <a href="{{ '/guides/e-ink/e-ink-bom.csv' | url }}" class="section__link" download="e-ink-bom.csv">BOM →</a>
+      </div>
+      <div class="section__image">
+        <img src="{{ '/images/IMG_9717.jpeg' | url }}" alt="E-Ink Display">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--nemo-mqtt">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">NEMO MQTT &amp; Tool Display</h2>
+        <p class="section__description">Real-time tool status from NEMO to wall-mounted ESP32 displays over MQTT: Django plugin, bridge service, and firmware. Read the <a href="{{ '/guides/nemo-mqtt/' | url }}">project overview</a> for architecture and links to the bridge package and hardware notes.</p>
+        <a href="{{ sources.nemoMqtt.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+        <a href="{{ '/projects/nemo-mqtt/' | url }}" class="section__link">Project page →</a>
+        <a href="{{ '/guides/nemo-mqtt/' | url }}" class="section__link">NEMO MQTT →</a>
+      </div>
+      <div class="section__image">
+        <img src="{{ '/images/IMG_0030.jpeg' | url }}" alt="NEMO MQTT tool display">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alternator-555">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">Alternator 555 Timer</h2>
+        <p class="section__description">A compact analog delay board for classic cars with upgraded alternators. Holds the field off for ~10 seconds after start so V-belts get traction before the load hits, no microcontroller, no firmware. Built for my <a href="{{ '/wrenching/thunderbird-restomod/' | url }}">Thunderbird restomod</a>.</p>
+        <a href="{{ sources.alternator555Timer.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+        <a href="{{ '/projects/alternator-555-timer/' | url }}" class="section__link">Project page →</a>
+        <a href="{{ '/projects/alternator-555-timer-bom.csv' | url }}" class="section__link" download="alternator-555-timer-bom.csv">BOM →</a>
+      </div>
+      <div class="section__image">
+        <img src="{{ '/images/555_pcb.png' | url }}" alt="Alternator 555 Timer PCB layout">
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tbird">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">T-Bird Electronics</h2>
+        <p class="section__description">Modern electronics for the 1968 Thunderbird restomod: engine sensing, in-dash display, alternator delay, and methanol injection monitoring. Modules share an RS-485 bus and live in the <a href="{{ sources.smartTbird.repo }}" target="_blank" rel="noopener noreferrer">smart_tbird</a> repo.</p>
+        <a href="{{ sources.smartTbird.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub →</a>
+        <a href="{{ '/projects/T-Bird_electronics/' | url }}" class="section__link">Project page →</a>
+      </div>
+      <div class="section__image">
+        <div class="placeholder-image" aria-label="T-Bird electronics photos coming soon"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--desktop-chime">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">Desktop Chime</h2>
+        <p class="section__description">An ATtiny3226 desktop chime that strikes eight notes on the hour. A battery-backed RTC keeps time with no Wi‑Fi, a knob picks the song, and solenoids hit the bars. Read the <a href="{{ '/guides/desktop-chime/' | url }}">build guide</a> for assembly, the BOM, and how to set the clock.</p>
+        <a href="{{ sources.desktopChime.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+        <a href="{{ '/projects/desktop-chime/' | url }}" class="section__link">Project page →</a>
+        <a href="{{ '/guides/desktop-chime/desktop-chime-bom.csv' | url }}" class="section__link" download="desktop-chime-bom.csv">BOM →</a>
+      </div>
+      <div class="section__image">
+        <div class="placeholder-image" aria-label="Desktop chime photos coming soon"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rainmaker">
+    <div class="section__content">
+      <div class="section__text">
+        <h2 class="section__title">Denton's Rainmaker</h2>
+        <p class="section__description">A four-channel 24 VAC ESP32 sprinkler controller with opto-triac zone drivers, Wi‑Fi clock sync, and BLE configuration from a browser. Schedules stay honest without a coin cell to replace.</p>
+        <a href="{{ sources.dentonRainmaker.repo }}" class="section__link" target="_blank" rel="noopener noreferrer">GitHub &amp; PCBs →</a>
+        <a href="{{ '/projects/denton-rainmaker/' | url }}" class="section__link">Project page →</a>
+        <a href="{{ '/guides/rainmaker/denton-rainmaker-bom.csv' | url }}" class="section__link" download="denton-rainmaker-bom.csv">BOM →</a>
+      </div>
+      <div class="section__image">
+        <div class="placeholder-image" aria-label="Rainmaker photos coming soon"></div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -807,7 +807,7 @@ tags:
   - I'll need to add a shunt resistor between the battery and alternator and take the current difference from there
   - Obviously the guage can't handle a 140A from the new alternator going through it
 - Also learned about the IVR, could be the reason my temp and fuel guages read low, not enough current going through them cause the voltage is too low. 
-- Started coding in the modbus, actually writing my own code and learning like way way way more than just having cursor do all the work.
+- Started the Modbus software, actually writing my own code and learning like way way way more than just having cursor do all the work.
 
 ### 11/13/2025
 **Main Task:** LED tail lights, floppy door card

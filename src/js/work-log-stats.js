@@ -3,7 +3,7 @@
 
   const CATEGORY_ORDER = ["coding", "wrenching", "microelectronics", "general"];
   const CATEGORY_LABELS = {
-    coding: "Coding",
+    coding: "Software",
     wrenching: "Wrenching",
     microelectronics: "Microelectronics",
     general: "General",

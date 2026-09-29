@@ -1,6 +1,6 @@
 # Denton Works Blog
 
-A modern, stylish blog about wrenching, coding, and microelectronics projects built with [11ty](https://www.11ty.dev/).
+A modern, stylish blog about wrenching, software, and microelectronics projects built with [11ty](https://www.11ty.dev/).
 
 ## 🚀 Quick Start
 
@@ -26,7 +26,7 @@ src/
 ├── assets/            # Static assets (images, models, etc.)
 ├── styles/            # CSS files
 ├── js/                # JavaScript files
-├── coding/            # Coding projects
+├── coding/            # Software projects
 ├── wrenching/         # Wrenching projects
 ├── microelectronics/  # Electronics projects
 ├── general/           # General content

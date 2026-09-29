@@ -478,7 +478,7 @@ I'm learning just all the time and I think it's cool to look back and see what y
 ### 11/29/2025
 - Classic ammeter: original design ran alternator output through the gauge; high-output alternator needs a shunt, not full current through the dial
 - Instrument voltage regulator (IVR) output is pulsed — DMM average lies; grounding the sender wire still proves gauge sweep
-- Started writing Modbus/RS-485 code by hand instead of only vibe-coding — sticks better
+- Started writing Modbus/RS-485 software by hand instead of only generating it — sticks better
 
 ### 11/21/2025
 - CAN stack size and MCU support pushed the car project to RS-485 modules that work on any ESP32 variant

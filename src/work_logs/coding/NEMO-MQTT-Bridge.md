@@ -192,7 +192,7 @@ graph LR
 - Same for the HMAC key, if you change it it doesn't work, so I know this baby is locked down
 - Went through every line in the customization page to make sure it worked, and that I really understand what it does
 - Made the monitor work much better. It now shows the important things just like the terminal
-- Cleaned it up, removed the good old vibe coding emojis
+- Cleaned it up, removed the leftover emoji comments
 - Also did some cleanup and reconcilliation of the ESP32 code. That's the last major untested part, the connection between the ESP32 and the broker
 
 ### 02/25/2026

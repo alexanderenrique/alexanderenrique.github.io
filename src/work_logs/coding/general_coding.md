@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "General Coding Work Log"
+title: "General Software Work Log"
 categories: [coding]
 tags:
   - software
@@ -9,12 +9,12 @@ tags:
   - tools
   - miscellaneous
   - general
-  - #coding
+  - #software
   - #work-log
 ---
 
 ## Project Overview
-General coding work that does not get its own project page.
+General software work that does not get its own project page.
 
 ## Up Next
 
