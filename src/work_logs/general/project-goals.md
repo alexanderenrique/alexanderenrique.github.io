@@ -23,7 +23,7 @@
 - Adding a BLE config option??
 - Installation guide on website
 
-## e-ink Display:
+## ESP32 e-ink Display:
 ### Goals:
 - Before UGIM:
   - Have 5-ish displayed in high visibility areas

@@ -5,7 +5,7 @@ tags: [esp32, e-ink, ble, iot, low-power]
 ---
 
 <div class="hero">
-  <h2 class="hero__title">Battery-powered ESP32 E‑Ink Display</h2>
+  <h2 class="hero__title">ESP32 E-Ink Display</h2>
   <p class="hero__subtitle">A small ESP32 + e‑ink display platform with 8+ month battery life</p>
 
   <div class="btn-row">
@@ -38,11 +38,11 @@ tags: [esp32, e-ink, ble, iot, low-power]
     <h3 class="card__title">Gallery</h3>
     <div class="photo-gallery">
       <figure class="photo-gallery__item">
-        <img src="{{ '/images/IMG_0048.jpeg' | url }}" alt="E-Ink display showing ISS tracker">
+        <img src="{{ '/images/IMG_0048.jpeg' | url }}" alt="ESP32 e-ink display showing ISS tracker">
         <figcaption class="photo-gallery__caption">Fun app — ISS tracker</figcaption>
       </figure>
       <figure class="photo-gallery__item">
-        <img src="{{ '/images/IMG_8216.jpeg' | url }}" alt="E-Ink display showing a fun fact">
+        <img src="{{ '/images/IMG_8216.jpeg' | url }}" alt="ESP32 e-ink display showing a fun fact">
         <figcaption class="photo-gallery__caption">Fun app — desk display</figcaption>
       </figure>
       <figure class="photo-gallery__item">
@@ -93,7 +93,7 @@ Once the platform was in place, it became clear that the same hardware could ser
 
 ## Build guide
 
-For assembly order, firmware flashing, BLE setup, and configuration links, start with the [E‑Ink Display build guide]({{ '/guides/e-ink/' | url }}).
+For assembly order, firmware flashing, BLE setup, and configuration links, start with the [ESP32 E-Ink Display build guide]({{ '/guides/e-ink/' | url }}).
 
 **BOM:** <a href="{{ '/guides/e-ink/e-ink-bom.csv' | url }}" download="e-ink-bom.csv">e-ink-bom.csv</a> — through-hole basic display parts with suggested MPNs and rough unit costs.
 

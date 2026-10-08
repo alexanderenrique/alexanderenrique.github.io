@@ -7,7 +7,7 @@ permalink: /guides/
 
 <div class="grid grid--2">
   <div class="card">
-    <h3 class="card__title">E‑Ink Display</h3>
+    <h3 class="card__title">ESP32 E-Ink Display</h3>
     <p class="card__description">Parts, assembly, firmware install, and BLE configuration for the ESP32 e‑ink display.</p>
     <a href="{{ '/guides/e-ink/' | url }}" class="section__link">Guide →</a>
   </div>

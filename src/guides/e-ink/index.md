@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "E‑Ink Display guide"
+title: "ESP32 E-Ink Display guide"
 description: "Step-by-step: parts, assembly, firmware, and configuration for the ESP32 e-ink display"
 permalink: /guides/e-ink/
 ---
@@ -47,7 +47,7 @@ Use this path to go from bare parts to a configured display.
 - Upon receiving the configuration, the display will exit Bluetooth mode and start displaying the App content chosen
 
 
-## E‑Ink Portal
+## ESP32 E-Ink Portal
 
 <div id="e-ink-portal" class="e-ink-intro">
   <p>Configure and install firmware for ESP32-powered e‑ink displays.</p>

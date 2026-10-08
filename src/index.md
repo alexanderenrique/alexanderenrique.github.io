@@ -22,8 +22,20 @@ description: One curious engineer's journey through wrenching, software, and mic
                 <a href="{{ '/projects/hardware/' | url }}" class="section__link">Browse hardware →</a>
             </div>
             <figure class="section__image">
-                <img src="{{ '/images/IMG_9717.jpeg' | url }}" alt="Battery-powered ESP32 e-ink display in a red enclosure">
-                <figcaption class="section__caption">E-ink display for the lab gowning room</figcaption>
+                <model-viewer
+                    class="board-viewer"
+                    src="{{ '/assets/models/attiny-e-ink.glb' | url }}"
+                    alt="ATtiny e-ink display circuit board"
+                    camera-controls
+                    auto-rotate
+                    interaction-prompt="none"
+                    exposure="1.5"
+                    shadow-intensity="0.5"
+                    environment-image="neutral"
+                    tone-mapping="commerce"
+                    background-color="#f6bd60">
+                </model-viewer>
+                <figcaption class="section__caption">ATtiny e-ink display board. Drag to orbit.</figcaption>
             </figure>
         </div>
     </section>

@@ -36,7 +36,7 @@ permalink: /guides/support-checklist/
   - where to get help
   - what info to include (photos, versions, logs)
 
-## E‑Ink Display specifics
+## ESP32 E-Ink Display specifics
 
 - Hardware overview (board revs, display compatibility, sensor options)
 - Battery guidance (supported cells, expected life ranges)

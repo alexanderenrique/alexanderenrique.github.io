@@ -52,7 +52,7 @@ tags: [attiny, e-ink, low-power, sd-card, kicad]
 
 ## Why I Built It
 
-The [first e-ink display]({{ '/projects/e-ink-display/' | url }}) did a lot. It logged temperature and humidity, joined Wi‑Fi, and could be configured over Bluetooth. It was a good lab tool. After handing a few out to friends, the whole wifi and BLE configuration turned out to be more of a headache than it was worth. You change your wifi password and now the display doesn't work, or my Rasperry Pi server quits and the display doesn't work. I want something that people could edit really simply, and would just work.
+The [ESP32 e-ink display]({{ '/projects/e-ink-display/' | url }}) did a lot. It logged temperature and humidity, joined Wi‑Fi, and could be configured over Bluetooth. It was a good lab tool. After handing a few out to friends, the whole wifi and BLE configuration turned out to be more of a headache than it was worth. You change your wifi password and now the display doesn't work, or my Rasperry Pi server quits and the display doesn't work. I want something that people could edit really simply, and would just work.
 
 I wanted to do a redesign at somepoint because I was baffled how bad the battery life of the ESP32 version was. It was also my first PCB design ever and I thought it could use a refresh. The impetus was a book with lots of highlighted quotes that I receied from my father in law. I wanted a small thing that could show one quote, e-ink style, and just stay there. Helping to keep these quotes top of mind. Once that was the job, the ESP32 stopped earning its keep. I don't care about earthquakes or where the ISS is, and I don't want a configuration app. Pop in an SD card, it cycles through whatever is on the card, and that's the product.
 
@@ -78,7 +78,7 @@ The 3226 has been my go-to for non-wifi projects. I've come to really like the f
 
 Nothing on this board speaks USB. After the first set of boards went out for fabrication I redrew the connector as a power-only USB-C receptacle. It only has to charge.
 
-The loads are gated individually: display, SD card, the battery divider, and the sensor. A divider that sits across the cell all year is a leak, and an SD card that stays powered is worse. The top button refreshes the display on demand
+The loads are gated individually: display, SD card, the battery divider, and the sensor. A divider that sits across the cell all year is a leak, and an SD card that stays powered is worse. The top button refreshes the display on demand.
 
 A magnet on the back, so it can live on a fridge, is still a maybe.
 
@@ -89,4 +89,4 @@ Schematic and layout for the first spin are done. I imported the 3D models into 
 ## Quick links
 
 - **Work log:** [ATtiny e-ink]({{ '/microelectronics/attiny-e-ink/' | url }})
-- **The display this replaces on the desk:** [Battery-powered ESP32 e-ink display]({{ '/projects/e-ink-display/' | url }})
+- **The display this replaces on the desk:** [ESP32 E-Ink Display]({{ '/projects/e-ink-display/' | url }})

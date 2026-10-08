@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "E-Ink Display"
+title: "ESP32 E-Ink Display"
 categories: [microelectronics]
 tags: 
   - electronics
