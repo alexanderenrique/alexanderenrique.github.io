@@ -54,6 +54,13 @@ The plan is a thin handlebar-mounted strip with a few thermistors tied to RGB LE
 
 ## Work Log
 
+### 09/27/2026
+**Task:** Schematic and PCB Layout
+
+**Notes:**
+- Schematic and PCB Layout
+  - I never thought 1206 SMD conponents would feel so large! But they sure do, if I could do it again I'd probably standardize on 0805.
+  - I made lare 15mm square blocks 
 ### 09/26/2026
 **Task:** Schematic and PCB Layout
 

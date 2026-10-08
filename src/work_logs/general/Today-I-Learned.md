@@ -19,6 +19,92 @@ I'm learning just all the time and I think it's cool to look back and see what y
 
 ## Learnings
 
+### 10/07/2026
+- KiCad: import the 3D model and assign it to the footprint if you want to see the real button before the board goes out
+- Li-ion charge current scales with capacity — a 150 mAh cell needs a larger BMS set resistor than a 500 mAh or you charge it too hard
+- On paper a 150 mAh cell is enough for a year on this e-ink tag, if the firmware actually sleeps
+
+### 10/06/2026
+- The protection MOSFETs on a pouch cell draw their own quiescent current — that idle draw is part of the battery-life budget
+
+### 10/05/2026
+- Humidity sensors are slow: some take ~8 s to start responding, and full accuracy is more like 4× that. A 2 s part exists, but it may not be worth it on a glanceable tag
+
+### 10/04/2026
+- LED indicator on a triac output: the anti-parallel diode has to share the series resistor. Leave it off the resistor and the diode eats full reverse current every half cycle and smokes
+
+### 10/03/2026
+- An "off" triac still leaks milliamps — enough to dimly light an LED
+- An NE-2 neon is the AC-friendly indicator; an LED is just a diode
+- Triac snubber: at 60 Hz the cap is basically open; on a fast solenoid spike it looks like a short and dumps the energy through the resistor
+
+### 09/27/2026
+- On a small board, 1206 starts to look huge — I'd standardize on 0805 next time
+
+### 09/25/2026
+- A bare ESP32 has its own bootstrap handshake to enter programming mode. Fiddly, not hard, and every chip's is a little different
+- 5 V addressable LEDs want a push-pull buffer off 3.3 V logic — a 74AHCT1G125 on data and on clock, ~33 Ω in series for ringing, and a bulk tantalum on the 5 V rail by the LEDs
+- ESP32-C3 GPIO 2, 8, and 9 are strapping pins
+
+### 09/24/2026
+- This RPM front end is sensitive enough that one turn of bare wire on a plug lead is already enough signal
+- An RPM ISR that never got out of the way kept the ATtiny from answering on RS-485 — looked like a dead link until it just transmitted instead of waiting to be polled
+- Fan logic with no temperature floor commands 100% on the first warm-up delta, even while the engine is still at room temp
+- Probing an ATtiny pin with 12 V kills the chip; leaving the programmer hanging on that rail kills the programmer too
+- Thunderbird on grades: lugging in second heat-soaks the engine; holding 60–65 actual mph ran cooler and shortened the climbs
+- Speedometer reads ~7–8% high, but the odometer only under-reports ~5% — MPG math has to use the odometer error
+- Plugs went white in Bakersfield; another half turn out on the idle mixture and they looked right once I was up in the Mojave
+
+### 09/23/2026
+- Solenoid striker sounds fine on the hit; the clank is the plunger slamming home on the return
+
+### 09/20/2026
+- A 2.54 mm 6-pin is still way too small for sprinkler solenoid wire — I had "standard pitch" and "big enough" mixed up
+
+### 09/13/2026
+- Idle mixture only 1/2 turn out was too lean and the idle was awful. Another half turn out, then a hard highway pull, and the white-smoke show after it sat cleared up
+
+### 09/10/2026
+- This printer runs about 0.010" oversized — a box comes out 0.020" small inside and 0.020" large outside, so a lid drawn line-to-line will not go on
+
+### 09/09/2026
+- Stacked hitch: the rearward camber bolt looks through a ~1/4" void (the bumper thickness), so tightening it pulls the nut into the frame and bulges it. Clamp on the forward grade-8 bolts and the big fender washer
+
+### 09/01/2026
+- Bike center of mass sits ~41" behind the front tire. With the hitch where it was, that put the mass a foot ahead of the trailer axle — too much tongue weight. A second hole set ~6" farther back is the adjustment
+
+### 08/31/2026
+- TIG over leftover flux-core tacks comes out nasty — grind the tacks out first
+- Hitch tube: weld the end caps on, then drill a 1/4" hole in the bottom of each side so water can get out
+
+### 08/30/2026
+- A heat gun will burn a hole straight through vinyl wrap
+- Don't drill and tap a structural hitch bar for a license plate. Plug-weld a strip on and bolt the plate to that
+
+### 08/28/2026
+- TIG a thick-to-thin joint: bias the arc into the thick metal, and watch the puddle and gravity or you undercut
+- The hitch receiver took three passes a side — about 60 inches of weld once you add it up
+
+### 08/27/2026
+- Weld the hitch as its own assembly before the drop mounts, so warpage doesn't preload the mounts. Tack it on the car, finish on the bench
+- Bevel the tube ends if you want penetration on a full 360° joint
+
+### 08/26/2026
+- As set up, vacuum advance adds ~10° at idle and a driveway rev only brought in ~10° mechanical
+- Bumping base timing from 8° to 12° didn't raise idle RPM — rich enough to bog. Opening a vacuum leak did raise idle
+- Vacuum and mechanical advance fight: as RPM rises, vacuum falls off while mechanical comes in, so a big rev never got much past ~25°
+- Thunderbird antenna: a retaining clip holds the upper trim, then one lower bolt lets the mast sleeve drop out
+- Hammering the tunnel for clearance dinged the trans-cooler return seat and it started leaking
+
+### 08/25/2026
+- The Isuzu bumper's safety-chain holes don't take the clip-style S-hooks the trailer came with
+
+### 08/23/2026
+- New window felt will not line up with the old trim holes — elongate them with a die grinder
+
+### 08/20/2026
+- GM HEI advance springs can be opened up enough to work in the Thunderbird distributor — one light and one medium, off the curve sheet
+
 ### 08/19/2026
 - Limiting total mechanical advance isn't enough: a weak spring also brings timing in too early, so it pings at part-throttle RPM
 - Slack in a stiff spring as a "halfway baseline" lets timing hunt at idle

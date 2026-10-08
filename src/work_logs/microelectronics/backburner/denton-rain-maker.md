@@ -53,6 +53,50 @@ Things I'm hoping to learn about in this project are:
 
 ### Work Log
 
+### 10/4/2026
+**Task:** Figured out the smoke!
+
+**Notes:**
+- Figured out the smoke!
+  - Okay, I learned that what was basically happening is that the diode was not going through the current-limiting resistor, so the diode was seeing the full reverse current of every half cycle. That's why it was releasing the magic smoke.
+  - In the future, you use a current-limiting resistor on the whole LED/diode assembly as one. I think for this board, I will probably just leave the LEDs and the diodes off.
+
+### 10/3/2026
+**Task:** Learning ("where the rubber meets the road")
+
+**Notes:**
+- learning:
+  - Okay, I was pretty stumped by the whole 24 V making its way all the way through the triac, but I did some learning and some research on this.
+  - I learned that triacs can leak a little bit of power in the milliamp range, which is just enough to dimly illuminate an LED, which is exactly what I was seeing.
+  - I also learned that this is why people use neon bulbs, sometimes the NE2 bulbs, which are more AC-friendly than an LED, which is, of course, a diode.
+    - For my next project, I'll find a way to use a little PCB-mounted neon bulb because that sounds so cool.
+  - I also fully understood that the snubber across a triac works because, at lower AC frequencies like 60 Hz, the capacitor is basically open and doesn't conduct. For those ultra-fast spikes, like whenever a solenoid closes, the capacitor acts like a short, and that allows the power to drain through the resistor harmlessly.
+  - BUT WHY THE SMOKE
+
+### 10/2/2026
+**Task:** Powering the board
+
+**Notes:**
+- Powering the board
+  - I got a 24VAC power supply, the leads are actually much finer gauge than I thought, I was able to puth them into the small terminal block no problem
+  - Got the board powered up, the bridge rectifier was perfect, the 5V was perfect, the LDO worked
+  - I had the 3.3V LED soldered in backwards
+  - As a test, I took 3.3V and applied it to the pin where it'll go to drive the triac circuit
+  - I released the magic smoke big time!! Straight cooked the diode associated with the LED
+  - Man I do not know what is going on. The LED was acting as some sort of rectifier, like I saw 18 VDC between the comm and the outputs when not driven high, and then when I removed the LED and diode I saw the full 24VAC making it through.
+  - I did probe for continuity, an there isn't like plain continuity between the two, the opto triac/triac must be doing something
+  - Time to review the schematic I guess, I really thought I got it right... or maybe I did and I've got some hardware issue? Or I'm using it wrong?? Like does it want to be pulled low to turn off? That'd be a twist.
+
+### 09/20/2026
+**Task:** Soldering the board
+
+**Notes:**
+- Soldering the board
+  - Soldered it together, much like the code, it works great when you don't apply power or anything!
+  - I did make one mistake, the 6 pin connector is way smaller than I anticipated, I thought 2.54mm would be like the big standard connector, but it is most certainly not
+  - I ordered the smaller connector just to finish the board but I'm not sure if the wires from the sprinkler solenoids will fit in it
+  - I did pretty much everything except for a capacitor, the MCU which I don't have, and the couple connectors I don't have
+
 ### 07/19/2026
 **Task:** Code
 
