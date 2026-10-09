@@ -73,7 +73,19 @@ permalink: /projects/hardware/
         <a href="{{ '/projects/alternator-555-timer-bom.csv' | url }}" class="section__link" download="alternator-555-timer-bom.csv">BOM →</a>
       </div>
       <div class="section__image">
-        <img src="{{ '/images/555_pcb.png' | url }}" alt="Alternator 555 Timer PCB layout">
+        <model-viewer
+          class="board-viewer"
+          src="{{ '/assets/models/alternator_555_timer.glb' | url }}"
+          alt="Alternator 555 Timer circuit board"
+          camera-controls
+          auto-rotate
+          interaction-prompt="none"
+          exposure="1.5"
+          shadow-intensity="0.5"
+          environment-image="neutral"
+          tone-mapping="commerce"
+          background-color="#f6bd60">
+        </model-viewer>
       </div>
     </div>
   </section>

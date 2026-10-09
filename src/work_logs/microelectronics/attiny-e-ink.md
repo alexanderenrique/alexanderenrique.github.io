@@ -57,6 +57,19 @@ This is going to be a more max effort version of the e-ink/denton's fun box disp
 
 ### Work Log
 
+### 10/9/2026
+**Task:** SSOP, layout improvements
+
+**Notes:**
+- SSOP
+  - Briefly considered moving to a smaller form factor for the MCU
+  - SSOP would save space, but like i already have a minimum width based on the connectors and buttons, and I don't really need to save that much space so I scrapped the idea
+- Layout improvements
+  - I feel like the terminal-esque font just isn't the move for consumer products
+  - I also wanted to make sure that facts weren't being truncated, so I did a litle investigation
+  - Moved the font type from the very terminal like font, so a serif with a bold title.
+  - Also made it like the old display, where the first line is a red header, which I think looks pretty good. 
+
 ### 10/7/2026
 **Task:** Schematic and PCB design, thinkin' about batteries, shipped and improvements already
 
